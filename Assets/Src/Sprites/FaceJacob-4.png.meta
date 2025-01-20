@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 4fb3b25de3f45ef9298197f90d2f16fe
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8926094841738309758
+    second: FaceJacob-Tired-3_0
+  - first:
+      213: 6382386892473572969
+    second: FaceJacob-Tired-3_1
+  - first:
+      213: 554811797435368410
+    second: FaceJacob-Tired-3_2
+  - first:
+      213: 8637842540524994558
+    second: FaceJacob-Tired-3_3
+  - first:
+      213: -1483792862235201760
+    second: FaceJacob-Tired-3_4
+  - first:
+      213: 4230011967862243701
+    second: FaceJacob-Tired-3_5
+  - first:
+      213: -6211214315108962732
+    second: FaceJacob-Tired-3_6
+  - first:
+      213: -8233855320505806071
+    second: FaceJacob-Tired-3_7
+  - first:
+      213: 7413398129223251970
+    second: FaceJacob-Tired-3_8
+  - first:
+      213: 2388260040063485159
+    second: FaceJacob-Tired-3_9
+  - first:
+      213: 5105913812270878568
+    second: FaceJacob-Tired-3_10
+  - first:
+      213: -7543102233562592857
+    second: FaceJacob-Tired-3_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_0
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 399
+        width: 250
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70324157fbdfdb70800000000000000
+      internalID: 8926094841738309758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 297
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e1ff8301bc29850800000000000000
+      internalID: 6382386892473572969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 277
+        width: 89
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad3c457e36613b700800000000000000
+      internalID: 554811797435368410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 339
+        width: 36
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: effffbd7608cfd770800000000000000
+      internalID: 8637842540524994558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 345
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02fe536d042886be0800000000000000
+      internalID: -1483792862235201760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_5
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 276
+        width: 88
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5718414297504ba30800000000000000
+      internalID: 4230011967862243701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_6
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 288
+        width: 35
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45eeb142d755dc9a0800000000000000
+      internalID: -6211214315108962732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_7
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 249
+        width: 94
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9039a49f5387bbd80800000000000000
+      internalID: -8233855320505806071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_8
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 252
+        width: 66
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 208b5e6125ea1e660800000000000000
+      internalID: 7413398129223251970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_9
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 176
+        width: 99
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e48e375addc42120800000000000000
+      internalID: 2388260040063485159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_10
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 150
+        width: 76
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f8a2a5f89dbd640800000000000000
+      internalID: 5105913812270878568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FaceJacob-Tired-3_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 119
+        width: 69
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a9cb00db74815790800000000000000
+      internalID: -7543102233562592857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FaceJacob-Tired-3_0: 8926094841738309758
+      FaceJacob-Tired-3_1: 6382386892473572969
+      FaceJacob-Tired-3_10: 5105913812270878568
+      FaceJacob-Tired-3_11: -7543102233562592857
+      FaceJacob-Tired-3_2: 554811797435368410
+      FaceJacob-Tired-3_3: 8637842540524994558
+      FaceJacob-Tired-3_4: -1483792862235201760
+      FaceJacob-Tired-3_5: 4230011967862243701
+      FaceJacob-Tired-3_6: -6211214315108962732
+      FaceJacob-Tired-3_7: -8233855320505806071
+      FaceJacob-Tired-3_8: 7413398129223251970
+      FaceJacob-Tired-3_9: 2388260040063485159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

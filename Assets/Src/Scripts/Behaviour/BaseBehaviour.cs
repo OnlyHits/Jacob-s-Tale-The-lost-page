@@ -29,7 +29,7 @@ namespace CustomArchitecture
             if (m_pause)
                 return;
 
-            OnFixedUpdate(Time.deltaTime);
+            OnFixedUpdate(Time.fixedDeltaTime);
         }
 
         protected void LateUpdate()
