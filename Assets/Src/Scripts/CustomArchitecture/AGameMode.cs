@@ -12,10 +12,10 @@ namespace CustomArchitecture
         protected string                            m_gameSceneName = null;
         protected string                            m_uiSceneName = null;
 
-        public AGameMode(string name)
-        {
-            m_gameName = name;
-        }
+        // public AGameMode(string name)
+        // {
+        //     m_gameName = name;
+        // }
 
         public abstract void StartGameMode();
         public abstract void OnLoadingEnded();

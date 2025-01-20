@@ -1,0 +1,32 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[Comic.Chapters, Assembly-CSharp],[Comic.ChapterConfig, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.EnumEqualityComparer`1[[Comic.Chapters, Assembly-CSharp]], mscorlib",
+        "$rlength": 0,
+        "$rcontent": [
+        ]
+    },
+    "$rlength": 1,
+    "$rcontent": [
+        {
+            "$k": 0,
+            "$v": {
+                "$id": 2,
+                "$type": "2|Comic.ChapterConfig, Assembly-CSharp",
+                "m_pnj": 0,
+                "m_powerType": 0,
+                "m_pages": {
+                    "$id": 3,
+                    "$type": "3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib",
+                    "$rlength": 2,
+                    "$rcontent": [
+                        1,
+                        2
+                    ]
+                }
+            }
+        }
+    ]
+}
