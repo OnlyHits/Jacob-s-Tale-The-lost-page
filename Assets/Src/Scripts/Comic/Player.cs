@@ -51,7 +51,7 @@ namespace Comic
             }
             Vector2 newVel = v * m_speed;
             Vector2 expectedVel = (newVel - m_rb.linearVelocity) * Time.fixedDeltaTime;
-            m_rb.AddForce(expectedVel, ForceMode2D.ForceVelocityChange);
+            m_rb.AddForce(expectedVel, ForceMode2D.Force);
         }
         private void StopMove(Vector2 v)
         {
