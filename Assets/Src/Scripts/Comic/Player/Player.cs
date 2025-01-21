@@ -1,6 +1,4 @@
 using CustomArchitecture;
-using Unity.Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Comic
@@ -9,12 +7,23 @@ namespace Comic
     {
         [SerializeField, ReadOnly] private PlayerInputsController m_inputsController;
         [SerializeField] private Rigidbody2D m_rb;
-        [SerializeField] private float m_speed = 10f;
+
+        [Header("Grounded")]
         [SerializeField] private bool m_isGrounded = false;
+
+        [Header("Move")]
         [SerializeField] private bool m_isMoving = false;
+        [SerializeField] private float m_speed = 10f;
+
+        [Header("Jump")]
+        [SerializeField] private bool m_isJumping = false;
         [SerializeField] private float m_jumpForce = 10f;
+
+        //[Header("Fall")]
+        //[SerializeField] private bool m_isfalling = false;
+
+        [Header("Others")]
         [SerializeField] private PageManager m_pageManager;
-        //[SerializeField] private Rigidbody2D m_rb;
 
         protected void Awake()
         {
@@ -24,6 +33,8 @@ namespace Comic
             m_inputsController.onJumpAction += OnJump;
             m_inputsController.onSprintAction += OnSprint;
             m_inputsController.onInteractAction += OnInteract;
+            m_inputsController.onNextPageAction += OnNextPage;
+            m_inputsController.onPrevPageAction += OnPrevPage;
 
             m_inputsController.Init();
         }
@@ -32,6 +43,11 @@ namespace Comic
         protected override void OnFixedUpdate(float elapsed_time)
         {
             m_isGrounded = IsGrounded();
+
+            if (!m_isGrounded)
+            {
+                TryFall();
+            }
         }
         protected override void OnLateUpdate(float elapsed_time) { }
 
@@ -39,8 +55,11 @@ namespace Comic
         {
             return true;
         }
+
+        #region MOVE
         private void StartMove(Vector2 v)
         {
+            PlayRun(true);
             m_isMoving = true;
         }
         private void Move(Vector2 v)
@@ -55,8 +74,34 @@ namespace Comic
         }
         private void StopMove(Vector2 v)
         {
+            PlayRun(false);
             m_isMoving = false;
         }
+        #endregion MOVE
+
+        #region JUMP
+        private void TryJump()
+        {
+            if (!m_isGrounded)
+            {
+                return;
+            }
+            PlayJump(true);
+            m_isJumping = true;
+        }
+        #endregion JUMP
+
+
+        #region FALL
+        private void TryFall()
+        {
+            if (m_isGrounded && m_isJumping)
+            {
+                return;
+            }
+            PlayFall(true);
+        }
+        #endregion FALL
 
     }
 }
