@@ -27,7 +27,7 @@ namespace Comic
 
         private void PlayFall(bool play = true)
         {
-            m_animator.SetTrigger(ANIM_FALL);
+            m_animator.SetBool(ANIM_FALL, play);
         }
 
         private void TryResetIdle()

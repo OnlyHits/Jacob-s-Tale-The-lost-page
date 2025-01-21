@@ -139,11 +139,6 @@ namespace Comic
             input = released ? InputType.RELEASED : input;
             input = !pressed && !released && isComputed ? InputType.COMPUTED : input;
 
-            if (input != InputType.NONE)
-            {
-                Debug.Log("Ok");
-            }
-
             return input;
         }
 

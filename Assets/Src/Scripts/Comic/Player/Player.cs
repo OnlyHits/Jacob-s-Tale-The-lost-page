@@ -19,8 +19,8 @@ namespace Comic
         [SerializeField] private bool m_isJumping = false;
         [SerializeField] private float m_jumpForce = 10f;
 
-        //[Header("Fall")]
-        //[SerializeField] private bool m_isfalling = false;
+        [Header("Fall")]
+        [SerializeField] private bool m_isFalling = false;
 
         [Header("Others")]
         [SerializeField] private PageManager m_pageManager;
@@ -44,9 +44,13 @@ namespace Comic
         {
             m_isGrounded = IsGrounded();
 
-            if (!m_isGrounded)
+            if (!m_isGrounded && !m_isFalling)
             {
                 TryFall();
+            }
+            else if (m_isFalling && m_isGrounded)
+            {
+                StopFall();
             }
         }
         protected override void OnLateUpdate(float elapsed_time) { }
@@ -95,11 +99,22 @@ namespace Comic
         #region FALL
         private void TryFall()
         {
-            if (m_isGrounded && m_isJumping)
+            if (m_isGrounded || m_isJumping || m_isFalling)
             {
                 return;
             }
+            m_isFalling = true;
             PlayFall(true);
+        }
+
+        private void StopFall()
+        {
+            if (!m_isGrounded && m_isFalling)
+            {
+                return;
+            }
+            m_isFalling = false;
+            PlayFall(false);
         }
         #endregion FALL
 
