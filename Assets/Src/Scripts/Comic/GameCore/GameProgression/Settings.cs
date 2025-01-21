@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace Comic
 {
     [System.Serializable]
@@ -9,14 +12,14 @@ namespace Comic
 
     public class Setting
     {
-        public List<SettingDatas>                       m_settingDatas = null;
+        public SettingDatas                             m_settingDatas = null;
         private readonly SaveUtilitary<SettingDatas>    m_saveUtilitary;
 
         public Setting()
         {
             m_saveUtilitary = new SaveUtilitary<SettingDatas>("SettingDatas", FileType.SaveFile);
 
-            m_unlockChapters = m_saveUtilitary.Load();
+            m_settingDatas = m_saveUtilitary.Load();
         }
     }
 }
