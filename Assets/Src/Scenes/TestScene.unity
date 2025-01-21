@@ -9099,6 +9099,7 @@ Transform:
   m_Children:
   - {fileID: 1910073037}
   - {fileID: 1551405519}
+  - {fileID: 1402228819}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1225921130
@@ -9188,8 +9189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_inputsController: {fileID: 0}
-  m_rb: {fileID: 1225921131}
-  m_sprites: []
+  m_headPositionGoRight: {fileID: 1551405519}
+  m_headPositionGoLeft: {fileID: 1402228819}
+  m_head: {fileID: 1571612433}
   m_isGrounded: 0
   m_isMoving: 0
   m_faceRight: 1
@@ -9197,6 +9199,7 @@ MonoBehaviour:
   m_isJumping: 0
   m_jumpForce: 6.5
   m_isFalling: 0
+  m_rb: {fileID: 1225921131}
   m_pageManager: {fileID: 2012221684}
   m_animator: {fileID: 1225921133}
 --- !u!95 &1225921133
@@ -10167,6 +10170,37 @@ Transform:
   - {fileID: 733000055}
   - {fileID: 284211674}
   m_Father: {fileID: 2133181589}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1402228818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402228819}
+  m_Layer: 0
+  m_Name: PositionHead GoLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1402228819
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402228818}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1225921129}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1403872925
 GameObject:
@@ -11753,7 +11787,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551405519}
   m_Layer: 0
-  m_Name: PositionHead
+  m_Name: PositionHead GoRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

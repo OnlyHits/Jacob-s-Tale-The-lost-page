@@ -7,8 +7,12 @@ namespace Comic
     public partial class Player : BaseBehaviour
     {
         [SerializeField, ReadOnly] private PlayerInputsController m_inputsController;
-        [SerializeField] private Rigidbody2D m_rb;
-        [HideInInspector] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
+
+        [Header("Animations")]
+        [SerializeField] private Transform m_headPositionGoRight;
+        [SerializeField] private Transform m_headPositionGoLeft;
+        [SerializeField] private Transform m_head;
+        private Vector2 m_baseHeadLocalPos;
 
         [Header("Grounded")]
         [SerializeField, ReadOnly] private bool m_isGrounded = false;
@@ -26,7 +30,9 @@ namespace Comic
         [SerializeField, ReadOnly] private bool m_isFalling = false;
 
         [Header("Others")]
+        [SerializeField] private Rigidbody2D m_rb;
         [SerializeField] private PageManager m_pageManager;
+        [HideInInspector] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
 
         protected void Awake()
         {
@@ -43,6 +49,8 @@ namespace Comic
 
             var sprites = GetComponentsInChildren<SpriteRenderer>();
             m_sprites.AddRange(sprites);
+
+            m_baseHeadLocalPos = m_head.localPosition;
         }
 
         protected override void OnUpdate(float elapsed_time)
@@ -95,6 +103,9 @@ namespace Comic
             foreach (var sprite in m_sprites)
             {
                 sprite.flipX = !m_faceRight;
+                Transform parentHead = m_faceRight ? m_headPositionGoRight : m_headPositionGoLeft;
+                m_head.parent = parentHead;
+                m_head.localPosition = m_baseHeadLocalPos;
             }
         }
         #endregion SPRITES
