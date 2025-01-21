@@ -6,8 +6,6 @@ using System.Collections.Generic;
 
 namespace Comic
 {
-    public partial class Player : BaseBehaviour
-    {
         public enum InputType
         {
             NONE = 0,
@@ -16,8 +14,11 @@ namespace Comic
             RELEASED = 3,
         }
 
-        public class PlayerInputsController : BaseBehaviour
+        public abstract class AInputManager : BaseBehaviour
         {
+            [HideInInspector] public List<InputActionStruct<Vector2>> m_inputActionStructsV2 = new List<InputActionStruct<Vector2>>();
+            [HideInInspector] public List<InputActionStruct<bool>> m_inputActionStructsBool = new List<InputActionStruct<bool>>();
+
             [Serializable]
             public class InputActionStruct<T>
             {
@@ -39,6 +40,7 @@ namespace Comic
                 {
                     callback?.Invoke(i, v);
                 }
+
                 public bool IsSameValue(T v)
                 {
                     bool isSame = false;
@@ -56,10 +58,12 @@ namespace Comic
                     }
                     return isSame;
                 }
+
                 public void SetValue(T v)
                 {
                     value = v;
                 }
+
                 public T GetValue()
                 {
                     if (value.GetType() == typeof(Vector2))
@@ -77,62 +81,7 @@ namespace Comic
                 }
             }
 
-            [HideInInspector] public List<InputActionStruct<Vector2>> m_inputActionStructsV2 = new List<InputActionStruct<Vector2>>();
-            [HideInInspector] public List<InputActionStruct<bool>> m_inputActionStructsBool = new List<InputActionStruct<bool>>();
-
-            #region ACTIONS
-            private InputAction m_moveAction;
-            private InputAction m_lookAction;
-            private InputAction m_jumpAction;
-            private InputAction m_sprintAction;
-            private InputAction m_interactAction;
-            private InputAction m_nextPageAction;
-            private InputAction m_prevPageAction;
-
-            #endregion ACTIONS
-
-            #region CALLBACKS
-            public Action<InputType, Vector2> onMoveAction;
-            public Action<InputType, Vector2> onLookAction;
-            public Action<InputType, bool> onJumpAction;
-            public Action<InputType, bool> onSprintAction;
-            public Action<InputType, bool> onInteractAction;
-            public Action<InputType, bool> onNextPageAction;
-            public Action<InputType, bool> onPrevPageAction;
-
-            #endregion CALLBACKS
-
-
-            private void Awake()
-            {
-                m_moveAction = InputSystem.actions.FindAction("Move");
-                m_lookAction = InputSystem.actions.FindAction("Look");
-                m_jumpAction = InputSystem.actions.FindAction("Jump");
-                m_sprintAction = InputSystem.actions.FindAction("Sprint");
-                m_interactAction = InputSystem.actions.FindAction("Interact");
-                m_nextPageAction = InputSystem.actions.FindAction("NextPage");
-                m_prevPageAction = InputSystem.actions.FindAction("PrevPage");
-
-            }
-
-            private void Start()
-            {
-                InputActionStruct<Vector2> iMove = new InputActionStruct<Vector2>(m_moveAction, onMoveAction, Vector2.zero, true);
-                InputActionStruct<Vector2> iLook = new InputActionStruct<Vector2>(m_lookAction, onLookAction, Vector2.zero, true);
-                InputActionStruct<bool> iJump = new InputActionStruct<bool>(m_jumpAction, onJumpAction, false);
-                InputActionStruct<bool> iSprint = new InputActionStruct<bool>(m_sprintAction, onSprintAction, false);
-                InputActionStruct<bool> iInteract = new InputActionStruct<bool>(m_interactAction, onInteractAction, false);
-                InputActionStruct<bool> iNextPage = new InputActionStruct<bool>(m_nextPageAction, onNextPageAction, false);
-                InputActionStruct<bool> iPrevPage = new InputActionStruct<bool>(m_prevPageAction, onPrevPageAction, false);
-
-                m_inputActionStructsV2.Add(iMove);
-                m_inputActionStructsV2.Add(iLook);
-                m_inputActionStructsBool.Add(iJump);
-                m_inputActionStructsBool.Add(iSprint);
-                m_inputActionStructsBool.Add(iInteract);
-                m_inputActionStructsBool.Add(iNextPage);
-                m_inputActionStructsBool.Add(iPrevPage);
-            }
+            abstract public void Init();
 
             protected override void OnUpdate(float elapsed_time)
             {
@@ -195,4 +144,3 @@ namespace Comic
 
         }
     }
-}

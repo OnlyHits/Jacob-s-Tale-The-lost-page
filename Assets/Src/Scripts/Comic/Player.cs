@@ -24,8 +24,6 @@ namespace Comic
             m_inputsController.onJumpAction += OnJump;
             m_inputsController.onSprintAction += OnSprint;
             m_inputsController.onInteractAction += OnInteract;
-            m_inputsController.onNextPageAction += OnNextPage;
-            m_inputsController.onPrevPageAction += OnPrevPage;
         }
 
         protected override void OnUpdate(float elapsed_time) { }

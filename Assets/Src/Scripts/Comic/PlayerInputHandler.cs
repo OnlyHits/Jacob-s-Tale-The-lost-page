@@ -72,31 +72,5 @@ namespace Comic
             {
             }
         }
-        private void OnNextPage(InputType input, bool b)
-        {
-            if (input == InputType.PRESSED)
-            {
-                m_pageManager.TryNextPage();
-            }
-            else if (input == InputType.COMPUTED)
-            {
-            }
-            else if (input == InputType.RELEASED)
-            {
-            }
-        }
-        private void OnPrevPage(InputType input, bool b)
-        {
-            if (input == InputType.PRESSED)
-            {
-                m_pageManager.TryPrevPage();
-            }
-            else if (input == InputType.COMPUTED)
-            {
-            }
-            else if (input == InputType.RELEASED)
-            {
-            }
-        }
     }
 }
