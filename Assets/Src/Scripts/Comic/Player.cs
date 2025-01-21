@@ -24,6 +24,8 @@ namespace Comic
             m_inputsController.onJumpAction += OnJump;
             m_inputsController.onSprintAction += OnSprint;
             m_inputsController.onInteractAction += OnInteract;
+
+            m_inputsController.Init();
         }
 
         protected override void OnUpdate(float elapsed_time) { }
