@@ -5,11 +5,11 @@ namespace CustomArchitecture
     public class BaseBehaviour : MonoBehaviour
     {
         [Header("BaseBehaviour")]
-        [ReadOnly, SerializeField] private bool m_pause;
+        [ReadOnly, SerializeField] protected bool m_pause;
 
         protected virtual void OnUpdate(float elapsed_time) { }
         protected virtual void OnFixedUpdate(float elapsed_time) { }
-        protected virtual void OnLateUpdate(float elapsed_time) { }
+        protected virtual void OnLateUpdate(float elapsed_time) { }       
 
         public virtual void Pause(bool pause = true)
         {
