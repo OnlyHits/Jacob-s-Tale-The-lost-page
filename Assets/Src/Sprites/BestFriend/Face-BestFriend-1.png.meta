@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 6c81b7ecf9b656d94bb59e8dae58281c
+guid: 809a86244d976fe609ea3aa40353ea63
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7997892418661091109
-    second: FaceJacob_0
-  - first:
-      213: -9204835120496253291
-    second: FaceJacob_1
-  - first:
-      213: 6936266073903686888
-    second: FaceJacob_2
-  - first:
-      213: -6440240080585946661
-    second: FaceJacob_3
+      213: 7602418982505440909
+    second: Face-BestFriend-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FaceJacob_0
+      name: Face-BestFriend-1_0
       rect:
         serializedVersion: 2
-        x: 170
-        y: 399
-        width: 250
-        height: 77
+        x: 66
+        y: 97
+        width: 364
+        height: 391
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5278516b7c83efe60800000000000000
-      internalID: 7997892418661091109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceJacob_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 277
-        width: 89
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 596e7ca2a3bd14080800000000000000
-      internalID: -9204835120496253291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceJacob_2
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 276
-        width: 88
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8e46f9a8e31924060800000000000000
-      internalID: 6936266073903686888
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceJacob_3
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 176
-        width: 99
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd90170c4cbaf96a0800000000000000
-      internalID: -6440240080585946661
+      spriteID: d866ce509c7318960800000000000000
+      internalID: 7602418982505440909
       vertices: []
       indices: 
       edges: []
@@ -200,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -209,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      FaceJacob_0: 7997892418661091109
-      FaceJacob_1: -9204835120496253291
-      FaceJacob_2: 6936266073903686888
-      FaceJacob_3: -6440240080585946661
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

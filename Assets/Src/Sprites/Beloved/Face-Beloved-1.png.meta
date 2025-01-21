@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 084e07b96229249f9ae5c91f91c7ab93
+guid: bd989e82bf2b52101b32a65775b5ba62
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2367645784240468100
-    second: FaceBully-1_0
-  - first:
-      213: 6191093002108099290
-    second: FaceBully-1_1
+      213: 9193074834588459267
+    second: Face-Beloved-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FaceBully-1_0
+      name: Face-Beloved-1_0
       rect:
         serializedVersion: 2
-        x: 83
-        y: 86
-        width: 311
-        height: 346
+        x: 58
+        y: 13
+        width: 417
+        height: 499
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 480ba93eb419bd020800000000000000
-      internalID: 2367645784240468100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceBully-1_1
-      rect:
-        serializedVersion: 2
-        x: 323
-        y: 97
-        width: 103
-        height: 201
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ada5f0a984e2be550800000000000000
-      internalID: 6191093002108099290
+      spriteID: 3016a35eadc549f70800000000000000
+      internalID: 9193074834588459267
       vertices: []
       indices: 
       edges: []

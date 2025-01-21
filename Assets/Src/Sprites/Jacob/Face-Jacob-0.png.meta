@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: fbfcafe7169a07c0baea6b501de03c5e
+guid: 8f2c9828c4a808e04bc1872ce499dac4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6823735432234625124
-    second: FaceJacob-Child_0
-  - first:
-      213: -3707736569279324955
-    second: FaceJacob-Child_1
-  - first:
-      213: -8995807508559847977
-    second: FaceJacob-Child_2
-  - first:
-      213: -5855493021368273202
-    second: FaceJacob-Child_3
+      213: -5623998970780724168
+    second: Face-Jacob-0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FaceJacob-Child_0
+      name: Face-Jacob-0_0
       rect:
         serializedVersion: 2
-        x: 226
-        y: 398
-        width: 113
-        height: 72
+        x: 65
+        y: 117
+        width: 305
+        height: 353
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c97986037c83d41a0800000000000000
-      internalID: -6823735432234625124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceJacob-Child_1
-      rect:
-        serializedVersion: 2
-        x: 120
-        y: 277
-        width: 89
-        height: 93
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ec51631c397b8cc0800000000000000
-      internalID: -3707736569279324955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceJacob-Child_2
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 276
-        width: 88
-        height: 90
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7dd9f789bb8782380800000000000000
-      internalID: -8995807508559847977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FaceJacob-Child_3
-      rect:
-        serializedVersion: 2
-        x: 183
-        y: 176
-        width: 99
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ec6b09cee1c1dbea0800000000000000
-      internalID: -5855493021368273202
+      spriteID: 834d379bbba83f1b0800000000000000
+      internalID: -5623998970780724168
       vertices: []
       indices: 
       edges: []
@@ -210,10 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FaceJacob-Child_0: -6823735432234625124
-      FaceJacob-Child_1: -3707736569279324955
-      FaceJacob-Child_2: -8995807508559847977
-      FaceJacob-Child_3: -5855493021368273202
+      Face-Jacob-0_0: -5623998970780724168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

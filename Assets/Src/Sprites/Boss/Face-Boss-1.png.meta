@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 076eae6cdfddfbc92a51f70f1da583a0
+guid: 40af981383d1c6ceb8bfeebb3be5eacf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3816386646433834653
-    second: FaceBeloved-1_0
+      213: 5154895282646757386
+    second: Face-Boss-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FaceBeloved-1_0
+      name: Face-Boss-1_0
       rect:
         serializedVersion: 2
-        x: 54
-        y: 13
-        width: 421
-        height: 499
+        x: 6
+        y: 0
+        width: 506
+        height: 447
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36954cda098790bc0800000000000000
-      internalID: -3816386646433834653
+      spriteID: a003f70a2fdd98740800000000000000
+      internalID: 5154895282646757386
       vertices: []
       indices: 
       edges: []
