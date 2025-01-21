@@ -83,9 +83,9 @@ namespace Comic
 
         abstract public void Init();
 
-        protected override void OnUpdate(float elapsed_time)
+        protected override void OnLateUpdate(float elapsed_time)
         {
-            base.OnUpdate(elapsed_time);
+            base.OnLateUpdate(elapsed_time);
 
             foreach (var ias in m_inputActionStructsV2)
             {

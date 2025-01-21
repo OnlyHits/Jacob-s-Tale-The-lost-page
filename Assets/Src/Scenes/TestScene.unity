@@ -9173,7 +9173,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1225921132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9189,11 +9189,16 @@ MonoBehaviour:
   m_pause: 0
   m_inputsController: {fileID: 0}
   m_rb: {fileID: 1225921131}
-  m_speed: 1000
+  m_sprites: []
   m_isGrounded: 0
   m_isMoving: 0
-  m_jumpForce: 10
+  m_faceRight: 1
+  m_speed: 500
+  m_isJumping: 0
+  m_jumpForce: 6.5
+  m_isFalling: 0
   m_pageManager: {fileID: 2012221684}
+  m_animator: {fileID: 1225921133}
 --- !u!95 &1225921133
 Animator:
   serializedVersion: 7
@@ -11763,8 +11768,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571612432}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.142, y: -0.287, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11818,7 +11823,7 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 1
+  m_DrawMode: 0
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0

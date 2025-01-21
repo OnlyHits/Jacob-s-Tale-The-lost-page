@@ -68,9 +68,9 @@ namespace Comic
                 m_inputActionStructsBool.Add(iPrevPage);
             }
 
-            protected override void OnUpdate(float elapsed_time)
+            protected override void OnLateUpdate(float elapsed_time)
             {
-                base.OnUpdate(elapsed_time);
+                base.OnLateUpdate(elapsed_time);
             }
         }
     }
