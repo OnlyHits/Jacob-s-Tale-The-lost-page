@@ -1,7 +1,12 @@
 using UnityEngine;
+using CustomArchitecture;
 
-public abstract class AView : MonoBehaviour {
-    public virtual void Hide() => gameObject.SetActive(false);
-    public virtual void Show() => gameObject.SetActive(true);
-    public abstract void Init();
+namespace Comic
+{
+    public abstract class AView : BaseBehaviour
+    {
+        public virtual void Hide() => gameObject.SetActive(false);
+        public virtual void Show() => gameObject.SetActive(true);
+        public abstract void Init();
+    }
 }

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Face-Beloved-1_0: 9193074834588459267
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

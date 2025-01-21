@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Face-Bully-1_0: -8918802008955394266
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

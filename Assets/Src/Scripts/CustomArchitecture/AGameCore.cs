@@ -72,8 +72,8 @@ namespace CustomArchitecture
 
             if (game_mode != null)
             {
-                game_mode.Init(this, parameters);
                 m_gameModes.Add(game_mode);
+                game_mode.Init(this, parameters);
             }
             else
             {

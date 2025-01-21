@@ -12,6 +12,7 @@ namespace Comic
         Voice_Bethany, // voice belove
         Voice_Dylan, // voice bully
         Voice_Ivyc, // voice boss
+        Voice_None
     }
 
     public enum PowerType
@@ -20,6 +21,7 @@ namespace Comic
         Power_Telekinesis,
         Power_Dummy,
         Power_Rotate_Room,
+        Power_None,
     }
 
     public enum Chapters
@@ -28,12 +30,13 @@ namespace Comic
         The_First_Chapter,
         The_Second_Chapter,
         The_Third_Chapter,
+        Chapter_None
     }
 
     [System.Serializable]
     public class ChapterConfig
     {
-        public VoiceType    m_pnj;
+        public VoiceType    m_voiceType;
         public PowerType    m_powerType;
         public List<int>    m_pages; 
     }
@@ -53,6 +56,62 @@ namespace Comic
             Load();
         }
 
+        public Chapters GetChapterByPower(PowerType type)
+        {
+            foreach (var chapter in m_config)
+            {
+                if (chapter.Value.m_powerType == type)
+                    return chapter.Key;
+            }
+
+            return Chapters.Chapter_None;
+        }
+
+        public Chapters GetChapterByVoice(VoiceType type)
+        {
+            foreach (var chapter in m_config)
+            {
+                if (chapter.Value.m_voiceType == type)
+                    return chapter.Key;
+            }
+
+            return Chapters.Chapter_None;
+        }
+
+        public PowerType GetPowerByChapter(Chapters type)
+        {
+            if (!m_config.ContainsKey(type))
+            {
+                Debug.LogWarning("Doesn't find chapter");
+                return PowerType.Power_None;
+            }
+
+            return m_config[type].m_powerType;
+        }
+
+        public VoiceType GetVoiceByChapter(Chapters type)
+        {
+            if (!m_config.ContainsKey(type))
+            {
+                Debug.LogWarning("Doesn't find chapter");
+                return VoiceType.Voice_None;
+            }
+
+            return m_config[type].m_voiceType;
+        }
+
+
+        public ChapterConfig GetChapterDatas(Chapters type)
+        {
+            if (!m_config.ContainsKey(type))
+            {
+                Debug.LogWarning("Couldn't find chapter");
+                return null;
+            }
+
+            return m_config[type];
+        }
+
         [Button("Save")]
         private void SaveData()
         {
@@ -60,7 +119,6 @@ namespace Comic
             Debug.Log("Data saved successfully!");
         }
 
-        // Method to load data
         [Button("Load")]
         private void LoadData()
         {
