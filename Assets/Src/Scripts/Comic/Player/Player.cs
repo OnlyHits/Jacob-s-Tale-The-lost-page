@@ -8,7 +8,7 @@ namespace Comic
     {
         [SerializeField, ReadOnly] private PlayerInputsController m_inputsController;
         [SerializeField] private Rigidbody2D m_rb;
-        [SerializeField] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
+        [HideInInspector] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
 
         [Header("Grounded")]
         [SerializeField, ReadOnly] private bool m_isGrounded = false;
@@ -119,7 +119,8 @@ namespace Comic
             Vector2 newVel = v * m_speed;
             Vector2 currentVel = new Vector2(m_rb.linearVelocity.x, m_isJumping ? 0 : m_rb.linearVelocity.y);
             Vector2 expectedVel = (newVel - currentVel) * Time.fixedDeltaTime;
-            m_rb.AddForce(expectedVel, ForceMode2D.Force);
+            m_rb.linearVelocityX = expectedVel.x;
+            //m_rb.AddForce(expectedVel, ForceMode2D.Force);
         }
         private void StopMove(Vector2 v)
         {
@@ -142,6 +143,10 @@ namespace Comic
             m_isJumping = true;
 
             Vector2 direction = Vector2.up;
+            //Vector2 newVel = m_jumpForce * direction;
+            //Vector2 currentVel = new Vector2(0, m_rb.linearVelocity.y);
+            //Vector2 expectedVel = (newVel - currentVel) * Time.fixedDeltaTime;
+            //m_rb.linearVelocityY = expectedVel.y;
             m_rb.AddForce(m_jumpForce * direction, ForceMode2D.Impulse);
         }
         #endregion JUMP
