@@ -1,0 +1,514 @@
+fileFormatVersion: 2
+guid: 78915bf61c677af6685b48fe9a093ed8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5643485520990775010
+    second: SpriteSheet-Bodies-Jacob_0
+  - first:
+      213: 5185483503182589919
+    second: SpriteSheet-Bodies-Jacob_1
+  - first:
+      213: 5989478397433843374
+    second: SpriteSheet-Bodies-Jacob_2
+  - first:
+      213: 4853499233197838096
+    second: SpriteSheet-Bodies-Jacob_3
+  - first:
+      213: -8593337773250879706
+    second: SpriteSheet-Bodies-Jacob_4
+  - first:
+      213: 7474898083989243642
+    second: SpriteSheet-Bodies-Jacob_5
+  - first:
+      213: -4523565796373410846
+    second: SpriteSheet-Bodies-Jacob_6
+  - first:
+      213: -2301711683170085643
+    second: SpriteSheet-Bodies-Jacob_7
+  - first:
+      213: 8170532428578481203
+    second: SpriteSheet-Bodies-Jacob_8
+  - first:
+      213: -4665729273522268781
+    second: SpriteSheet-Bodies-Jacob_9
+  - first:
+      213: 7709876641530443515
+    second: SpriteSheet-Bodies-Jacob_10
+  - first:
+      213: 2570725995629126017
+    second: SpriteSheet-Bodies-Jacob_11
+  - first:
+      213: -9221647357838000581
+    second: SpriteSheet-Bodies-Jacob_12
+  - first:
+      213: 7385808023153447821
+    second: SpriteSheet-Bodies-Jacob_13
+  - first:
+      213: -7399659779903932603
+    second: SpriteSheet-Bodies-Jacob_14
+  - first:
+      213: -5817643230227274529
+    second: SpriteSheet-Bodies-Jacob_15
+  - first:
+      213: 7532584315865454136
+    second: SpriteSheet-Bodies-Jacob_16
+  - first:
+      213: -5771692095168559638
+    second: SpriteSheet-Bodies-Jacob_17
+  - first:
+      213: 6321493919357859821
+    second: SpriteSheet-Bodies-Jacob_18
+  - first:
+      213: 2999756822762201267
+    second: SpriteSheet-Bodies-Jacob_19
+  - first:
+      213: -9198703035840362795
+    second: SpriteSheet-Bodies-Jacob_20
+  - first:
+      213: 7492961243432009208
+    second: SpriteSheet-Bodies-Jacob_21
+  - first:
+      213: -5036581749461481604
+    second: SpriteSheet-Bodies-Jacob_22
+  - first:
+      213: -223439557239759630
+    second: SpriteSheet-Bodies-Jacob_23
+  - first:
+      213: 2179243608076559839
+    second: SpriteSheet-Bodies-Jacob_24
+  - first:
+      213: 20274843322642387
+    second: SpriteSheet-Bodies-Jacob_25
+  - first:
+      213: -1401129928164977524
+    second: SpriteSheet-Bodies-Jacob_26
+  - first:
+      213: -6274585081600872069
+    second: SpriteSheet-Bodies-Jacob_27
+  - first:
+      213: -7434799298075873365
+    second: SpriteSheet-Bodies-Jacob_28
+  - first:
+      213: -3436341251699240417
+    second: SpriteSheet-Bodies-Jacob_29
+  - first:
+      213: -765156960194085652
+    second: SpriteSheet-Bodies-Jacob_30
+  - first:
+      213: 1976749705061449472
+    second: SpriteSheet-Bodies-Jacob_31
+  - first:
+      213: -4561783030672831087
+    second: SpriteSheet-Bodies-Jacob_32
+  - first:
+      213: -2860924144031593930
+    second: SpriteSheet-Bodies-Jacob_33
+  - first:
+      213: -5368576819963808855
+    second: SpriteSheet-Bodies-Jacob_34
+  - first:
+      213: 7729390921864433772
+    second: SpriteSheet-Bodies-Jacob_35
+  - first:
+      213: -2792635727409740276
+    second: SpriteSheet-Bodies-Jacob_36
+  - first:
+      213: -2274409828184270525
+    second: SpriteSheet-Bodies-Jacob_37
+  - first:
+      213: -1688366865258026588
+    second: SpriteSheet-Bodies-Jacob_38
+  - first:
+      213: -8372422502102167793
+    second: SpriteSheet-Bodies-Jacob_39
+  - first:
+      213: 6396266435672152126
+    second: SpriteSheet-Bodies-Jacob_40
+  - first:
+      213: 8044799652877367234
+    second: SpriteSheet-Bodies-Jacob_41
+  - first:
+      213: 6109159929349040101
+    second: SpriteSheet-Bodies-Jacob_42
+  - first:
+      213: -7380245118293686191
+    second: SpriteSheet-Bodies-Jacob_43
+  - first:
+      213: 6845817496781588927
+    second: SpriteSheet-Bodies-Jacob_44
+  - first:
+      213: 2227319365259392350
+    second: SpriteSheet-Bodies-Jacob_45
+  - first:
+      213: -5309509830706435829
+    second: SpriteSheet-Bodies-Jacob_46
+  - first:
+      213: -6300240241295576056
+    second: SpriteSheet-Bodies-Jacob_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08d6471d66dc8bb5cadfe1116ed5629e
+      internalID: -1386448900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f253c4b9dd802060ca66710e5aed50b3
+      internalID: -598226009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a17a11c9bdc847dab7f53c8fa0e0d99
+      internalID: -975464753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d255b8dac11ea1ca6bc4932bcf7872
+      internalID: -797887428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc33b9506a34d871dae682b469962535
+      internalID: -1887919995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3653b8f8747c662f0a6873af92e59ea3
+      internalID: 1284310729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a345f1ce10ae78827bf67ce605c6fae1
+      internalID: -562004816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b35570808d167cf108f082a49b7208f2
+      internalID: -262933242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff10c1d152a61f9349039a337746a3d1
+      internalID: -176797643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd84d0eba376c257b2c7982e820046e
+      internalID: -1211703424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Bodies-Jacob_10
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da99eb2aa7df483c789149559053623b
+      internalID: 2075786329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0f0b78ad4c28a2c5e94e2fc57fb17693
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet-Bodies-Jacob_0: -1386448900
+      SpriteSheet-Bodies-Jacob_1: -598226009
+      SpriteSheet-Bodies-Jacob_10: 2075786329
+      SpriteSheet-Bodies-Jacob_2: -975464753
+      SpriteSheet-Bodies-Jacob_3: -797887428
+      SpriteSheet-Bodies-Jacob_4: -1887919995
+      SpriteSheet-Bodies-Jacob_5: 1284310729
+      SpriteSheet-Bodies-Jacob_6: -562004816
+      SpriteSheet-Bodies-Jacob_7: -262933242
+      SpriteSheet-Bodies-Jacob_8: -176797643
+      SpriteSheet-Bodies-Jacob_9: -1211703424
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -45,8 +45,8 @@ namespace Comic
                 m_jumpAction = InputSystem.actions.FindAction("Jump");
                 m_sprintAction = InputSystem.actions.FindAction("Sprint");
                 m_interactAction = InputSystem.actions.FindAction("Interact");
-                // m_nextPageAction = InputSystem.actions.FindAction("NextPage");
-                // m_prevPageAction = InputSystem.actions.FindAction("PrevPage");
+                m_nextPageAction = InputSystem.actions.FindAction("NextPage");
+                m_prevPageAction = InputSystem.actions.FindAction("PrevPage");
             }
 
             private void InitInputActions()
@@ -56,21 +56,21 @@ namespace Comic
                 InputActionStruct<bool> iJump = new InputActionStruct<bool>(m_jumpAction, onJumpAction, false);
                 InputActionStruct<bool> iSprint = new InputActionStruct<bool>(m_sprintAction, onSprintAction, false);
                 InputActionStruct<bool> iInteract = new InputActionStruct<bool>(m_interactAction, onInteractAction, false);
-                // InputActionStruct<bool> iNextPage = new InputActionStruct<bool>(m_nextPageAction, onNextPageAction, false);
-                // InputActionStruct<bool> iPrevPage = new InputActionStruct<bool>(m_prevPageAction, onPrevPageAction, false);
+                InputActionStruct<bool> iNextPage = new InputActionStruct<bool>(m_nextPageAction, onNextPageAction, false);
+                InputActionStruct<bool> iPrevPage = new InputActionStruct<bool>(m_prevPageAction, onPrevPageAction, false);
 
                 m_inputActionStructsV2.Add(iMove);
                 m_inputActionStructsV2.Add(iLook);
                 m_inputActionStructsBool.Add(iJump);
                 m_inputActionStructsBool.Add(iSprint);
                 m_inputActionStructsBool.Add(iInteract);
-                // m_inputActionStructsBool.Add(iNextPage);
-                // m_inputActionStructsBool.Add(iPrevPage);
+                m_inputActionStructsBool.Add(iNextPage);
+                m_inputActionStructsBool.Add(iPrevPage);
             }
 
-            protected override void OnUpdate(float elapsed_time)
+            protected override void OnLateUpdate(float elapsed_time)
             {
-                base.OnUpdate(elapsed_time);
+                base.OnLateUpdate(elapsed_time);
             }
         }
     }
