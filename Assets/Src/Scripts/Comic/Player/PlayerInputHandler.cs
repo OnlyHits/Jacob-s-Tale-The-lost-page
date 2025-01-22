@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Comic
 {
-    public partial class Player : BaseBehaviour
+    public partial class Player : Character
     {
         private void OnMove(InputType input, Vector2 v)
         {
