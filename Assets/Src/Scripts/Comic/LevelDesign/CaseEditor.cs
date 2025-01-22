@@ -17,6 +17,7 @@ namespace Comic
         public CaseColliderEditor m_colliderEditor;
         public CaseDecorEditor m_decorEditor;
 
+        #region DECOR FIELDS
         [Space]
         [OnValueChanged("OnDecorFieldChanged")]
         public DecorType m_decorType;
@@ -32,10 +33,10 @@ namespace Comic
         [OnValueChanged("OnDecorFieldChanged")]
         [ShowIf("IsRoom")]
         public Sprite m_ceilingSprite;
+        #endregion DECOR FIELDS
 
         private Vector3 m_lastPosition = Vector2.zero;
         private Vector3 m_lastScale = Vector2.zero;
-
 
         [Button("Refresh All")]
         private void RefreshComponents()
@@ -76,6 +77,11 @@ namespace Comic
 
         private bool IsRoom() => m_decorType == DecorType.Room;
         private bool IsRoomOrOutside() => m_decorType == DecorType.Room || m_decorType == DecorType.Outside;
+
+        public void EnableCanvasVisual(bool enable)
+        {
+            m_canvasEditor?.EnableVisual(enable);
+        }
 
     }
 }

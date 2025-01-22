@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Comic
 {
@@ -9,6 +10,10 @@ namespace Comic
         public Transform m_caseSprite;
         public Canvas m_canvas;
         [SerializeField, ReadOnly] private RectTransform m_rectCanvas;
+        [SerializeField] private Image m_leftMargin;
+        [SerializeField] private Image m_rightMargin;
+        [SerializeField] private Image m_topMargin;
+        [SerializeField] private Image m_botMargin;
 
         private bool TryInit()
         {
@@ -48,6 +53,14 @@ namespace Comic
             float h = m_caseSprite.transform.localScale.y;
 
             m_rectCanvas.sizeDelta = new Vector2(w, h);
+        }
+
+        public void EnableVisual(bool enable)
+        {
+            m_leftMargin.enabled = enable;
+            m_rightMargin.enabled = enable;
+            m_topMargin.enabled = enable;
+            m_botMargin.enabled = enable;
         }
     }
 }
