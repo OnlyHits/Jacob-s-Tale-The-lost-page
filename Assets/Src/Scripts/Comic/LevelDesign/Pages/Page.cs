@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using CustomArchitecture;
 using Unity.Cinemachine;
 using UnityEngine;
