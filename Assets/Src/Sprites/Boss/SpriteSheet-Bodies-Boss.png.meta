@@ -1,22 +1,43 @@
 fileFormatVersion: 2
-guid: 9755d3bfb8805d63a8bd3e786d5ff770
+guid: 23858ea5912b6734cbbdb7847e34db38
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1544410205640172775
-    second: Body-Jacob-Idle_0
+      213: -7518654210422930428
+    second: SpriteSheet-Bodies-Boss_0
   - first:
-      213: 6820305416238610679
-    second: Body-Jacob-Idle_1
+      213: 7269499947629584733
+    second: SpriteSheet-Bodies-Boss_1
   - first:
-      213: 3632447125271459174
-    second: Body-Jacob-Idle_2
+      213: -1655574221657875741
+    second: SpriteSheet-Bodies-Boss_2
   - first:
-      213: -5388103506610857330
-    second: Body-Jacob-Idle_3
+      213: 5384696088186714172
+    second: SpriteSheet-Bodies-Boss_3
   - first:
-      213: -6659225140393361288
-    second: Body-Jacob-Idle_4
+      213: -6991756749181475810
+    second: SpriteSheet-Bodies-Boss_4
+  - first:
+      213: -5850189032685138534
+    second: SpriteSheet-Bodies-Boss_5
+  - first:
+      213: 3633461934139561413
+    second: SpriteSheet-Bodies-Boss_6
+  - first:
+      213: 9148993383829119595
+    second: SpriteSheet-Bodies-Boss_7
+  - first:
+      213: -1223348718371605431
+    second: SpriteSheet-Bodies-Boss_8
+  - first:
+      213: -3742651190081712805
+    second: SpriteSheet-Bodies-Boss_9
+  - first:
+      213: 3631548272572359752
+    second: SpriteSheet-Bodies-Boss_10
+  - first:
+      213: -2779653199675099922
+    second: SpriteSheet-Bodies-Boss_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,9 +79,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -112,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Body-Jacob-Idle_0
+      name: SpriteSheet-Bodies-Boss_0
       rect:
         serializedVersion: 2
-        x: 288
-        y: 229
-        width: 57
-        height: 66
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +148,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91b5451c917219ae0800000000000000
-      internalID: -1544410205640172775
+      spriteID: 4040fb6c4df58a790800000000000000
+      internalID: -7518654210422930428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Jacob-Idle_1
+      name: SpriteSheet-Bodies-Boss_1
       rect:
         serializedVersion: 2
-        x: 368
-        y: 216
-        width: 165
-        height: 145
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +170,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7f8339af3a796ae50800000000000000
-      internalID: 6820305416238610679
+      spriteID: d51ae29dfa372e460800000000000000
+      internalID: 7269499947629584733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Jacob-Idle_2
+      name: SpriteSheet-Bodies-Boss_2
       rect:
         serializedVersion: 2
-        x: 575
-        y: 243
-        width: 46
-        height: 41
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 665b1373a6b096230800000000000000
-      internalID: 3632447125271459174
+      spriteID: 3ead9ca54083609e0800000000000000
+      internalID: -1655574221657875741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Jacob-Idle_3
+      name: SpriteSheet-Bodies-Boss_3
       rect:
         serializedVersion: 2
-        x: 347
-        y: 105
-        width: 100
-        height: 71
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,30 +214,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8a5c6b786c9935b0800000000000000
-      internalID: -5388103506610857330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Body-Jacob-Idle_4
-      rect:
-        serializedVersion: 2
-        x: 458
-        y: 112
-        width: 116
-        height: 61
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 870c083540ea593a0800000000000000
-      internalID: -6659225140393361288
+      spriteID: c38fdc710984aba40800000000000000
+      internalID: 5384696088186714172
       vertices: []
       indices: 
       edges: []
@@ -225,7 +224,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 10e30fbd098bfc71e86400480e9e05dd
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +234,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Body-Jacob-Idle_0: -1544410205640172775
-      Body-Jacob-Idle_1: 6820305416238610679
-      Body-Jacob-Idle_2: 3632447125271459174
-      Body-Jacob-Idle_3: -5388103506610857330
-      Body-Jacob-Idle_4: -6659225140393361288
+      SpriteSheet-Bodies-Boss_0: -7518654210422930428
+      SpriteSheet-Bodies-Boss_1: 7269499947629584733
+      SpriteSheet-Bodies-Boss_2: -1655574221657875741
+      SpriteSheet-Bodies-Boss_3: 5384696088186714172
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,22 +1,61 @@
 fileFormatVersion: 2
-guid: 78290cdb26c7f0129b87cc7f977c1dff
+guid: 409db31b82fe3c9768393db3051c1b22
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5911039921408238243
-    second: Body-Jacob-Idle-2_0
+      213: -4254753025929262123
+    second: SpriteSheet-Bodies-Beloved_0
   - first:
-      213: 6942234470481683028
-    second: Body-Jacob-Idle-2_1
+      213: -2956119755520863338
+    second: SpriteSheet-Bodies-Beloved_1
   - first:
-      213: -764361414147276579
-    second: Body-Jacob-Idle-2_2
+      213: 8138006034491636709
+    second: SpriteSheet-Bodies-Beloved_2
   - first:
-      213: 2390809470950621343
-    second: Body-Jacob-Idle-2_3
+      213: -2900178352373147503
+    second: SpriteSheet-Bodies-Beloved_3
   - first:
-      213: -3922865044364697006
-    second: Body-Jacob-Idle-2_4
+      213: -3288130307984633919
+    second: SpriteSheet-Bodies-Beloved_4
+  - first:
+      213: -6103837185561025383
+    second: SpriteSheet-Bodies-Beloved_5
+  - first:
+      213: -8691543809950470025
+    second: SpriteSheet-Bodies-Beloved_6
+  - first:
+      213: -66735344888655271
+    second: SpriteSheet-Bodies-Beloved_7
+  - first:
+      213: 8901335960727906489
+    second: SpriteSheet-Bodies-Beloved_8
+  - first:
+      213: -1514781144126050098
+    second: SpriteSheet-Bodies-Beloved_9
+  - first:
+      213: 982165562051114819
+    second: SpriteSheet-Bodies-Beloved_10
+  - first:
+      213: 5266988914045419667
+    second: SpriteSheet-Bodies-Beloved_11
+  - first:
+      213: 7205238355967265545
+    second: SpriteSheet-Bodies-Beloved_12
+  - first:
+      213: -3382275166946126839
+    second: SpriteSheet-Bodies-Beloved_13
+  - first:
+      213: 3809126352631519671
+    second: SpriteSheet-Bodies-Beloved_14
+  - first:
+      213: -1986381148458480861
+    second: SpriteSheet-Bodies-Beloved_15
+  - first:
+      213: 924663880574761896
+    second: SpriteSheet-Bodies-Beloved_16
+  - first:
+      213: -8962651718048415551
+    second: SpriteSheet-Bodies-Beloved_17
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,9 +97,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -112,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Body-Jacob-Idle-2_0
+      name: SpriteSheet-Bodies-Beloved_0
       rect:
         serializedVersion: 2
-        x: 306
-        y: 222
-        width: 49
-        height: 49
+        x: 0
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5d1f4f6284c7fda0800000000000000
-      internalID: -5911039921408238243
+      spriteID: 5dbc7726aa414f4c0800000000000000
+      internalID: -4254753025929262123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Jacob-Idle-2_1
+      name: SpriteSheet-Bodies-Beloved_1
       rect:
         serializedVersion: 2
-        x: 371
-        y: 207
-        width: 167
-        height: 172
+        x: 512
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +188,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 45268882875c75060800000000000000
-      internalID: 6942234470481683028
+      spriteID: 6931aaa9eb0c9f6d0800000000000000
+      internalID: -2956119755520863338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Jacob-Idle-2_2
+      name: SpriteSheet-Bodies-Beloved_2
       rect:
         serializedVersion: 2
-        x: 566
-        y: 225
-        width: 47
-        height: 46
+        x: 1024
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dd08cb5f7517465f0800000000000000
-      internalID: -764361414147276579
+      spriteID: 5ebfbd11f5100f070800000000000000
+      internalID: 8138006034491636709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body-Jacob-Idle-2_3
+      name: SpriteSheet-Bodies-Beloved_3
       rect:
         serializedVersion: 2
-        x: 348
-        y: 105
-        width: 91
-        height: 64
+        x: 1536
+        y: 1536
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,30 +232,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f90c6a9fb8cdd2120800000000000000
-      internalID: 2390809470950621343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Body-Jacob-Idle-2_4
-      rect:
-        serializedVersion: 2
-        x: 461
-        y: 111
-        width: 114
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 25268d0c60f2f89c0800000000000000
-      internalID: -3922865044364697006
+      spriteID: 1985581872f70c7d0800000000000000
+      internalID: -2900178352373147503
       vertices: []
       indices: 
       edges: []
@@ -225,7 +242,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 225a921853f18a8bb84e3365dc1e6d8c
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +252,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Body-Jacob-Idle-2_0: -5911039921408238243
-      Body-Jacob-Idle-2_1: 6942234470481683028
-      Body-Jacob-Idle-2_2: -764361414147276579
-      Body-Jacob-Idle-2_3: 2390809470950621343
-      Body-Jacob-Idle-2_4: -3922865044364697006
+      SpriteSheet-Bodies-Beloved_0: -4254753025929262123
+      SpriteSheet-Bodies-Beloved_1: -2956119755520863338
+      SpriteSheet-Bodies-Beloved_2: 8138006034491636709
+      SpriteSheet-Bodies-Beloved_3: -2900178352373147503
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
