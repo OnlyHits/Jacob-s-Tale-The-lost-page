@@ -18,11 +18,22 @@ namespace Comic
         public CaseDecorEditor m_decorEditor;
 
         [Space]
+        [OnValueChanged("OnDecorFieldChanged")]
         public DecorType m_decorType;
+
+        [OnValueChanged("OnDecorFieldChanged")]
+        [ShowIf("IsRoomOrOutside")]
         public Sprite m_backgroundSprite;
+
+        [OnValueChanged("OnDecorFieldChanged")]
+        [ShowIf("IsRoomOrOutside")]
         public Sprite m_groundSprite;
+
+        [OnValueChanged("OnDecorFieldChanged")]
+        [ShowIf("IsRoom")]
         public Sprite m_ceilingSprite;
 
+        private Vector3 m_lastPosition = Vector2.zero;
         private Vector3 m_lastScale = Vector2.zero;
 
 
@@ -39,7 +50,7 @@ namespace Comic
 
         private void TryRefresh()
         {
-            if (m_lastScale == transform.localScale)
+            if (m_lastScale == transform.localScale && m_lastPosition == transform.position)
             {
                 return;
             }
@@ -49,13 +60,22 @@ namespace Comic
             m_decorEditor?.Refresh();
 
             m_lastScale = transform.localScale;
+            m_lastPosition = transform.position;
         }
 
-        private void OnDecordChanged()
+        private void OnDecorFieldChanged()
         {
+            if (m_decorType == DecorType.Outside)
+            {
+                m_ceilingSprite = null;
+            }
+
             CaseDecorProvider provider = new CaseDecorProvider(m_decorType, m_backgroundSprite, m_groundSprite, m_ceilingSprite);
             m_decorEditor?.Setup(provider);
         }
+
+        private bool IsRoom() => m_decorType == DecorType.Room;
+        private bool IsRoomOrOutside() => m_decorType == DecorType.Room || m_decorType == DecorType.Outside;
 
     }
 }

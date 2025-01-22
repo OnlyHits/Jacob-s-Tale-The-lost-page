@@ -70,7 +70,7 @@ namespace Comic
                 return;
             }
 
-            //UpdateElements();
+            UpdateElements();
         }
 
         private void UpdateElements()
