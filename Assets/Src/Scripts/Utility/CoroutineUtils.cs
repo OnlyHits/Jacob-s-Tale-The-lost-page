@@ -4,7 +4,6 @@ using UnityEngine;
 
 public static class CoroutineUtils
 {
-
     public static IEnumerator InvokeRepeating(float delay, float repeatRate, Action lambda, bool unscaleTIme = false)
     {
         if (unscaleTIme == true)
