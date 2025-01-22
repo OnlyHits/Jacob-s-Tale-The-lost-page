@@ -1070,8 +1070,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447586831}
-  - component: {fileID: 447586830}
   - component: {fileID: 447586829}
+  - component: {fileID: 447586830}
   m_Layer: 0
   m_Name: EdgeCollider
   m_TagString: Untagged
@@ -4474,10 +4474,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1989899900}
+  - component: {fileID: 1989899896}
   - component: {fileID: 1989899897}
   - component: {fileID: 1989899899}
   - component: {fileID: 1989899898}
-  - component: {fileID: 1989899896}
   m_Layer: 5
   m_Name: Canvas Margins
   m_TagString: Untagged
