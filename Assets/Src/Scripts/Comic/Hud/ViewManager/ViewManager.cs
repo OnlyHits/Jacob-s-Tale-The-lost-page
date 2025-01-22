@@ -1,64 +1,80 @@
 using System.Collections.Generic;
 using UnityEngine;
+using CustomArchitecture;
 
-public class ViewManager : MonoBehaviour {
-    private static ViewManager m_instance;
-    [SerializeField] private AView m_startingView;
-    [SerializeField] private AView[] m_views;
-    private AView m_currentView;
-    private readonly Stack<AView> m_history = new Stack<AView>();
-    private void Awake() => m_instance = this;
-
-    public static T GetView<T>() where T : AView
+namespace Comic
+{
+    public class ViewManager : BaseBehaviour
     {
-        for (int i = 0; i < m_instance.m_views.Length; i++) {
-            if (m_instance.m_views[i] is T tView) {
-                return tView;
-            }
-        }
-        return null;
-    }
+        private static ViewManager              m_instance;
+        [SerializeField] private AView          m_startingView;
+        [SerializeField] private AView[]        m_views;
+        private AView                           m_currentView;
+        private readonly Stack<AView>           m_history = new Stack<AView>();
 
-    public static void Show<T>(bool remember = false) where T : AView
-    {
-        for (int i = 0; i < m_instance.m_views.Length; i++) {
-            if (m_instance.m_views[i] is T) {
-                if (m_instance.m_currentView != null) {
-                    if (remember) {
-                        m_instance.m_history.Push(m_instance.m_currentView);
-                    }
-                    m_instance.m_currentView.Hide();
+        public T GetView<T>() where T : AView
+        {
+            for (int i = 0; i < m_views.Length; i++)
+            {
+                if (m_views[i] is T tView)
+                {
+                    return tView;
                 }
-                m_instance.m_views[i].Show();
-                m_instance.m_currentView = m_instance.m_views[i];
+            }
+            return null;
+        }
+
+        public void Show<T>(bool remember = false) where T : AView
+        {
+            for (int i = 0; i < m_views.Length; i++)
+            {
+                if (m_views[i] is T)
+                {
+                    if (m_currentView != null)
+                    {
+                        if (remember)
+                        {
+                            m_history.Push(m_currentView);
+                        }
+                        m_currentView.Hide();
+                    }
+                    m_views[i].Show();
+                    m_currentView = m_views[i];
+                }
             }
         }
-    }
 
-    public static void Show(AView view, bool remember = false) {
-        if (m_instance.m_currentView != null) {
-            if (remember) {
-                m_instance.m_history.Push(m_instance.m_currentView);
+        public void Show(AView view, bool remember = false)
+        {
+            if (m_currentView != null)
+            {
+                if (remember) {
+                    m_history.Push(m_currentView);
+                }
+                m_currentView.Hide();
             }
-            m_instance.m_currentView.Hide();
-        }
-        view.Show();
-        m_instance.m_currentView = view;
-    }
-
-    public static void ShowLast() {
-        if (m_instance.m_history.Count != 0) {
-            Show(m_instance.m_history.Pop(), false);
-        }
-    }
-
-    private void Start() {
-        for (int i = 0; i < m_views.Length; i++) {
-           m_views[i].Init();
-            m_views[i].Hide();
+            view.Show();
+            m_currentView = view;
         }
 
-        if (m_startingView != null)
-            Show(m_startingView, true);
+        public void ShowLast()
+        {
+            if (m_history.Count != 0)
+            {
+                Show(m_history.Pop(), false);
+            }
+        }
+
+        public void Init()
+        {
+            for (int i = 0; i < m_views.Length; i++)
+            {
+                m_views[i].Init();
+                m_views[i].Hide();
+            }
+
+            if (m_startingView != null)
+                Show(m_startingView, true);            
+        }
     }
 }

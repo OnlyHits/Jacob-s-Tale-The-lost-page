@@ -8,22 +8,68 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 1,
+    "$rlength": 4,
     "$rcontent": [
         {
             "$k": 0,
             "$v": {
                 "$id": 2,
                 "$type": "2|Comic.ChapterConfig, Assembly-CSharp",
-                "m_pnj": 0,
+                "m_voiceType": 0,
                 "m_powerType": 0,
                 "m_pages": {
                     "$id": 3,
                     "$type": "3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib",
-                    "$rlength": 2,
+                    "$rlength": 0,
                     "$rcontent": [
-                        1,
-                        2
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 1,
+            "$v": {
+                "$id": 4,
+                "$type": 2,
+                "m_voiceType": 1,
+                "m_powerType": 0,
+                "m_pages": {
+                    "$id": 5,
+                    "$type": 3,
+                    "$rlength": 0,
+                    "$rcontent": [
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 2,
+            "$v": {
+                "$id": 6,
+                "$type": 2,
+                "m_voiceType": 2,
+                "m_powerType": 0,
+                "m_pages": {
+                    "$id": 7,
+                    "$type": 3,
+                    "$rlength": 0,
+                    "$rcontent": [
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 3,
+            "$v": {
+                "$id": 8,
+                "$type": 2,
+                "m_voiceType": 3,
+                "m_powerType": 0,
+                "m_pages": {
+                    "$id": 9,
+                    "$type": 3,
+                    "$rlength": 0,
+                    "$rcontent": [
                     ]
                 }
             }
