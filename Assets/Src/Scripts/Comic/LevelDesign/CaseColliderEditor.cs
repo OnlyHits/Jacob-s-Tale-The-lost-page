@@ -52,9 +52,23 @@ namespace Comic
             UpdateEdges();
         }
 
+        float formulaWidth(float x) => x * (m_caseSprite.transform.localScale.x / 2f);
+        float formulaHeight(float x) => x * (m_caseSprite.transform.localScale.y / 2f);
+
         private void UpdateEdges()
         {
+            m_edgeColliderTransform.position = m_caseSprite.position;
 
+            Vector2 topLeft = new Vector2(formulaWidth(-1), formulaHeight(1));
+            Vector2 topRight = new Vector2(formulaWidth(1), formulaHeight(1));
+            Vector2 botRight = new Vector2(formulaWidth(1), formulaHeight(-1));
+            Vector2 botLeft = new Vector2(formulaWidth(-1), formulaHeight(-1));
+
+            List<Vector2> points = new List<Vector2>() {
+                topLeft, topRight, botRight, botLeft, topLeft
+            };
+
+            m_edgeCollider.SetPoints(points);
         }
     }
 }
