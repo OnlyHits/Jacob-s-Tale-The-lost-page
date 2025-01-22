@@ -19,7 +19,7 @@ namespace Comic
 
         [Header("Move")]
         [SerializeField, ReadOnly] private bool m_isMoving = false;
-        [SerializeField] private bool m_faceRight = true;
+        [SerializeField, ReadOnly] private bool m_faceRight = true;
         [SerializeField] private float m_speed = 10f;
 
         [Header("Jump")]
