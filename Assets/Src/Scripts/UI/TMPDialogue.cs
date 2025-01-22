@@ -52,9 +52,13 @@ public class TMPDialogue : MonoBehaviour
         public DialoguePartOfSide[] _partOfSide;
     }
 
+    [Serializable]
+    public struct DialogueDynamicData
+    {
+        
+    } 
+
     [SerializeField] protected Dialogue[] _dialogues;
-    [SerializeField] private GameObject _dialogueBox;
-    [SerializeField] private Transform _canvasTransform;
     [SerializeField] private float _waveSpeed;
     [SerializeField] private float _waveAmplitude;
     [SerializeField] private Vector2 _bounceSpeed;
@@ -63,8 +67,7 @@ public class TMPDialogue : MonoBehaviour
     [SerializeField] private Vector2 _woodleAmplitude;
     [SerializeField] private float _popDuration;
     [SerializeField] private bool _handleByInput = false;
-    [SerializeField] private Transform _target;
-    [SerializeField] private Vector2 _targetOffset;
+
     //private SoundEffect _soundEffectPlayer;
     protected TMP_Text _textMeshPro;
     protected Coroutine _popCoroutine = null;
@@ -76,11 +79,15 @@ public class TMPDialogue : MonoBehaviour
     protected bool _isCompute = false;
     protected float _currentPopSpeed;
     protected bool _canSkip = false;
-    protected GameObject _dialogueBoxReference = null;
+
+    // protected GameObject _dialogueBoxReference = null;
 
     private void Start()
     {
-        //_soundEffectPlayer = GetComponent<SoundEffect>();
+        _textMeshPro = gameObject.GetComponent<TMP_Text>();
+        if (_textMeshPro == null)
+            Debug.Log("No tmp found");
+
         _currentPopSpeed = _popDuration;
         for (int i = 0; i < _dialogues.Length; ++i)
         {
@@ -90,11 +97,6 @@ public class TMPDialogue : MonoBehaviour
         }
     }
 
-    public void SetCanvasTransform(Transform canvasTransform)
-    {
-        _canvasTransform = canvasTransform;
-    }
-
     public bool HasFinishPop()
     {
         return (_popCoroutine == null);
@@ -102,15 +104,18 @@ public class TMPDialogue : MonoBehaviour
 
     public virtual bool IsFinish()
     {
-        return (_dialogueBoxReference == null);
+        return _isCompute && _popCoroutine == null;
     }
 
     protected void ChangeText(int partOfSideIndex)
     {
         _textMeshPro.text = _dialogues[_dialogueIndex]._partOfSide[partOfSideIndex]._fullText;
+
+        Debug.Log(_textMeshPro.text);
         _partOfSideIndex = partOfSideIndex;
     }
 
+    // can be made once at init and reused
     protected void SetupDialogue(int dialogueIndex)
     {
         int index = 0;
@@ -120,13 +125,6 @@ public class TMPDialogue : MonoBehaviour
             for (int i = 0; i < _dialogues[dialogueIndex]._partOfSide[j]._modifiableText.Length; ++i)
             {
                 _dialogues[dialogueIndex]._partOfSide[j]._modifiableText[i]._colorRandomSpeed = new List<float>();
-
-                /*
-                if (_dialogues[dialogueIndex]._partOfSide[j]._modifiableText[i]._text.Contains("$name$"))
-                {
-                    _dialogues[dialogueIndex]._partOfSide[j]._modifiableText[i]._text = _dialogues[dialogueIndex]._partOfSide[j]._modifiableText[i]._text.Replace("$name$", SaveManager.DataInstance.GetPlayerInfo()._playerName);
-                }
-                */
 
                 if (_dialogues[dialogueIndex]._partOfSide[j]._modifiableText[i]._text.Contains("\\n"))
                 {
@@ -220,14 +218,6 @@ public class TMPDialogue : MonoBehaviour
 
                             if ((updateI = PopCharacter(vertexIndex, time, info)))
                             {
-                                /*
-                                if (_soundEffectPlayer != null) {
-                                    if (_currentPopSpeed == _popDuration)
-                                        _soundEffectPlayer.PlaySound(SoundData.SoundEffectName.UI_CHARACTER_POP);
-                                    else if (i % 4 == 0)
-                                        _soundEffectPlayer.PlaySound(SoundData.SoundEffectName.UI_CHARACTER_POP);
-                                }
-                                */
                                 i++;
                                 time = 0.0f;
                                 
@@ -256,7 +246,7 @@ public class TMPDialogue : MonoBehaviour
             }
             _mesh.colors32 = _colors;
             _mesh.vertices = _vertices;
-            FollowTarget();
+
             yield return null;
         }
         _isCompute = true;
@@ -322,15 +312,6 @@ public class TMPDialogue : MonoBehaviour
         }
     }
 
-    protected void InstantiateDialogueBox()
-    {
-        _dialogueBoxReference = Instantiate(_dialogueBox, _canvasTransform) as GameObject;
-        _textMeshPro = _dialogueBoxReference.transform.GetChild(0).GetComponent<TMP_Text>();
-        if (_textMeshPro == null)
-            Debug.Log("No tmp found");
-        FollowTarget();
-    }
-
     public virtual void StartDialogue(int index)
     {
         if (_popCoroutine != null)
@@ -343,9 +324,6 @@ public class TMPDialogue : MonoBehaviour
             Debug.Log("This dialogue doesn't exist");
             return;
         }
-
-        if (_dialogueBoxReference == null)
-            InstantiateDialogueBox();
 
         _canSkip = true;
         _dialogueIndex = index;
@@ -389,8 +367,6 @@ public class TMPDialogue : MonoBehaviour
             return;
         }
 
-        if (_dialogueBoxReference == null)
-            InstantiateDialogueBox();
         _canSkip = true;
         _dialogueIndex = (int)d;
 
@@ -413,16 +389,11 @@ public class TMPDialogue : MonoBehaviour
         if (_popCoroutine != null)
             StopCoroutine(_popCoroutine);
         _popCoroutine = null;
-        if (_dialogueBoxReference != null)
-            Destroy(_dialogueBoxReference);
-        _dialogueBoxReference = null;
         _textMeshPro = null;
     }
 
     private void UpdateInput()
     {
-        if (_dialogueBoxReference == null)
-            return;
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (_popCoroutine == null)
@@ -489,8 +460,6 @@ public class TMPDialogue : MonoBehaviour
         }
         _mesh.vertices = _vertices;
         _mesh.colors32 = _colors;
-
-        FollowTarget();
     }
 
     public string[] GetDialogueNames()
@@ -505,31 +474,20 @@ public class TMPDialogue : MonoBehaviour
         return dialogNames;
     }
 
-    private void FollowTarget()
-    {
-        if (_target != null)
-        {
-            var canvasRect = _canvasTransform.gameObject.GetComponent<RectTransform>();
-            Vector2 viewportPosition = Camera.main.WorldToViewportPoint(_target.transform.position + (Vector3)_targetOffset);
-            Vector2 worldObject_ScreenPosition = new Vector2(
-            ((viewportPosition.x * canvasRect.sizeDelta.x) - (canvasRect.sizeDelta.x * 0.5f)),
-            ((viewportPosition.y * canvasRect.sizeDelta.y) - (canvasRect.sizeDelta.y * 0.5f)));
+    // private void FollowTarget()
+    // {
+    //     if (_target != null)
+    //     {
+    //         var canvasRect = _canvasTransform.gameObject.GetComponent<RectTransform>();
+    //         Vector2 viewportPosition = Camera.main.WorldToViewportPoint(_target.transform.position + (Vector3)_targetOffset);
+    //         Vector2 worldObject_ScreenPosition = new Vector2(
+    //         ((viewportPosition.x * canvasRect.sizeDelta.x) - (canvasRect.sizeDelta.x * 0.5f)),
+    //         ((viewportPosition.y * canvasRect.sizeDelta.y) - (canvasRect.sizeDelta.y * 0.5f)));
 
-            if (_dialogueBoxReference != null)
-                _dialogueBoxReference.GetComponent<RectTransform>().anchoredPosition = worldObject_ScreenPosition;
-        }
-    }
-
-    public void SetDialogBox(GameObject dialogBox)
-    {
-        _dialogueBox = dialogBox;
-    }
-
-    public void SetUpTarget(Transform target, Vector3? offset = null)
-    {
-        _target = target;
-        _targetOffset = offset ?? Vector3.zero;
-    }
+    //         if (_dialogueBoxReference != null)
+    //             _dialogueBoxReference.GetComponent<RectTransform>().anchoredPosition = worldObject_ScreenPosition;
+    //     }
+    // }
 
     private float CosWave(float time)
     {

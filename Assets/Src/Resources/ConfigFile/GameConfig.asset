@@ -50,7 +50,7 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 2|Comic.ChapterConfig, Assembly-CSharp
-    - Name: m_pnj
+    - Name: m_voiceType
       Entry: 3
       Data: 0
     - Name: m_powerType
@@ -83,9 +83,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 4|Comic.ChapterConfig, Assembly-CSharp
-    - Name: m_pnj
+    - Name: m_voiceType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: m_powerType
       Entry: 3
       Data: 0
@@ -116,9 +116,9 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 6|Comic.ChapterConfig, Assembly-CSharp
-    - Name: m_pnj
+    - Name: m_voiceType
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: m_powerType
       Entry: 3
       Data: 0
@@ -149,7 +149,7 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 8|Comic.ChapterConfig, Assembly-CSharp
-    - Name: m_pnj
+    - Name: m_voiceType
       Entry: 3
       Data: 3
     - Name: m_powerType
