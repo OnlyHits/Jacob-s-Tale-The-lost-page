@@ -1,7 +1,5 @@
 #if UNITY_EDITOR
-using System;
 using System.Collections.Generic;
-using CustomArchitecture;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -29,11 +27,6 @@ namespace Comic
                 return false;
             }
             return true;
-        }
-
-        private void OnDrawGizmos()
-        {
-            Refresh();
         }
 
         [Button("Force Refresh")]

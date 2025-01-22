@@ -1,9 +1,6 @@
 #if UNITY_EDITOR
-using System.Collections.Generic;
-using CustomArchitecture;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 namespace Comic
 {
@@ -26,11 +23,6 @@ namespace Comic
                 return false;
             }
             return true;
-        }
-
-        private void OnDrawGizmos()
-        {
-            Refresh();
         }
 
         [Button("Force Refresh")]
