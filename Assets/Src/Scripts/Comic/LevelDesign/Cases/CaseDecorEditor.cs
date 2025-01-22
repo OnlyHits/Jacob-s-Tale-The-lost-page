@@ -32,6 +32,10 @@ namespace Comic
         public SpriteRenderer m_floor;
         public SpriteRenderer m_ceiling;
 
+        [Space]
+        public Transform m_floorPivot;
+        public Transform m_ceilingPivot;
+
         public void Setup(CaseDecorProvider provider)
         {
             m_decorType = provider.decorType;
@@ -73,6 +77,8 @@ namespace Comic
             UpdateElements();
         }
 
+        private float formualHeight(float x) => x * (m_caseSprite.transform.localScale.y / 2f);
+
         private void UpdateElements()
         {
             m_decorTransform.position = m_caseSprite.position;
@@ -80,6 +86,12 @@ namespace Comic
             float w = m_caseSprite.localScale.x;
             float h = m_caseSprite.localScale.y;
             m_wall.size = new Vector2(w, h);
+
+            m_floor.size = new Vector2(w, m_floor.size.y);
+            m_ceiling.size = new Vector2(w, m_ceiling.size.y);
+
+            m_floorPivot.localPosition = new Vector3(0, formualHeight(-1), 0);
+            m_ceilingPivot.localPosition = new Vector3(0, formualHeight(1), 0);
         }
     }
 }

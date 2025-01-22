@@ -45,8 +45,8 @@ namespace Comic
             UpdateEdges();
         }
 
-        float formulaWidth(float x) => x * (m_caseSprite.transform.localScale.x / 2f);
-        float formulaHeight(float x) => x * (m_caseSprite.transform.localScale.y / 2f);
+        private float formulaWidth(float x) => x * (m_caseSprite.transform.localScale.x / 2f);
+        private float formulaHeight(float x) => x * (m_caseSprite.transform.localScale.y / 2f);
 
         private void UpdateEdges()
         {
