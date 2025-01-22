@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 40af981383d1c6ceb8bfeebb3be5eacf
+guid: c8a9dca0fde32eb5fb33825735dd0986
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5154895282646757386
-    second: Face-Boss-1_0
+      213: -2413806693520163455
+    second: Circle_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Face-Boss-1_0
+      name: Circle_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 506
-        height: 447
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a003f70a2fdd98740800000000000000
-      internalID: 5154895282646757386
+      spriteID: 18d3544e99f608ed0800000000000000
+      internalID: -2413806693520163455
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Face-Boss-1_0: 5154895282646757386
+      Circle_0: -2413806693520163455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

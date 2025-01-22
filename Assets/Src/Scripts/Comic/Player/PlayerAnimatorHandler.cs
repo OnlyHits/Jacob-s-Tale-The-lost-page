@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Comic
 {
-    public partial class Player : BaseBehaviour
+    public partial class Player : Character
     {
         [SerializeField] private Animator m_animator;
 

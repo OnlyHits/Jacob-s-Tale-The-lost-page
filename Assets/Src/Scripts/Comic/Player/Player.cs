@@ -4,22 +4,15 @@ using UnityEngine;
 
 namespace Comic
 {
-    public partial class Player : BaseBehaviour
+    public partial class Player : Character
     {
         [SerializeField, ReadOnly] private PlayerInputsController m_inputsController;
-
-        [Header("Animations")]
-        [SerializeField] private Transform m_headPositionGoRight;
-        [SerializeField] private Transform m_headPositionGoLeft;
-        [SerializeField] private Transform m_head;
-        private Vector2 m_baseHeadLocalPos;
 
         [Header("Grounded")]
         [SerializeField, ReadOnly] private bool m_isGrounded = false;
 
         [Header("Move")]
         [SerializeField, ReadOnly] private bool m_isMoving = false;
-        [SerializeField] private bool m_faceRight = true;
         [SerializeField] private float m_speed = 10f;
 
         [Header("Jump")]
@@ -30,12 +23,11 @@ namespace Comic
         [SerializeField, ReadOnly] private bool m_isFalling = false;
 
         [Header("Others")]
-        [SerializeField] private Rigidbody2D m_rb;
         [SerializeField] private PageManager m_pageManager;
-        [HideInInspector] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
 
-        protected void Awake()
+        protected override void Awake()
         {
+            base.Awake();
             m_inputsController = gameObject.AddComponent<PlayerInputsController>();
             m_inputsController.onMoveAction += OnMove;
             m_inputsController.onLookAction += OnLook;
@@ -46,11 +38,6 @@ namespace Comic
             m_inputsController.onPrevPageAction += OnPrevPage;
 
             m_inputsController.Init();
-
-            var sprites = GetComponentsInChildren<SpriteRenderer>();
-            m_sprites.AddRange(sprites);
-
-            m_baseHeadLocalPos = m_head.localPosition;
         }
 
         protected override void OnUpdate(float elapsed_time)
@@ -80,35 +67,6 @@ namespace Comic
         {
             return true;
         }
-
-        #region SPRITES
-        private void SetSprireFaceDirection(Vector2 direction)
-        {
-            bool wasFacingRight = m_faceRight;
-
-            if (direction.x > 0)
-            {
-                m_faceRight = true;
-            }
-            else if (direction.x < 0)
-            {
-                m_faceRight = false;
-            }
-
-            if (wasFacingRight == m_faceRight)
-            {
-                return;
-            }
-
-            foreach (var sprite in m_sprites)
-            {
-                sprite.flipX = !m_faceRight;
-                Transform parentHead = m_faceRight ? m_headPositionGoRight : m_headPositionGoLeft;
-                m_head.parent = parentHead;
-                m_head.localPosition = m_baseHeadLocalPos;
-            }
-        }
-        #endregion SPRITES
 
         #region MOVE
         private void StartMove(Vector2 v)
