@@ -144,16 +144,19 @@ namespace Comic
 
         private IEnumerator TriggerDialogue()
         {
-            m_currentBubbles[VoiceType.Voice_Beloved].gameObject.SetActive(true);
+            if (m_currentBubbles.TryGetValue(VoiceType.Voice_Beloved, out GameObject obj))
+            {
+                obj.SetActive(true);
 
-            Bubble bubble = m_currentBubbles[VoiceType.Voice_Beloved].GetComponent<Bubble>();
+                Bubble bubble = m_currentBubbles[VoiceType.Voice_Beloved].GetComponent<Bubble>();
 
-            bubble.Appear(BubbleAppearIntensity.Intensity_Normal);
+                bubble.Appear(BubbleAppearIntensity.Intensity_Normal);
 
-            while (bubble.IsCompute())
-                yield return null;
+                while (bubble.IsCompute())
+                    yield return null;
 
-            yield return StartCoroutine(bubble.TriggerAndWaitDialogue(DialogueType.Bethany_Welcome));
+                yield return StartCoroutine(bubble.TriggerAndWaitDialogue(DialogueType.Bethany_Welcome));
+            }
         }
     }
 }

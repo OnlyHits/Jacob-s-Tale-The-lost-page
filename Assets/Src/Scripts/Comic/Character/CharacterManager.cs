@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using CustomArchitecture;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Comic
@@ -7,7 +9,7 @@ namespace Comic
     public class CharacterManager : BaseBehaviour
     {
         [SerializeField, ReadOnly] private Player m_player;
-        [SerializeField, ReadOnly] private Dictionary<VoiceType, Character> m_npcs;
+        private Dictionary<VoiceType, Character> m_npcs;
         public Player GetPlayer() => m_player;
 
         public void Init()
