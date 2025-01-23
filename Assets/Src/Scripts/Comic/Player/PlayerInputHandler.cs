@@ -78,7 +78,7 @@ namespace Comic
         {
             if (input == InputType.PRESSED)
             {
-                m_pageManager.TryNextPage();
+                m_pageManager?.TryNextPage();
             }
             else if (input == InputType.COMPUTED)
             {
@@ -92,7 +92,7 @@ namespace Comic
         {
             if (input == InputType.PRESSED)
             {
-                m_pageManager.TryPrevPage();
+                m_pageManager?.TryPrevPage();
             }
             else if (input == InputType.COMPUTED)
             {

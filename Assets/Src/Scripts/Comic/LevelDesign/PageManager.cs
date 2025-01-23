@@ -1,19 +1,28 @@
 using System.Collections.Generic;
 using CustomArchitecture;
-using Unity.Cinemachine;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Comic
 {
     public class PageManager : BaseBehaviour
     {
-        [SerializeField] private List<Page> m_pageList = new List<Page>();
+        [SerializeField, ReadOnly] private List<Page> m_pageList = new List<Page>();
         [SerializeField, ReadOnly] private Page m_currentPage;
         [SerializeField, ReadOnly] private int m_currentPageIndex;
 
         private void Awake()
         {
+            InitPages();
             SwitchPageByIndex(m_currentPageIndex);
+        }
+
+        [Button("Refresh Pages")]
+        private void InitPages()
+        {
+            var pages = GetComponentsInChildren<Page>();
+            m_pageList.Clear();
+            m_pageList.AddRange(pages);
         }
 
         public bool TryNextPage()
