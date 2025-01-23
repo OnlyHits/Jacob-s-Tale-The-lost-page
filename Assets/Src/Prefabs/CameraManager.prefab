@@ -53,6 +53,9 @@ MonoBehaviour:
   m_camController: {fileID: 1011657781850361014}
   m_target: {fileID: 0}
   m_composer: {fileID: 0}
+  m_durationSwitchPage: 0.5
+  m_switchPageOrthoSize: 10.5
+  m_baseOrthagraphicSize: 9.5
 --- !u!114 &4549745904968168299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +130,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 40
-    OrthographicSize: 10.5
+    OrthographicSize: 9.5
     NearClipPlane: 0
     FarClipPlane: 5000
     Dutch: 0
@@ -391,7 +394,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10.5
+  orthographic size: 9.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

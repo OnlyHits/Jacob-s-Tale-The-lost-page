@@ -17,5 +17,10 @@ namespace Comic
         {
             return m_spawnPoint;
         }
+
+        public Transform GetVisualTransform()
+        {
+            return m_visual.transform;
+        }
     }
 }

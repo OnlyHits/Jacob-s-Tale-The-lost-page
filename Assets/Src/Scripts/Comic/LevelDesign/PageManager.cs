@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CustomArchitecture;
 using Sirenix.Utilities;
@@ -14,6 +15,7 @@ namespace Comic
 
         private void Awake()
         {
+
         }
 
         public void Init()
@@ -83,6 +85,8 @@ namespace Comic
             }
         }
 
+        public static Action<bool, Page, Page> onSwitchPage;
+
         public bool TryNextPage()
         {
             int nextIdx = m_currentPageIndex + 1;
@@ -90,8 +94,11 @@ namespace Comic
             {
                 return false;
             }
+            PageManager.onSwitchPage?.Invoke(true, m_unlockedPageList[m_currentPageIndex], m_unlockedPageList[nextIdx]);
+
             m_currentPageIndex = nextIdx;
             SwitchPageByIndex(m_currentPageIndex);
+
             return true;
         }
         public bool TryPrevPage()
@@ -101,8 +108,11 @@ namespace Comic
             {
                 return false;
             }
+            PageManager.onSwitchPage?.Invoke(false, m_unlockedPageList[m_currentPageIndex], m_unlockedPageList[prevIdx]);
+
             m_currentPageIndex = prevIdx;
             SwitchPageByIndex(m_currentPageIndex);
+
             return true;
         }
 

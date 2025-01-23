@@ -79,8 +79,6 @@ namespace Comic
             m_viewManager.Init();
             m_pageManager.Init();
             m_characterManager.Init();
-
-            ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.English;
         }
 
         #region Progression

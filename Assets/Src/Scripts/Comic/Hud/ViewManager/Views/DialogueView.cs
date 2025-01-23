@@ -139,7 +139,7 @@ namespace Comic
 
         public void StartDialogue()
         {
-            StartCoroutine(TriggerDialogue());
+            //StartCoroutine(TriggerDialogue());
         }
 
         private IEnumerator TriggerDialogue()
