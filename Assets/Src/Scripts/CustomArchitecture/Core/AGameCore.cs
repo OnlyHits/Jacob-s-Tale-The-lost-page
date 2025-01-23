@@ -11,6 +11,8 @@ namespace CustomArchitecture
         private AGameMode m_startingGameMode = null;
         private Settings m_settings = null;
 
+        public Settings GetSettings() => m_settings;
+
         // Prevent direct instantiation
         protected AGameCore() { }
 
