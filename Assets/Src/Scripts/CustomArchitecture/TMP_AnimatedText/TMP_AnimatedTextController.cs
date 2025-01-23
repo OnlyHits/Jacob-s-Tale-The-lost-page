@@ -22,6 +22,7 @@ namespace CustomArchitecture
         public Vector2 m_woodleSpeed;
         public Vector2 m_woodleAmplitude;
         public float m_popDuration;
+        public float m_simultaneousApparitionDuration;
 
         // Prevent direct instantiation
         protected TMP_AnimatedTextController() { }

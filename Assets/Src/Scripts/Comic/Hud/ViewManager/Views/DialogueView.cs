@@ -122,6 +122,8 @@ namespace Comic
             bubble_rect.position = new Vector3(0, y_position, bubble_rect.position.z);
 
             bubble_rect.SetPivotInWorldSpace(icon_rect.position);
+
+            bubble_rect.GetComponent<Bubble>().SetPinPosition(icon_rect);
         }
 
         protected override void OnUpdate(float elapsed_time)

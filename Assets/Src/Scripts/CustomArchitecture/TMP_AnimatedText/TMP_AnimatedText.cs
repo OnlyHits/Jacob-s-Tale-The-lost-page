@@ -199,7 +199,7 @@ namespace CustomArchitecture
                     ++index;
                 }
 
-                time += 10 * Time.deltaTime;
+                time += Time.deltaTime;
                 m_mesh.colors32 = m_colors;
                 m_mesh.vertices = m_vertices;
 
@@ -209,78 +209,79 @@ namespace CustomArchitecture
 
         protected IEnumerator IncrementalApparition()
         {
-            float time = 0.0f;
-            bool updateI = false;
+            yield return null;
+            // float time = 0.0f;
+            // bool updateI = false;
 
-            for (int i = 0; i < m_textMeshPro.text.Length; updateI = false)
-            {
-                m_textMeshPro.ForceMeshUpdate();
+            // for (int i = 0; i < m_textMeshPro.text.Length; updateI = false)
+            // {
+            //     m_textMeshPro.ForceMeshUpdate();
 
-                m_mesh = m_textMeshPro.mesh;
-                m_vertices = m_mesh.vertices;
-                m_colors = m_mesh.colors32;
+            //     m_mesh = m_textMeshPro.mesh;
+            //     m_vertices = m_mesh.vertices;
+            //     m_colors = m_mesh.colors32;
 
-                for (int s = 0; s < m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas.Length; ++s)
-                {
-                    for (int inc = m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_firstIndex, j = 0;
-                        inc < m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_lastIndex; ++inc)
-                    {
-                        TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[inc];
+            //     for (int s = 0; s < m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas.Length; ++s)
+            //     {
+            //         for (int inc = m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_firstIndex, j = 0;
+            //             inc < m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_lastIndex; ++inc)
+            //         {
+            //             TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[inc];
 
-                        int vertexIndex = info.vertexIndex;
+            //             int vertexIndex = info.vertexIndex;
 
-                        if (info.character == ' '|| info.character == '\n')
-                        {
-                            if (inc == i)
-                            {
-                                i++;
-                                updateI = true;
-                                time = 0.0f;
-                            }
-                            continue;
-                        }
+            //             if (info.character == ' '|| info.character == '\n')
+            //             {
+            //                 if (inc == i)
+            //                 {
+            //                     i++;
+            //                     updateI = true;
+            //                     time = 0.0f;
+            //                 }
+            //                 continue;
+            //             }
 
-                        if (inc == i)
-                        {
-                            if (Time.deltaTime < .1f)
-                            {
-                                time += Time.deltaTime / .1f;
+            //             if (inc == i)
+            //             {
+            //                 if (Time.deltaTime < .1f)
+            //                 {
+            //                     time += Time.deltaTime / .1f;
 
-                                if ((updateI = PopCharacter(vertexIndex, time, info)))
-                                {
-                                    i++;
-                                    time = 0.0f;
+            //                     if ((updateI = PopCharacter(vertexIndex, time, info)))
+            //                     {
+            //                         i++;
+            //                         time = 0.0f;
                                     
-                                }                            
-                            }
-                            else
-                                updateI = true;
-                        }
+            //                     }                            
+            //                 }
+            //                 else
+            //                     updateI = true;
+            //             }
 
-                        if (inc < i || (inc == i && !updateI))
-                        {
-                            UpdateTextModifier(vertexIndex, m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[s], inc);
-                            UpdateColor(vertexIndex,
-                                m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[s],
-                                m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_colorRandomSpeed, j);
-                        }
-                        else if ((inc == i && updateI) || inc > i)
-                        {
-                            Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
+            //             if (inc < i || (inc == i && !updateI))
+            //             {
+            //                 UpdateTextModifier(vertexIndex, m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[s], inc);
+            //                 UpdateColor(vertexIndex,
+            //                     m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[s],
+            //                     m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_colorRandomSpeed, j);
+            //             }
+            //             else if ((inc == i && updateI) || inc > i)
+            //             {
+            //                 Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
 
-                            m_vertices[vertexIndex] = center;
-                            m_vertices[vertexIndex + 1] = center;
-                            m_vertices[vertexIndex + 2] = center;
-                            m_vertices[vertexIndex + 3] = center;
-                        }
-                        ++j;
-                    }
-                }
-                m_mesh.colors32 = m_colors;
-                m_mesh.vertices = m_vertices;
+            //                 m_vertices[vertexIndex] = center;
+            //                 m_vertices[vertexIndex + 1] = center;
+            //                 m_vertices[vertexIndex + 2] = center;
+            //                 m_vertices[vertexIndex + 3] = center;
+            //             }
+            //             ++j;
+            //         }
+            //     }
+            //     m_mesh.colors32 = m_colors;
+            //     m_mesh.vertices = m_vertices;
 
-                yield return null;
-            }
+            //     yield return null;
+            // }
         }
     
         #endregion
@@ -360,17 +361,21 @@ namespace CustomArchitecture
         {
             Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
 
-            m_vertices[vertexIndex] = Vector3.Lerp(center, info.bottomLeft, time);
-            m_vertices[vertexIndex + 1] = Vector3.Lerp(center, info.topLeft, time);
-            m_vertices[vertexIndex + 2] = Vector3.Lerp(center, info.topRight, time);
-            m_vertices[vertexIndex + 3] = Vector3.Lerp(center, info.bottomRight, time);
-                
-            if (m_vertices[vertexIndex] == info.bottomLeft && m_vertices[vertexIndex + 1] == info.topLeft
-                && m_vertices[vertexIndex + 2] == info.topRight && m_vertices[vertexIndex + 3] == info.bottomRight)
-            {
-                return true;
-            }
-            return false;
+            float ease = Easing.EaseInSine(Mathf.Clamp(time / TMP_AnimatedTextController.Instance.m_simultaneousApparitionDuration, 0f, 1f));
+
+            m_vertices[vertexIndex] = Vector3.Lerp(center, info.bottomLeft, ease);
+            m_vertices[vertexIndex + 1] = Vector3.Lerp(center, info.topLeft, ease);
+            m_vertices[vertexIndex + 2] = Vector3.Lerp(center, info.topRight, ease);
+            m_vertices[vertexIndex + 3] = Vector3.Lerp(center, info.bottomRight, ease);
+
+            return ease == 1f;
+
+            // if (m_vertices[vertexIndex] == info.bottomLeft && m_vertices[vertexIndex + 1] == info.topLeft
+            //     && m_vertices[vertexIndex + 2] == info.topRight && m_vertices[vertexIndex + 3] == info.bottomRight)
+            // {
+            //     return true;
+            // }
+            // return false;
         }
 
         #endregion

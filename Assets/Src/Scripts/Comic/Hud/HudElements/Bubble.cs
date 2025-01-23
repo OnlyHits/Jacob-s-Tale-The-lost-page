@@ -17,6 +17,7 @@ namespace Comic
     public class Bubble : BaseBehaviour
     {
         [SerializeField] private TMP_AnimatedText       m_dialogue;
+        [SerializeField] private RectTransform          m_pinRectTransform;
         private Tween                                   m_scaleTween = null;
 
         public bool IsCompute()
@@ -24,6 +25,27 @@ namespace Comic
             return m_scaleTween != null && m_scaleTween.IsActive() && m_scaleTween.IsPlaying();
         }
 
+        public void SetPinPosition(RectTransform target)
+        {
+            RectTransform rt = gameObject.GetComponent<RectTransform>();
+            Vector2 self_position = rt.TransformPoint(rt.rect.center);
+            Vector2 direction = ((Vector2)rt.position - self_position).normalized;
+            // float distance = Vector2.Distance(self_position, rt.position);
+
+            // Debug.Log("Rect position " + self_position);
+            // Debug.Log("Base position " + rt.anchoredPosition);
+
+            // Debug.Log(distance);
+            // distance = m_pinRectTransform.TransformPoint(new Vector2(0, distance)).y;
+            // Debug.Log(distance);
+
+            // Debug.Log("_______"); 
+
+            m_pinRectTransform.position = rt.TransformPoint(rt.rect.center);
+            m_pinRectTransform.rotation = Quaternion.LookRotation(m_pinRectTransform.forward, direction);
+            // m_pinRectTransform.sizeDelta = new Vector2(m_pinRectTransform.sizeDelta.x, distance);
+        }
+    
         public void Appear(BubbleAppearIntensity intensity)
         {
             if (m_scaleTween != null && m_scaleTween.IsActive() && m_scaleTween.IsPlaying())
