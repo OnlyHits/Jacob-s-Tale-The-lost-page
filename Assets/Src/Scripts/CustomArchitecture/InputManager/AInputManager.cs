@@ -1,10 +1,9 @@
-using CustomArchitecture;
 using UnityEngine.InputSystem;
 using UnityEngine;
 using System;
 using System.Collections.Generic;
 
-namespace Comic
+namespace CustomArchitecture
 {
     public enum InputType
     {

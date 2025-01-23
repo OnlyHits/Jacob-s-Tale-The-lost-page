@@ -4,11 +4,12 @@ using UnityEngine;
 using TMPro;
 using System;
 using ExtensionMethods;
+using UnityEngine.InputSystem;
 
 namespace CustomArchitecture
 {
     [RequireComponent(typeof(TMP_Text))]
-    public class TMP_AnimatedText : BaseBehaviour
+    public class TMP_AnimatedText : AInputManager
     {
         private Coroutine               m_dialogueCoroutine = null;
 
@@ -21,6 +22,7 @@ namespace CustomArchitecture
         protected DynamicDialogueData   m_dynamicDatas;
         protected int                   m_sentenceIndex = 0;
         protected bool                  m_isCompute = false;
+        protected bool                  m_updateInCoroutine = false;
 
         private void Awake()
         {
@@ -28,6 +30,8 @@ namespace CustomArchitecture
             
             if (m_textMeshPro == null)
                 Debug.LogWarning("No TextMeshPro found");
+
+            Init();
         }
 
         public void StartDialogue(DialogueConfig config, DynamicDialogueData datas)
@@ -37,10 +41,9 @@ namespace CustomArchitecture
 
             m_sentenceIndex = 0;
 
-            SetDialogue();
             m_isCompute = true;
 
-//            m_dialogueCoroutine = StartCoroutine()
+            m_dialogueCoroutine = StartCoroutine(DialogueCoroutine());
         }
 
         public void StopDialogue()
@@ -48,47 +51,49 @@ namespace CustomArchitecture
             m_isCompute = false;
         }
 
-        protected IEnumerator DialogueCoroutine()
-        {
-            if (m_dialogueConfig.m_handleByInput)
-            {
-                
-            }
-            else
-            {
-
-                while (m_sentenceIndex < m_dialogueConfig.m_dialogueSentences.Length)
-                {
-                    yield return StartCoroutine(ApparitionCoroutine());
-                    yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
-                }
-            }
-        }
-
-        private IEnumerator ApparitionCoroutine()
-        {
-            yield return null;
-            // if (m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_apparitionType == DialogueApparitionType.INCREMENTAL)
-            // {
-
-            // }
-            // else if (m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_apparitionType == DialogueApparitionType.SIMULTANEOUS)
-            // {
-
-            // }
-        }
-
         protected void SetDialogue()
         {
             m_textMeshPro.text = m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_fullText;
         }
 
+        protected IEnumerator DialogueCoroutine()
+        {
+            while (m_sentenceIndex < m_dialogueConfig.m_dialogueSentences.Length)
+            {
+                SetDialogue();
+
+                m_updateInCoroutine = true;
+                yield return StartCoroutine(ApparitionCoroutine());
+                m_updateInCoroutine = false;
+            
+                if (!m_dialogueConfig.m_handleByInput)
+                    yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
+                else
+                    yield return new WaitWhile(() => m_isInputPressed == false);
+
+                ++m_sentenceIndex;
+            }
+
+            m_sentenceIndex = Mathf.Clamp(m_sentenceIndex, 0, m_dialogueConfig.m_dialogueSentences.Length - 1);
+        }
+
+        private IEnumerator ApparitionCoroutine()
+        {
+            if (m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_apparitionType == DialogueApparitionType.INCREMENTAL)
+            {
+                yield return StartCoroutine(IncrementalApparition());
+            }
+            else if (m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_apparitionType == DialogueApparitionType.SIMULTANEOUS)
+            {
+                yield return StartCoroutine(SimultaneousApparition());
+            }
+        }
+
         protected override void OnUpdate(float elapsed_time)
         {
-            // if (_handleByInput)
-            //     UpdateInput();
+            base.OnUpdate(elapsed_time);
 
-            if (!m_isCompute)
+            if (!m_isCompute || m_updateInCoroutine)
                 return;
 
             m_textMeshPro.ForceMeshUpdate();
@@ -97,6 +102,7 @@ namespace CustomArchitecture
             m_colors = m_mesh.colors32;
 
             int index = 0;
+
             foreach (var d in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
             {
                 for (int i = d.m_firstIndex, j = 0; i < d.m_lastIndex; ++i)
@@ -108,8 +114,11 @@ namespace CustomArchitecture
 
                     int vertexIndex = info.vertexIndex;
 
-                    UpdateTextModifier(vertexIndex, m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[index], i);
-                    UpdateColor(vertexIndex, m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[index], d.m_colorRandomSpeed, j);
+                    UpdateTextModifier(vertexIndex,
+                        m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[index], i);
+                    UpdateColor(vertexIndex, 
+                        m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[index],
+                        d.m_colorRandomSpeed, j);
 
                     ++j;
                 }
@@ -121,119 +130,160 @@ namespace CustomArchitecture
             m_mesh.colors32 = m_colors;
         }
 
+        #region Apparition Coroutines
+
         protected IEnumerator SimultaneousApparition()
         {
-            yield return null;
+            m_textMeshPro.ForceMeshUpdate();
+
+            m_mesh = m_textMeshPro.mesh;
+            m_vertices = m_mesh.vertices;
+            m_colors = m_mesh.colors32;
+
+            foreach (var data in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
+            {
+                for (int i = data.m_firstIndex; i < data.m_lastIndex; ++i)
+                {
+                    TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[i];
+
+                    int vertexIndex = info.vertexIndex;
+
+                    if (info.character == ' '|| info.character == '\n')
+                        continue;
+
+                    Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
+
+                    m_vertices[vertexIndex] = center;
+                    m_vertices[vertexIndex + 1] = center;
+                    m_vertices[vertexIndex + 2] = center;
+                    m_vertices[vertexIndex + 3] = center;
+                }
+            }
+            
+            m_mesh.colors32 = m_colors;
+            m_mesh.vertices = m_vertices;
+            
+            bool finish = false;
+            float time = 0f;
+
+            while (!finish)
+            {
+                m_textMeshPro.ForceMeshUpdate();
+
+                m_mesh = m_textMeshPro.mesh;
+                m_vertices = m_mesh.vertices;
+                m_colors = m_mesh.colors32;
+
+                int index = 0;
+                finish = true;
+
+                foreach (var data in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
+                {
+                    for (int i = data.m_firstIndex, j = 0; i < data.m_lastIndex; ++i)
+                    {
+                        TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[i];
+                        int vertexIndex = info.vertexIndex;
+
+                        if (info.character == ' '|| info.character == '\n')
+                            continue;
+
+                        if (!PopCharacter(vertexIndex, time, info))
+                            finish = false;
+
+                        UpdateColor(vertexIndex,
+                            m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[index],
+                            data.m_colorRandomSpeed, j);
+                        ++j;
+                    }
+                    
+                    ++index;
+                }
+
+                time += 10 * Time.deltaTime;
+                m_mesh.colors32 = m_colors;
+                m_mesh.vertices = m_vertices;
+
+                yield return null;
+            }
         }
 
         protected IEnumerator IncrementalApparition()
         {
             float time = 0.0f;
             bool updateI = false;
-            yield return null;
-            // for (int i = 0; i < m_textMeshPro.text.Length; updateI = false)
-            // {
-            //     m_textMeshPro.ForceMeshUpdate();
 
-            //     m_mesh = m_textMeshPro.mesh;
-            //     m_vertices = m_mesh.vertices;
-            //     m_colors = m_mesh.colors32;
+            for (int i = 0; i < m_textMeshPro.text.Length; updateI = false)
+            {
+                m_textMeshPro.ForceMeshUpdate();
 
-            //     foreach (var d in _dialogues[_dialogueIndex]._partOfSide[_partOfSideIndex]._modifiableText)
-            //     {
-            //         for (int inc = d._firstIndex, j = 0; inc < d._lastIndex; ++inc)
-            //         {
-            //             TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[inc];
+                m_mesh = m_textMeshPro.mesh;
+                m_vertices = m_mesh.vertices;
+                m_colors = m_mesh.colors32;
 
-            //             int vertexIndex = info.vertexIndex;
+                for (int s = 0; s < m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas.Length; ++s)
+                {
+                    for (int inc = m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_firstIndex, j = 0;
+                        inc < m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_lastIndex; ++inc)
+                    {
+                        TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[inc];
 
-            //             if (info.character == ' '|| info.character == '\n')
-            //             {
-            //                 if (inc == i)
-            //                 {
-            //                     i++;
-            //                     updateI = true;
-            //                     time = 0.0f;
-            //                 }
-            //                 continue;
-            //             }
+                        int vertexIndex = info.vertexIndex;
 
-            //             if (inc == i)
-            //             {
-            //                 if (Time.deltaTime < _currentPopSpeed)
-            //                 {
-            //                     time += Time.deltaTime / _currentPopSpeed;
+                        if (info.character == ' '|| info.character == '\n')
+                        {
+                            if (inc == i)
+                            {
+                                i++;
+                                updateI = true;
+                                time = 0.0f;
+                            }
+                            continue;
+                        }
 
-            //                     if ((updateI = PopCharacter(vertexIndex, time, info)))
-            //                     {
-            //                         i++;
-            //                         time = 0.0f;
+                        if (inc == i)
+                        {
+                            if (Time.deltaTime < .1f)
+                            {
+                                time += Time.deltaTime / .1f;
+
+                                if ((updateI = PopCharacter(vertexIndex, time, info)))
+                                {
+                                    i++;
+                                    time = 0.0f;
                                     
-            //                     }                            
-            //                 }
-            //                 else
-            //                     updateI = true;
-            //             }
+                                }                            
+                            }
+                            else
+                                updateI = true;
+                        }
 
-            //             if (inc < i || (inc == i && !updateI))
-            //             {
-            //                 UpdateTextModifier(vertexIndex, d, inc);
-            //                 UpdateColor(vertexIndex, d, j);
-            //             }
-            //             else if ((inc == i && updateI) || inc > i)
-            //             {
-            //                 Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
+                        if (inc < i || (inc == i && !updateI))
+                        {
+                            UpdateTextModifier(vertexIndex, m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[s], inc);
+                            UpdateColor(vertexIndex,
+                                m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_animatedText[s],
+                                m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas[s].m_colorRandomSpeed, j);
+                        }
+                        else if ((inc == i && updateI) || inc > i)
+                        {
+                            Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
 
-            //                 m_vertices[vertexIndex] = center;
-            //                 m_vertices[vertexIndex + 1] = center;
-            //                 m_vertices[vertexIndex + 2] = center;
-            //                 m_vertices[vertexIndex + 3] = center;
-            //             }
-            //             ++j;
-            //         }
-            //     }
-            //     m_mesh.colors32 = m_colors;
-            //     m_mesh.vertices = m_vertices;
+                            m_vertices[vertexIndex] = center;
+                            m_vertices[vertexIndex + 1] = center;
+                            m_vertices[vertexIndex + 2] = center;
+                            m_vertices[vertexIndex + 3] = center;
+                        }
+                        ++j;
+                    }
+                }
+                m_mesh.colors32 = m_colors;
+                m_mesh.vertices = m_vertices;
 
-            //     yield return null;
-            // }
+                yield return null;
+            }
         }
-
-        // private void UpdateInput()
-        // {
-        //     if (Input.GetKeyDown(KeyCode.Return))
-        //     {
-        //         if (_popCoroutine == null)
-        //         {
-        //             if (_partOfSideIndex + 1 >= _dialogues[_dialogueIndex]._partOfSide.Length)
-        //             {
-        //                 StopDialogue();
-        //             }
-        //             else
-        //             {
-        //                 _canSkip = false;
-        //                 if (_popDuration == 0.0f)
-        //                 {
-        //                     ChangeText(_partOfSideIndex + 1);
-        //                     _isCompute = true;
-        //                 }
-        //                 else
-        //                     _popCoroutine = StartCoroutine(PopDialogue(_partOfSideIndex + 1));
-        //             }
-        //         }
-        //     }
-        //     else if (Input.GetKey(KeyCode.Return) && _canSkip)
-        //     {
-        //         _currentPopSpeed = _popDuration * 0.3f;
-        //     }
-
-        //     if (Input.GetKeyUp(KeyCode.Return))
-        //     {
-        //         if (!_canSkip)
-        //             _canSkip = true;
-        //         _currentPopSpeed = _popDuration;
-        //     }
-        // }
+    
+        #endregion
 
         #region VertexModifier
 
@@ -335,6 +385,50 @@ namespace CustomArchitecture
         private Vector2 Wobble(float time, Vector2 speed, Vector2 amplitude)
         {
             return new Vector2(Mathf.Sin(time * speed.x) * amplitude.x, Mathf.Cos(time * speed.y) * amplitude.y);
+        }
+
+        #endregion
+    
+        #region Input
+
+        private InputAction             m_dialogueInputAction;
+        private Action<InputType, bool> onDialogueInput;
+        private bool                    m_isInputPressed;
+
+        public override void Init()
+        {
+            onDialogueInput += OnDialogueInput;
+
+            FindAction();
+            InitInputActions();
+        }
+
+        private void FindAction()
+        {
+            m_dialogueInputAction = InputSystem.actions.FindAction("DialogueInput");
+        }
+
+        private void InitInputActions()
+        {
+            InputActionStruct<bool> iInput = new InputActionStruct<bool>(m_dialogueInputAction, onDialogueInput, false);
+
+            m_inputActionStructsBool.Add(iInput);
+        }
+
+        private void OnDialogueInput(InputType input, bool b)
+        {
+            if (input == InputType.PRESSED)
+            {
+                m_isInputPressed = true;
+            }
+            else if (input == InputType.COMPUTED)
+            {
+                m_isInputPressed = true;
+            }
+            else if (input == InputType.RELEASED)
+            {
+                m_isInputPressed = false;
+            }
         }
 
         #endregion

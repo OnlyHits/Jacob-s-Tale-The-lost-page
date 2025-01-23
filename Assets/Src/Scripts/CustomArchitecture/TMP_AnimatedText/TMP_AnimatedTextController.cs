@@ -85,12 +85,12 @@ namespace CustomArchitecture
 
         public DynamicDialogueData GetDialogueDatas(DialogueType type)
         {
-            return m_dialogues[Language.French].GetDialogueDatas(type);
+            return m_dialogues[AGameCore.Instance.GetSettings().m_settingDatas.m_language].GetDialogueDatas(type);
         }
         
         public DialogueConfig GetDialogueConfig(DialogueType type)
         {
-            return m_dialogues[Language.French].GetDialogueConfig(type);
+            return m_dialogues[AGameCore.Instance.GetSettings().m_settingDatas.m_language].GetDialogueConfig(type);
         }
     }
 }

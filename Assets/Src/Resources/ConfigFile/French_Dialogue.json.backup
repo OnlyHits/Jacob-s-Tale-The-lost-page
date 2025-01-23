@@ -69,7 +69,8 @@
                                         "m_colorSpeedRandomness": 0
                                     }
                                 ]
-                            }
+                            },
+                            "m_apparitionType": 1
                         },
                         {
                             "$type": 4,
@@ -121,11 +122,13 @@
                                         "m_colorSpeedRandomness": 0
                                     }
                                 ]
-                            }
+                            },
+                            "m_apparitionType": 0
                         }
                     ]
                 },
-                "m_handleByInput": false
+                "m_handleByInput": true,
+                "m_durationBetweenSentence": 0.1
             }
         }
     ]
