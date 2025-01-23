@@ -39,7 +39,7 @@ public class Shortcuts : MonoBehaviour
         if (hasComputeChaptersKey)
         {
             if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(chapterComputed, false, false);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(chapterComputed, true, true);
             else
                 ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(chapterComputed);
         }
