@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using Sirenix.OdinInspector;
 
 namespace CustomArchitecture
 {
-    public class TMP_AnimatedTextController : BaseBehaviour
+    public interface TMP_AnimatedTextController_Provider
     {
-        [SerializeField] private float _waveSpeed;
-        [SerializeField] private float _waveAmplitude;
-        [SerializeField] private Vector2 _bounceSpeed;
-        [SerializeField] private Vector2 _bounceAmplitude;
-        [SerializeField] private Vector2 _woodleSpeed;
-        [SerializeField] private Vector2 _woodleAmplitude;
-        [SerializeField] private float _popDuration;
+        public DynamicDialogueData GetDialogueDatas(DialogueType type);
+        public DialogueConfig GetDialogueConfig(DialogueType type);
+    }
+
+    public class TMP_AnimatedTextController : BaseBehaviour, TMP_AnimatedTextController_Provider
+    {
+        public float m_waveSpeed;
+        public float m_waveAmplitude;
+        public Vector2 m_bounceSpeed;
+        public Vector2 m_bounceAmplitude;
+        public Vector2 m_woodleSpeed;
+        public Vector2 m_woodleAmplitude;
+        public float m_popDuration;
 
         // Prevent direct instantiation
         protected TMP_AnimatedTextController() { }
@@ -56,10 +63,34 @@ namespace CustomArchitecture
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            
+            OnAwake();
         }
 
         #endregion
 
+        private Dictionary<Language, TMP_AnimatedText_ScriptableObject> m_dialogues;
 
+        private void OnAwake()
+        {
+            m_dialogues = new()
+            {
+                { Language.French, SerializedScriptableObject.CreateInstance<TMP_AnimatedText_ScriptableObject>() },
+                { Language.English, SerializedScriptableObject.CreateInstance<TMP_AnimatedText_ScriptableObject>() },
+            };
+
+            m_dialogues[Language.French].Init("French_Dialogue");
+            m_dialogues[Language.English].Init("English_Dialogue");
+        }
+
+        public DynamicDialogueData GetDialogueDatas(DialogueType type)
+        {
+            return m_dialogues[Language.French].GetDialogueDatas(type);
+        }
+        
+        public DialogueConfig GetDialogueConfig(DialogueType type)
+        {
+            return m_dialogues[Language.French].GetDialogueConfig(type);
+        }
     }
 }

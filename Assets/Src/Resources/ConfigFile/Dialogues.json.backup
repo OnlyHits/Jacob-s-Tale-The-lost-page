@@ -1,0 +1,66 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[CustomArchitecture.DialogueType, Assembly-CSharp],[CustomArchitecture.TMP_AnimatedText_ScriptableObject+Dialogue[], Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.EnumEqualityComparer`1[[CustomArchitecture.DialogueType, Assembly-CSharp]], mscorlib",
+        "$rlength": 0,
+        "$rcontent": [
+        ]
+    },
+    "$rlength": 1,
+    "$rcontent": [
+        {
+            "$k": 0,
+            "$v": {
+                "$id": 2,
+                "$type": "2|CustomArchitecture.TMP_AnimatedText_ScriptableObject+Dialogue[], Assembly-CSharp",
+                "$rlength": 1,
+                "$rcontent": [
+                    {
+                        "$type": "3|CustomArchitecture.TMP_AnimatedText_ScriptableObject+Dialogue, Assembly-CSharp",
+                        "_partOfSide": {
+                            "$id": 3,
+                            "$type": "4|CustomArchitecture.TMP_AnimatedText_ScriptableObject+DialoguePartOfSide[], Assembly-CSharp",
+                            "$rlength": 1,
+                            "$rcontent": [
+                                {
+                                    "$type": "5|CustomArchitecture.TMP_AnimatedText_ScriptableObject+DialoguePartOfSide, Assembly-CSharp",
+                                    "_modifiableText": {
+                                        "$id": 4,
+                                        "$type": "6|CustomArchitecture.TMP_AnimatedText_ScriptableObject+ModifiableText[], Assembly-CSharp",
+                                        "$rlength": 1,
+                                        "$rcontent": [
+                                            {
+                                                "$type": "7|CustomArchitecture.TMP_AnimatedText_ScriptableObject+ModifiableText, Assembly-CSharp",
+                                                "_text": null,
+                                                "_textModifier": 1,
+                                                "_colorModifier": 2,
+                                                "_solidColor": {
+                                                    "$type": "8|UnityEngine.Color32, UnityEngine.CoreModule",
+                                                    190,
+                                                    46,
+                                                    46,
+                                                    255
+                                                },
+                                                "_gradientColor": {
+                                                    "$type": 8,
+                                                    255,
+                                                    0,
+                                                    202,
+                                                    255
+                                                },
+                                                "_colorSpeedRandomness": 0
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        "_handleByInput": false
+                    }
+                ]
+            }
+        }
+    ]
+}

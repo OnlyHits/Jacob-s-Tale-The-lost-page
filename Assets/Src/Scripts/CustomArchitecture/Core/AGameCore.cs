@@ -9,6 +9,7 @@ namespace CustomArchitecture
         private List<AGameMode> m_gameModes = new();
         private AGameMode m_currentGameMode = null;
         private AGameMode m_startingGameMode = null;
+        private Settings m_settings = null;
 
         // Prevent direct instantiation
         protected AGameCore() { }
@@ -48,6 +49,8 @@ namespace CustomArchitecture
 
             Instance = this;
             DontDestroyOnLoad(gameObject);
+
+            m_settings = new Settings();
 
             InstantiateGameModes();
         }

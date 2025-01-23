@@ -16,8 +16,8 @@ namespace Comic
 
     public class Bubble : BaseBehaviour
     {
-        [SerializeField] private TMPDialogue    m_dialogue;
-        private Tween                           m_scaleTween = null;
+        [SerializeField] private TMP_AnimatedText       m_dialogue;
+        private Tween                                   m_scaleTween = null;
 
         public bool IsCompute()
         {
@@ -60,11 +60,14 @@ namespace Comic
                 // .OnComplete(() => { gameObject.SetActive(false); });
         }
 
-        public IEnumerator TriggerAndWaitDialogue(string dialogue_name)
+        public IEnumerator TriggerAndWaitDialogue(DialogueType type)
         {
-            m_dialogue.StartDialogue("Welcome");
+            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
+            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
 
-            while (!m_dialogue.IsFinish())
+            m_dialogue.StartDialogue(config, datas);
+
+            // while (!m_dialogue.IsFinish())
                 yield return null;
         }
 

@@ -5,6 +5,7 @@ using TMPro;
 using System;
 using ExtensionMethods;
 
+
 public class TMPDialogue : MonoBehaviour
 {
     public enum TextColor
@@ -97,21 +98,19 @@ public class TMPDialogue : MonoBehaviour
         }
     }
 
-    public bool HasFinishPop()
-    {
-        return (_popCoroutine == null);
-    }
+    // public bool HasFinishPop()
+    // {
+    //     return (_popCoroutine == null);
+    // }
 
-    public virtual bool IsFinish()
-    {
-        return _isCompute && _popCoroutine == null;
-    }
+    // public virtual bool IsFinish()
+    // {
+    //     return _isCompute && _popCoroutine == null;
+    // }
 
     protected void ChangeText(int partOfSideIndex)
     {
         _textMeshPro.text = _dialogues[_dialogueIndex]._partOfSide[partOfSideIndex]._fullText;
-
-        Debug.Log(_textMeshPro.text);
         _partOfSideIndex = partOfSideIndex;
     }
 

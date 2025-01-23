@@ -153,7 +153,9 @@ namespace Comic
             while (bubble.IsCompute())
                 yield return null;
 
-           yield return StartCoroutine(bubble.TriggerAndWaitDialogue("Welcome"));
+            Debug.Log("Bite");
+
+            yield return StartCoroutine(bubble.TriggerAndWaitDialogue(DialogueType.Bethany_Welcome));
         }
     }
 }
