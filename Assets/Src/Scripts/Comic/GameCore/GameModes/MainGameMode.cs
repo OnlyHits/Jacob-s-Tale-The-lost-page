@@ -64,6 +64,8 @@ namespace Comic
             m_viewManager.Init();
         }
 
+        #region Progression
+
         public void UnlockVoice(VoiceType type, bool force_unlock = false)
         {
             Chapters target_chapter = m_gameConfig.GetChapterByVoice(type);
@@ -153,6 +155,8 @@ namespace Comic
             m_onLockPowerCallback?.Invoke(m_gameConfig.GetPowerByChapter(type));
         }
 
+        #endregion
+
         public void ClearSaveDebug()
         {
             m_gameProgression.ClearSaveDebug();
@@ -234,9 +238,5 @@ namespace Comic
         {
             Compute = true;
         }
-
-        // Pause every managed objects
-        //public override void Pause(bool pause)
-        //{}
     }
 }

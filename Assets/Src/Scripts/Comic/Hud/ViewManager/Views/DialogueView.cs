@@ -51,6 +51,7 @@ namespace Comic
         public override void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(UnlockVoice);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(LockVoice);
 
             m_currentIcons = new();
             m_currentBubbles = new();
@@ -75,6 +76,38 @@ namespace Comic
         private void Start()
         {
             StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, StartDialogue));
+        }
+
+        public void LockVoice(VoiceType type)
+        {
+            if (!m_currentIcons.ContainsKey(type))
+            {
+                Debug.LogWarning(type + " is not unlocked");
+            }
+            else
+            {
+                Destroy(m_currentIcons[type]);
+                m_currentIcons.Remove(type);
+            }
+
+            if (!m_currentBubbles.ContainsKey(type))
+            {
+                Debug.LogWarning(type + " is not unlocked");
+            }
+            else
+            {
+                Destroy(m_currentBubbles[type]);
+                m_currentBubbles.Remove(type);
+            }
+
+            if (!m_iconLastPositions.ContainsKey(type))
+            {
+                Debug.LogWarning(type + " is not unlocked");
+            }
+            else
+            {
+                m_iconLastPositions.Remove(type);
+            }
         }
 
         public void UnlockVoice(VoiceType type)
