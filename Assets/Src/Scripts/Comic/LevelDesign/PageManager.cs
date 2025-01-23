@@ -61,6 +61,12 @@ namespace Comic
             {
                 var page = m_pageList[index];
                 m_unlockedPageList.Remove(page);
+
+                if (m_currentPageIndex == index)
+                {
+                    m_currentPageIndex = m_unlockedPageList.Count - 1;
+                    SwitchPageByIndex(m_currentPageIndex);
+                }
             }
         }
 
