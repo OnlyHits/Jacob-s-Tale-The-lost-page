@@ -6,6 +6,7 @@ using UnityEngine;
 public class Shortcuts : MonoBehaviour
 {
     public bool unlock = true;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -13,41 +14,41 @@ public class Shortcuts : MonoBehaviour
             unlock = !unlock;
         }
 
+        bool hasComputeChaptersKey = false;
+        Chapters chapterComputed = Chapters.Chapter_None;
+
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(Chapters.The_Prequel, false, false);
-            else
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(Chapters.The_Prequel);
+            hasComputeChaptersKey = true;
+            chapterComputed = Chapters.The_Prequel;
         }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(Chapters.The_First_Chapter, true, true);
-            else
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(Chapters.The_First_Chapter);
+            hasComputeChaptersKey = true;
+            chapterComputed = Chapters.The_First_Chapter;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(Chapters.The_Second_Chapter, true, true);
-            else
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(Chapters.The_Second_Chapter);
-
+            hasComputeChaptersKey = true;
+            chapterComputed = Chapters.The_Second_Chapter;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(Chapters.The_Third_Chapter, true, true);
-            else
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(Chapters.The_Third_Chapter);
+            hasComputeChaptersKey = true;
+            chapterComputed = Chapters.The_Third_Chapter;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
+            hasComputeChaptersKey = true;
+            chapterComputed = Chapters.The_Fourth_Chapter;
+        }
+
+        if (hasComputeChaptersKey)
+        {
             if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(Chapters.The_Fourth_Chapter, true, true);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(chapterComputed, false, false);
             else
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(Chapters.The_Fourth_Chapter);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(chapterComputed);
         }
     }
 }
