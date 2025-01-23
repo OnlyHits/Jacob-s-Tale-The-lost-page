@@ -36,8 +36,9 @@ namespace Comic
                 //get le chapter d'ou vient ce npc
                 //get les pages du chapter
                 //parcourir les page & check si il y a un spawnPoint
-                Vector3 spawnPoint = null;
-                npc.transform.position = spawnPoint;
+
+                // Vector3 spawnPoint = null;
+                // npc.transform.position = spawnPoint;
             }
         }
 

@@ -535,7 +535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pause: 0
-  visual: {fileID: 5518141131545643168}
+  m_visual: {fileID: 5518141131545643168}
+  m_spawnPoint: {fileID: 0}
 --- !u!114 &2355702779432209742
 MonoBehaviour:
   m_ObjectHideFlags: 0
