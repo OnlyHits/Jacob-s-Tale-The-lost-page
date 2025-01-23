@@ -40,13 +40,13 @@ namespace Comic
 
     public class DialogueView : AView
     {
-        [SerializeField] protected Transform            m_iconContainer;
-        private Dictionary<VoiceType, GameObject>       m_icons;
-        private Dictionary<VoiceType, GameObject>       m_currentIcons;
+        [SerializeField] protected Transform m_iconContainer;
+        private Dictionary<VoiceType, GameObject> m_icons;
+        private Dictionary<VoiceType, GameObject> m_currentIcons;
 
-        [SerializeField] protected Transform            m_bubbleContainer;
-        private Dictionary<VoiceType, GameObject>       m_currentBubbles;
-        private Dictionary<VoiceType, Vector3>          m_iconLastPositions;
+        [SerializeField] protected Transform m_bubbleContainer;
+        private Dictionary<VoiceType, GameObject> m_currentBubbles;
+        private Dictionary<VoiceType, Vector3> m_iconLastPositions;
 
         public override void Init()
         {
@@ -57,10 +57,10 @@ namespace Comic
             m_iconLastPositions = new();
             m_icons = new()
             {
-                { VoiceType.Voice_Gaetan,       Resources.Load<GameObject>("GUI/Icon_Gaetan") },
-                { VoiceType.Voice_Bethany,      Resources.Load<GameObject>("GUI/Icon_Bethany") },
-                { VoiceType.Voice_Dylan,        Resources.Load<GameObject>("GUI/Icon_Dylan") },
-                { VoiceType.Voice_Ivyc,         Resources.Load<GameObject>("GUI/Icon_Ivyc") },
+                { VoiceType.Voice_BestFriend,       Resources.Load<GameObject>("GUI/Icon_Gaetan") },
+                { VoiceType.Voice_Beloved,      Resources.Load<GameObject>("GUI/Icon_Bethany") },
+                { VoiceType.Voice_Bully,        Resources.Load<GameObject>("GUI/Icon_Dylan") },
+                { VoiceType.Voice_Boss,         Resources.Load<GameObject>("GUI/Icon_Ivyc") },
             };
 
             foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
@@ -116,7 +116,7 @@ namespace Comic
             Vector3 offset_y = new Vector3(0, container_rect.rect.height - bubble_rect.rect.height, 0);
             Vector3 top_position = container_rect.position + container_rect.TransformPoint(offset_y * .5f);
             Vector3 bot_position = container_rect.position - container_rect.TransformPoint(offset_y * .5f);
-                
+
             float y_position = Mathf.Clamp(icon_rect.position.y, bot_position.y, top_position.y);
 
             bubble_rect.position = new Vector3(0, y_position, bubble_rect.position.z);
@@ -144,16 +144,16 @@ namespace Comic
 
         private IEnumerator TriggerDialogue()
         {
-            m_currentBubbles[VoiceType.Voice_Bethany].gameObject.SetActive(true);
+            m_currentBubbles[VoiceType.Voice_Beloved].gameObject.SetActive(true);
 
-            Bubble bubble = m_currentBubbles[VoiceType.Voice_Bethany].GetComponent<Bubble>();
+            Bubble bubble = m_currentBubbles[VoiceType.Voice_Beloved].GetComponent<Bubble>();
 
             bubble.Appear(BubbleAppearIntensity.Intensity_Normal);
 
             while (bubble.IsCompute())
                 yield return null;
 
-           yield return StartCoroutine(bubble.TriggerAndWaitDialogue("Welcome"));
+            yield return StartCoroutine(bubble.TriggerAndWaitDialogue("Welcome"));
         }
     }
 }

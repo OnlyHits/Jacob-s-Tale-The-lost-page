@@ -1,28 +1,45 @@
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 
 namespace Comic
 {
     public class PageManager : BaseBehaviour
     {
-        [SerializeField, ReadOnly] private List<Page> m_pageList = new List<Page>();
+        [SerializeField] private List<Page> m_pageList = new List<Page>();
         [SerializeField, ReadOnly] private Page m_currentPage;
         [SerializeField, ReadOnly] private int m_currentPageIndex;
+        [SerializeField, ReadOnly] private List<Page> m_unlockedPageList = new List<Page>();
 
         private void Awake()
         {
-            InitPages();
+        }
+
+        public void Init()
+        {
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
+            {
+                if (data.m_hasUnlockVoice)
+                {
+                    UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
+                }
+            }
+
             SwitchPageByIndex(m_currentPageIndex);
         }
 
-        [Button("Refresh Pages")]
-        private void InitPages()
+        private void UnlockPages(List<int> pageIndexes)
         {
-            var pages = GetComponentsInChildren<Page>();
-            m_pageList.Clear();
-            m_pageList.AddRange(pages);
+            if (pageIndexes.IsNullOrEmpty())
+            {
+                Debug.LogError("Could not get pages indexes because the list is null");
+            }
+            foreach (int index in pageIndexes)
+            {
+                var page = m_pageList[index];
+                m_unlockedPageList.Add(page);
+            }
         }
 
         public bool TryNextPage()

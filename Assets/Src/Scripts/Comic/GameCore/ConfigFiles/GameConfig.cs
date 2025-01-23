@@ -8,10 +8,10 @@ namespace Comic
 {
     public enum VoiceType
     {
-        Voice_Gaetan, // best friend
-        Voice_Bethany, // voice belove
-        Voice_Dylan, // voice bully
-        Voice_Ivyc, // voice boss
+        Voice_BestFriend, // Geatan
+        Voice_Beloved, // Bethany
+        Voice_Bully, // Dylan
+        Voice_Boss, // Yvick
         Voice_None
     }
 
@@ -36,18 +36,18 @@ namespace Comic
     [System.Serializable]
     public class ChapterConfig
     {
-        public VoiceType    m_voiceType;
-        public PowerType    m_powerType;
-        public List<int>    m_pages; 
+        public VoiceType m_voiceType;
+        public PowerType m_powerType;
+        public List<int> m_pages;
     }
 
     [CreateAssetMenu(fileName = "GameConfig", menuName = "Comic/GameConfig")]
     [System.Serializable]
     public class GameConfig : SerializedScriptableObject
     {
-        [NonSerialized] private readonly SaveUtilitary<Dictionary<Chapters, ChapterConfig>>   m_saveUtilitary;
+        [NonSerialized] private readonly SaveUtilitary<Dictionary<Chapters, ChapterConfig>> m_saveUtilitary;
 
-        [OdinSerialize, ShowInInspector] public Dictionary<Chapters, ChapterConfig>  m_config;
+        [OdinSerialize, ShowInInspector] public Dictionary<Chapters, ChapterConfig> m_config;
 
         public GameConfig()
         {
@@ -100,6 +100,17 @@ namespace Comic
             return m_config[type].m_voiceType;
         }
 
+        public List<int> GetPagesByChapter(Chapters type)
+        {
+            if (!m_config.ContainsKey(type))
+            {
+                Debug.LogWarning("Doesn't find chapter");
+                return null;
+            }
+
+            return m_config[type].m_pages;
+        }
+
 
         public ChapterConfig GetChapterDatas(Chapters type)
         {
@@ -125,7 +136,7 @@ namespace Comic
             Load();
             Debug.Log("Data loaded successfully!");
         }
-        
+
         public Dictionary<Chapters, ChapterConfig> GetConfig()
         {
             return m_config;

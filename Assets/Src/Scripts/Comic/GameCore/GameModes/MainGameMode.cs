@@ -5,6 +5,7 @@ using CustomArchitecture;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 namespace Comic
 {
@@ -21,19 +22,20 @@ namespace Comic
 
     public class MainGameMode : AGameMode, MainGameModeProvider
     {
-        private GameConfig              m_gameConfig;
-        private GameProgression         m_gameProgression;// regrouper avec settings dans une subclass
-        private Setting                 m_settings;
-        private PauseInput              m_pauseInput; // ca va etre integré direct dans gamemode
-        private NavigationInput         m_hudNavigationInput; // ca degage
-        private ViewManager             m_viewManager;
+        private GameConfig m_gameConfig;
+        private GameProgression m_gameProgression;// regrouper avec settings dans une subclass
+        private Setting m_settings;
+        private PauseInput m_pauseInput; // ca va etre integré direct dans gamemode
+        private NavigationInput m_hudNavigationInput; // ca degage
+        private ViewManager m_viewManager;
+        private PageManager m_pageManager;
 
-        private Action<VoiceType>       m_onUnlockVoiceCallback;
-        private Action<PowerType>       m_onUnlockPowerCallback;
+        private Action<VoiceType> m_onUnlockVoiceCallback;
+        private Action<PowerType> m_onUnlockPowerCallback;
 
-        public List<ChapterSavedData> GetSavedValues() => m_gameProgression.GetUnlockedChaptersDatas(); 
-        public GameConfig GetGameConfig() => m_gameConfig; 
-        public override void OnLoadingEnded() {}
+        public List<ChapterSavedData> GetSavedValues() => m_gameProgression.GetUnlockedChaptersDatas();
+        public GameConfig GetGameConfig() => m_gameConfig;
+        public override void OnLoadingEnded() { }
 
         public override void Init(AGameCore game_core, params object[] parameters)
         {
@@ -45,10 +47,12 @@ namespace Comic
             m_pauseInput = GetComponent<PauseInput>();
             m_hudNavigationInput = GetComponent<NavigationInput>();
             m_viewManager = GetComponent<ViewManager>();
+            m_pageManager = GetComponent<PageManager>();
 
             m_pauseInput.Init();
             m_hudNavigationInput.Init();
             m_viewManager.Init();
+            m_pageManager.Init();
         }
 
         public void UnlockVoice(VoiceType type, bool force_unlock = false)
@@ -87,7 +91,7 @@ namespace Comic
                 if (force_unlock)
                 {
                     UnlockChapter(target_chapter, false, true);
-                    return;   
+                    return;
                 }
                 else
                 {
@@ -118,7 +122,7 @@ namespace Comic
 
             if (unlock_voice)
                 UnlockVoice(m_gameConfig.GetChapterDatas(type).m_voiceType, false);
-            
+
             if (unlock_power)
                 UnlockPower(m_gameConfig.GetChapterDatas(type).m_powerType, false);
         }
@@ -151,6 +155,8 @@ namespace Comic
 
         protected override void OnUpdate(float elapsed_time)
         {
+            base.OnUpdate(elapsed_time);
+
             // if (m_pause)
             // {
             //     m_hudNavigationInput.Update();
@@ -175,9 +181,5 @@ namespace Comic
         {
             Compute = true;
         }
-
-        // Pause every managed objects
-        //public override void Pause(bool pause)
-        //{}
     }
 }
