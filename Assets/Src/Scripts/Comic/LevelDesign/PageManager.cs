@@ -80,7 +80,7 @@ namespace Comic
         public bool TryNextPage()
         {
             int nextIdx = m_currentPageIndex + 1;
-            if (nextIdx >= m_pageList.Count)
+            if (nextIdx >= m_unlockedPageList.Count)
             {
                 return false;
             }
@@ -102,12 +102,12 @@ namespace Comic
 
         private void SwitchPageByIndex(int index)
         {
-            foreach (var page in m_pageList)
+            foreach (var page in m_unlockedPageList)
             {
                 page.Enable(false);
             }
 
-            m_currentPage = m_pageList[m_currentPageIndex];
+            m_currentPage = m_unlockedPageList[m_currentPageIndex];
             m_currentPage.Enable(true);
         }
     }
