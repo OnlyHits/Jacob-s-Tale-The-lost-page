@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using CustomArchitecture;
 
 namespace Comic
 {
@@ -28,6 +29,12 @@ namespace Comic
         }
 
         public List<ChapterSavedData> GetUnlockedChaptersDatas() => m_unlockChapters;
+
+        public void ClearSaveDebug()
+        {
+            m_unlockChapters.Clear();
+            m_saveUtilitary.Save(m_unlockChapters);
+        }
 
         public void EncounterVoice(Chapters type)
         {
@@ -102,6 +109,20 @@ namespace Comic
             m_unlockChapters.Add(chapter);
             
             chapter.m_chapterType = type;
+
+            m_saveUtilitary.Save(m_unlockChapters);
+        }
+
+        public void LockChapter(Chapters type)
+        {
+            foreach (var unlock_chapter in m_unlockChapters)
+            {
+                if (unlock_chapter.m_chapterType == type)
+                {
+                    m_unlockChapters.Remove(unlock_chapter);
+                    break;
+                }
+            }
 
             m_saveUtilitary.Save(m_unlockChapters);
         }

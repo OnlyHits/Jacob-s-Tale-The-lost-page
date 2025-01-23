@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Collections.Generic;
 
-namespace Comic
+namespace CustomArchitecture
 {
     public enum FileType
     {

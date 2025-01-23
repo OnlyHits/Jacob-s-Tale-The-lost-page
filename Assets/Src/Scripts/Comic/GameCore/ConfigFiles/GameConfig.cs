@@ -3,6 +3,7 @@ using Sirenix.Serialization;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
+using CustomArchitecture;
 
 namespace Comic
 {

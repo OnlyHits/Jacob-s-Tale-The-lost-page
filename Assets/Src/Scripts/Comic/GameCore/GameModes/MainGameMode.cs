@@ -18,23 +18,38 @@ namespace Comic
         public void UnlockVoice(VoiceType type, bool force_unlock);
         public void UnlockPower(PowerType type, bool force_unlock);
         public void UnlockChapter(Chapters type, bool unlock_voice, bool unlock_power);
+
+        public void LockChapter(Chapters type);
+
+        public void SubscribeToLockVoice(Action<VoiceType> function);
+        public void SubscribeToLockPower(Action<PowerType> function);
+        public void SubscribeToLockChapter(Action<Chapters> function);
+
         public void SubscribeToUnlockVoice(Action<VoiceType> function);
         public void SubscribeToUnlockPower(Action<PowerType> function);
+        public void SubscribeToUnlockChapter(Action<Chapters> function);
+
+        public void ClearSaveDebug();
     }
 
     public class MainGameMode : AGameMode, MainGameModeProvider
     {
         private GameConfig m_gameConfig;
         private GameProgression m_gameProgression;// regrouper avec settings dans une subclass
-        private Setting m_settings;
         private PauseInput m_pauseInput; // ca va etre integré direct dans gamemode
         private NavigationInput m_hudNavigationInput; // ca degage
+
         private ViewManager m_viewManager;
         private PageManager m_pageManager;
         private CharacterManager m_characterManager;
 
         private Action<VoiceType> m_onUnlockVoiceCallback;
         private Action<PowerType> m_onUnlockPowerCallback;
+        private Action<Chapters> m_onUnlockChapterCallback;
+
+        private Action<VoiceType> m_onLockVoiceCallback;
+        private Action<PowerType> m_onLockPowerCallback;
+        private Action<Chapters> m_onLockChapterCallback;
 
         public List<ChapterSavedData> GetSavedValues() => m_gameProgression.GetUnlockedChaptersDatas();
         public GameConfig GetGameConfig() => m_gameConfig;
@@ -48,7 +63,6 @@ namespace Comic
 
             m_gameConfig = SerializedScriptableObject.CreateInstance<GameConfig>();
             m_gameProgression = new GameProgression();
-            m_settings = new Setting();
             m_pauseInput = GetComponent<PauseInput>();
             m_hudNavigationInput = GetComponent<NavigationInput>();
             m_viewManager = GetComponent<ViewManager>();
@@ -66,6 +80,8 @@ namespace Comic
             m_pageManager.Init();
             m_characterManager.Init();
         }
+
+        #region Progression
 
         public void UnlockVoice(VoiceType type, bool force_unlock = false)
         {
@@ -114,7 +130,7 @@ namespace Comic
 
             if (m_gameProgression.HasUnlockPower(target_chapter))
             {
-                Debug.LogWarning("You already unlock this voice");
+                Debug.LogWarning("You already unlock this power");
                 return;
             }
 
@@ -137,6 +153,52 @@ namespace Comic
 
             if (unlock_power)
                 UnlockPower(m_gameConfig.GetChapterDatas(type).m_powerType, false);
+
+            m_onUnlockChapterCallback?.Invoke(type);
+        }
+
+        public void LockChapter(Chapters type)
+        {
+            if (!m_gameProgression.HasUnlockChapter(type))
+            {
+                Debug.LogWarning("Chapter already locked");
+                return;
+            }
+
+            m_gameProgression.LockChapter(type);
+
+            m_onLockChapterCallback?.Invoke(type);
+            m_onLockVoiceCallback?.Invoke(m_gameConfig.GetVoiceByChapter(type));
+            m_onLockPowerCallback?.Invoke(m_gameConfig.GetPowerByChapter(type));
+        }
+
+        #endregion
+
+        public void ClearSaveDebug()
+        {
+            m_gameProgression.ClearSaveDebug();
+        }
+
+        #region Callbacks
+
+        public void SubscribeToLockChapter(Action<Chapters> function)
+        {
+            m_onLockChapterCallback += function;
+        }
+
+        public void SubscribeToLockPower(Action<PowerType> function)
+        {
+            m_onLockPowerCallback += function;
+        }
+
+        public void SubscribeToLockVoice(Action<VoiceType> function)
+        {
+            m_onLockVoiceCallback += function;
+        }
+
+        public void SubscribeToUnlockChapter(Action<Chapters> function)
+        {
+            m_onUnlockChapterCallback += function;
         }
 
         public void SubscribeToUnlockPower(Action<PowerType> function)
@@ -148,6 +210,8 @@ namespace Comic
         {
             m_onUnlockVoiceCallback += function;
         }
+
+        #endregion
 
         public override void Pause(bool pause)
         {

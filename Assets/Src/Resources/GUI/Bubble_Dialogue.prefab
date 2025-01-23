@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8485098015758462980}
   - component: {fileID: 1821633747410618639}
-  - component: {fileID: 287713692175757334}
   - component: {fileID: 7974700209739119680}
+  - component: {fileID: 2565954832161246164}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -83,61 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &287713692175757334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5587876598351033016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63b7232801f46663094665a3c18ac894, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dialogues:
-  - dialogueName: Welcome
-    _setupOnStart: 1
-    _isSetup: 0
-    _partOfSide:
-    - _modifiableText:
-      - _text: 'Bonjour '
-        _textModifier: 1
-        _colorModifier: 2
-        _solidColor:
-          serializedVersion: 2
-          rgba: 4278848248
-        _gradientColor:
-          serializedVersion: 2
-          rgba: 4278241535
-        _colorSpeedRandomness: 0.193
-        _firstIndex: 0
-        _lastIndex: 0
-        _colorRandomSpeed: []
-      - _text: Je m'appelle Bethany
-        _textModifier: 3
-        _colorModifier: 0
-        _solidColor:
-          serializedVersion: 2
-          rgba: 4290327330
-        _gradientColor:
-          serializedVersion: 2
-          rgba: 0
-        _colorSpeedRandomness: 0
-        _firstIndex: 0
-        _lastIndex: 0
-        _colorRandomSpeed: []
-      _fullText: 
-    - _modifiableText: []
-      _fullText: 
-  _waveSpeed: 0
-  _waveAmplitude: 0
-  _bounceSpeed: {x: 0, y: 3}
-  _bounceAmplitude: {x: 0, y: 5}
-  _woodleSpeed: {x: 0, y: 1}
-  _woodleAmplitude: {x: 0, y: 3}
-  _popDuration: 0.1
-  _handleByInput: 0
 --- !u!114 &7974700209739119680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +177,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1821633747410618639}
   m_maskType: 0
+--- !u!114 &2565954832161246164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5587876598351033016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86094ca7d3de9fccf84d7a9f949a0642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pause: 0
 --- !u!1 &6725362304523002123
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pause: 0
-  m_dialogue: {fileID: 287713692175757334}
+  m_dialogue: {fileID: 2565954832161246164}
 --- !u!222 &3237081782123541359
 CanvasRenderer:
   m_ObjectHideFlags: 0
