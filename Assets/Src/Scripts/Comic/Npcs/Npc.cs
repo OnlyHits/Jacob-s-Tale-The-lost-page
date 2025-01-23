@@ -18,6 +18,11 @@ namespace Comic
         {
             base.OnUpdate(elapsed_time);
 
+            if (m_lookTarget == null)
+            {
+                return;
+            }
+
             Vector2 directionTarget = (Vector2)m_lookTarget.position - m_rb.position;
             SetSprireFaceDirection(directionTarget);
         }
