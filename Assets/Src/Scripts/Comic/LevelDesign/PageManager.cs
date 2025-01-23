@@ -102,7 +102,7 @@ namespace Comic
 
         private void SwitchPageByIndex(int index)
         {
-            foreach (var page in m_unlockedPageList)
+            foreach (var page in m_pageList)
             {
                 page.Enable(false);
             }
