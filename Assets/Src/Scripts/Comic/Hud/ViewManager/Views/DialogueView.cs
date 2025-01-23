@@ -64,7 +64,7 @@ namespace Comic
                 { VoiceType.Voice_Boss,         Resources.Load<GameObject>("GUI/Icon_Ivyc") },
             };
 
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
                 if (data.m_hasUnlockVoice)
                 {

@@ -18,34 +18,38 @@ namespace Comic
 
         public void Init()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
 
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
-                bool unlock = false;
-
-                if (data.m_chapterType == Chapters.The_Prequel)
-                {
-                    unlock = true;
-                }
-                else if (data.m_hasUnlockVoice)
-                {
-                    unlock = true;
-                }
-
-                if (unlock)
-                {
-                    UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
-                }
+                UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
             }
 
             SwitchPageByIndex(m_currentPageIndex);
         }
 
-        private void OnUnlockVoice(VoiceType voiceType)
+        private void OnUnlockChapter(Chapters chapterUnlocked)
         {
-            Chapters newChapterUnlocked = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetChapterByVoice(voiceType);
-            UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(newChapterUnlocked));
+            UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));
+        }
+
+        private void OnLockChapter(Chapters chapterUnlocked)
+        {
+            LockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));
+        }
+
+        private void LockPages(List<int> pageIndexes)
+        {
+            if (pageIndexes.IsNullOrEmpty())
+            {
+                Debug.LogError("Could not get pages indexes because the list is null");
+            }
+            foreach (int index in pageIndexes)
+            {
+                var page = m_pageList[index];
+                m_unlockedPageList.Remove(page);
+            }
         }
 
         private void UnlockPages(List<int> pageIndexes)

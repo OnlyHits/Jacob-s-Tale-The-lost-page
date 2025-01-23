@@ -11,7 +11,7 @@ namespace Comic
 {
     public interface MainGameModeProvider
     {
-        public List<ChapterSavedData> GetSavedValues();
+        public List<ChapterSavedData> GetUnlockChaptersData();
         public GameConfig GetGameConfig();
         public PageManager GetPageManager();
         public CharacterManager GetCharacterManager();
@@ -51,7 +51,7 @@ namespace Comic
         private Action<PowerType> m_onLockPowerCallback;
         private Action<Chapters> m_onLockChapterCallback;
 
-        public List<ChapterSavedData> GetSavedValues() => m_gameProgression.GetUnlockedChaptersDatas();
+        public List<ChapterSavedData> GetUnlockChaptersData() => m_gameProgression.GetUnlockedChaptersDatas();
         public GameConfig GetGameConfig() => m_gameConfig;
         public PageManager GetPageManager() => m_pageManager;
         public CharacterManager GetCharacterManager() => m_characterManager;
@@ -69,7 +69,7 @@ namespace Comic
             m_pageManager = GetComponent<PageManager>();
             m_characterManager = GetComponent<CharacterManager>();
 
-            if (GetSavedValues().Count == 0)
+            if (GetUnlockChaptersData().Count == 0)
             {
                 UnlockChapter(Chapters.The_Prequel, false, false);
             }

@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.Utilities;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 namespace Comic
@@ -24,13 +22,22 @@ namespace Comic
 
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
 
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
                 if (data.m_hasUnlockVoice)
                 {
                     VoiceType voiceType = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType);
                     DisableNPC(voiceType);
                 }
+            }
+
+            foreach (Character npc in m_npcs.Values)
+            {
+                //get le chapter d'ou vient ce npc
+                //get les pages du chapter
+                //parcourir les page & check si il y a un spawnPoint
+                Vector3 spawnPoint = null;
+                npc.transform.position = spawnPoint;
             }
         }
 
