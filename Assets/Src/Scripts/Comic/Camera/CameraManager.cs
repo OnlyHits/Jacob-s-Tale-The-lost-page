@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using CustomArchitecture;
 using DG.Tweening;
+using UnityEngine.PlayerLoop;
 
 namespace Comic
 {
@@ -41,12 +42,21 @@ namespace Comic
             m_composer = m_camController.GetComponent<CinemachinePositionComposer>();
             m_camController.Follow = m_target;
             m_camController.LookAt = m_target;
-
             m_baseOrthagraphicSize = m_camController.Lens.OrthographicSize;
-            PageManager.onSwitchPage += OnSwitchPage;
         }
 
-        private void OnSwitchPage(bool nextPage, Page p1, Page p2)
+        private void Start()
+        {
+            Init();
+        }
+
+        public void Init()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+        }
+
+        private void OnBeforeSwitchPage(bool nextPage, Page p1, Page p2)
         {
             if (m_switchPageTween != null)
             {
@@ -55,7 +65,7 @@ namespace Comic
 
             float currentValue = m_camController.Lens.OrthographicSize;
             float startValue = m_baseOrthagraphicSize;
-            float duration = m_durationSwitchPage / 2;
+            float duration = m_durationSwitchPage / 4;
             float destValue = m_switchPageOrthoSize;
 
             m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, duration)

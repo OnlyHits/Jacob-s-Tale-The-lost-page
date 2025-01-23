@@ -50,6 +50,7 @@ namespace Comic
         public override void Pause(bool pause = true)
         {
             base.Pause(pause);
+            m_inputsController.Pause(pause);
         }
 
         protected override void OnUpdate(float elapsed_time)

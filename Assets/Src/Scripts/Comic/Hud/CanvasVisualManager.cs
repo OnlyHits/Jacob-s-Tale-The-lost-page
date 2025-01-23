@@ -18,10 +18,23 @@ namespace Comic
         {
             m_baseRot = transform.position;
             m_destRot = m_destTransform.eulerAngles;
-            PageManager.onSwitchPage += OnSwitchPage;
         }
 
-        private void OnSwitchPage(bool nextPage, Page p1, Page p2)
+        private void Start()
+        {
+            Init();
+        }
+
+        public void Init()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+        }
+
+
+        #region SWITCH PAGE
+
+        private void OnBeforeSwitchPage(bool nextPage, Page p1, Page p2)
         {
             if (!nextPage)
             {
@@ -54,5 +67,9 @@ namespace Comic
         {
             transform.eulerAngles = new Vector3(0, m_baseRot.y, 0);
         }
+
+        #endregion SWITCH PAGE
+
+
     }
 }

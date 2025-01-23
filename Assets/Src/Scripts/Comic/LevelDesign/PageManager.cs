@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using CustomArchitecture;
+using Sirenix.Serialization.Internal;
 using Sirenix.Utilities;
 using UnityEngine;
 
 namespace Comic
 {
-    public class PageManager : BaseBehaviour
+    public partial class PageManager : BaseBehaviour
     {
         [SerializeField] private List<Page> m_pageList = new List<Page>();
         [SerializeField, ReadOnly] private Page m_currentPage;
@@ -85,8 +86,6 @@ namespace Comic
             }
         }
 
-        public static Action<bool, Page, Page> onSwitchPage;
-
         public bool TryNextPage()
         {
             int nextIdx = m_currentPageIndex + 1;
@@ -94,16 +93,7 @@ namespace Comic
             {
                 return false;
             }
-            PageManager.onSwitchPage?.Invoke(true, m_unlockedPageList[m_currentPageIndex], m_unlockedPageList[nextIdx]);
-
-            // after pagre has turned
-            // wait for : callback / event, duration (1f)
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, () =>
-            {
-                m_currentPageIndex = nextIdx;
-                SwitchPageByIndex(m_currentPageIndex);
-            }));
-
+            SwitchPage(true, nextIdx);
             return true;
         }
         public bool TryPrevPage()
@@ -113,26 +103,9 @@ namespace Comic
             {
                 return false;
             }
-            PageManager.onSwitchPage?.Invoke(false, m_unlockedPageList[m_currentPageIndex], m_unlockedPageList[prevIdx]);
 
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, () =>
-            {
-                m_currentPageIndex = prevIdx;
-                SwitchPageByIndex(m_currentPageIndex);
-            }));
-
+            SwitchPage(false, prevIdx);
             return true;
-        }
-
-        private void SwitchPageByIndex(int index)
-        {
-            foreach (var page in m_pageList)
-            {
-                page.Enable(false);
-            }
-
-            m_currentPage = m_unlockedPageList[m_currentPageIndex];
-            m_currentPage.Enable(true);
         }
     }
 }

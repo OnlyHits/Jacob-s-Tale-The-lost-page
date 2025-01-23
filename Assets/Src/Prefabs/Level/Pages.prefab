@@ -135,7 +135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7416579488358883468}
   m_Layer: 0
-  m_Name: TestPage
+  m_Name: ///// TestPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

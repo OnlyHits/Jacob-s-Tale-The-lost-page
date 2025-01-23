@@ -10,21 +10,13 @@ namespace Comic
         private Dictionary<VoiceType, Character> m_npcs;
         public Player GetPlayer() => m_player;
 
-        private void Awake()
-        {
-            PageManager.onSwitchPage += OnSwitchPage;
-        }
-
         public void Init()
         {
             LoadCharacters();
+            InitCharacters();
 
-            m_player.Init();
-            foreach (Character npc in m_npcs.Values)
-            {
-                npc.Init();
-            }
-
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(OnLockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
@@ -61,6 +53,17 @@ namespace Comic
             };
         }
 
+        private void InitCharacters()
+        {
+            m_player.Init();
+            foreach (Character npc in m_npcs.Values)
+            {
+                npc.Init();
+            }
+        }
+
+        #region SPAWN NPCs
+
         private void TrySpawnNPCsByChapter(Chapters chapter)
         {
             Dictionary<VoiceType, int> npcsSpawnPages = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetNpcsSpawnPageByChapter(chapter); ;
@@ -91,6 +94,11 @@ namespace Comic
                 EnableNPC(npcVoice, true);
             }
         }
+
+        #endregion SPAWN NPCs
+
+
+        #region CALLBACK RECEPTION
 
         private void OnUnlockVoice(VoiceType voiceType)
         {
@@ -129,14 +137,19 @@ namespace Comic
             m_npcs[voiceType].gameObject.SetActive(enable);
         }
 
-        private void OnSwitchPage(bool nextPage, Page p1, Page p2)
+        #endregion CALLBACK RECEPTION
+
+
+        #region SWITCH PAGE
+
+        private void OnBeforeSwitchPage(bool nextPage, Page p1, Page p2)
         {
             PauseAllCharacters(true);
+        }
 
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, () =>
-            {
-                PauseAllCharacters(false);
-            }));
+        private void OnAfterSwitchPage(bool nextPage, Page p1, Page p2)
+        {
+            PauseAllCharacters(false);
         }
 
         public void PauseAllCharacters(bool pause = true)
@@ -147,5 +160,7 @@ namespace Comic
                 npc.Pause(pause);
             }
         }
+
+        #endregion SWITCH PAGE
     }
 }

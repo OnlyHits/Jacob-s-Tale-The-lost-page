@@ -15,10 +15,23 @@ namespace Comic
         private void Awake()
         {
             m_destRot = m_destTransform.eulerAngles;
-            PageManager.onSwitchPage += OnSwitchPage;
         }
 
-        private void OnSwitchPage(bool nextPage, Page currentPage, Page newPage)
+        private void Start()
+        {
+            Init();
+        }
+
+        public void Init()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+        }
+
+
+        #region SWITCH PAGE
+
+        private void OnBeforeSwitchPage(bool nextPage, Page currentPage, Page newPage)
         {
             if (nextPage)
             {
@@ -53,6 +66,9 @@ namespace Comic
         {
             page.ResetBaseVisualRot();
         }
+
+        #endregion SWITCH PAGE
+
     }
 
 }
