@@ -9,8 +9,9 @@ namespace CustomArchitecture
 
         protected virtual void OnUpdate(float elapsed_time) { }
         protected virtual void OnFixedUpdate(float elapsed_time) { }
-        protected virtual void OnLateUpdate(float elapsed_time) { }       
+        protected virtual void OnLateUpdate(float elapsed_time) { }
 
+        public bool IsPaused() => m_pause;
         public virtual void Pause(bool pause = true)
         {
             m_pause = pause;

@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Comic
@@ -11,6 +9,11 @@ namespace Comic
         [SerializeField, ReadOnly] private Player m_player;
         private Dictionary<VoiceType, Character> m_npcs;
         public Player GetPlayer() => m_player;
+
+        private void Awake()
+        {
+            PageManager.onSwitchPage += OnSwitchPage;
+        }
 
         public void Init()
         {
@@ -124,6 +127,25 @@ namespace Comic
                 return;
             }
             m_npcs[voiceType].gameObject.SetActive(enable);
+        }
+
+        private void OnSwitchPage(bool nextPage, Page p1, Page p2)
+        {
+            PauseAllCharacters(true);
+
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, () =>
+            {
+                PauseAllCharacters(false);
+            }));
+        }
+
+        public void PauseAllCharacters(bool pause = true)
+        {
+            m_player.Pause(pause);
+            foreach (Npc npc in m_npcs.Values)
+            {
+                npc.Pause(pause);
+            }
         }
     }
 }

@@ -8,19 +8,39 @@ namespace Comic
     {
         [SerializeField] private GameObject m_visual;
         [SerializeField] private Transform m_spawnPoint;
-        public void Enable(bool enable)
+
+        [SerializeField, ReadOnly] private Vector3 m_baseVisualRot;
+
+        private void Awake()
         {
-            m_visual.SetActive(enable);
+            m_baseVisualRot = m_visual.transform.eulerAngles;
         }
 
-        public Transform TryGetSpawnPoint()
+        #region VISUAL
+        public Vector3 GetBaseVisualRot()
         {
-            return m_spawnPoint;
+            return m_baseVisualRot;
         }
-
+        public void ResetBaseVisualRot()
+        {
+            m_visual.transform.eulerAngles = new Vector3(0, m_baseVisualRot.y, 0);
+        }
         public Transform GetVisualTransform()
         {
             return m_visual.transform;
         }
+
+        public void Enable(bool enable)
+        {
+            m_visual.SetActive(enable);
+        }
+        #endregion VISUAL
+
+        #region SPAWN POINT
+        public Transform TryGetSpawnPoint()
+        {
+            return m_spawnPoint;
+        }
+        #endregion SPAWN POINT
     }
 }

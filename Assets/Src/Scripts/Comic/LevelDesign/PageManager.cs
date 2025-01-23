@@ -96,8 +96,13 @@ namespace Comic
             }
             PageManager.onSwitchPage?.Invoke(true, m_unlockedPageList[m_currentPageIndex], m_unlockedPageList[nextIdx]);
 
-            m_currentPageIndex = nextIdx;
-            SwitchPageByIndex(m_currentPageIndex);
+            // after pagre has turned
+            // wait for : callback / event, duration (1f)
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, () =>
+            {
+                m_currentPageIndex = nextIdx;
+                SwitchPageByIndex(m_currentPageIndex);
+            }));
 
             return true;
         }
@@ -110,8 +115,11 @@ namespace Comic
             }
             PageManager.onSwitchPage?.Invoke(false, m_unlockedPageList[m_currentPageIndex], m_unlockedPageList[prevIdx]);
 
-            m_currentPageIndex = prevIdx;
-            SwitchPageByIndex(m_currentPageIndex);
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, () =>
+            {
+                m_currentPageIndex = prevIdx;
+                SwitchPageByIndex(m_currentPageIndex);
+            }));
 
             return true;
         }

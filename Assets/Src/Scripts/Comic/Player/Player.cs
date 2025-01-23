@@ -47,6 +47,11 @@ namespace Comic
             m_pageManager = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager();
         }
 
+        public override void Pause(bool pause = true)
+        {
+            base.Pause(pause);
+        }
+
         protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);
