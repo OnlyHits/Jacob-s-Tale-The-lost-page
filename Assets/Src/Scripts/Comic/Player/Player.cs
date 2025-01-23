@@ -40,6 +40,13 @@ namespace Comic
             m_inputsController.Init();
         }
 
+        public override void Init()
+        {
+            base.Init();
+
+            m_pageManager = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager();
+        }
+
         protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);

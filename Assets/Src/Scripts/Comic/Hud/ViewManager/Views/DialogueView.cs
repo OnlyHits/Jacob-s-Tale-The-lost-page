@@ -57,7 +57,7 @@ namespace Comic
             m_iconLastPositions = new();
             m_icons = new()
             {
-                { VoiceType.Voice_BestFriend,       Resources.Load<GameObject>("GUI/Icon_Gaetan") },
+                { VoiceType.Voice_BestFriend,   Resources.Load<GameObject>("GUI/Icon_Gaetan") },
                 { VoiceType.Voice_Beloved,      Resources.Load<GameObject>("GUI/Icon_Bethany") },
                 { VoiceType.Voice_Bully,        Resources.Load<GameObject>("GUI/Icon_Dylan") },
                 { VoiceType.Voice_Boss,         Resources.Load<GameObject>("GUI/Icon_Ivyc") },
@@ -139,7 +139,7 @@ namespace Comic
 
         public void StartDialogue()
         {
-            StartCoroutine(TriggerDialogue());
+            //StartCoroutine(TriggerDialogue());
         }
 
         private IEnumerator TriggerDialogue()

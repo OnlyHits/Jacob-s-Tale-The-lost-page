@@ -8,10 +8,10 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 4,
+    "$rlength": 5,
     "$rcontent": [
         {
-            "$k": 0,
+            "$k": 1,
             "$v": {
                 "$id": 2,
                 "$type": "2|Comic.ChapterConfig, Assembly-CSharp",
@@ -20,14 +20,15 @@
                 "m_pages": {
                     "$id": 3,
                     "$type": "3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib",
-                    "$rlength": 0,
+                    "$rlength": 1,
                     "$rcontent": [
+                        1
                     ]
                 }
             }
         },
         {
-            "$k": 1,
+            "$k": 2,
             "$v": {
                 "$id": 4,
                 "$type": 2,
@@ -36,14 +37,15 @@
                 "m_pages": {
                     "$id": 5,
                     "$type": 3,
-                    "$rlength": 0,
+                    "$rlength": 1,
                     "$rcontent": [
+                        2
                     ]
                 }
             }
         },
         {
-            "$k": 2,
+            "$k": 3,
             "$v": {
                 "$id": 6,
                 "$type": 2,
@@ -52,14 +54,15 @@
                 "m_pages": {
                     "$id": 7,
                     "$type": 3,
-                    "$rlength": 0,
+                    "$rlength": 1,
                     "$rcontent": [
+                        3
                     ]
                 }
             }
         },
         {
-            "$k": 3,
+            "$k": 4,
             "$v": {
                 "$id": 8,
                 "$type": 2,
@@ -68,8 +71,26 @@
                 "m_pages": {
                     "$id": 9,
                     "$type": 3,
-                    "$rlength": 0,
+                    "$rlength": 1,
                     "$rcontent": [
+                        4
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 0,
+            "$v": {
+                "$id": 10,
+                "$type": 2,
+                "m_voiceType": 4,
+                "m_powerType": 4,
+                "m_pages": {
+                    "$id": 11,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        0
                     ]
                 }
             }

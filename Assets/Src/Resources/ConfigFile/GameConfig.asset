@@ -40,13 +40,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: $v
       Entry: 7
       Data: 2|Comic.ChapterConfig, Assembly-CSharp
@@ -61,7 +61,10 @@ MonoBehaviour:
       Data: 3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 13
       Data: 
@@ -79,7 +82,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: $v
       Entry: 7
       Data: 4|Comic.ChapterConfig, Assembly-CSharp
@@ -94,7 +97,10 @@ MonoBehaviour:
       Data: 5|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 13
       Data: 
@@ -112,7 +118,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: $v
       Entry: 7
       Data: 6|Comic.ChapterConfig, Assembly-CSharp
@@ -127,7 +133,10 @@ MonoBehaviour:
       Data: 7|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 0
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 3
     - Name: 
       Entry: 13
       Data: 
@@ -145,7 +154,7 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
+      Data: 4
     - Name: $v
       Entry: 7
       Data: 8|Comic.ChapterConfig, Assembly-CSharp
@@ -160,6 +169,45 @@ MonoBehaviour:
       Data: 9|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 10|Comic.ChapterConfig, Assembly-CSharp
+    - Name: m_voiceType
+      Entry: 3
+      Data: 4
+    - Name: m_powerType
+      Entry: 3
+      Data: 4
+    - Name: m_pages
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
       Data: 0
     - Name: 
       Entry: 13

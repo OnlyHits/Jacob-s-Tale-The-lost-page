@@ -18,15 +18,34 @@ namespace Comic
 
         public void Init()
         {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
+
             foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
             {
-                if (data.m_hasUnlockVoice)
+                bool unlock = false;
+
+                if (data.m_chapterType == Chapters.The_Prequel)
+                {
+                    unlock = true;
+                }
+                else if (data.m_hasUnlockVoice)
+                {
+                    unlock = true;
+                }
+
+                if (unlock)
                 {
                     UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
                 }
             }
 
             SwitchPageByIndex(m_currentPageIndex);
+        }
+
+        private void OnUnlockVoice(VoiceType voiceType)
+        {
+            Chapters newChapterUnlocked = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetChapterByVoice(voiceType);
+            UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(newChapterUnlocked));
         }
 
         private void UnlockPages(List<int> pageIndexes)

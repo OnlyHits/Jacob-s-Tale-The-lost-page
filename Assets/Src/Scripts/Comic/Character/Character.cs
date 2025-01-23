@@ -27,6 +27,12 @@ namespace Comic
             m_sprites.AddRange(sprites);
         }
 
+        public virtual void Init()
+        {
+            // Get spawn pos & set pos
+            //ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCharacterManager().GetPlayer();
+        }
+
         protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);

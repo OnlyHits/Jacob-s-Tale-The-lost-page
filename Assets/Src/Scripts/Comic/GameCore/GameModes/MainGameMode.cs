@@ -13,6 +13,8 @@ namespace Comic
     {
         public List<ChapterSavedData> GetSavedValues();
         public GameConfig GetGameConfig();
+        public PageManager GetPageManager();
+        public CharacterManager GetCharacterManager();
         public void UnlockVoice(VoiceType type, bool force_unlock);
         public void UnlockPower(PowerType type, bool force_unlock);
         public void UnlockChapter(Chapters type, bool unlock_voice, bool unlock_power);
@@ -29,12 +31,15 @@ namespace Comic
         private NavigationInput m_hudNavigationInput; // ca degage
         private ViewManager m_viewManager;
         private PageManager m_pageManager;
+        private CharacterManager m_characterManager;
 
         private Action<VoiceType> m_onUnlockVoiceCallback;
         private Action<PowerType> m_onUnlockPowerCallback;
 
         public List<ChapterSavedData> GetSavedValues() => m_gameProgression.GetUnlockedChaptersDatas();
         public GameConfig GetGameConfig() => m_gameConfig;
+        public PageManager GetPageManager() => m_pageManager;
+        public CharacterManager GetCharacterManager() => m_characterManager;
         public override void OnLoadingEnded() { }
 
         public override void Init(AGameCore game_core, params object[] parameters)
@@ -48,11 +53,18 @@ namespace Comic
             m_hudNavigationInput = GetComponent<NavigationInput>();
             m_viewManager = GetComponent<ViewManager>();
             m_pageManager = GetComponent<PageManager>();
+            m_characterManager = GetComponent<CharacterManager>();
+
+            if (GetSavedValues().Count == 0)
+            {
+                UnlockChapter(Chapters.The_Prequel, false, false);
+            }
 
             m_pauseInput.Init();
             m_hudNavigationInput.Init();
             m_viewManager.Init();
             m_pageManager.Init();
+            m_characterManager.Init();
         }
 
         public void UnlockVoice(VoiceType type, bool force_unlock = false)

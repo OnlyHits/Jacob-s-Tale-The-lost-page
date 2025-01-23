@@ -14,6 +14,15 @@ namespace Comic
             base.Awake();
         }
 
+        public override void Init()
+        {
+            base.Init();
+
+            Player player = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCharacterManager().GetPlayer();
+
+            m_lookTarget = player.transform;
+        }
+
         protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);

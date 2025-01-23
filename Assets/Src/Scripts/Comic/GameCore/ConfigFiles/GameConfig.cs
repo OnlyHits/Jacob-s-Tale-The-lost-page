@@ -30,6 +30,7 @@ namespace Comic
         The_First_Chapter,
         The_Second_Chapter,
         The_Third_Chapter,
+        The_Fourth_Chapter,
         Chapter_None
     }
 
