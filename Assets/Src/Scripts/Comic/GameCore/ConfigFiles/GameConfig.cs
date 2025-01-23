@@ -41,6 +41,7 @@ namespace Comic
         public VoiceType m_voiceType;
         public PowerType m_powerType;
         public List<int> m_pages;
+        [OdinSerialize, ShowInInspector] public Dictionary<VoiceType, int> m_npcSpawnByPage;
     }
 
     [CreateAssetMenu(fileName = "GameConfig", menuName = "Comic/GameConfig")]
@@ -112,6 +113,18 @@ namespace Comic
 
             return m_config[type].m_pages;
         }
+
+        public Dictionary<VoiceType, int> GetNpcsSpawnPageByChapter(Chapters type)
+        {
+            if (!m_config.ContainsKey(type))
+            {
+                Debug.LogWarning("Doesn't find chapter");
+                return null;
+            }
+
+            return m_config[type].m_npcSpawnByPage;
+        }
+
 
 
         public ChapterConfig GetChapterDatas(Chapters type)

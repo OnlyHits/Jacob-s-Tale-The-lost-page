@@ -29,6 +29,18 @@ namespace Comic
             SwitchPageByIndex(m_currentPageIndex);
         }
 
+        public Transform GetSpawnPointByPageIndex(int indexPage)
+        {
+            if (indexPage >= m_pageList.Count)
+            {
+                Debug.LogWarning("Try to get page index " + indexPage.ToString() + " which does not exist in PageManager");
+                return null;
+            }
+            Page page = m_pageList[indexPage];
+
+            return page.TryGetSpawnPoint();
+        }
+
         private void OnUnlockChapter(Chapters chapterUnlocked)
         {
             UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));

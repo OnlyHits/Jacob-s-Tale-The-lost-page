@@ -13,7 +13,7 @@ namespace Comic
             m_visual.SetActive(enable);
         }
 
-        public bool TryGetSpawnPoint()
+        public Transform TryGetSpawnPoint()
         {
             return m_spawnPoint;
         }
