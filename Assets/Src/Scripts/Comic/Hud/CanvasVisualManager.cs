@@ -8,10 +8,10 @@ namespace Comic
     public class CanvasVisualManager : BaseBehaviour
     {
         [Header("Switch Page Anim")]
-        [SerializeField, ReadOnly] private Vector3 m_baseRot;
         [SerializeField] private Transform m_destTransform;
+        [SerializeField, ReadOnly] private Vector3 m_baseRot;
         [SerializeField, ReadOnly] private Vector3 m_destRot;
-        [SerializeField] private float m_duration = 1f;
+        [SerializeField, ReadOnly] private float m_duration = 1f;
         private Tween m_switchPageTween = null;
 
         private void Awake()
@@ -29,6 +29,7 @@ namespace Comic
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
             //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
 

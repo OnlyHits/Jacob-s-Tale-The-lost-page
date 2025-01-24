@@ -119,6 +119,7 @@ MonoBehaviour:
   m_currentPage: {fileID: 0}
   m_currentPageIndex: 0
   m_unlockedPageList: []
+  m_durationSwitchPage: 2
 --- !u!114 &2573248173068338771
 MonoBehaviour:
   m_ObjectHideFlags: 0

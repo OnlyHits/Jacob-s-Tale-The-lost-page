@@ -8,13 +8,13 @@ namespace Comic
     {
         [Header("Switch Page Anim")]
         [SerializeField] private Transform m_destTransform;
-        [SerializeField, ReadOnly] private Vector3 m_destRot;
-        [SerializeField] private float m_duration = 1f;
+        [SerializeField, ReadOnly] private Quaternion m_destRotQuat;
+        [SerializeField, ReadOnly] private float m_duration = 1f;
         private Tween m_switchPageTween = null;
 
         private void Awake()
         {
-            m_destRot = m_destTransform.eulerAngles;
+            m_destRotQuat = m_destTransform.rotation;
         }
 
         private void Start()
@@ -26,6 +26,7 @@ namespace Comic
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
             //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
 
@@ -35,41 +36,37 @@ namespace Comic
         {
             if (nextPage)
             {
-                float from = m_destRot.y;
-                float to = currentPage.GetBaseVisualRot().y;
+                Quaternion from = m_destRotQuat;
+                Quaternion to = currentPage.GetBaseVisualRot();
                 TranslatePage(from, to, newPage);
             }
             else if (nextPage == false)
             {
-                float from = currentPage.GetBaseVisualRot().y;
-                float to = m_destRot.y;
+                Quaternion from = currentPage.GetBaseVisualRot();
+                Quaternion to = m_destRotQuat;
                 TranslatePage(from, to, currentPage);
             }
         }
-
-        private void TranslatePage(float from, float to, Page page)
+        private void TranslatePage(Quaternion from, Quaternion to, Page page)
         {
             if (m_switchPageTween != null)
             {
                 m_switchPageTween.Kill();
             }
 
-            float currentValue = from;
-            float startValue = from;
-            float destValue = to;
+            if (Quaternion.Dot(from, to) < 0)
+            {
+                to = new Quaternion(-to.x, -to.y, -to.z, -to.w);
+            }
 
-            m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, m_duration)
+            m_switchPageTween = page.GetVisualTransform().DORotateQuaternion(to, m_duration)
+                .From(from)
                 .SetEase(Ease.Linear)
-                .OnUpdate(() =>
-                {
-                    page.GetVisualTransform().eulerAngles = new Vector3(0, currentValue, 0);
-                })
                 .OnComplete(() =>
                 {
                     ResetTransformToBase(page);
                 });
         }
-
         private void ResetTransformToBase(Page page)
         {
             page.ResetBaseVisualRot();

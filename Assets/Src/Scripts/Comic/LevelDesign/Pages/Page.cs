@@ -9,22 +9,23 @@ namespace Comic
         [SerializeField] private GameObject m_visual;
         [SerializeField] private Transform m_spawnPoint;
 
-        [SerializeField, ReadOnly] private Vector3 m_baseVisualRot;
+        private Quaternion m_baseVisualRot;
 
         private void Awake()
         {
-            m_baseVisualRot = m_visual.transform.eulerAngles;
+            m_baseVisualRot = m_visual.transform.rotation;
         }
 
         #region VISUAL
-        public Vector3 GetBaseVisualRot()
+        public Quaternion GetBaseVisualRot()
         {
             return m_baseVisualRot;
         }
         public void ResetBaseVisualRot()
         {
-            m_visual.transform.eulerAngles = new Vector3(0, m_baseVisualRot.y, 0);
+            m_visual.transform.rotation = m_baseVisualRot;
         }
+
         public Transform GetVisualTransform()
         {
             return m_visual.transform;

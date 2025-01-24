@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.Utilities;
 using UnityEngine;
 
 namespace Comic
@@ -31,6 +29,11 @@ namespace Comic
 
         #endregion CALLBACKS
 
+
+        public float GetSwitchPageDuration()
+        {
+            return m_durationSwitchPage;
+        }
 
         private void SwitchPage(bool isNextPage, int idxNewPage)
         {
