@@ -14,6 +14,7 @@ namespace Comic
         [SerializeField, ReadOnly] private int m_currentPageIndex;
         [SerializeField, ReadOnly] private List<Page> m_unlockedPageList = new List<Page>();
 
+
         private void Awake()
         {
 
