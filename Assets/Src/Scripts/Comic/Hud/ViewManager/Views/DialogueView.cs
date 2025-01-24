@@ -6,30 +6,56 @@ using System;
 
 namespace Comic
 {
+    public enum NpcIconType
+    {
+        Icon_Beloved,
+        Icon_BestFriend,
+        Icon_Boss_1,
+        Icon_Boss_2,
+        Icon_Bully,
+        Icon_Jacob_0,
+        Icon_Jacob_1,
+        Icon_Jacob_2,
+        Icon_Jacob_3,
+        Icon_Jacob_4,
+    }
+
     public class DialogueView : AView
     {
-        [SerializeField] protected Transform m_iconContainer;
-        private Dictionary<VoiceType, GameObject> m_icons;
-        private Dictionary<VoiceType, GameObject> m_currentIcons;
+        private List<VoiceType> m_allowedVoices = new() { VoiceType.Voice_Beloved, VoiceType.Voice_BestFriend, VoiceType.Voice_Boss, VoiceType.Voice_Bully };
 
         [SerializeField] protected Transform m_bubbleContainer;
-        private Dictionary<VoiceType, GameObject> m_currentBubbles;
-        private Dictionary<VoiceType, Vector3> m_iconLastPositions;
+        [SerializeField] protected Transform m_iconContainer;
+        [SerializeField] protected Transform m_mainIconContainer;
+
+        private Dictionary<VoiceType, NpcIcon> m_icons;
+        private Dictionary<VoiceType, Bubble> m_bubbles;
+
+        private NpcIcon m_mainIcon;
+        private Bubble m_mainBubble;
+
+        [SerializeField] protected Canvas m_canvas;
+        private Dictionary<NpcIconType, Sprite> m_iconSprites;
 
         public override void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(UnlockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(LockVoice);
 
-            m_currentIcons = new();
-            m_currentBubbles = new();
-            m_iconLastPositions = new();
-            m_icons = new()
+            m_icons = new();
+            m_bubbles = new();
+            m_iconSprites = new()
             {
-                { VoiceType.Voice_BestFriend,   Resources.Load<GameObject>("GUI/Icon_Gaetan") },
-                { VoiceType.Voice_Beloved,      Resources.Load<GameObject>("GUI/Icon_Bethany") },
-                { VoiceType.Voice_Bully,        Resources.Load<GameObject>("GUI/Icon_Dylan") },
-                { VoiceType.Voice_Boss,         Resources.Load<GameObject>("GUI/Icon_Ivyc") },
+                { NpcIconType.Icon_Beloved, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Beloved-1") },
+                { NpcIconType.Icon_BestFriend, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-BestFriend-1") },
+                { NpcIconType.Icon_Boss_1, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Boss-1") },
+                { NpcIconType.Icon_Boss_2, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Boss-2") },
+                { NpcIconType.Icon_Bully, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Bully-1") },
+                { NpcIconType.Icon_Jacob_0, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-0") },
+                { NpcIconType.Icon_Jacob_1, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-1") },
+                { NpcIconType.Icon_Jacob_2, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-2") },
+                { NpcIconType.Icon_Jacob_3, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-3") },
+                { NpcIconType.Icon_Jacob_4, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-4") },
             };
 
             foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
@@ -39,6 +65,8 @@ namespace Comic
                     UnlockVoice(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType));
                 }
             }
+
+            InitMainIcon();
         }
 
         private void Start()
@@ -46,96 +74,77 @@ namespace Comic
             StartCoroutine(CoroutineUtils.InvokeOnDelay(1f, StartDialogue));
         }
 
+        private void InitMainIcon()
+        {
+            GameObject main_icon = Instantiate(Resources.Load<GameObject>("GUI/Icon/IconFrame_Speaker"), m_mainIconContainer);
+            m_mainIcon = main_icon.GetComponent<NpcIcon>();
+            GameObject main_bubble = Instantiate(Resources.Load<GameObject>("GUI/IconBubble_Speaker"), m_bubbleContainer);
+            m_mainBubble = main_bubble.GetComponent<Bubble>();
+
+            RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
+            m_mainIcon.Init(VoiceType.Voice_None, m_iconSprites[ NpcIconType.Icon_Jacob_0]);
+            m_mainBubble.Init(m_mainIcon, container_rect, m_canvas);
+
+            // m_mainIcon.gameObject.SetActive(false);
+            m_mainBubble.gameObject.SetActive(false);
+        }
+
         public void LockVoice(VoiceType type)
         {
-            if (!m_currentIcons.ContainsKey(type))
+            if (!m_icons.ContainsKey(type))
             {
                 Debug.LogWarning(type + " is not unlocked");
             }
             else
             {
-                Destroy(m_currentIcons[type]);
-                m_currentIcons.Remove(type);
+                Destroy(m_icons[type].gameObject);
+                m_icons.Remove(type);
             }
 
-            if (!m_currentBubbles.ContainsKey(type))
+            if (!m_bubbles.ContainsKey(type))
             {
                 Debug.LogWarning(type + " is not unlocked");
             }
             else
             {
-                Destroy(m_currentBubbles[type]);
-                m_currentBubbles.Remove(type);
-            }
-
-            if (!m_iconLastPositions.ContainsKey(type))
-            {
-                Debug.LogWarning(type + " is not unlocked");
-            }
-            else
-            {
-                m_iconLastPositions.Remove(type);
+                Destroy(m_bubbles[type].gameObject);
+                m_bubbles.Remove(type);
             }
         }
 
         public void UnlockVoice(VoiceType type)
         {
-            if (!m_icons.ContainsKey(type) || m_currentIcons.ContainsKey(type))
+            if (!IsVoiceAllow(type))
             {
                 Debug.LogWarning(type + " is not register");
                 return;
             }
+            if ( m_icons.ContainsKey(type))
+            {
+                Debug.LogWarning(type + " is already register");
+                return;
+            }
 
-            GameObject icon = Instantiate(m_icons[type], m_iconContainer);
-            icon.GetComponent<VoiceIcon>().Init(type);
+            GameObject icon = Instantiate(Resources.Load<GameObject>("GUI/Icon/IconFrame_Voice"), m_iconContainer);
+            GameObject bubble = Instantiate(Resources.Load<GameObject>("GUI/IconBubble_Voice"), m_bubbleContainer);
+ 
+            bubble.SetActive(false);
+ 
+            m_icons.Add(type, icon.GetComponent<NpcIcon>());
+            m_bubbles.Add(type, bubble.GetComponent<Bubble>());
 
-            m_currentIcons.Add(type, icon);
-
-            m_iconLastPositions.Add(type, icon.GetComponent<RectTransform>().position);
-
-            InstantiateBubble(type);
+            RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
+            m_icons[type].Init(type, GetSpriteByType(type));
+            m_bubbles[type].Init(m_icons[type], container_rect, m_canvas);
         }
 
         private void InstantiateBubble(VoiceType type)
         {
-            GameObject bubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble_Dialogue"), m_bubbleContainer);
-            bubble.SetActive(false);
 
-            m_currentBubbles.Add(type, bubble);
-        }
-
-        private void SetupBubble(VoiceType type)
-        {
-            RectTransform icon_rect = m_currentIcons[type].GetComponent<RectTransform>();
-            RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
-            RectTransform bubble_rect = m_currentBubbles[type].GetComponent<RectTransform>();
-
-            bubble_rect.pivot = new Vector2(.5f, .5f);
-
-            Vector3 offset_x = new Vector3(icon_rect.rect.width + bubble_rect.rect.width, 0, 0);
-            Vector3 offset_y = new Vector3(0, container_rect.rect.height - bubble_rect.rect.height, 0);
-            Vector3 top_position = container_rect.position + container_rect.TransformPoint(offset_y * .5f);
-            Vector3 bot_position = container_rect.position - container_rect.TransformPoint(offset_y * .5f);
-
-            float y_position = Mathf.Clamp(icon_rect.position.y, bot_position.y, top_position.y);
-
-            bubble_rect.position = new Vector3(0, y_position, bubble_rect.position.z);
-
-            bubble_rect.SetPivotInWorldSpace(icon_rect.position);
         }
 
         protected override void OnUpdate(float elapsed_time)
-        {
-            foreach (var icon in m_currentIcons)
-            {
-                if (icon.Value.GetComponent<RectTransform>().position
-                   != m_iconLastPositions[icon.Key])
-                {
-                    SetupBubble(icon.Key);
-                    m_iconLastPositions[icon.Key] = icon.Value.GetComponent<RectTransform>().position;
-                }
-            }
-        }
+        {}
 
         public void StartDialogue()
         {
@@ -144,19 +153,46 @@ namespace Comic
 
         private IEnumerator TriggerDialogue()
         {
-            if (m_currentBubbles.TryGetValue(VoiceType.Voice_Beloved, out GameObject obj))
+            if (m_bubbles.TryGetValue(VoiceType.Voice_Beloved, out Bubble obj))
             {
-                obj.SetActive(true);
+                obj.gameObject.SetActive(true);
 
-                Bubble bubble = m_currentBubbles[VoiceType.Voice_Beloved].GetComponent<Bubble>();
+                Bubble bubble = m_bubbles[VoiceType.Voice_Beloved];
 
                 bubble.Appear(BubbleAppearIntensity.Intensity_Normal);
 
-                while (bubble.IsCompute())
-                    yield return null;
+                // while (bubble.IsCompute())
+                //     yield return null;
 
                 yield return StartCoroutine(bubble.TriggerAndWaitDialogue(DialogueType.Bethany_Welcome));
             }
+        }
+
+        private bool IsVoiceAllow(VoiceType type)
+        {
+            foreach (var allowed_icon in m_allowedVoices)
+            {
+                if (type == allowed_icon)
+                return true;
+            }
+
+            return false;
+        }
+
+        private Sprite GetSpriteByType(VoiceType type)
+        {
+            if (type == VoiceType.Voice_Beloved)
+                return m_iconSprites[NpcIconType.Icon_Beloved];
+            else if (type == VoiceType.Voice_BestFriend)
+                return m_iconSprites[NpcIconType.Icon_BestFriend];
+            else if (type == VoiceType.Voice_Boss)
+                return m_iconSprites[NpcIconType.Icon_Boss_2];
+            else if (type == VoiceType.Voice_Bully)
+                return m_iconSprites[NpcIconType.Icon_Bully];
+            else if (type == VoiceType.Voice_None)
+                return m_iconSprites[NpcIconType.Icon_Jacob_0];
+            else
+                return null;
         }
     }
 }
