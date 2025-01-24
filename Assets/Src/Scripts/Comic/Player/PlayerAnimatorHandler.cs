@@ -8,8 +8,6 @@ namespace Comic
 {
     public partial class Player : Character
     {
-        [SerializeField] private Animator m_animator;
-
         private readonly string ANIM_IDLE = "Idle";
         private readonly string ANIM_RUN = "Run";
         private readonly string ANIM_JUMP = "Jump";

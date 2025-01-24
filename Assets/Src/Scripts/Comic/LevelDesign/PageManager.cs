@@ -1,11 +1,13 @@
+using System;
 using System.Collections.Generic;
 using CustomArchitecture;
+using Sirenix.Serialization.Internal;
 using Sirenix.Utilities;
 using UnityEngine;
 
 namespace Comic
 {
-    public class PageManager : BaseBehaviour
+    public partial class PageManager : BaseBehaviour
     {
         [SerializeField] private List<Page> m_pageList = new List<Page>();
         [SerializeField, ReadOnly] private Page m_currentPage;
@@ -14,19 +16,23 @@ namespace Comic
 
         private void Awake()
         {
+
         }
 
-        public void Init()
+        private void Start()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
-
             foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
                 UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
             }
 
             SwitchPageByIndex(m_currentPageIndex);
+        }
+
+        public void Init()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
         }
 
         public Transform GetSpawnPointByPageIndex(int indexPage)
@@ -90,8 +96,7 @@ namespace Comic
             {
                 return false;
             }
-            m_currentPageIndex = nextIdx;
-            SwitchPageByIndex(m_currentPageIndex);
+            SwitchPage(true, nextIdx);
             return true;
         }
         public bool TryPrevPage()
@@ -101,20 +106,9 @@ namespace Comic
             {
                 return false;
             }
-            m_currentPageIndex = prevIdx;
-            SwitchPageByIndex(m_currentPageIndex);
+
+            SwitchPage(false, prevIdx);
             return true;
-        }
-
-        private void SwitchPageByIndex(int index)
-        {
-            foreach (var page in m_pageList)
-            {
-                page.Enable(false);
-            }
-
-            m_currentPage = m_unlockedPageList[m_currentPageIndex];
-            m_currentPage.Enable(true);
         }
     }
 }

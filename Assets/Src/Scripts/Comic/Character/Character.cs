@@ -10,6 +10,9 @@ namespace Comic
         [SerializeField, ReadOnly] protected bool m_faceRight = true;
 
         [Header("Animations")]
+        [SerializeField] protected Animator m_animator;
+
+        [Space]
         [SerializeField] protected Transform m_headPositionGoRight;
         [SerializeField] protected Transform m_headPositionGoLeft;
         [SerializeField] protected Transform m_head;
@@ -36,6 +39,13 @@ namespace Comic
         protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);
+        }
+
+        public override void Pause(bool pause = true)
+        {
+            base.Pause(pause);
+            m_rb.simulated = !pause;
+            m_animator.speed = pause ? 0 : 1f;
         }
 
         #region SPRITES

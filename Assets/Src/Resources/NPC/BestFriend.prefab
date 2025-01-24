@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_faceRight: 1
+  m_animator: {fileID: 1875409493875025703}
   m_headPositionGoRight: {fileID: 4690161332379603705}
   m_headPositionGoLeft: {fileID: 3967520318893813272}
   m_head: {fileID: 3040616925587487454}

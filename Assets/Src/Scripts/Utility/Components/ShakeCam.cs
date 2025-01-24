@@ -1,8 +1,8 @@
 using CustomArchitecture;
 using Unity.Cinemachine;
 using UnityEngine;
+using Comic;
 
-//[RequireComponent(typeof(CameraManager))]
 public class ShakeCam : BaseBehaviour
 {
     public static ShakeCam Inst { get; private set; }

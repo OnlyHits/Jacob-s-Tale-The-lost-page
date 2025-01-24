@@ -1,7 +1,5 @@
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Comic
@@ -15,13 +13,10 @@ namespace Comic
         public void Init()
         {
             LoadCharacters();
+            InitCharacters();
 
-            m_player.Init();
-            foreach (Character npc in m_npcs.Values)
-            {
-                npc.Init();
-            }
-
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(OnLockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
@@ -58,6 +53,17 @@ namespace Comic
             };
         }
 
+        private void InitCharacters()
+        {
+            m_player.Init();
+            foreach (Character npc in m_npcs.Values)
+            {
+                npc.Init();
+            }
+        }
+
+        #region SPAWN NPCs
+
         private void TrySpawnNPCsByChapter(Chapters chapter)
         {
             Dictionary<VoiceType, int> npcsSpawnPages = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetNpcsSpawnPageByChapter(chapter); ;
@@ -88,6 +94,11 @@ namespace Comic
                 EnableNPC(npcVoice, true);
             }
         }
+
+        #endregion SPAWN NPCs
+
+
+        #region CALLBACK RECEPTION
 
         private void OnUnlockVoice(VoiceType voiceType)
         {
@@ -125,5 +136,31 @@ namespace Comic
             }
             m_npcs[voiceType].gameObject.SetActive(enable);
         }
+
+        #endregion CALLBACK RECEPTION
+
+
+        #region SWITCH PAGE
+
+        private void OnBeforeSwitchPage(bool nextPage, Page p1, Page p2)
+        {
+            PauseAllCharacters(true);
+        }
+
+        private void OnAfterSwitchPage(bool nextPage, Page p1, Page p2)
+        {
+            PauseAllCharacters(false);
+        }
+
+        public void PauseAllCharacters(bool pause = true)
+        {
+            m_player.Pause(pause);
+            foreach (Npc npc in m_npcs.Values)
+            {
+                npc.Pause(pause);
+            }
+        }
+
+        #endregion SWITCH PAGE
     }
 }

@@ -183,33 +183,54 @@ namespace Comic
 
         #region Callbacks
 
+        public void SubscribeToBeforeSwitchPage(Action<bool, Page, Page> function)
+        {
+            m_pageManager.SubscribeToBeforeSwitchPage(function);
+        }
+
+        public void SubscribeToMiddleSwitchPage(Action<bool, Page, Page> function)
+        {
+            m_pageManager.SubscribeToMiddleSwitchPage(function);
+        }
+
+        public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function)
+        {
+            m_pageManager.SubscribeToAfterSwitchPage(function);
+        }
+
         public void SubscribeToLockChapter(Action<Chapters> function)
         {
+            m_onLockChapterCallback -= function;
             m_onLockChapterCallback += function;
         }
 
         public void SubscribeToLockPower(Action<PowerType> function)
         {
+            m_onLockPowerCallback -= function;
             m_onLockPowerCallback += function;
         }
 
         public void SubscribeToLockVoice(Action<VoiceType> function)
         {
+            m_onLockVoiceCallback -= function;
             m_onLockVoiceCallback += function;
         }
 
         public void SubscribeToUnlockChapter(Action<Chapters> function)
         {
+            m_onUnlockChapterCallback -= function;
             m_onUnlockChapterCallback += function;
         }
 
         public void SubscribeToUnlockPower(Action<PowerType> function)
         {
+            m_onUnlockPowerCallback -= function;
             m_onUnlockPowerCallback += function;
         }
 
         public void SubscribeToUnlockVoice(Action<VoiceType> function)
         {
+            m_onUnlockVoiceCallback -= function;
             m_onUnlockVoiceCallback += function;
         }
 
