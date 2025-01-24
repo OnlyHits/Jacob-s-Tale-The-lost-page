@@ -105,8 +105,6 @@ namespace Comic
             }
         }
 
-
-
         private void DestroyCanvasCopy()
         {
             if (m_canvasDuplicated != null)

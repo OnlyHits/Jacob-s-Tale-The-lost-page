@@ -86,7 +86,7 @@ namespace Comic
 
             Tween tween = DOTween.To(() => from, x => value = x, to, duration)
                 .SetLoops(2, LoopType.Yoyo)
-                .SetEase(Ease.InQuad)
+                .SetEase(Ease.Linear)
                 .OnUpdate(() =>
                 {
                     setterCallback?.Invoke(value);
