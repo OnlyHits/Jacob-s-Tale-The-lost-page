@@ -36,16 +36,26 @@ namespace Comic
         {
             Page currentPage = m_unlockedPageList[m_currentPageIndex];
             Page newPage = m_unlockedPageList[idxNewPage];
-            // Dans les premiere 0.5secondes si (!isNextPage), dans les dernieres 0.5secondes si (isNextPage) 
-            float delayEnableNewPage = isNextPage ? m_durationSwitchPage / 2 : 0;
 
             m_onBeforeSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
 
-            currentPage.Enable(true);
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableNewPage, () =>
+            float delayEnableCurrentPage = isNextPage ? 0 : 0;
+            float delayDisableCurrentPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage / 2;
+
+            float delayEnableNewPage = isNextPage ? m_durationSwitchPage / 2 : 0;
+            float delayDisableNewPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage;
+
+            if (!isNextPage)
             {
-                newPage.Enable(true);
-            }));
+                StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableCurrentPage, () => currentPage.Enable(true)));
+            }
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableCurrentPage, () => currentPage.Enable(false)));
+
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableNewPage, () => newPage.Enable(true)));
+            if (isNextPage)
+            {
+                StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableNewPage, () => newPage.Enable(false)));
+            }
 
             StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage, () =>
             {

@@ -38,20 +38,30 @@ namespace Comic
         {
             if (!nextPage)
             {
-                return;
+                float from = m_destRot.y;
+                float to = m_baseRot.y;
+                TranslateCanvas(from, to);
             }
+            else if (nextPage)
+            {
+                float from = m_baseRot.y;
+                float to = m_destRot.y;
+                TranslateCanvas(from, to);
+            }
+        }
 
+        private void TranslateCanvas(float from, float to)
+        {
             if (m_switchPageTween != null)
             {
                 m_switchPageTween.Kill();
             }
 
-            //m_switchPageTween = transform.DORotate(m_destRot, m_duration)
-            float currentValue = m_baseRot.y;
-            float startValue = m_baseRot.y;
-            float destValue = m_destRot.y;
+            float currentValue = from;
+            float startValue = from;
+            float destValue = to;
 
-            m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, m_duration / 2)
+            m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, m_duration)
                 .SetEase(Ease.Linear)
                 .OnUpdate(() =>
                 {

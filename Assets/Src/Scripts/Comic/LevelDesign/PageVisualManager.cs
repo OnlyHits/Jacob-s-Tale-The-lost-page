@@ -35,31 +35,39 @@ namespace Comic
         {
             if (nextPage)
             {
-                return;
+                float from = m_destRot.y;
+                float to = currentPage.GetBaseVisualRot().y;
+                TranslatePage(from, to, newPage);
             }
-
-            if (nextPage == false)
+            else if (nextPage == false)
             {
-                if (m_switchPageTween != null)
-                {
-                    m_switchPageTween.Kill();
-                }
-
-                float currentValue = currentPage.GetBaseVisualRot().y;
-                float startValue = currentPage.GetBaseVisualRot().y;
-                float destValue = m_destRot.y;
-
-                m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, m_duration / 2)
-                    .SetEase(Ease.Linear)
-                    .OnUpdate(() =>
-                    {
-                        currentPage.GetVisualTransform().eulerAngles = new Vector3(0, currentValue, 0);
-                    })
-                    .OnComplete(() =>
-                    {
-                        ResetTransformToBase(currentPage);
-                    });
+                float from = currentPage.GetBaseVisualRot().y;
+                float to = m_destRot.y;
+                TranslatePage(from, to, currentPage);
             }
+        }
+
+        private void TranslatePage(float from, float to, Page page)
+        {
+            if (m_switchPageTween != null)
+            {
+                m_switchPageTween.Kill();
+            }
+
+            float currentValue = from;
+            float startValue = from;
+            float destValue = to;
+
+            m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, m_duration)
+                .SetEase(Ease.Linear)
+                .OnUpdate(() =>
+                {
+                    page.GetVisualTransform().eulerAngles = new Vector3(0, currentValue, 0);
+                })
+                .OnComplete(() =>
+                {
+                    ResetTransformToBase(page);
+                });
         }
 
         private void ResetTransformToBase(Page page)
