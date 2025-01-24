@@ -121,9 +121,9 @@ GameObject:
   - component: {fileID: 4814922581960523340}
   - component: {fileID: 4436056563511737785}
   - component: {fileID: 2737123481013460128}
-  - component: {fileID: 1667438380183332103}
   - component: {fileID: 4072759863184302984}
-  - component: {fileID: 3549652503920674235}
+  - component: {fileID: 1633446470902499528}
+  - component: {fileID: 3192988111695943110}
   m_Layer: 5
   m_Name: IconFrame_Voice
   m_TagString: Untagged
@@ -147,10 +147,10 @@ RectTransform:
   - {fileID: 157021037077130318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 602, y: 602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4436056563511737785
 CanvasRenderer:
@@ -190,19 +190,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1667438380183332103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9031084525961810234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 1
 --- !u!114 &4072759863184302984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,7 +205,20 @@ MonoBehaviour:
   m_pause: 0
   m_bubbleAnchor: {fileID: 157021037077130318}
   m_iconImage: {fileID: 5272443286817404894}
---- !u!114 &3549652503920674235
+--- !u!114 &1633446470902499528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9031084525961810234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &3192988111695943110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,4 +231,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AspectMode: 1
-  m_AspectRatio: 1.0341365
+  m_AspectRatio: 1
