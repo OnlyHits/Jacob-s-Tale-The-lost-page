@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: a20bfd2245f3d80669ca09ffb81af025
+guid: 517fa9aff5486269cbf2a3de69777dbc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1719127251252230678
-    second: Bubble_pin_0
-  - first:
-      213: -4367571308410736673
-    second: Bubble_pin_1
-  - first:
-      213: -8565247517721661818
-    second: Bubble_pin_2
-  - first:
-      213: 4842439533854007701
-    second: Bubble_pin_3
+      213: -3407339434949640886
+    second: Face-Jacob-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,13 +46,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.33178976, y: 0.33157527}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 52, y: 0, z: 93, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -109,89 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_pin_0
+      name: Face-Jacob-1_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 899
-        width: 10
-        height: 16
+        x: 53
+        y: 98
+        width: 367
+        height: 378
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae5ca619fde6428e0800000000000000
-      internalID: -1719127251252230678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_pin_1
-      rect:
-        serializedVersion: 2
-        x: 76
-        y: 1
-        width: 222
-        height: 914
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fdf6dfe09054363c0800000000000000
-      internalID: -4367571308410736673
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_pin_2
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 824
-        width: 7
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68e67e463c0222980800000000000000
-      internalID: -8565247517721661818
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_pin_3
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 811
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5912da5891dc33340800000000000000
-      internalID: 4842439533854007701
+      spriteID: a4d75a636d2b6b0d0800000000000000
+      internalID: -3407339434949640886
       vertices: []
       indices: 
       edges: []
@@ -200,8 +125,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
-    internalID: 0
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -209,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Face-Jacob-1_0: -3407339434949640886
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

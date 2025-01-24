@@ -71,36 +71,38 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: m_npcSpawnByPage
+      Entry: 7
+      Data: 4|System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 5|System.Collections.Generic.EnumEqualityComparer`1[[Comic.VoiceType,
+        Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 8
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: $v
-      Entry: 7
-      Data: 4|Comic.ChapterConfig, Assembly-CSharp
-    - Name: m_voiceType
       Entry: 3
       Data: 1
-    - Name: m_powerType
-      Entry: 3
-      Data: 0
-    - Name: m_pages
-      Entry: 7
-      Data: 5|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 3
-      Data: 2
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -118,13 +120,13 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
+      Data: 2
     - Name: $v
       Entry: 7
       Data: 6|Comic.ChapterConfig, Assembly-CSharp
     - Name: m_voiceType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: m_powerType
       Entry: 3
       Data: 0
@@ -136,7 +138,99 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_npcSpawnByPage
+      Entry: 7
+      Data: 8|System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 5
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
       Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 9|Comic.ChapterConfig, Assembly-CSharp
+    - Name: m_voiceType
+      Entry: 3
+      Data: 2
+    - Name: m_powerType
+      Entry: 3
+      Data: 0
+    - Name: m_pages
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_npcSpawnByPage
+      Entry: 7
+      Data: 11|System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 5
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -157,7 +251,7 @@ MonoBehaviour:
       Data: 4
     - Name: $v
       Entry: 7
-      Data: 8|Comic.ChapterConfig, Assembly-CSharp
+      Data: 12|Comic.ChapterConfig, Assembly-CSharp
     - Name: m_voiceType
       Entry: 3
       Data: 3
@@ -166,13 +260,39 @@ MonoBehaviour:
       Data: 0
     - Name: m_pages
       Entry: 7
-      Data: 9|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+      Data: 13|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 3
       Data: 4
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_npcSpawnByPage
+      Entry: 7
+      Data: 14|System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 15|System.Collections.Generic.EnumEqualityComparer`1[[Comic.VoiceType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -193,7 +313,7 @@ MonoBehaviour:
       Data: 0
     - Name: $v
       Entry: 7
-      Data: 10|Comic.ChapterConfig, Assembly-CSharp
+      Data: 16|Comic.ChapterConfig, Assembly-CSharp
     - Name: m_voiceType
       Entry: 3
       Data: 4
@@ -202,13 +322,41 @@ MonoBehaviour:
       Data: 4
     - Name: m_pages
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+      Data: 17|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 3
       Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_npcSpawnByPage
+      Entry: 7
+      Data: 18|System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 9
+      Data: 5
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 

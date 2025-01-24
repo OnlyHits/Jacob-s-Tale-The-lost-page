@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3773950377114243695}
   - component: {fileID: 8015448415948756102}
   - component: {fileID: 2170693466071268090}
-  - component: {fileID: 5696360124895706135}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Pin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,8 +35,8 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 191.2134}
-  m_Pivot: {x: 0.5, y: -0.000000018626451}
+  m_SizeDelta: {x: 50, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8015448415948756102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -68,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -4367571308410736673, guid: a20bfd2245f3d80669ca09ffb81af025, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -76,20 +75,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5696360124895706135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856211840536643178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AspectMode: 2
-  m_AspectRatio: 0.26148796
 --- !u!1 &5518209783683628892
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,10 +198,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5747771517356425682}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.2, y: 0.2}
+  m_AnchorMax: {x: 0.84000003, y: 0.86436254}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 159, y: 70}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1821633747410618639
 MeshRenderer:
@@ -386,7 +371,7 @@ GameObject:
   - component: {fileID: 8488952509343829976}
   - component: {fileID: 2628057042181969222}
   m_Layer: 5
-  m_Name: Bubble_Dialogue
+  m_Name: IconBubble_Voice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -408,10 +393,10 @@ RectTransform:
   - {fileID: 4111776794673904627}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128942120888618022
 MonoBehaviour:
@@ -427,7 +412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_dialogue: {fileID: 2565954832161246164}
-  m_pinRectTransform: {fileID: 3773950377114243695}
+  m_pinRect: {fileID: 3773950377114243695}
 --- !u!114 &8567832056660378163
 MonoBehaviour:
   m_ObjectHideFlags: 0

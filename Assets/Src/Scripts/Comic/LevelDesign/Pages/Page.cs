@@ -6,10 +6,16 @@ namespace Comic
 {
     public class Page : BaseBehaviour
     {
-        [SerializeField] private GameObject visual;
+        [SerializeField] private GameObject m_visual;
+        [SerializeField] private Transform m_spawnPoint;
         public void Enable(bool enable)
         {
-            visual.SetActive(enable);
+            m_visual.SetActive(enable);
+        }
+
+        public Transform TryGetSpawnPoint()
+        {
+            return m_spawnPoint;
         }
     }
 }

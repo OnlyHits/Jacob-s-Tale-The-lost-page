@@ -9,7 +9,7 @@ public class Shortcuts : MonoBehaviour
     public bool unlock = true;
     public Dictionary<KeyCode, Chapters> keyByChapters = new Dictionary<KeyCode, Chapters>()
     {
-        { KeyCode.Alpha0, Chapters.The_Prequel },
+        //{ KeyCode.Alpha0, Chapters.The_Prequel },
         { KeyCode.Alpha1, Chapters.The_First_Chapter },
         { KeyCode.Alpha2, Chapters.The_Second_Chapter },
         { KeyCode.Alpha3, Chapters.The_Third_Chapter },

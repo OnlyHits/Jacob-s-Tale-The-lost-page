@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.Utilities;
-using UnityEditor.SearchService;
+using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Comic
@@ -9,7 +9,7 @@ namespace Comic
     public class CharacterManager : BaseBehaviour
     {
         [SerializeField, ReadOnly] private Player m_player;
-        [SerializeField, ReadOnly] private Dictionary<VoiceType, Character> m_npcs;
+        private Dictionary<VoiceType, Character> m_npcs;
         public Player GetPlayer() => m_player;
 
         public void Init()
@@ -23,13 +23,19 @@ namespace Comic
             }
 
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(OnLockVoice);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
 
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetSavedValues())
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
+                // Spawn NPCS
+                TrySpawnNPCsByChapter(data.m_chapterType);
+
+                // Disable NPC if already got in UI
                 if (data.m_hasUnlockVoice)
                 {
                     VoiceType voiceType = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType);
-                    DisableNPC(voiceType);
+                    EnableNPC(voiceType, false);
                 }
             }
         }
@@ -52,6 +58,37 @@ namespace Comic
             };
         }
 
+        private void TrySpawnNPCsByChapter(Chapters chapter)
+        {
+            Dictionary<VoiceType, int> npcsSpawnPages = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetNpcsSpawnPageByChapter(chapter); ;
+
+            if (npcsSpawnPages == null)
+            {
+                return;
+            }
+
+            foreach (VoiceType npcVoice in npcsSpawnPages.Keys)
+            {
+                if (!m_npcs.ContainsKey(npcVoice))
+                {
+                    return;
+                }
+                int idxPageToSpawn = npcsSpawnPages[npcVoice];
+
+                Transform spawn = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSpawnPointByPageIndex(idxPageToSpawn);
+
+                if (spawn == null)
+                {
+                    Debug.LogWarning("No spawn pos for page " + idxPageToSpawn.ToString() + ", npc " + npcVoice.ToString() + " cannot spawn properly");
+                    return;
+                }
+
+                m_npcs[npcVoice].transform.position = spawn.position;
+                m_npcs[npcVoice].transform.parent = spawn;
+                EnableNPC(npcVoice, true);
+            }
+        }
+
         private void OnUnlockVoice(VoiceType voiceType)
         {
             if (!m_npcs.ContainsKey(voiceType))
@@ -60,12 +97,33 @@ namespace Comic
                 return;
             }
 
-            DisableNPC(voiceType);
+            EnableNPC(voiceType, false);
         }
 
-        private void DisableNPC(VoiceType voiceType)
+        public void OnLockVoice(VoiceType voiceType)
         {
-            m_npcs[voiceType].gameObject.SetActive(false);
+            if (!m_npcs.ContainsKey(voiceType))
+            {
+                Debug.LogWarning(voiceType + " is not register");
+                return;
+            }
+
+            EnableNPC(voiceType, true);
+        }
+
+        private void OnUnlockChapter(Chapters chapter)
+        {
+            TrySpawnNPCsByChapter(chapter);
+        }
+
+        private void EnableNPC(VoiceType voiceType, bool enable)
+        {
+            if (!m_npcs.ContainsKey(voiceType))
+            {
+                Debug.LogWarning("Try to enable a npc of type " + voiceType.ToString() + " which is not in npc list from CharacterManager");
+                return;
+            }
+            m_npcs[voiceType].gameObject.SetActive(enable);
         }
     }
 }
