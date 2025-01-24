@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using CustomArchitecture;
 using DG.Tweening;
 using UnityEngine;
@@ -12,9 +13,15 @@ namespace Comic
         [SerializeField, ReadOnly] private float m_duration = 1f;
         private Tween m_switchPageTween = null;
 
+        [Header("Page Visuals")]
+        [SerializeField, ReadOnly] private List<PageVisual> m_pageVisuals = new List<PageVisual>();
+
         private void Awake()
         {
             m_destRotQuat = m_destTransform.rotation;
+
+            var pages = GetComponentsInChildren<PageVisual>();
+            m_pageVisuals.AddRange(pages);
         }
 
         private void Start()
@@ -25,7 +32,7 @@ namespace Comic
         public void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
-            //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
             m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
@@ -39,14 +46,35 @@ namespace Comic
                 Quaternion from = m_destRotQuat;
                 Quaternion to = currentPage.GetBaseVisualRot();
                 TranslatePage(from, to, newPage);
+
+                newPage.gameObject.GetComponent<PageVisual>().AddOrderInLayer(50);
+                newPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(true);
             }
             else if (nextPage == false)
             {
                 Quaternion from = currentPage.GetBaseVisualRot();
                 Quaternion to = m_destRotQuat;
                 TranslatePage(from, to, currentPage);
+
+                currentPage.gameObject.GetComponent<PageVisual>().AddOrderInLayer(50);
+                currentPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(true);
             }
         }
+
+        private void OnAfterSwitchPage(bool nextPage, Page currentPage, Page newPage)
+        {
+            if (nextPage)
+            {
+                newPage.gameObject.GetComponent<PageVisual>().SubOrderInLayer(50);
+                newPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(false);
+            }
+            else if (nextPage == false)
+            {
+                currentPage.gameObject.GetComponent<PageVisual>().SubOrderInLayer(50);
+                currentPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(false);
+            }
+        }
+
         private void TranslatePage(Quaternion from, Quaternion to, Page page)
         {
             if (m_switchPageTween != null)

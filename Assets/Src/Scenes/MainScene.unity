@@ -762,8 +762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pause: 0
-  m_baseRot: {x: 0, y: 0, z: 0}
   m_destTransform: {fileID: 1590696774}
+  m_baseRot: {x: 0, y: 0, z: 0}
   m_destRot: {x: 0, y: 0, z: 0}
   m_duration: 2
 --- !u!1 &1976428871

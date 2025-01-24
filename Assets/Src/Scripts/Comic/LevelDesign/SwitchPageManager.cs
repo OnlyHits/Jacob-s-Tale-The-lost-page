@@ -44,21 +44,15 @@ namespace Comic
 
             float delayEnableCurrentPage = isNextPage ? 0 : 0;
             float delayDisableCurrentPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage / 2;
-
             float delayEnableNewPage = isNextPage ? m_durationSwitchPage / 2 : 0;
             float delayDisableNewPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage;
 
-            if (!isNextPage)
-            {
-                StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableCurrentPage, () => currentPage.Enable(true)));
-            }
+            if (!isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableCurrentPage, () => currentPage.Enable(true)));
             StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableCurrentPage, () => currentPage.Enable(false)));
-
             StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableNewPage, () => newPage.Enable(true)));
-            if (isNextPage)
-            {
-                StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableNewPage, () => newPage.Enable(false)));
-            }
+            if (isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableNewPage, () => newPage.Enable(false)));
+
+            //order in layer of all objects in page
 
             StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage, () =>
             {

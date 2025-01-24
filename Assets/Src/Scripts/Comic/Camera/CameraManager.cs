@@ -2,7 +2,6 @@ using UnityEngine;
 using Unity.Cinemachine;
 using CustomArchitecture;
 using DG.Tweening;
-using UnityEngine.PlayerLoop;
 
 namespace Comic
 {
@@ -10,6 +9,7 @@ namespace Comic
     {
         [Header("Cameras")]
         [SerializeField] protected Camera m_cam;
+        [SerializeField] protected Camera m_camOverlay;
         [SerializeField] protected CinemachineCamera m_camController;
 
         [Header("Targets")]
@@ -18,10 +18,17 @@ namespace Comic
         [SerializeField, ReadOnly] private CinemachinePositionComposer m_composer;
 
         [Header("Switch Page Animation")]
-        [SerializeField] private float m_durationSwitchPage = 0.25f;
-        [SerializeField] private float m_switchPageOrthoSize = 10.5f;
-        [SerializeField, ReadOnly] private float m_baseOrthagraphicSize = 9.5f;
-        private Tween m_switchPageTween = null;
+        [SerializeField] private float m_switchPageMainOrthoSize = 10.5f;
+        [SerializeField, ReadOnly] private float m_baseMainOrthoSize = 9.5f;
+
+        [Space]
+        [SerializeField] private float m_switchPageOverlayOrthoSize = 60f;
+        [SerializeField, ReadOnly] private float m_baseOverlayOrthoSize = 57.5f;
+
+        [Space]
+        [SerializeField, ReadOnly] private float m_durationSwitchPage = 0.25f;
+        private Tween m_switchPageMainTween = null;
+        private Tween m_switchPageOverlayTween = null;
 
 
         #region Shake
@@ -42,7 +49,8 @@ namespace Comic
             m_composer = m_camController.GetComponent<CinemachinePositionComposer>();
             m_camController.Follow = m_target;
             m_camController.LookAt = m_target;
-            m_baseOrthagraphicSize = m_camController.Lens.OrthographicSize;
+            m_baseMainOrthoSize = m_camController.Lens.OrthographicSize;
+            m_baseOverlayOrthoSize = m_camOverlay.orthographicSize;
         }
 
         private void Start()
@@ -54,34 +62,44 @@ namespace Comic
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
             //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            m_durationSwitchPage = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
         private void OnBeforeSwitchPage(bool nextPage, Page p1, Page p2)
         {
-            if (m_switchPageTween != null)
+            float duration = m_durationSwitchPage / 2;
+
+
+            if (m_switchPageMainTween != null)
             {
-                m_switchPageTween.Kill();
+                m_switchPageMainTween.Kill();
             }
 
-            float currentValue = m_camController.Lens.OrthographicSize;
-            float startValue = m_baseOrthagraphicSize;
-            float duration = m_durationSwitchPage / 4;
-            float destValue = m_switchPageOrthoSize;
+            float value1 = m_camController.Lens.OrthographicSize;
 
-            m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, duration)
+            m_switchPageMainTween = DOTween.To(() => m_baseMainOrthoSize, x => value1 = x, m_switchPageMainOrthoSize, duration)
                 .SetLoops(2, LoopType.Yoyo)
                 .SetEase(Ease.InQuad)
                 .OnUpdate(() =>
                 {
-                    m_camController.Lens.OrthographicSize = currentValue;
-                })
-                .OnComplete(() =>
+                    m_camController.Lens.OrthographicSize = value1;
+                });
+
+
+
+            if (m_switchPageOverlayTween != null)
+            {
+                m_switchPageOverlayTween.Kill();
+            }
+
+            float value2 = m_camOverlay.orthographicSize;
+
+            m_switchPageOverlayTween = DOTween.To(() => m_baseOverlayOrthoSize, x => value2 = x, m_switchPageOverlayOrthoSize, duration)
+                .SetLoops(2, LoopType.Yoyo)
+                .SetEase(Ease.InQuad)
+                .OnUpdate(() =>
                 {
-                    //Debug.Log("> Complete");
-                })
-                .OnKill(() =>
-                {
-                    //Debug.Log("> Killed");
+                    m_camOverlay.orthographicSize = value2;
                 });
         }
     }
