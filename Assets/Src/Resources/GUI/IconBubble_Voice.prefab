@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a67058f0e15bc48930633c7d4af8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 0acc781381cec359c9988dffce82f1c0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4111776794673904627}
   - component: {fileID: 4806441267034867976}
   - component: {fileID: 2671967248670900156}
-  - component: {fileID: 7187646668257554077}
+  - component: {fileID: 6325329268511221003}
   m_Layer: 5
   m_Name: Mask
   m_TagString: Untagged
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7187646668257554077
+--- !u!114 &6325329268511221003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

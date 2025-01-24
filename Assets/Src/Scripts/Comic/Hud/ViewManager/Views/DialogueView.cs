@@ -159,12 +159,12 @@ namespace Comic
 
                 Bubble bubble = m_bubbles[VoiceType.Voice_Beloved];
 
-                bubble.Appear(BubbleAppearIntensity.Intensity_Normal);
+                // bubble.Appear(BubbleAppearIntensity.Intensity_Normal);
 
-                // while (bubble.IsCompute())
-                //     yield return null;
+                // // while (bubble.IsCompute())
+                    yield return null;
 
-                yield return StartCoroutine(bubble.TriggerAndWaitDialogue(DialogueType.Bethany_Welcome));
+                // yield return StartCoroutine(bubble.TriggerAndWaitDialogue(DialogueType.Bethany_Welcome));
             }
         }
 
