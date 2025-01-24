@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CustomArchitecture;
 using UnityEngine;
+using static Comic.Comic;
 
 namespace Comic
 {
@@ -10,6 +11,7 @@ namespace Comic
         [Header("Cases Visuals")]
         [SerializeField, ReadOnly] private List<CaseVisual> m_caseVisuals = new List<CaseVisual>();
         [SerializeField] private SpriteRenderer m_pageBackgroundSprite;
+        [SerializeField] private SpriteRenderer m_pageBackgroundSpriteCenter;
 
         private void Awake()
         {
@@ -23,7 +25,8 @@ namespace Comic
             {
                 caseVisual.PushFront();
             }
-            m_pageBackgroundSprite.sortingLayerName = "SwitchPage";
+            m_pageBackgroundSprite.sortingLayerName = frontLayerName;
+            m_pageBackgroundSpriteCenter.sortingLayerName = frontLayerName;
         }
 
         public void PushBack()
@@ -32,7 +35,8 @@ namespace Comic
             {
                 caseVisual.PushBack();
             }
-            m_pageBackgroundSprite.sortingLayerName = "NotSwitchPage";
+            m_pageBackgroundSprite.sortingLayerName = backLayerName;
+            m_pageBackgroundSpriteCenter.sortingLayerName = backLayerName;
         }
 
         public void ResetDefault()
@@ -41,7 +45,8 @@ namespace Comic
             {
                 caseVisual.ResetDefault();
             }
-            m_pageBackgroundSprite.sortingLayerName = "Default";
+            m_pageBackgroundSprite.sortingLayerName = defaultLayerName;
+            m_pageBackgroundSpriteCenter.sortingLayerName = defaultLayerName;
         }
 
         public void AddOrderInLayer(int addValue)

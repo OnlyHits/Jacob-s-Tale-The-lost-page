@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CustomArchitecture;
 using UnityEngine;
+using static Comic.Comic;
 
 namespace Comic
 {
@@ -9,15 +10,6 @@ namespace Comic
     {
         [SerializeField, ReadOnly] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
         [SerializeField, ReadOnly] private SpriteMask m_caseMask;
-
-        public readonly string frontLayerName = "SwitchPage";
-        public readonly string backLayerName = "NotSwitchPage";
-        public readonly string defaultLayerName = "Default";
-
-        public int frontLayerId => SortingLayer.NameToID(frontLayerName);
-        public int backLayerId => SortingLayer.NameToID(backLayerName);
-        public int defaultLayerId => SortingLayer.NameToID(defaultLayerName);
-
 
         private void Awake()
         {
