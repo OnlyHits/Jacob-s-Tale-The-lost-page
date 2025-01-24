@@ -2,6 +2,7 @@ using UnityEngine;
 using Unity.Cinemachine;
 using CustomArchitecture;
 using DG.Tweening;
+using System;
 
 namespace Comic
 {
@@ -69,38 +70,39 @@ namespace Comic
         {
             float duration = m_durationSwitchPage / 2;
 
-
             if (m_switchPageMainTween != null)
-            {
                 m_switchPageMainTween.Kill();
-            }
-
-            float value1 = m_camController.Lens.OrthographicSize;
-
-            m_switchPageMainTween = DOTween.To(() => m_baseMainOrthoSize, x => value1 = x, m_switchPageMainOrthoSize, duration)
-                .SetLoops(2, LoopType.Yoyo)
-                .SetEase(Ease.InQuad)
-                .OnUpdate(() =>
-                {
-                    m_camController.Lens.OrthographicSize = value1;
-                });
-
-
 
             if (m_switchPageOverlayTween != null)
-            {
                 m_switchPageOverlayTween.Kill();
-            }
 
-            float value2 = m_camOverlay.orthographicSize;
+            m_switchPageMainTween = PlayZoomTweenOnCam(m_baseMainOrthoSize, m_switchPageMainOrthoSize, duration, SetControllerCamOrthoSize);
+            m_switchPageOverlayTween = PlayZoomTweenOnCam(m_baseOverlayOrthoSize, m_switchPageOverlayOrthoSize, duration, SetOveralyCamOrthoSize);
+        }
 
-            m_switchPageOverlayTween = DOTween.To(() => m_baseOverlayOrthoSize, x => value2 = x, m_switchPageOverlayOrthoSize, duration)
+        private Tween PlayZoomTweenOnCam(float from, float to, float duration, Action<float> setterCallback)
+        {
+            float value = 0f;
+
+            Tween tween = DOTween.To(() => from, x => value = x, to, duration)
                 .SetLoops(2, LoopType.Yoyo)
                 .SetEase(Ease.InQuad)
                 .OnUpdate(() =>
                 {
-                    m_camOverlay.orthographicSize = value2;
+                    setterCallback?.Invoke(value);
                 });
+
+            return tween;
+        }
+
+        private void SetControllerCamOrthoSize(float newSize)
+        {
+            m_camController.Lens.OrthographicSize = newSize;
+        }
+
+        private void SetOveralyCamOrthoSize(float newSize)
+        {
+            m_camOverlay.orthographicSize = newSize;
         }
     }
 }

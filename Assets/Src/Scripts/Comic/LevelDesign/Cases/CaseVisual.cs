@@ -10,6 +10,15 @@ namespace Comic
         [SerializeField, ReadOnly] private List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
         [SerializeField, ReadOnly] private SpriteMask m_caseMask;
 
+        public readonly string frontLayerName = "SwitchPage";
+        public readonly string backLayerName = "NotSwitchPage";
+        public readonly string defaultLayerName = "Default";
+
+        public int frontLayerId => SortingLayer.NameToID(frontLayerName);
+        public int backLayerId => SortingLayer.NameToID(backLayerName);
+        public int defaultLayerId => SortingLayer.NameToID(defaultLayerName);
+
+
         private void Awake()
         {
             var sprites = GetComponentsInChildren<SpriteRenderer>();
@@ -19,44 +28,35 @@ namespace Comic
 
         public void PushFront()
         {
-            int sortingLayerID = SortingLayer.NameToID("SwitchPage");
-            m_caseMask.frontSortingLayerID = sortingLayerID;
-            m_caseMask.backSortingLayerID = sortingLayerID;
-            //m_caseMask.sortingLayerName = "SwitchPage";
-
+            m_caseMask.frontSortingLayerID = frontLayerId;
+            m_caseMask.backSortingLayerID = frontLayerId;
             foreach (SpriteRenderer sprite in m_sprites)
             {
-                sprite.sortingLayerName = "SwitchPage";
+                sprite.sortingLayerName = frontLayerName;
             }
         }
 
         public void PushBack()
         {
-            int sortingLayerID = SortingLayer.NameToID("NotSwitchPage");
-            m_caseMask.frontSortingLayerID = sortingLayerID;
-            m_caseMask.backSortingLayerID = sortingLayerID;
-            //m_caseMask.sortingLayerName = "NotSwitchPage";
-
+            m_caseMask.frontSortingLayerID = backLayerId;
+            m_caseMask.backSortingLayerID = backLayerId;
             foreach (SpriteRenderer sprite in m_sprites)
             {
-                sprite.sortingLayerName = "NotSwitchPage";
+                sprite.sortingLayerName = backLayerName;
             }
         }
 
         public void ResetDefault()
         {
-            int sortingLayerID = SortingLayer.NameToID("Default");
-            m_caseMask.frontSortingLayerID = sortingLayerID;
-            m_caseMask.backSortingLayerID = sortingLayerID;
-            //m_caseMask.sortingLayerName = "Default";
-
+            m_caseMask.frontSortingLayerID = defaultLayerId;
+            m_caseMask.backSortingLayerID = defaultLayerId;
             foreach (SpriteRenderer sprite in m_sprites)
             {
-                sprite.sortingLayerName = "Default";
+                sprite.sortingLayerName = defaultLayerName;
             }
         }
 
-        /*public void AddOrderInLayer(int addValue)
+        public void AddOrderInLayer(int addValue)
         {
             foreach (SpriteRenderer sprite in m_sprites)
             {
@@ -70,6 +70,6 @@ namespace Comic
             {
                 sprite.sortingOrder -= subValue;
             }
-        }*/
+        }
     }
 }

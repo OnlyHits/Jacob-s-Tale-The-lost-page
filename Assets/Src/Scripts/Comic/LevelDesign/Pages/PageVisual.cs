@@ -44,7 +44,6 @@ namespace Comic
             m_pageBackgroundSprite.sortingLayerName = "Default";
         }
 
-        /*
         public void AddOrderInLayer(int addValue)
         {
             foreach (CaseVisual caseVisual in m_caseVisuals)
@@ -64,11 +63,10 @@ namespace Comic
 
             m_pageBackgroundSprite.sortingOrder -= subValue;
         }
-        */
 
-        /*public void SetMaskInteraction(bool on)
-        {
-            m_pageBackgroundSprite.maskInteraction = on ? SpriteMaskInteraction.None : SpriteMaskInteraction.VisibleOutsideMask;
-        }*/
+        // public void SetMaskInteraction(bool on)
+        // {
+        //     m_pageBackgroundSprite.maskInteraction = on ? SpriteMaskInteraction.None : SpriteMaskInteraction.VisibleOutsideMask;
+        // }
     }
 }
