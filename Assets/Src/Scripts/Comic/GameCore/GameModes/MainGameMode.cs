@@ -186,6 +186,11 @@ namespace Comic
             m_pageManager.SubscribeToBeforeSwitchPage(function);
         }
 
+        public void SubscribeToMiddleSwitchPage(Action<bool, Page, Page> function)
+        {
+            m_pageManager.SubscribeToMiddleSwitchPage(function);
+        }
+
         public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function)
         {
             m_pageManager.SubscribeToAfterSwitchPage(function);

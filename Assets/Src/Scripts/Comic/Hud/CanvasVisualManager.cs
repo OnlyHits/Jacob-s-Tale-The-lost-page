@@ -29,7 +29,8 @@ namespace Comic
         public void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
-            //ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToMiddleSwitchPage(OnMiddleSwitchPage);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
             m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
@@ -43,12 +44,37 @@ namespace Comic
                 float from = m_destRot.y;
                 float to = m_baseRot.y;
                 TranslateCanvas(from, to);
+                gameObject.SetActive(false);
             }
             else if (nextPage)
             {
                 float from = m_baseRot.y;
                 float to = m_destRot.y;
                 TranslateCanvas(from, to);
+            }
+        }
+
+        private void OnMiddleSwitchPage(bool nextPage, Page p1, Page p2)
+        {
+            if (!nextPage)
+            {
+                gameObject.SetActive(true);
+            }
+            else if (nextPage)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+
+        private void OnAfterSwitchPage(bool nextPage, Page p1, Page p2)
+        {
+            if (!nextPage)
+            {
+
+            }
+            else if (nextPage)
+            {
+                gameObject.SetActive(true);
             }
         }
 
@@ -59,15 +85,13 @@ namespace Comic
                 m_switchPageTween.Kill();
             }
 
-            float currentValue = from;
-            float startValue = from;
-            float destValue = to;
+            float value = from;
 
-            m_switchPageTween = DOTween.To(() => startValue, x => currentValue = x, destValue, m_duration)
+            m_switchPageTween = DOTween.To(() => from, x => value = x, to, m_duration)
                 .SetEase(Ease.Linear)
                 .OnUpdate(() =>
                 {
-                    transform.eulerAngles = new Vector3(0, currentValue, 0);
+                    transform.eulerAngles = new Vector3(0, value, 0);
                 })
                 .OnComplete(() =>
                 {

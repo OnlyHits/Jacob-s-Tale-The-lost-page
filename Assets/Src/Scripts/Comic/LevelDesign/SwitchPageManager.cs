@@ -10,6 +10,7 @@ namespace Comic
         [SerializeField] private float m_durationSwitchPage = 1f;
 
         private Action<bool, Page, Page> m_onBeforeSwitchPageCallback;
+        private Action<bool, Page, Page> m_onMiddleSwitchPageCallback;
         private Action<bool, Page, Page> m_onAfterSwitchPageCallback;
 
 
@@ -19,6 +20,12 @@ namespace Comic
         {
             m_onBeforeSwitchPageCallback -= function;
             m_onBeforeSwitchPageCallback += function;
+        }
+
+        public void SubscribeToMiddleSwitchPage(Action<bool, Page, Page> function)
+        {
+            m_onMiddleSwitchPageCallback -= function;
+            m_onMiddleSwitchPageCallback += function;
         }
 
         public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function)
@@ -52,7 +59,10 @@ namespace Comic
             StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableNewPage, () => newPage.Enable(true)));
             if (isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableNewPage, () => newPage.Enable(false)));
 
-            //order in layer of all objects in page
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage / 2, () =>
+            {
+                m_onMiddleSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
+            }));
 
             StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage, () =>
             {
