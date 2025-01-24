@@ -33,6 +33,10 @@ namespace CustomArchitecture
     public enum DialogueType
     {
         Bethany_Welcome,
+        BestFriend_Welcome_Response_1,
+        Bethany_Welcome_Response_1,
+        Boss_Welcome_Response_1,
+        BestFriend_Welcome_Response_2,
     }
 
     public struct DynamicAnimatedTextData

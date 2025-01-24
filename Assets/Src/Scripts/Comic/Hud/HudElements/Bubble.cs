@@ -7,13 +7,6 @@ using System.Collections;
 
 namespace Comic
 {
-    public enum BubbleAppearIntensity
-    {
-        Intensity_Normal,
-        Intensity_Medium,
-        Intensity_Hard
-    }
-
     public class Bubble : BaseBehaviour
     {
         [SerializeField] private TMP_AnimatedText       m_dialogue;
@@ -22,12 +15,14 @@ namespace Comic
         private RectTransform                           m_containerRect;
         private Canvas                                  m_canvas;
         private Tween                                   m_scaleTween = null;
+        private Coroutine                               m_dialogueCoroutine = null;
 
         public void Init(NpcIcon icon_rect, RectTransform container_rect, Canvas canvas)
         {
             m_iconRect = icon_rect;
             m_containerRect = container_rect;
             m_canvas = canvas;
+            gameObject.SetActive(false);
         }
 
         protected override void OnLateUpdate(float elapsed_time)
@@ -36,6 +31,40 @@ namespace Comic
             ConstraintPosition();
             SetPinTransform();
         }
+
+        public void SetupDialogue(DialogueType type)
+        {
+            if (m_dialogueCoroutine != null)
+            {
+                m_dialogue.StopDialogue();
+                StopCoroutine(m_dialogueCoroutine);
+                m_dialogueCoroutine = null;
+            }
+
+            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
+            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
+
+            gameObject.SetActive(true);
+
+            m_dialogue.StartDialogue(config, datas);
+        }
+
+        public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity)
+        {
+            Appear(intensity);
+
+            yield return new WaitWhile(() =>
+                m_dialogue.GetState() == TMP_AnimatedText_State.State_Displaying
+                || IsCompute());
+
+            Disappear();
+
+            yield return new WaitWhile(() => IsCompute());
+
+            gameObject.SetActive(false);
+        }
+
+        #region Constraints
 
         private void ConstraintPosition()
         {
@@ -91,23 +120,38 @@ namespace Comic
 
             // gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.position);
         }
+        
+        #endregion
     
         #region EaseCoroutine
 
-        public void Appear(BubbleAppearIntensity intensity)
+        public void Appear(DialogueAppearIntensity intensity)
         {
-            if (m_scaleTween != null && m_scaleTween.IsActive() && m_scaleTween.IsPlaying())
+            if (IsCompute())
             {
                 m_scaleTween.Kill();
                 m_scaleTween = null;
             }
 
-            if (intensity == BubbleAppearIntensity.Intensity_Normal)
+            if (intensity == DialogueAppearIntensity.Intensity_Normal)
                 NormalAppear();
-            // else if (intensity == BubbleAppearIntensity.Intensity_Medium)
-            // ;
-            else if (intensity == BubbleAppearIntensity.Intensity_Hard)
+            else if (intensity == DialogueAppearIntensity.Intensity_Medium)
+                MediumAppear();
+            else if (intensity == DialogueAppearIntensity.Intensity_Hard)
                 HardAppear();
+        }
+
+        public void Disappear()
+        {
+            if (IsCompute())
+            {
+                m_scaleTween.Kill();
+                m_scaleTween = null;
+            }
+
+            m_scaleTween = transform.GetComponent<RectTransform>()
+                .DOScale(Vector3.zero, .3f)
+                .SetEase(Ease.OutCirc);
         }
 
         public bool IsCompute()
@@ -120,9 +164,17 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, .8f)
+                .DOScale(Vector3.one, 1f)
                 .SetEase(Ease.OutCirc);
-                // .OnComplete(() => { gameObject.SetActive(false); });
+        }
+
+        public void MediumAppear()
+        {
+            transform.GetComponent<RectTransform>().localScale = Vector3.zero;
+
+            m_scaleTween = transform.GetComponent<RectTransform>()
+                .DOScale(Vector3.one, .5f)
+                .SetEase(Ease.OutBounce);
         }
 
         public void HardAppear()
@@ -130,20 +182,8 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, .5f)
+                .DOScale(Vector3.one, .2f)
                 .SetEase(Ease.OutBounce);
-                // .OnComplete(() => { gameObject.SetActive(false); });
-        }
-
-        public IEnumerator TriggerAndWaitDialogue(DialogueType type)
-        {
-            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
-            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
-
-            m_dialogue.StartDialogue(config, datas);
-
-            // while (!m_dialogue.IsFinish())
-                yield return null;
         }
 
         #endregion

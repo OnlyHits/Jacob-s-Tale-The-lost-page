@@ -8,21 +8,30 @@ using UnityEngine.InputSystem;
 
 namespace CustomArchitecture
 {
+    public enum TMP_AnimatedText_State
+    {
+        State_Displaying,
+        State_Idle,
+        State_Uncompute,
+    }
+
     [RequireComponent(typeof(TMP_Text))]
     public class TMP_AnimatedText : AInputManager
     {
-        private Coroutine               m_dialogueCoroutine = null;
+        private Coroutine                   m_dialogueCoroutine = null;
 
-        protected TMP_Text              m_textMeshPro = null;
-        protected Mesh                  m_mesh = null;
-        protected Vector3[]             m_vertices = null;
-        protected Color32[]             m_colors = null;
+        protected TMP_Text                  m_textMeshPro = null;
+        protected Mesh                      m_mesh = null;
+        protected Vector3[]                 m_vertices = null;
+        protected Color32[]                 m_colors = null;
 
-        protected DialogueConfig        m_dialogueConfig;
-        protected DynamicDialogueData   m_dynamicDatas;
-        protected int                   m_sentenceIndex = 0;
-        protected bool                  m_isCompute = false;
-        protected bool                  m_updateInCoroutine = false;
+        protected DialogueConfig            m_dialogueConfig;
+        protected DynamicDialogueData       m_dynamicDatas;
+        protected int                       m_sentenceIndex = 0;
+        protected TMP_AnimatedText_State    m_state = TMP_AnimatedText_State.State_Uncompute;
+        protected bool                      m_updateInCoroutine = false;
+
+        public TMP_AnimatedText_State GetState() => m_state;
 
         private void Awake()
         {
@@ -41,14 +50,20 @@ namespace CustomArchitecture
 
             m_sentenceIndex = 0;
 
-            m_isCompute = true;
-
+            m_state = TMP_AnimatedText_State.State_Displaying;
             m_dialogueCoroutine = StartCoroutine(DialogueCoroutine());
         }
 
         public void StopDialogue()
         {
-            m_isCompute = false;
+            m_state = TMP_AnimatedText_State.State_Uncompute;
+            m_updateInCoroutine = false;
+            
+            if (m_dialogueCoroutine != null)
+            {
+                StopCoroutine(m_dialogueCoroutine);
+                m_dialogueCoroutine = null;
+            }
         }
 
         protected void SetDialogue()
@@ -75,6 +90,7 @@ namespace CustomArchitecture
             }
 
             m_sentenceIndex = Mathf.Clamp(m_sentenceIndex, 0, m_dialogueConfig.m_dialogueSentences.Length - 1);
+            m_state = TMP_AnimatedText_State.State_Idle;
         }
 
         private IEnumerator ApparitionCoroutine()
@@ -93,7 +109,7 @@ namespace CustomArchitecture
         {
             base.OnUpdate(elapsed_time);
 
-            if (!m_isCompute || m_updateInCoroutine)
+            if (m_state == TMP_AnimatedText_State.State_Uncompute || m_updateInCoroutine)
                 return;
 
             m_textMeshPro.ForceMeshUpdate();

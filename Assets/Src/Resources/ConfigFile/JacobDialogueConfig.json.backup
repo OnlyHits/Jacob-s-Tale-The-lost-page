@@ -1,0 +1,69 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[Comic.DialogueName, Assembly-CSharp],[System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]], mscorlib]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.EnumEqualityComparer`1[[Comic.DialogueName, Assembly-CSharp]], mscorlib",
+        "$rlength": 0,
+        "$rcontent": [
+        ]
+    },
+    "$rlength": 1,
+    "$rcontent": [
+        {
+            "$k": 0,
+            "$v": {
+                "$id": 2,
+                "$type": "2|System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]], mscorlib",
+                "$rlength": 5,
+                "$rcontent": [
+                    {
+                        "$id": 3,
+                        "$type": "3|Comic.PartOfDialogueConfig, Assembly-CSharp",
+                        "m_speaker": 1,
+                        "m_iconType": 0,
+                        "m_associatedDialogue": 0,
+                        "m_intensity": 0,
+                        "m_isMainDialogue": false
+                    },
+                    {
+                        "$id": 4,
+                        "$type": 3,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
+                        "m_associatedDialogue": 1,
+                        "m_intensity": 2,
+                        "m_isMainDialogue": false
+                    },
+                    {
+                        "$id": 5,
+                        "$type": 3,
+                        "m_speaker": 1,
+                        "m_iconType": 0,
+                        "m_associatedDialogue": 2,
+                        "m_intensity": 1,
+                        "m_isMainDialogue": false
+                    },
+                    {
+                        "$id": 6,
+                        "$type": 3,
+                        "m_speaker": 3,
+                        "m_iconType": 3,
+                        "m_associatedDialogue": 3,
+                        "m_intensity": 0,
+                        "m_isMainDialogue": false
+                    },
+                    {
+                        "$id": 7,
+                        "$type": 3,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
+                        "m_associatedDialogue": 4,
+                        "m_intensity": 0,
+                        "m_isMainDialogue": false
+                    }
+                ]
+            }
+        }
+    ]
+}

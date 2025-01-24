@@ -38,6 +38,7 @@ namespace Comic
         private GameProgression m_gameProgression;// regrouper avec settings dans une subclass
         private PauseInput m_pauseInput; // ca va etre integré direct dans gamemode
         private NavigationInput m_hudNavigationInput; // ca degage
+        private DialogueManager m_dialogueManager;
 
         private ViewManager m_viewManager;
         private PageManager m_pageManager;
@@ -68,6 +69,7 @@ namespace Comic
             m_viewManager = GetComponent<ViewManager>();
             m_pageManager = GetComponent<PageManager>();
             m_characterManager = GetComponent<CharacterManager>();
+            m_dialogueManager = GetComponent<DialogueManager>();
 
             if (GetUnlockChaptersData().Count == 0)
             {
@@ -79,6 +81,7 @@ namespace Comic
             m_viewManager.Init();
             m_pageManager.Init();
             m_characterManager.Init();
+            m_dialogueManager.Init();
 
             ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
         }

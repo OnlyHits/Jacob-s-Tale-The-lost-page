@@ -17,5 +17,10 @@ namespace Comic
             m_iconImage.sprite = sprite;
             m_type = type;
         }
+
+        public void SetIconSprite(Sprite sprite)
+        {
+            m_iconImage.sprite = sprite;
+        }
     }
 }
