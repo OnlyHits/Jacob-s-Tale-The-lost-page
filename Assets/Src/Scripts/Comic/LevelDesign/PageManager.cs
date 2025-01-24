@@ -19,17 +19,20 @@ namespace Comic
 
         }
 
-        public void Init()
+        private void Start()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
-
             foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
                 UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
             }
 
             SwitchPageByIndex(m_currentPageIndex);
+        }
+
+        public void Init()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
         }
 
         public Transform GetSpawnPointByPageIndex(int indexPage)

@@ -21,9 +21,9 @@ namespace Comic
 
         private void Awake()
         {
-            var sprites = GetComponentsInChildren<SpriteRenderer>();
+            var sprites = GetComponentsInChildren<SpriteRenderer>(true);
             m_sprites.AddRange(sprites);
-            m_caseMask = GetComponentInChildren<SpriteMask>();
+            m_caseMask = GetComponentInChildren<SpriteMask>(true);
         }
 
         public void PushFront()

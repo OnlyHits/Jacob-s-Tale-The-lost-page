@@ -20,7 +20,7 @@ namespace Comic
         {
             m_destRotQuat = m_destTransform.rotation;
 
-            var pages = GetComponentsInChildren<PageVisual>();
+            var pages = GetComponentsInChildren<PageVisual>(true);
             m_pageVisuals.AddRange(pages);
         }
 

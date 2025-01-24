@@ -13,7 +13,7 @@ namespace Comic
 
         private void Awake()
         {
-            var cases = GetComponentsInChildren<CaseVisual>();
+            var cases = GetComponentsInChildren<CaseVisual>(true);
             m_caseVisuals.AddRange(cases);
         }
 
