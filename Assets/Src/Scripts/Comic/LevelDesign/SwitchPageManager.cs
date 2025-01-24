@@ -13,6 +13,10 @@ namespace Comic
         private Action<bool, Page, Page> m_onMiddleSwitchPageCallback;
         private Action<bool, Page, Page> m_onAfterSwitchPageCallback;
 
+        [Header("Canvas Duplication")]
+        [SerializeField] private GameObject m_canvas;
+        [SerializeField, ReadOnly] private GameObject m_canvasDuplicated;
+
 
         #region CALLBACKS
 
@@ -44,6 +48,8 @@ namespace Comic
 
         private void SwitchPage(bool isNextPage, int idxNewPage)
         {
+            SwitchCanvas(isNextPage, idxNewPage);
+
             Page currentPage = m_unlockedPageList[m_currentPageIndex];
             Page newPage = m_unlockedPageList[idxNewPage];
 
@@ -68,8 +74,45 @@ namespace Comic
             {
                 m_currentPageIndex = idxNewPage;
                 SwitchPageByIndex(m_currentPageIndex);
+                DestroyCanvasCopy();
                 m_onAfterSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
             }));
+        }
+
+        private void SwitchCanvas(bool isNextPage, int idxNewPage)
+        {
+            m_canvasDuplicated = Instantiate(m_canvas);
+            DisableAllMonoBehaviours(m_canvasDuplicated);
+        }
+
+        public static void DisableAllMonoBehaviours(GameObject parent)
+        {
+            if (parent == null)
+            {
+                Debug.LogWarning("Parent GameObject is null. Cannot disable MonoBehaviours.");
+                return;
+            }
+
+            BaseBehaviour[] monoBehaviours = parent.GetComponents<BaseBehaviour>();
+            foreach (BaseBehaviour mb in monoBehaviours)
+            {
+                mb.enabled = false;
+            }
+
+            foreach (Transform child in parent.transform)
+            {
+                DisableAllMonoBehaviours(child.gameObject);
+            }
+        }
+
+
+
+        private void DestroyCanvasCopy()
+        {
+            if (m_canvasDuplicated != null)
+            {
+                Destroy(m_canvasDuplicated);
+            }
         }
 
         private void SwitchPageByIndex(int index)
