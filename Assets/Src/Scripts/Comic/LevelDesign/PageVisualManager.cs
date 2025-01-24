@@ -46,18 +46,14 @@ namespace Comic
                 Quaternion from = m_destRotQuat;
                 Quaternion to = currentPage.GetBaseVisualRot();
                 TranslatePage(from, to, newPage);
-
-                newPage.gameObject.GetComponent<PageVisual>().AddOrderInLayer(50);
-                newPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(true);
+                newPage.gameObject.GetComponent<PageVisual>().PushFront();
             }
             else if (nextPage == false)
             {
                 Quaternion from = currentPage.GetBaseVisualRot();
                 Quaternion to = m_destRotQuat;
                 TranslatePage(from, to, currentPage);
-
-                currentPage.gameObject.GetComponent<PageVisual>().AddOrderInLayer(50);
-                currentPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(true);
+                currentPage.gameObject.GetComponent<PageVisual>().PushFront();
             }
         }
 
@@ -65,13 +61,11 @@ namespace Comic
         {
             if (nextPage)
             {
-                newPage.gameObject.GetComponent<PageVisual>().SubOrderInLayer(50);
-                newPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(false);
+                newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
             }
             else if (nextPage == false)
             {
-                currentPage.gameObject.GetComponent<PageVisual>().SubOrderInLayer(50);
-                currentPage.gameObject.GetComponent<PageVisual>().SetMaskInteraction(false);
+                currentPage.gameObject.GetComponent<PageVisual>().ResetDefault();
             }
         }
 

@@ -359,9 +359,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_destTransform: {fileID: 2144114254852173438}
-  m_destRot: {x: 0, y: 0, z: 0}
   m_destRotQuat: {x: 0, y: 0, z: 0, w: 0}
   m_duration: 2
+  m_pageVisuals: []
 --- !u!1 &8531735828886083398
 GameObject:
   m_ObjectHideFlags: 0

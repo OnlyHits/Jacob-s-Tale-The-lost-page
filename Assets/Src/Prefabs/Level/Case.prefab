@@ -210,9 +210,9 @@ SpriteMask:
   m_BackSortingLayerID: 0
   m_FrontSortingLayer: 0
   m_BackSortingLayer: 0
-  m_FrontSortingOrder: 0
-  m_BackSortingOrder: 0
-  m_IsCustomRangeActive: 0
+  m_FrontSortingOrder: 10
+  m_BackSortingOrder: -10
+  m_IsCustomRangeActive: 1
   m_SpriteSortPoint: 0
   m_MaskSource: 0
 --- !u!212 &4831894460810933040
@@ -821,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_sprites: []
+  m_caseMask: {fileID: 0}
 --- !u!1 &4798586584676182691
 GameObject:
   m_ObjectHideFlags: 0

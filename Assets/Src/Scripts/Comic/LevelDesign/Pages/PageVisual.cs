@@ -17,6 +17,34 @@ namespace Comic
             m_caseVisuals.AddRange(cases);
         }
 
+        public void PushFront()
+        {
+            foreach (CaseVisual caseVisual in m_caseVisuals)
+            {
+                caseVisual.PushFront();
+            }
+            m_pageBackgroundSprite.sortingLayerName = "SwitchPage";
+        }
+
+        public void PushBack()
+        {
+            foreach (CaseVisual caseVisual in m_caseVisuals)
+            {
+                caseVisual.PushBack();
+            }
+            m_pageBackgroundSprite.sortingLayerName = "NotSwitchPage";
+        }
+
+        public void ResetDefault()
+        {
+            foreach (CaseVisual caseVisual in m_caseVisuals)
+            {
+                caseVisual.ResetDefault();
+            }
+            m_pageBackgroundSprite.sortingLayerName = "Default";
+        }
+
+        /*
         public void AddOrderInLayer(int addValue)
         {
             foreach (CaseVisual caseVisual in m_caseVisuals)
@@ -36,10 +64,11 @@ namespace Comic
 
             m_pageBackgroundSprite.sortingOrder -= subValue;
         }
+        */
 
-        public void SetMaskInteraction(bool on)
+        /*public void SetMaskInteraction(bool on)
         {
             m_pageBackgroundSprite.maskInteraction = on ? SpriteMaskInteraction.None : SpriteMaskInteraction.VisibleOutsideMask;
-        }
+        }*/
     }
 }
