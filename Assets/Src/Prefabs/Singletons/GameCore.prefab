@@ -139,10 +139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_allPowers:
-  - {fileID: 8296222945276671203, guid: 8962628dc1ea78d4797898239ad4f654, type: 3}
-  - {fileID: 8296222945276671203, guid: 76b0b2c649de32ce2b1482da302a7215, type: 3}
-  - {fileID: 8296222945276671203, guid: f7d576918fca198a880f41ae5f5b62f2, type: 3}
-  - {fileID: 8296222945276671203, guid: 1e9d051287abdabbb9389fd77c31fc87, type: 3}
+  - {fileID: 2864018651493326434, guid: 8962628dc1ea78d4797898239ad4f654, type: 3}
+  - {fileID: 5291749001903467664, guid: f7d576918fca198a880f41ae5f5b62f2, type: 3}
+  - {fileID: 5766326303786376690, guid: 1e9d051287abdabbb9389fd77c31fc87, type: 3}
+  - {fileID: 5189261603271534520, guid: 76b0b2c649de32ce2b1482da302a7215, type: 3}
 --- !u!114 &2573248173068338771
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ namespace Comic
     public interface MainGameModeProvider
     {
         public Player GetPlayer();
+        public Page GetCurrentPage();
+        public Case GetCurrentCase();
 
         public List<ChapterSavedData> GetUnlockChaptersData();
         public GameConfig GetGameConfig();
@@ -63,6 +65,8 @@ namespace Comic
         private Action<Chapters> m_onLockChapterCallback;
 
         public Player GetPlayer() => m_characterManager.GetPlayer();
+        public Page GetCurrentPage() => m_pageManager.GetCurrentPage();
+        public Case GetCurrentCase() => m_pageManager.GetCurrentCase();
         public List<ChapterSavedData> GetUnlockChaptersData() => m_gameProgression.GetUnlockedChaptersDatas();
         public GameConfig GetGameConfig() => m_gameConfig;
         public PageManager GetPageManager() => m_pageManager;

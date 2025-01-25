@@ -50,6 +50,9 @@ namespace Comic
             m_pageManager = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager();
 
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToPowerSelected(OnPowerSelected);
+
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
         }
 
         public override void Pause(bool pause = true)

@@ -37,6 +37,7 @@ namespace Comic
 
         private Vector3 m_lastPosition = Vector2.zero;
         private Vector3 m_lastScale = Vector2.zero;
+        private Vector3 m_lastRotation = Vector2.zero;
 
         [Button("Refresh All")]
         private void RefreshComponents()
@@ -51,7 +52,7 @@ namespace Comic
 
         private void TryRefresh()
         {
-            if (m_lastScale == transform.localScale && m_lastPosition == transform.position)
+            if (m_lastScale == transform.localScale && m_lastPosition == transform.position && m_lastRotation == transform.eulerAngles)
             {
                 return;
             }
@@ -60,8 +61,13 @@ namespace Comic
             m_colliderEditor?.Refresh();
             m_decorEditor?.Refresh();
 
+            //Vector3 childGlobalPosition = transform.position;
+            //transform.parent.position = childGlobalPosition;
+            //transform.SetParent(transform.parent, true);
+
             m_lastScale = transform.localScale;
             m_lastPosition = transform.position;
+            m_lastRotation = transform.eulerAngles;
         }
 
         private void OnDecorFieldChanged()
@@ -86,3 +92,27 @@ namespace Comic
     }
 }
 #endif
+
+
+public class AlignParentToChild : MonoBehaviour
+{
+    public Transform child;
+
+    public void AlignParent()
+    {
+        if (child == null)
+        {
+            Debug.LogError("Child Transform is not assigned.");
+            return;
+        }
+
+        // Store the child's current global position
+        Vector3 childGlobalPosition = child.position;
+
+        // Set the parent to the child's global position
+        transform.position = childGlobalPosition;
+
+        // Reassign the child to the parent
+        child.SetParent(transform, true); // 'true' ensures it retains its global position
+    }
+}

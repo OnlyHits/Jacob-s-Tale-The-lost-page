@@ -9,6 +9,10 @@ namespace Comic
         [SerializeField] private PowerType m_powerType = PowerType.Power_None;
         public PowerType GetPowerType() => m_powerType;
 
+        public virtual void Activate(bool activate = true)
+        {
+
+        }
 
     }
 }
