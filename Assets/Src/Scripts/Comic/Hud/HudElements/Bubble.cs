@@ -17,6 +17,8 @@ namespace Comic
         private Tween                                   m_scaleTween = null;
         private Coroutine                               m_dialogueCoroutine = null;
 
+        public TMP_AnimatedText GetAnimatedText() => m_dialogue;
+
         public void Init(NpcIcon icon_rect, RectTransform container_rect, Canvas canvas)
         {
             m_iconRect = icon_rect;
@@ -42,7 +44,7 @@ namespace Comic
         protected override void OnLateUpdate(float elapsed_time)
         {
 //            SetBubblePosition();
-            ConstraintPosition();
+//            ConstraintPosition();
             SetPinTransform();
         }
 
@@ -134,7 +136,8 @@ namespace Comic
         private void SetBubblePosition()
         {
 
-            // bubble_rect.pivot = new Vector2(.5f, .5f);
+//            bubble_rect.pivot = new Vector2(.5f, .5f);
+            // gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.position);
 
             // Vector3 offset_x = new Vector3(icon_rect.rect.width + bubble_rect.rect.width, 0, 0);
             // Vector3 offset_y = new Vector3(0, container_rect.rect.height - bubble_rect.rect.height, 0);
@@ -154,6 +157,8 @@ namespace Comic
 
         public void Appear(DialogueAppearIntensity intensity)
         {
+            gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.GetBubbleAnchor().position);
+
             if (IsCompute())
             {
                 m_scaleTween.Kill();
@@ -177,6 +182,8 @@ namespace Comic
 
         public void Disappear()
         {
+            gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.GetBubbleAnchor().position);
+
             if (IsCompute())
             {
                 m_scaleTween.Kill();

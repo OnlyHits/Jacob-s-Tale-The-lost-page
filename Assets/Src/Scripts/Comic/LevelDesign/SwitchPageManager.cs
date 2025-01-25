@@ -18,7 +18,6 @@ namespace Comic
         [SerializeField] private GameObject m_canvas;
         [SerializeField, ReadOnly] private GameObject m_canvasDuplicated;
 
-
         #region CALLBACKS
 
         public void Test(Action<bool> function)

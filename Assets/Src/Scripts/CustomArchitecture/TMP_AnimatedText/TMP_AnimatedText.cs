@@ -32,7 +32,84 @@ namespace CustomArchitecture
         protected bool                      m_updateInCoroutine = false;
 
         public TMP_AnimatedText_State GetState() => m_state;
-        private bool                        m_isTmpEnabled = false;
+        public TMP_Text GetTextMeshPro() => m_textMeshPro;
+
+        public void CopyText(TMP_Text text)
+        {
+            if (m_textMeshPro == null)
+            {
+                Debug.LogError("No TMP_Text component found on the GameObject.");
+                return;
+            }
+
+            m_textMeshPro.text = text.text;
+
+            text.ForceMeshUpdate();
+            m_textMeshPro.ForceMeshUpdate();
+
+            TMP_TextInfo sourceTextInfo = text.textInfo;
+            TMP_TextInfo targetTextInfo = m_textMeshPro.textInfo;
+
+            if (sourceTextInfo.characterCount != targetTextInfo.characterCount)
+            {
+                Debug.LogError("Character counts do not match between source and target TMP_Text objects.");
+                return;
+            }
+
+            for (int i = 0; i < sourceTextInfo.meshInfo.Length; i++)
+            {
+                TMP_MeshInfo sourceMeshInfo = sourceTextInfo.meshInfo[i];
+                TMP_MeshInfo targetMeshInfo = targetTextInfo.meshInfo[i];
+
+                if (targetMeshInfo.vertices.Length != sourceMeshInfo.vertices.Length)
+                {
+                    targetTextInfo.meshInfo[i].ResizeMeshInfo(sourceMeshInfo.vertices.Length / 4);
+                }
+
+                System.Array.Copy(sourceMeshInfo.vertices, targetMeshInfo.vertices, sourceMeshInfo.vertices.Length);
+                System.Array.Copy(sourceMeshInfo.colors32, targetMeshInfo.colors32, sourceMeshInfo.colors32.Length);
+                System.Array.Copy(sourceMeshInfo.uvs0, targetMeshInfo.uvs0, sourceMeshInfo.uvs0.Length);
+                System.Array.Copy(sourceMeshInfo.normals, targetMeshInfo.normals, sourceMeshInfo.normals.Length);
+                System.Array.Copy(sourceMeshInfo.tangents, targetMeshInfo.tangents, sourceMeshInfo.tangents.Length);
+            }
+
+            for (int i = 0; i < targetTextInfo.meshInfo.Length; i++)
+            {
+                m_textMeshPro.UpdateGeometry(targetTextInfo.meshInfo[i].mesh, i);
+            }
+            Debug.Log(targetTextInfo.meshInfo.Length);
+        }
+
+
+
+        //     Debug.Log(text.text);
+
+        //     m_textMeshPro = gameObject.GetComponent<TMP_Text>();
+        //     Debug.Log(m_textMeshPro == null);
+            
+        //     m_textMeshPro.text = text.text;
+        //     m_textMeshPro.ForceMeshUpdate();
+
+        //     m_mesh = m_textMeshPro.mesh;
+        //     m_vertices = m_mesh.vertices;
+        //     m_colors = m_mesh.colors32;
+
+        //     foreach (var info in text.textInfo.characterInfo)
+        //     {
+        //         int vertexIndex = info.vertexIndex;
+
+        //         if (info.character == ' '|| info.character == '\n')
+        //             continue;
+
+        //         m_vertices[vertexIndex] = info.bottomLeft;
+        //         m_vertices[vertexIndex + 1] = info.topLeft;
+        //         m_vertices[vertexIndex + 2] = info.topRight;
+        //         m_vertices[vertexIndex + 3] = info.bottomRight;
+        //     }
+                
+        //     m_mesh.colors32 = m_colors;
+        //     m_mesh.vertices = m_vertices;
+        // }
 
         // protected void Update()
         // {
@@ -160,7 +237,7 @@ namespace CustomArchitecture
             m_mesh.vertices = m_vertices;
         }
 
-        protected override void OnLateUpdate(float elapsed_time)
+        protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);
 

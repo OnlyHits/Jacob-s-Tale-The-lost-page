@@ -32,6 +32,8 @@ namespace Comic
         #if UNITY_EDITOR
         [SerializeField, OnValueChanged("DebugGraphic")] private bool m_activeGraphic = true;
 
+        [SerializeField] private TMP_AnimatedText test;
+
         private void DebugGraphic()
         {
             ActiveGraphic(m_activeGraphic);
