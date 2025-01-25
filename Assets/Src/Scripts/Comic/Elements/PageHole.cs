@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.Utilities;
 using UnityEngine;
+using static Comic.Comic;
 
 public class PageHole : BaseBehaviour
 {
@@ -54,6 +54,10 @@ public class PageHole : BaseBehaviour
             int indexSpriteFrame = i;
             StartCoroutine(CoroutineUtils.InvokeOnDelay(delay, () =>
             {
+                if (indexSpriteFrame > 0)
+                {
+                    m_spriteRd.sortingLayerID = defaultLayerId;
+                }
                 m_spriteRd.sprite = m_animHole.m_spriteFrames[indexSpriteFrame];
             }));
             delay += delayToAdd;

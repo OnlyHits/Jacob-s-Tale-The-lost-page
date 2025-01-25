@@ -66,8 +66,12 @@ namespace Comic
         {
             if (nextPage)
             {
-                newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
                 InstantiateHole(newPage);
+
+                StartCoroutine(CoroutineUtils.InvokeOnDelay(0.5f / 3, () =>
+                {
+                    newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
+                }));
             }
             else if (nextPage == false)
             {
