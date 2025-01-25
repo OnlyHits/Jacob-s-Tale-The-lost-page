@@ -68,9 +68,6 @@ namespace Comic
             m_decorEditor?.Refresh();
 
             m_propsParent.position = transform.position;
-            //var props = m_propsParent.GetComponentsInChildren<Prop>();
-            //foreach (Prop prop in props)
-            //    prop.transform.SetParent(m_propsParent, true);
 
             m_lastScale = transform.localScale;
             m_lastPosition = transform.position;

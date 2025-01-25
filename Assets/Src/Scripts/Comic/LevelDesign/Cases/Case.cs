@@ -4,7 +4,6 @@ using CustomArchitecture;
 using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
-using static Comic.Comic;
 
 namespace Comic
 {
@@ -12,7 +11,6 @@ namespace Comic
     {
         [SerializeField] private List<Transform> m_allElements;
         [SerializeField] private Transform m_elements;
-        [SerializeField] private Transform m_propsParent;
         [SerializeField] private SpriteRenderer m_caseSprite;
 
         private List<Tween> m_rotCaseTweens = new List<Tween>();
@@ -59,11 +57,10 @@ namespace Comic
 
             m_isRotating = true;
 
-            List<Transform> transforms = GetCaseTransforms();
             Vector3 destRot = m_currentRotation + new Vector3(0, 0, 180);
             m_currentRotation += new Vector3(0, 0, 180);
 
-            foreach (Transform t in transforms)
+            foreach (Transform t in m_allElements)
             {
                 Tween tween = t.DOLocalRotate(destRot, 0.5f);
                 tween.OnComplete(() =>
@@ -78,16 +75,6 @@ namespace Comic
                     });
                 m_rotCaseTweens.Add(tween);
             }
-        }
-
-        public Transform GetPropsParent()
-        {
-            return m_propsParent;
-        }
-
-        public List<Transform> GetCaseTransforms()
-        {
-            return m_allElements;
         }
 
         public Transform GetCaseTransform()
