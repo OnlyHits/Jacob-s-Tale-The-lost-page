@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using System;
+using Sirenix.OdinInspector;
+using UnityEngine.UI;
+using TMPro;
 
 namespace Comic
 {
@@ -25,6 +28,31 @@ namespace Comic
 
         [SerializeField] protected Canvas m_canvas;
         private Dictionary<NpcIconType, Sprite> m_iconSprites;
+
+        #if UNITY_EDITOR
+        [SerializeField, OnValueChanged("DebugGraphic")] private bool m_activeGraphic = true;
+
+        private void DebugGraphic()
+        {
+            ActiveGraphic(m_activeGraphic);
+        }
+        #endif
+
+        public override void ActiveGraphic(bool active)
+        {
+            Image[] images = gameObject.GetComponentsInChildren<Image>(true);
+            TMP_Text[] texts = gameObject.GetComponentsInChildren<TMP_Text>(true);
+
+            foreach (Image image in images)
+            {
+                image.enabled = active;
+            }
+
+            foreach (TMP_Text text in texts)
+            {
+                text.enabled = active;
+            }
+        }
 
         public override void Init()
         {
@@ -59,6 +87,15 @@ namespace Comic
 
             m_mainIcon.gameObject.SetActive(false);
             m_mainBubble.gameObject.SetActive(false);
+        }
+
+        public override void Pause(bool pause)
+        {
+            foreach (var d in m_datas)
+            {
+                d.Value.m_icon.Pause(pause);
+                d.Value.m_bubble.Pause(pause);
+            }
         }
 
         public void RemoveVoice(VoiceType type)

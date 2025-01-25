@@ -12,6 +12,7 @@ namespace Comic
         private Action<bool, Page, Page> m_onBeforeSwitchPageCallback;
         private Action<bool, Page, Page> m_onMiddleSwitchPageCallback;
         private Action<bool, Page, Page> m_onAfterSwitchPageCallback;
+        private Action<bool> m_onTest;
 
         [Header("Canvas Duplication")]
         [SerializeField] private GameObject m_canvas;
@@ -19,6 +20,12 @@ namespace Comic
 
 
         #region CALLBACKS
+
+        public void Test(Action<bool> function)
+        {
+            m_onTest -= function;
+            m_onTest += function;
+        }
 
         public void SubscribeToBeforeSwitchPage(Action<bool, Page, Page> function)
         {
@@ -48,12 +55,14 @@ namespace Comic
 
         private void SwitchPage(bool isNextPage, int idxNewPage)
         {
-            SwitchCanvas(isNextPage, idxNewPage);
-
             Page currentPage = m_unlockedPageList[m_currentPageIndex];
             Page newPage = m_unlockedPageList[idxNewPage];
 
             m_onBeforeSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
+
+            SwitchCanvas(isNextPage, idxNewPage);
+
+            m_onTest?.Invoke(isNextPage);
 
             float delayEnableCurrentPage = isNextPage ? 0 : 0;
             float delayDisableCurrentPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage / 2;
@@ -82,6 +91,11 @@ namespace Comic
         private void SwitchCanvas(bool isNextPage, int idxNewPage)
         {
             m_canvasDuplicated = Instantiate(m_canvas);
+            // foreach (var d in m_canvasDuplicated.GetComponentsInChildren<AView>())
+            // {
+            //     if (d.gameObject.activeSelf)
+            //         d.Pause(true);
+            // }
             DisableAllMonoBehaviours(m_canvasDuplicated);
         }
 
@@ -104,8 +118,6 @@ namespace Comic
                 DisableAllMonoBehaviours(child.gameObject);
             }
         }
-
-
 
         private void DestroyCanvasCopy()
         {

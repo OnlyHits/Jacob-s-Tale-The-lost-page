@@ -1,0 +1,4719 @@
+fileFormatVersion: 2
+guid: 094f605a8fe41f50b983da206c14fa4e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3106231826534064311
+    second: Painting_Woman_0
+  - first:
+      213: -8718047971021453225
+    second: Painting_Woman_1
+  - first:
+      213: 8717845400321133121
+    second: Painting_Woman_2
+  - first:
+      213: 4156942990602213388
+    second: Painting_Woman_3
+  - first:
+      213: -8473523173612858099
+    second: Painting_Woman_4
+  - first:
+      213: -9182876153222338654
+    second: Painting_Woman_5
+  - first:
+      213: -1804453482471997101
+    second: Painting_Woman_6
+  - first:
+      213: 4250903040010984883
+    second: Painting_Woman_7
+  - first:
+      213: 5612969175061887898
+    second: Painting_Woman_8
+  - first:
+      213: -4926180598928775532
+    second: Painting_Woman_9
+  - first:
+      213: -3335953135309803857
+    second: Painting_Woman_10
+  - first:
+      213: 1110441091526824865
+    second: Painting_Woman_11
+  - first:
+      213: -1316139060191248506
+    second: Painting_Woman_12
+  - first:
+      213: 7025657601685649555
+    second: Painting_Woman_13
+  - first:
+      213: -3661626077213491598
+    second: Painting_Woman_14
+  - first:
+      213: -2720714239263039087
+    second: Painting_Woman_15
+  - first:
+      213: -5523315719997729878
+    second: Painting_Woman_16
+  - first:
+      213: 8220251794092490770
+    second: Painting_Woman_17
+  - first:
+      213: 5009182700111097063
+    second: Painting_Woman_18
+  - first:
+      213: -4060075640923390540
+    second: Painting_Woman_19
+  - first:
+      213: -4655631096104355557
+    second: Painting_Woman_20
+  - first:
+      213: 2610755175023341419
+    second: Painting_Woman_21
+  - first:
+      213: 5496522983166880222
+    second: Painting_Woman_22
+  - first:
+      213: 2590586691218405446
+    second: Painting_Woman_23
+  - first:
+      213: -480552466415618499
+    second: Painting_Woman_24
+  - first:
+      213: -4132392698166432312
+    second: Painting_Woman_25
+  - first:
+      213: -3222027444982349796
+    second: Painting_Woman_26
+  - first:
+      213: 6837968240406724102
+    second: Painting_Woman_27
+  - first:
+      213: -1683355537515536149
+    second: Painting_Woman_28
+  - first:
+      213: -5264275820848833550
+    second: Painting_Woman_29
+  - first:
+      213: 5010738546352876596
+    second: Painting_Woman_30
+  - first:
+      213: -8137412064042615026
+    second: Painting_Woman_31
+  - first:
+      213: -1354921844475675420
+    second: Painting_Woman_32
+  - first:
+      213: -5024566275715094757
+    second: Painting_Woman_33
+  - first:
+      213: 368614487918585318
+    second: Painting_Woman_34
+  - first:
+      213: -8209050790314733815
+    second: Painting_Woman_35
+  - first:
+      213: -6320532333811113207
+    second: Painting_Woman_36
+  - first:
+      213: -7643655274560581597
+    second: Painting_Woman_37
+  - first:
+      213: -6013209613988812426
+    second: Painting_Woman_38
+  - first:
+      213: 4457001489195451230
+    second: Painting_Woman_39
+  - first:
+      213: -5772091794437644962
+    second: Painting_Woman_40
+  - first:
+      213: 4493735536178081288
+    second: Painting_Woman_41
+  - first:
+      213: 8121820108790539876
+    second: Painting_Woman_42
+  - first:
+      213: -5708800047807659063
+    second: Painting_Woman_43
+  - first:
+      213: 4611179853733894133
+    second: Painting_Woman_44
+  - first:
+      213: 4660337733413876579
+    second: Painting_Woman_45
+  - first:
+      213: 7262978096923815231
+    second: Painting_Woman_46
+  - first:
+      213: -5890860501163862039
+    second: Painting_Woman_47
+  - first:
+      213: 5116226951792546027
+    second: Painting_Woman_48
+  - first:
+      213: -6289583160697585518
+    second: Painting_Woman_49
+  - first:
+      213: -1864964719909722895
+    second: Painting_Woman_50
+  - first:
+      213: -8630194218932393920
+    second: Painting_Woman_51
+  - first:
+      213: 7152758068817787670
+    second: Painting_Woman_52
+  - first:
+      213: 3547763110022617054
+    second: Painting_Woman_53
+  - first:
+      213: 8043007329454946539
+    second: Painting_Woman_54
+  - first:
+      213: -2734382409920529184
+    second: Painting_Woman_55
+  - first:
+      213: -4312474712716593022
+    second: Painting_Woman_56
+  - first:
+      213: 7128255280629460725
+    second: Painting_Woman_57
+  - first:
+      213: -2217389911170608997
+    second: Painting_Woman_58
+  - first:
+      213: 7890163550868534116
+    second: Painting_Woman_59
+  - first:
+      213: -5939628543105154420
+    second: Painting_Woman_60
+  - first:
+      213: -1967061469392985096
+    second: Painting_Woman_61
+  - first:
+      213: 1999574943857453198
+    second: Painting_Woman_62
+  - first:
+      213: -7774233728880204382
+    second: Painting_Woman_63
+  - first:
+      213: -5417031659381278177
+    second: Painting_Woman_64
+  - first:
+      213: 1957649500619894649
+    second: Painting_Woman_65
+  - first:
+      213: -4273921553673879526
+    second: Painting_Woman_66
+  - first:
+      213: -3373996806419634716
+    second: Painting_Woman_67
+  - first:
+      213: -7714208754975186100
+    second: Painting_Woman_68
+  - first:
+      213: -455560827317858605
+    second: Painting_Woman_69
+  - first:
+      213: 8878448454015548550
+    second: Painting_Woman_70
+  - first:
+      213: -7510590069003003008
+    second: Painting_Woman_71
+  - first:
+      213: -9217782511090806041
+    second: Painting_Woman_72
+  - first:
+      213: 3856297783769552521
+    second: Painting_Woman_73
+  - first:
+      213: 7332631314320621787
+    second: Painting_Woman_74
+  - first:
+      213: 8732882100550847640
+    second: Painting_Woman_75
+  - first:
+      213: -3278049240283790503
+    second: Painting_Woman_76
+  - first:
+      213: -8304081067598906881
+    second: Painting_Woman_77
+  - first:
+      213: 4935917836653188891
+    second: Painting_Woman_78
+  - first:
+      213: -3842574373257719388
+    second: Painting_Woman_79
+  - first:
+      213: 4012002068832127653
+    second: Painting_Woman_80
+  - first:
+      213: 4335182078300299677
+    second: Painting_Woman_81
+  - first:
+      213: -5207965242066503363
+    second: Painting_Woman_82
+  - first:
+      213: 7144999305344789663
+    second: Painting_Woman_83
+  - first:
+      213: -9194756485477203964
+    second: Painting_Woman_84
+  - first:
+      213: -573927297868461412
+    second: Painting_Woman_85
+  - first:
+      213: 3112959693012027470
+    second: Painting_Woman_86
+  - first:
+      213: -6817224546519588822
+    second: Painting_Woman_87
+  - first:
+      213: -868147700395274117
+    second: Painting_Woman_88
+  - first:
+      213: -5700967510334318774
+    second: Painting_Woman_89
+  - first:
+      213: -653793543352631308
+    second: Painting_Woman_90
+  - first:
+      213: 6908950460443779855
+    second: Painting_Woman_91
+  - first:
+      213: 6511348791320130755
+    second: Painting_Woman_92
+  - first:
+      213: -7077226839055945453
+    second: Painting_Woman_93
+  - first:
+      213: -838414692723324524
+    second: Painting_Woman_94
+  - first:
+      213: 2353220276743301826
+    second: Painting_Woman_95
+  - first:
+      213: 6308626111391382789
+    second: Painting_Woman_96
+  - first:
+      213: -7959169358383674734
+    second: Painting_Woman_97
+  - first:
+      213: 2552819212251213376
+    second: Painting_Woman_98
+  - first:
+      213: -7512453274837306374
+    second: Painting_Woman_99
+  - first:
+      213: -1784393257378801256
+    second: Painting_Woman_100
+  - first:
+      213: 7331417119494568950
+    second: Painting_Woman_101
+  - first:
+      213: -8716804710709154939
+    second: Painting_Woman_102
+  - first:
+      213: -2180637343855558086
+    second: Painting_Woman_103
+  - first:
+      213: 6132248624034039223
+    second: Painting_Woman_104
+  - first:
+      213: -484723733737670630
+    second: Painting_Woman_105
+  - first:
+      213: -6959402893673505549
+    second: Painting_Woman_106
+  - first:
+      213: 6474140786610338975
+    second: Painting_Woman_107
+  - first:
+      213: 4320942428212587470
+    second: Painting_Woman_108
+  - first:
+      213: -375567543353297509
+    second: Painting_Woman_109
+  - first:
+      213: -8333166907615080426
+    second: Painting_Woman_110
+  - first:
+      213: 5300014157286300867
+    second: Painting_Woman_111
+  - first:
+      213: 4673417848181524585
+    second: Painting_Woman_112
+  - first:
+      213: -4227719925972498603
+    second: Painting_Woman_113
+  - first:
+      213: -232370541903234913
+    second: Painting_Woman_114
+  - first:
+      213: 4235829492483621972
+    second: Painting_Woman_115
+  - first:
+      213: 7613391311362478741
+    second: Painting_Woman_116
+  - first:
+      213: -4325132479907859105
+    second: Painting_Woman_117
+  - first:
+      213: -1969105349743008560
+    second: Painting_Woman_118
+  - first:
+      213: -4664261279825690763
+    second: Painting_Woman_119
+  - first:
+      213: -1501355184388799635
+    second: Painting_Woman_120
+  - first:
+      213: 6942900263214333723
+    second: Painting_Woman_121
+  - first:
+      213: 4883250138501648429
+    second: Painting_Woman_122
+  - first:
+      213: -623348067065726126
+    second: Painting_Woman_123
+  - first:
+      213: -4487179842906394983
+    second: Painting_Woman_124
+  - first:
+      213: 2012061310352123440
+    second: Painting_Woman_125
+  - first:
+      213: 2647372799291845535
+    second: Painting_Woman_126
+  - first:
+      213: -5089888867607985853
+    second: Painting_Woman_127
+  - first:
+      213: 5127141050650526894
+    second: Painting_Woman_128
+  - first:
+      213: -7072950389524402740
+    second: Painting_Woman_129
+  - first:
+      213: -5356738265653411920
+    second: Painting_Woman_130
+  - first:
+      213: -7833815158577766264
+    second: Painting_Woman_131
+  - first:
+      213: -4513736269952528685
+    second: Painting_Woman_132
+  - first:
+      213: -235342973788186960
+    second: Painting_Woman_133
+  - first:
+      213: 4578573945204931420
+    second: Painting_Woman_134
+  - first:
+      213: -6004893801665638552
+    second: Painting_Woman_135
+  - first:
+      213: 3573569463391001423
+    second: Painting_Woman_136
+  - first:
+      213: -501342584160339812
+    second: Painting_Woman_137
+  - first:
+      213: 4878923369457341138
+    second: Painting_Woman_138
+  - first:
+      213: 1839116637970865350
+    second: Painting_Woman_139
+  - first:
+      213: 8949498437285139445
+    second: Painting_Woman_140
+  - first:
+      213: 991641639188834717
+    second: Painting_Woman_141
+  - first:
+      213: -3701812183073382527
+    second: Painting_Woman_142
+  - first:
+      213: -7432415845981898418
+    second: Painting_Woman_143
+  - first:
+      213: 8610211680038718093
+    second: Painting_Woman_144
+  - first:
+      213: 7832683206582787994
+    second: Painting_Woman_145
+  - first:
+      213: -8591331443419876883
+    second: Painting_Woman_146
+  - first:
+      213: -4584275686145530712
+    second: Painting_Woman_147
+  - first:
+      213: 1073630693453456494
+    second: Painting_Woman_148
+  - first:
+      213: 496917312338426419
+    second: Painting_Woman_149
+  - first:
+      213: -4031648096796036769
+    second: Painting_Woman_150
+  - first:
+      213: 4037140468606228187
+    second: Painting_Woman_151
+  - first:
+      213: -2472379771542111913
+    second: Painting_Woman_152
+  - first:
+      213: 7194866973782695263
+    second: Painting_Woman_153
+  - first:
+      213: -8717612270687746226
+    second: Painting_Woman_154
+  - first:
+      213: -8749837957041355572
+    second: Painting_Woman_155
+  - first:
+      213: 6005345431869473944
+    second: Painting_Woman_156
+  - first:
+      213: 1286744304568663692
+    second: Painting_Woman_157
+  - first:
+      213: 4203460081118164010
+    second: Painting_Woman_158
+  - first:
+      213: 1741567974264172496
+    second: Painting_Woman_159
+  - first:
+      213: 8905441609085128090
+    second: Painting_Woman_160
+  - first:
+      213: 2504437031964564934
+    second: Painting_Woman_161
+  - first:
+      213: -3051883551629481459
+    second: Painting_Woman_162
+  - first:
+      213: 9100608038009399490
+    second: Painting_Woman_163
+  - first:
+      213: -6544663860314736628
+    second: Painting_Woman_164
+  - first:
+      213: 6772705950761300781
+    second: Painting_Woman_165
+  - first:
+      213: -1989895087189249597
+    second: Painting_Woman_166
+  - first:
+      213: -3346655579761204797
+    second: Painting_Woman_167
+  - first:
+      213: 9162453907362107374
+    second: Painting_Woman_168
+  - first:
+      213: 4175916821106332968
+    second: Painting_Woman_169
+  - first:
+      213: 1022018789254084522
+    second: Painting_Woman_170
+  - first:
+      213: -8617716965449225278
+    second: Painting_Woman_171
+  - first:
+      213: 7906317182647240753
+    second: Painting_Woman_172
+  - first:
+      213: 3488878953101766812
+    second: Painting_Woman_173
+  - first:
+      213: -8912982169403158070
+    second: Painting_Woman_174
+  - first:
+      213: 6117069102386348382
+    second: Painting_Woman_175
+  - first:
+      213: 5911277829132227074
+    second: Painting_Woman_176
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Painting_Woman_0
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 220
+        height: 2020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b06392836d8b1b20800000000000000
+      internalID: 3106231826534064311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_1
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 711
+        width: 107
+        height: 1309
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75883708f85430780800000000000000
+      internalID: -8718047971021453225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_2
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 0
+        width: 1347
+        height: 2020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a0ae4d3320cf870800000000000000
+      internalID: 8717845400321133121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_3
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 2014
+        width: 58
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08156220ad60b930800000000000000
+      internalID: 4156942990602213388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_4
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 2012
+        width: 78
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d05d3c8719ff76a80800000000000000
+      internalID: -8473523173612858099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_5
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 2013
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7e6c6aacedf8080800000000000000
+      internalID: -9182876153222338654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_6
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 2006
+        width: 84
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3514a8b3e1b45f6e0800000000000000
+      internalID: -1804453482471997101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_7
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 2006
+        width: 89
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bd9b7aeacd3efa30800000000000000
+      internalID: 4250903040010984883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_8
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1794
+        width: 103
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bf7c6d9b545ed40800000000000000
+      internalID: 5612969175061887898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_9
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 0
+        width: 237
+        height: 2020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 496ed6568d0b2abb0800000000000000
+      internalID: -4926180598928775532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_10
+      rect:
+        serializedVersion: 2
+        x: 1825
+        y: 0
+        width: 223
+        height: 2020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fae228e4c4054b1d0800000000000000
+      internalID: -3335953135309803857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_11
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1985
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a314741a44196f00800000000000000
+      internalID: 1110441091526824865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1972
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68fb84a7f722cbde0800000000000000
+      internalID: -1316139060191248506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_13
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 1974
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 398fefd7d56208160800000000000000
+      internalID: 7025657601685649555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_14
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 1972
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ef16f9b7a4f2dc0800000000000000
+      internalID: -3661626077213491598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_15
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1953
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 191216970d41e3ad0800000000000000
+      internalID: -2720714239263039087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_16
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1954
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3543fcd9d3953b0800000000000000
+      internalID: -5523315719997729878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_17
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 1952
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21086273473341270800000000000000
+      internalID: 8220251794092490770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_18
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1931
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec672f3021348540800000000000000
+      internalID: 5009182700111097063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_19
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 1931
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bd7b8d37b6b7a7c0800000000000000
+      internalID: -4060075640923390540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_20
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1930
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19ff674f20e36fb0800000000000000
+      internalID: -4655631096104355557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_21
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1922
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f67c2dff34b3420800000000000000
+      internalID: 2610755175023341419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_22
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1900
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed9ae670882974c40800000000000000
+      internalID: 5496522983166880222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_23
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1900
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6487de1cedc93f320800000000000000
+      internalID: 2590586691218405446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_24
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1900
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d36fb5fe31cb459f0800000000000000
+      internalID: -480552466415618499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_25
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 1899
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cd2f514cbac6a6c0800000000000000
+      internalID: -4132392698166432312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_26
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1879
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c10844d1c1f0943d0800000000000000
+      internalID: -3222027444982349796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_27
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1814
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e78d2b2e755ee50800000000000000
+      internalID: 6837968240406724102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_28
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 1794
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be023b3be0583a8e0800000000000000
+      internalID: -1683355537515536149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_29
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 1773
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb90a2480981f6b0800000000000000
+      internalID: -5264275820848833550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_30
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1752
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c68bde828b98540800000000000000
+      internalID: 5010738546352876596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_31
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1715
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ff2c377da121f80800000000000000
+      internalID: -8137412064042615026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_32
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1699
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec3c99d2c9523de0800000000000000
+      internalID: -1354921844475675420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_33
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1692
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b172891f797254ab0800000000000000
+      internalID: -5024566275715094757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_34
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1670
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e5237b7ce49d1500800000000000000
+      internalID: 368614487918585318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_35
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 1657
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f8624bcc7931e80800000000000000
+      internalID: -8209050790314733815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_36
+      rect:
+        serializedVersion: 2
+        x: 1976
+        y: 1657
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90361db7455f848a0800000000000000
+      internalID: -6320532333811113207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_37
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1636
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320964e86084ce590800000000000000
+      internalID: -7643655274560581597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_38
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 1613
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 679ab3627b9cc8ca0800000000000000
+      internalID: -6013209613988812426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_39
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 1614
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53c1ee7d337add30800000000000000
+      internalID: 4457001489195451230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_40
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1615
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dd895481965efa0800000000000000
+      internalID: -5772091794437644962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_41
+      rect:
+        serializedVersion: 2
+        x: 1963
+        y: 1615
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80ea17c49a4fc5e30800000000000000
+      internalID: 4493735536178081288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_42
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1588
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466a5129b5086b070800000000000000
+      internalID: 8121820108790539876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_43
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1588
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c301b06a9446c0b0800000000000000
+      internalID: -5708800047807659063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_44
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 1592
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f71f3955a33eff30800000000000000
+      internalID: 4611179853733894133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_45
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1563
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 363bb7d1a78dca040800000000000000
+      internalID: 4660337733413876579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_46
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 1551
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d269629184bc460800000000000000
+      internalID: 7262978096923815231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_47
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1533
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e79fb6d5957f3ea0800000000000000
+      internalID: -5890860501163862039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_48
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1532
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be0dfd34e4d700740800000000000000
+      internalID: 5116226951792546027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_49
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1533
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29087516079e6b8a0800000000000000
+      internalID: -6289583160697585518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_50
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1518
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f4252fd7705e16e0800000000000000
+      internalID: -1864964719909722895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_51
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1506
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 048a7e525146b3880800000000000000
+      internalID: -8630194218932393920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_52
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1505
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b71301193b34360800000000000000
+      internalID: 7152758068817787670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_53
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1506
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7122070cf2c3130800000000000000
+      internalID: 3547763110022617054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_54
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1506
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8760e6d808e9f60800000000000000
+      internalID: 8043007329454946539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_55
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1483
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec3c908fa58d0ad0800000000000000
+      internalID: -2734382409920529184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_56
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1476
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2883ca5e8130724c0800000000000000
+      internalID: -4312474712716593022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_57
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1476
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fea83e1966ace260800000000000000
+      internalID: 7128255280629460725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_58
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 1476
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b901420cf9f3a31e0800000000000000
+      internalID: -2217389911170608997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_59
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 1476
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463f04512fd7f7d60800000000000000
+      internalID: 7890163550868534116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_60
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1475
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82427e3f43329da0800000000000000
+      internalID: -5939628543105154420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_61
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1450
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f32979f30893b4e0800000000000000
+      internalID: -1967061469392985096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_62
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1453
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88256631daefbb10800000000000000
+      internalID: 1999574943857453198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_63
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1424
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a52c3dfc9f5c1490800000000000000
+      internalID: -7774233728880204382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_64
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1424
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ab88d0866d2d4b0800000000000000
+      internalID: -5417031659381278177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_65
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1412
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f6b2749d7fa2b10800000000000000
+      internalID: 1957649500619894649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_66
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 1392
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10026bbdfaffa4c0800000000000000
+      internalID: -4273921553673879526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_67
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1347
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e52e00e7c72d21d0800000000000000
+      internalID: -3373996806419634716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_68
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1348
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c43ee7c4200a1f490800000000000000
+      internalID: -7714208754975186100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_69
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 1348
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dec22a57d58da9f0800000000000000
+      internalID: -455560827317858605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_70
+      rect:
+        serializedVersion: 2
+        x: 1733
+        y: 1340
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c763234d5963b70800000000000000
+      internalID: 8878448454015548550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_71
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 1326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bdf73002605c790800000000000000
+      internalID: -7510590069003003008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_72
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1317
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2df91e4abd31080800000000000000
+      internalID: -9217782511090806041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_73
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1296
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986d5bd1762548530800000000000000
+      internalID: 3856297783769552521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_74
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 1296
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd08cf6945db2c560800000000000000
+      internalID: 7332631314320621787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_75
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 1296
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89c43bc600e613970800000000000000
+      internalID: 8732882100550847640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_76
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1296
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95345a475970282d0800000000000000
+      internalID: -3278049240283790503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_77
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1274
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff978b3144af1cc80800000000000000
+      internalID: -8304081067598906881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_78
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1272
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b175a3eee17ef7440800000000000000
+      internalID: 4935917836653188891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_79
+      rect:
+        serializedVersion: 2
+        x: 1891
+        y: 1275
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a154f267fe6caac0800000000000000
+      internalID: -3842574373257719388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_80
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 1272
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa0fd600ae7da730800000000000000
+      internalID: 4012002068832127653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_81
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1266
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91aab5a129a92c30800000000000000
+      internalID: 4335182078300299677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_82
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1255
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d397b00943799b7b0800000000000000
+      internalID: -5207965242066503363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_83
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 1254
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c2d7b2303282360800000000000000
+      internalID: 7144999305344789663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_84
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1213
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40089ee31b9a56080800000000000000
+      internalID: -9194756485477203964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_85
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1190
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a86a3d9200908f0800000000000000
+      internalID: -573927297868461412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_86
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1190
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48471ef854733b20800000000000000
+      internalID: 3112959693012027470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_87
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1183
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2060a6e46a5461a0800000000000000
+      internalID: -6817224546519588822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_88
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 1168
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b701e512448b3f3f0800000000000000
+      internalID: -868147700395274117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_89
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 1167
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47da7e114812e0b0800000000000000
+      internalID: -5700967510334318774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_90
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 1161
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ffb50c7c324de6f0800000000000000
+      internalID: -653793543352631308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_91
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 1139
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f03e58da6d581ef50800000000000000
+      internalID: 6908950460443779855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_92
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 1108
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c43e432a35fc5a50800000000000000
+      internalID: 6511348791320130755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_93
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 1108
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 311b537cfa3a8cd90800000000000000
+      internalID: -7077226839055945453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_94
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 1108
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49902c1774a5d54f0800000000000000
+      internalID: -838414692723324524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_95
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 1075
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cae781bf5158a020800000000000000
+      internalID: 2353220276743301826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_96
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1054
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50dbc36160ebc8750800000000000000
+      internalID: 6308626111391382789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_97
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 1054
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a0e5653a95b8190800000000000000
+      internalID: -7959169358383674734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_98
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1054
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04ea6025c8f6d6320800000000000000
+      internalID: 2552819212251213376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_99
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1033
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af33a999c876eb790800000000000000
+      internalID: -7512453274837306374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_100
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 1033
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899955a59cf8c37e0800000000000000
+      internalID: -1784393257378801256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_101
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1033
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbf0b3d60d6eb560800000000000000
+      internalID: 7331417119494568950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_102
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1026
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58baab99c40b70780800000000000000
+      internalID: -8716804710709154939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_103
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1012
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32c987a3e1dcb1e0800000000000000
+      internalID: -2180637343855558086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_104
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 1003
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b54ded22af1a1550800000000000000
+      internalID: 6132248624034039223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_105
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 1003
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a187d54155ae549f0800000000000000
+      internalID: -484723733737670630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_106
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 1003
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcd3c1d0fb3b6f90800000000000000
+      internalID: -6959402893673505549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_107
+      rect:
+        serializedVersion: 2
+        x: 1689
+        y: 979
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9cf6c37eb4c8d950800000000000000
+      internalID: 6474140786610338975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_108
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 979
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb6680ce3217fb30800000000000000
+      internalID: 4320942428212587470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_109
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 975
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95b2452f47b9caf0800000000000000
+      internalID: -375567543353297509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_110
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 975
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610109939d4aa5c80800000000000000
+      internalID: -8333166907615080426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_111
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 952
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc579d9bce6d8940800000000000000
+      internalID: 5300014157286300867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_112
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 938
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96884d7a5c05bd040800000000000000
+      internalID: 4673417848181524585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_113
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 937
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5578192702f1455c0800000000000000
+      internalID: -4227719925972498603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_114
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 938
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98b799293476ccf0800000000000000
+      internalID: -232370541903234913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_115
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 873
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4540c942b70b8ca30800000000000000
+      internalID: 4235829492483621972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_116
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 870
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5925ec96f0338a960800000000000000
+      internalID: 7613391311362478741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_117
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 870
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f557690dcea0af3c0800000000000000
+      internalID: -4325132479907859105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_118
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 853
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d42f3ffd155ca4e0800000000000000
+      internalID: -1969105349743008560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_119
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 851
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f716c0417354fb0800000000000000
+      internalID: -4664261279825690763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_120
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 795
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6380d01a6d1a2be0800000000000000
+      internalID: -1501355184388799635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_121
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 735
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f3bdb11032a5060800000000000000
+      internalID: 6942900263214333723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_122
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 736
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2094ced02ac4c340800000000000000
+      internalID: 4883250138501648429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_123
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 713
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25bfe135c3c6957f0800000000000000
+      internalID: -623348067065726126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_124
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 713
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e654cf4b55ab1c0800000000000000
+      internalID: -4487179842906394983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_125
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 713
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03668d5f9174ceb10800000000000000
+      internalID: 2012061310352123440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_126
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 713
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b62d9d88b5db420800000000000000
+      internalID: 2647372799291845535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_127
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 719
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341c204da051d59b0800000000000000
+      internalID: -5089888867607985853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_128
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 695
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea4095dee93472740800000000000000
+      internalID: 5127141050650526894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_129
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 668
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccdef664815d7dd90800000000000000
+      internalID: -7072950389524402740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_130
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 672
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf7cf8bdea09a5b0800000000000000
+      internalID: -5356738265653411920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_131
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 668
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880e6ec5e92b84390800000000000000
+      internalID: -7833815158577766264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_132
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 652
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3deceabf6ccfb51c0800000000000000
+      internalID: -4513736269952528685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_133
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 631
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b698feefc4ebbcf0800000000000000
+      internalID: -235342973788186960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_134
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 636
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b7ccdaebc5a8f30800000000000000
+      internalID: 4578573945204931420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_135
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 586
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f46c517e45aaca0800000000000000
+      internalID: -6004893801665638552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_136
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 554
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b9a9d4e7ed79130800000000000000
+      internalID: 3573569463391001423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_137
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 556
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98b850739fda09f0800000000000000
+      internalID: -501342584160339812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_138
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 556
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d25bd274fa65b340800000000000000
+      internalID: 4878923369457341138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_139
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 554
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc93c296dad58910800000000000000
+      internalID: 1839116637970865350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_140
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 556
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f35b488961033c70800000000000000
+      internalID: 8949498437285139445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_141
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 555
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99265021d403cd00800000000000000
+      internalID: 991641639188834717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_142
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 555
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f92babe6580acc0800000000000000
+      internalID: -3701812183073382527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_143
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 556
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e49b34daa21cad890800000000000000
+      internalID: -7432415845981898418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_144
+      rect:
+        serializedVersion: 2
+        x: 1962
+        y: 555
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a80a577ed9d7770800000000000000
+      internalID: 8610211680038718093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_145
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 514
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fd88680e743bc60800000000000000
+      internalID: 7832683206582787994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_146
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 515
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de1705f229575c880800000000000000
+      internalID: -8591331443419876883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_147
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 504
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4e5de4d816160c0800000000000000
+      internalID: -4584275686145530712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_148
+      rect:
+        serializedVersion: 2
+        x: 1716
+        y: 504
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64ef376d6d46ee00800000000000000
+      internalID: 1073630693453456494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_149
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 504
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a7caca9a765e600800000000000000
+      internalID: 496917312338426419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_150
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 471
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f51b713aa65bc08c0800000000000000
+      internalID: -4031648096796036769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_151
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 471
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd6d0a3ddddc60830800000000000000
+      internalID: 4037140468606228187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_152
+      rect:
+        serializedVersion: 2
+        x: 1849
+        y: 473
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759fe5f62b750bdd0800000000000000
+      internalID: -2472379771542111913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_153
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 421
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5dd182846d49d360800000000000000
+      internalID: 7194866973782695263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_154
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 397
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e470214e3d1d40780800000000000000
+      internalID: -8717612270687746226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_155
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 398
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc402589cb4529680800000000000000
+      internalID: -8749837957041355572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_156
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 389
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89448144ad5475350800000000000000
+      internalID: 6005345431869473944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_157
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 347
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e7296a02f6bd110800000000000000
+      internalID: 1286744304568663692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_158
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 314
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2435924ca0b55a30800000000000000
+      internalID: 4203460081118164010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_159
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 314
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df663a68da4b2810800000000000000
+      internalID: 1741567974264172496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_160
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 315
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d808dd5fb769b70800000000000000
+      internalID: 8905441609085128090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_161
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 292
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdd494263c81c220800000000000000
+      internalID: 2504437031964564934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_162
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 293
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a6441541885a5d0800000000000000
+      internalID: -3051883551629481459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_163
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 290
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c86d912bcadb4e70800000000000000
+      internalID: 9100608038009399490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_164
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 241
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c087a97e4eeac25a0800000000000000
+      internalID: -6544663860314736628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_165
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 196
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d233d4bcd2c7dfd50800000000000000
+      internalID: 6772705950761300781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_166
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 196
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c13acb06f87264e0800000000000000
+      internalID: -1989895087189249597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_167
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 176
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c121c64b7a4e81d0800000000000000
+      internalID: -3346655579761204797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_168
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 156
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef4533b843972f70800000000000000
+      internalID: 9162453907362107374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_169
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 156
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8251f9d4936d3f930800000000000000
+      internalID: 4175916821106332968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_170
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 156
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa7b3478ca0fe2e00800000000000000
+      internalID: 1022018789254084522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_171
+      rect:
+        serializedVersion: 2
+        x: 1662
+        y: 138
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cbaa8b1418b76880800000000000000
+      internalID: -8617716965449225278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_172
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 112
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13881419691e8bd60800000000000000
+      internalID: 7906317182647240753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_173
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 91
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90b7f74cecfa6030800000000000000
+      internalID: 3488878953101766812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_174
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 71
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1955f90f9be4480800000000000000
+      internalID: -8912982169403158070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_175
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 49
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51814260f134e450800000000000000
+      internalID: 6117069102386348382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Painting_Woman_176
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 17
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2029116cdd3190250800000000000000
+      internalID: 5911277829132227074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Painting_Woman_0: 3106231826534064311
+      Painting_Woman_1: -8718047971021453225
+      Painting_Woman_10: -3335953135309803857
+      Painting_Woman_100: -1784393257378801256
+      Painting_Woman_101: 7331417119494568950
+      Painting_Woman_102: -8716804710709154939
+      Painting_Woman_103: -2180637343855558086
+      Painting_Woman_104: 6132248624034039223
+      Painting_Woman_105: -484723733737670630
+      Painting_Woman_106: -6959402893673505549
+      Painting_Woman_107: 6474140786610338975
+      Painting_Woman_108: 4320942428212587470
+      Painting_Woman_109: -375567543353297509
+      Painting_Woman_11: 1110441091526824865
+      Painting_Woman_110: -8333166907615080426
+      Painting_Woman_111: 5300014157286300867
+      Painting_Woman_112: 4673417848181524585
+      Painting_Woman_113: -4227719925972498603
+      Painting_Woman_114: -232370541903234913
+      Painting_Woman_115: 4235829492483621972
+      Painting_Woman_116: 7613391311362478741
+      Painting_Woman_117: -4325132479907859105
+      Painting_Woman_118: -1969105349743008560
+      Painting_Woman_119: -4664261279825690763
+      Painting_Woman_12: -1316139060191248506
+      Painting_Woman_120: -1501355184388799635
+      Painting_Woman_121: 6942900263214333723
+      Painting_Woman_122: 4883250138501648429
+      Painting_Woman_123: -623348067065726126
+      Painting_Woman_124: -4487179842906394983
+      Painting_Woman_125: 2012061310352123440
+      Painting_Woman_126: 2647372799291845535
+      Painting_Woman_127: -5089888867607985853
+      Painting_Woman_128: 5127141050650526894
+      Painting_Woman_129: -7072950389524402740
+      Painting_Woman_13: 7025657601685649555
+      Painting_Woman_130: -5356738265653411920
+      Painting_Woman_131: -7833815158577766264
+      Painting_Woman_132: -4513736269952528685
+      Painting_Woman_133: -235342973788186960
+      Painting_Woman_134: 4578573945204931420
+      Painting_Woman_135: -6004893801665638552
+      Painting_Woman_136: 3573569463391001423
+      Painting_Woman_137: -501342584160339812
+      Painting_Woman_138: 4878923369457341138
+      Painting_Woman_139: 1839116637970865350
+      Painting_Woman_14: -3661626077213491598
+      Painting_Woman_140: 8949498437285139445
+      Painting_Woman_141: 991641639188834717
+      Painting_Woman_142: -3701812183073382527
+      Painting_Woman_143: -7432415845981898418
+      Painting_Woman_144: 8610211680038718093
+      Painting_Woman_145: 7832683206582787994
+      Painting_Woman_146: -8591331443419876883
+      Painting_Woman_147: -4584275686145530712
+      Painting_Woman_148: 1073630693453456494
+      Painting_Woman_149: 496917312338426419
+      Painting_Woman_15: -2720714239263039087
+      Painting_Woman_150: -4031648096796036769
+      Painting_Woman_151: 4037140468606228187
+      Painting_Woman_152: -2472379771542111913
+      Painting_Woman_153: 7194866973782695263
+      Painting_Woman_154: -8717612270687746226
+      Painting_Woman_155: -8749837957041355572
+      Painting_Woman_156: 6005345431869473944
+      Painting_Woman_157: 1286744304568663692
+      Painting_Woman_158: 4203460081118164010
+      Painting_Woman_159: 1741567974264172496
+      Painting_Woman_16: -5523315719997729878
+      Painting_Woman_160: 8905441609085128090
+      Painting_Woman_161: 2504437031964564934
+      Painting_Woman_162: -3051883551629481459
+      Painting_Woman_163: 9100608038009399490
+      Painting_Woman_164: -6544663860314736628
+      Painting_Woman_165: 6772705950761300781
+      Painting_Woman_166: -1989895087189249597
+      Painting_Woman_167: -3346655579761204797
+      Painting_Woman_168: 9162453907362107374
+      Painting_Woman_169: 4175916821106332968
+      Painting_Woman_17: 8220251794092490770
+      Painting_Woman_170: 1022018789254084522
+      Painting_Woman_171: -8617716965449225278
+      Painting_Woman_172: 7906317182647240753
+      Painting_Woman_173: 3488878953101766812
+      Painting_Woman_174: -8912982169403158070
+      Painting_Woman_175: 6117069102386348382
+      Painting_Woman_176: 5911277829132227074
+      Painting_Woman_18: 5009182700111097063
+      Painting_Woman_19: -4060075640923390540
+      Painting_Woman_2: 8717845400321133121
+      Painting_Woman_20: -4655631096104355557
+      Painting_Woman_21: 2610755175023341419
+      Painting_Woman_22: 5496522983166880222
+      Painting_Woman_23: 2590586691218405446
+      Painting_Woman_24: -480552466415618499
+      Painting_Woman_25: -4132392698166432312
+      Painting_Woman_26: -3222027444982349796
+      Painting_Woman_27: 6837968240406724102
+      Painting_Woman_28: -1683355537515536149
+      Painting_Woman_29: -5264275820848833550
+      Painting_Woman_3: 4156942990602213388
+      Painting_Woman_30: 5010738546352876596
+      Painting_Woman_31: -8137412064042615026
+      Painting_Woman_32: -1354921844475675420
+      Painting_Woman_33: -5024566275715094757
+      Painting_Woman_34: 368614487918585318
+      Painting_Woman_35: -8209050790314733815
+      Painting_Woman_36: -6320532333811113207
+      Painting_Woman_37: -7643655274560581597
+      Painting_Woman_38: -6013209613988812426
+      Painting_Woman_39: 4457001489195451230
+      Painting_Woman_4: -8473523173612858099
+      Painting_Woman_40: -5772091794437644962
+      Painting_Woman_41: 4493735536178081288
+      Painting_Woman_42: 8121820108790539876
+      Painting_Woman_43: -5708800047807659063
+      Painting_Woman_44: 4611179853733894133
+      Painting_Woman_45: 4660337733413876579
+      Painting_Woman_46: 7262978096923815231
+      Painting_Woman_47: -5890860501163862039
+      Painting_Woman_48: 5116226951792546027
+      Painting_Woman_49: -6289583160697585518
+      Painting_Woman_5: -9182876153222338654
+      Painting_Woman_50: -1864964719909722895
+      Painting_Woman_51: -8630194218932393920
+      Painting_Woman_52: 7152758068817787670
+      Painting_Woman_53: 3547763110022617054
+      Painting_Woman_54: 8043007329454946539
+      Painting_Woman_55: -2734382409920529184
+      Painting_Woman_56: -4312474712716593022
+      Painting_Woman_57: 7128255280629460725
+      Painting_Woman_58: -2217389911170608997
+      Painting_Woman_59: 7890163550868534116
+      Painting_Woman_6: -1804453482471997101
+      Painting_Woman_60: -5939628543105154420
+      Painting_Woman_61: -1967061469392985096
+      Painting_Woman_62: 1999574943857453198
+      Painting_Woman_63: -7774233728880204382
+      Painting_Woman_64: -5417031659381278177
+      Painting_Woman_65: 1957649500619894649
+      Painting_Woman_66: -4273921553673879526
+      Painting_Woman_67: -3373996806419634716
+      Painting_Woman_68: -7714208754975186100
+      Painting_Woman_69: -455560827317858605
+      Painting_Woman_7: 4250903040010984883
+      Painting_Woman_70: 8878448454015548550
+      Painting_Woman_71: -7510590069003003008
+      Painting_Woman_72: -9217782511090806041
+      Painting_Woman_73: 3856297783769552521
+      Painting_Woman_74: 7332631314320621787
+      Painting_Woman_75: 8732882100550847640
+      Painting_Woman_76: -3278049240283790503
+      Painting_Woman_77: -8304081067598906881
+      Painting_Woman_78: 4935917836653188891
+      Painting_Woman_79: -3842574373257719388
+      Painting_Woman_8: 5612969175061887898
+      Painting_Woman_80: 4012002068832127653
+      Painting_Woman_81: 4335182078300299677
+      Painting_Woman_82: -5207965242066503363
+      Painting_Woman_83: 7144999305344789663
+      Painting_Woman_84: -9194756485477203964
+      Painting_Woman_85: -573927297868461412
+      Painting_Woman_86: 3112959693012027470
+      Painting_Woman_87: -6817224546519588822
+      Painting_Woman_88: -868147700395274117
+      Painting_Woman_89: -5700967510334318774
+      Painting_Woman_9: -4926180598928775532
+      Painting_Woman_90: -653793543352631308
+      Painting_Woman_91: 6908950460443779855
+      Painting_Woman_92: 6511348791320130755
+      Painting_Woman_93: -7077226839055945453
+      Painting_Woman_94: -838414692723324524
+      Painting_Woman_95: 2353220276743301826
+      Painting_Woman_96: 6308626111391382789
+      Painting_Woman_97: -7959169358383674734
+      Painting_Woman_98: 2552819212251213376
+      Painting_Woman_99: -7512453274837306374
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

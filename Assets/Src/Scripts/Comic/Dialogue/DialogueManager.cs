@@ -70,6 +70,13 @@ namespace Comic
 
         #region Dialogues
 
+        public override void Pause(bool pause)
+        {
+            base.Pause(pause);
+
+            Debug.Log("DialogueManager is paused : " + pause.ToString());
+        }
+
         private void Start()
         {
             StartDialogue(DialogueName.DialogueWelcome);

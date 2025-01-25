@@ -25,6 +25,20 @@ namespace Comic
             gameObject.SetActive(false);
         }
 
+        public override void Pause(bool pause)
+        {
+            base.Pause(pause);
+
+            m_dialogue.Pause(pause);
+
+            if (pause && m_scaleTween != null)
+                m_scaleTween.Pause();
+            else if (!pause && m_scaleTween != null)
+                m_scaleTween.Play();
+
+            Debug.Log("Bubble is pause : " + pause);
+        }
+
         protected override void OnLateUpdate(float elapsed_time)
         {
 //            SetBubblePosition();
@@ -49,17 +63,30 @@ namespace Comic
             m_dialogue.StartDialogue(config, datas);
         }
 
+        public bool IsDialogueComplete()
+        {
+            if (m_pause)
+                return false;
+            
+            if (m_dialogue.GetState() == TMP_AnimatedText_State.State_Displaying)
+                return false;
+            
+            if (m_scaleTween != null && m_scaleTween.IsActive())
+                return false;
+
+            return true;
+        }
+
         public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity)
         {
             Appear(intensity);
 
-            yield return new WaitWhile(() =>
-                m_dialogue.GetState() == TMP_AnimatedText_State.State_Displaying
-                || IsCompute());
+            yield return new WaitUntil(() => IsDialogueComplete());
 
             Disappear();
 
-            yield return new WaitWhile(() => IsCompute());
+            yield return new WaitWhile(() =>
+                m_scaleTween != null || m_pause);
 
             gameObject.SetActive(false);
         }
@@ -139,6 +166,13 @@ namespace Comic
                 MediumAppear();
             else if (intensity == DialogueAppearIntensity.Intensity_Hard)
                 HardAppear();
+
+            m_scaleTween
+                .OnComplete(() => m_scaleTween = null)
+                .OnKill(() => m_scaleTween = null);
+
+            if (m_pause)
+                m_scaleTween.Pause();
         }
 
         public void Disappear()
@@ -152,6 +186,13 @@ namespace Comic
             m_scaleTween = transform.GetComponent<RectTransform>()
                 .DOScale(Vector3.zero, .3f)
                 .SetEase(Ease.OutCirc);
+
+            m_scaleTween
+                .OnComplete(() => m_scaleTween = null)
+                .OnKill(() => m_scaleTween = null);
+
+            if (m_pause)
+                m_scaleTween.Pause();
         }
 
         public bool IsCompute()

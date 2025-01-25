@@ -22,5 +22,10 @@ namespace Comic
         {
             m_iconImage.sprite = sprite;
         }
+
+        public override void Pause(bool pause)
+        {
+            base.Pause(pause);
+        }
     }
 }

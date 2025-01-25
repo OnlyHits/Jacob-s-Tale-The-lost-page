@@ -11,6 +11,8 @@ namespace Comic
 {
     public interface MainGameModeProvider
     {
+        public void Test(Action<bool> function);
+
         public List<ChapterSavedData> GetUnlockChaptersData();
         public GameConfig GetGameConfig();
         public PageManager GetPageManager();
@@ -199,6 +201,11 @@ namespace Comic
         public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function)
         {
             m_pageManager.SubscribeToAfterSwitchPage(function);
+        }
+
+        public void Test(Action<bool> function)
+        {
+            m_pageManager.Test(function);
         }
 
         public void SubscribeToLockChapter(Action<Chapters> function)

@@ -32,6 +32,22 @@ namespace CustomArchitecture
         protected bool                      m_updateInCoroutine = false;
 
         public TMP_AnimatedText_State GetState() => m_state;
+        private bool                        m_isTmpEnabled = false;
+
+        // protected void Update()
+        // {
+        //     if (m_textMeshPro.enabled && !m_isTmpEnabled)
+        //     {
+        //     m_textMeshPro.ForceMeshUpdate();
+        //     }
+            
+        //     m_isTmpEnabled = m_textMeshPro.enabled;
+
+        //     if (m_pause)
+        //         return;
+
+        //     OnUpdate(Time.deltaTime);
+        // }
 
         private void Awake()
         {
@@ -66,6 +82,11 @@ namespace CustomArchitecture
             }
         }
 
+        public override void Pause(bool pause)
+        {
+            base.Pause(pause);
+        }
+
         protected void SetDialogue()
         {
             m_textMeshPro.text = m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_fullText;
@@ -80,12 +101,13 @@ namespace CustomArchitecture
                 m_updateInCoroutine = true;
                 yield return StartCoroutine(ApparitionCoroutine());
                 m_updateInCoroutine = false;
-            
+                
                 if (!m_dialogueConfig.m_handleByInput)
                     yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
                 else
                     yield return new WaitWhile(() => m_isInputPressed == false);
 
+                yield return new WaitWhile(() => m_pause);
                 ++m_sentenceIndex;
             }
 
@@ -101,11 +123,44 @@ namespace CustomArchitecture
             }
             else if (m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_apparitionType == DialogueApparitionType.SIMULTANEOUS)
             {
+                SetVertexAtCenter();
                 yield return StartCoroutine(SimultaneousApparition());
             }
         }
 
-        protected override void OnUpdate(float elapsed_time)
+        protected void SetVertexAtCenter()
+        {
+            m_textMeshPro.ForceMeshUpdate();
+
+            m_mesh = m_textMeshPro.mesh;
+            m_vertices = m_mesh.vertices;
+            m_colors = m_mesh.colors32;
+
+            foreach (var data in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
+            {
+                for (int i = data.m_firstIndex; i < data.m_lastIndex; ++i)
+                {
+                    TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[i];
+
+                    int vertexIndex = info.vertexIndex;
+
+                    if (info.character == ' '|| info.character == '\n')
+                        continue;
+
+                    Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
+
+                    m_vertices[vertexIndex] = center;
+                    m_vertices[vertexIndex + 1] = center;
+                    m_vertices[vertexIndex + 2] = center;
+                    m_vertices[vertexIndex + 3] = center;
+                }
+            }
+                
+            m_mesh.colors32 = m_colors;
+            m_mesh.vertices = m_vertices;
+        }
+
+        protected override void OnLateUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);
 
@@ -150,35 +205,6 @@ namespace CustomArchitecture
 
         protected IEnumerator SimultaneousApparition()
         {
-            m_textMeshPro.ForceMeshUpdate();
-
-            m_mesh = m_textMeshPro.mesh;
-            m_vertices = m_mesh.vertices;
-            m_colors = m_mesh.colors32;
-
-            foreach (var data in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
-            {
-                for (int i = data.m_firstIndex; i < data.m_lastIndex; ++i)
-                {
-                    TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[i];
-
-                    int vertexIndex = info.vertexIndex;
-
-                    if (info.character == ' '|| info.character == '\n')
-                        continue;
-
-                    Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
-
-                    m_vertices[vertexIndex] = center;
-                    m_vertices[vertexIndex + 1] = center;
-                    m_vertices[vertexIndex + 2] = center;
-                    m_vertices[vertexIndex + 3] = center;
-                }
-            }
-            
-            m_mesh.colors32 = m_colors;
-            m_mesh.vertices = m_vertices;
-            
             bool finish = false;
             float time = 0f;
 
@@ -219,7 +245,7 @@ namespace CustomArchitecture
                 m_mesh.colors32 = m_colors;
                 m_mesh.vertices = m_vertices;
 
-                yield return null;
+                yield return new WaitWhile(() => m_pause);
             }
         }
 
