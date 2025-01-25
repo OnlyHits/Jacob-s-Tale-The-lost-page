@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CustomArchitecture;
+using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 
 namespace Comic
@@ -92,7 +93,14 @@ namespace Comic
 
         private void PowerAction(bool on)
         {
-
+            if (on)
+            {
+                Debug.Log("ON | Power Action " + m_powerTypeSelected.ToString());
+            }
+            else
+            {
+                Debug.Log("OFF | Power Action " + m_powerTypeSelected.ToString());
+            }
         }
     }
 }
