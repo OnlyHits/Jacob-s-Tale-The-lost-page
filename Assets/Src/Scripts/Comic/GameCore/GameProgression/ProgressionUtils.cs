@@ -31,5 +31,7 @@ namespace Comic
 
             return PowerType.Power_None;
         }
+
+
    }
 }

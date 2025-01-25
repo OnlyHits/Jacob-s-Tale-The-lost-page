@@ -202,7 +202,9 @@ namespace Comic
 
         public void SubscribeToPowerSelected(Action<PowerType> function)
         {
+            m_dialogueManager.SubscribeToPowerSelected(function);
         }
+
         public void SubscribeToNextPower(Action function)
         {
             GetPlayer().SubscribeToNextPower(function);

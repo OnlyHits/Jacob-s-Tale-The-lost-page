@@ -15,11 +15,15 @@ namespace Comic
         private JacobDialogueConfig             m_dialogueConfig;
         private Coroutine                       m_dialogueCoroutine;
         private Action<PowerType>               m_changePowerCallback;
+        private int                             m_powerIndex = 0;
 
         public void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(UnlockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(LockVoice);
+
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToNextPower(() => OnSwitchPower(true));
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToPrevPower(() => OnSwitchPower(false));
 
             m_dialogueConfig = SerializedScriptableObject.CreateInstance<JacobDialogueConfig>();
             m_dialogueCoroutine = null;
@@ -27,17 +31,37 @@ namespace Comic
             InitDialogueView();
         }
 
-        public void SubscribeToNextPowerSelected(Action<PowerType> function)
+        public void SubscribeToPowerSelected(Action<PowerType> function)
         {
-            m_changePowerCallback
+            m_changePowerCallback -= function;
+            m_changePowerCallback += function;
         }
 
-
-        public void OnSwitchPower()
+        private void GetNextIndex(bool next)
         {
-            VoiceType type = m_dialogueView.HighlightNext();
+            if (next)
+            {
+                m_powerIndex += 1;
+                if (m_powerIndex >= ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData().Count)
+                    m_powerIndex = 0;
+            }
+            else
+            {
+                m_powerIndex -= 1;
+                if (m_powerIndex < 0)
+                    m_powerIndex = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData().Count - 1;
+            }
+        }
 
-            m_changePowerCallback?.Invoke(ProgressionUtils.GetPowerByVoice(type));
+        public void OnSwitchPower(bool next)
+        {
+            GetNextIndex(next);
+
+            ChapterSavedData data = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData()[m_powerIndex];
+
+            m_dialogueView.Highlight(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType));
+
+            m_changePowerCallback?.Invoke(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPowerByChapter(data.m_chapterType));
         }
 
         #region VoiceIcon
