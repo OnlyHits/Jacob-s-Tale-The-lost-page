@@ -8,21 +8,123 @@ using UnityEngine.InputSystem;
 
 namespace CustomArchitecture
 {
+    public enum TMP_AnimatedText_State
+    {
+        State_Displaying,
+        State_Idle,
+        State_Uncompute,
+    }
+
     [RequireComponent(typeof(TMP_Text))]
     public class TMP_AnimatedText : AInputManager
     {
-        private Coroutine               m_dialogueCoroutine = null;
+        private Coroutine                   m_dialogueCoroutine = null;
 
-        protected TMP_Text              m_textMeshPro = null;
-        protected Mesh                  m_mesh = null;
-        protected Vector3[]             m_vertices = null;
-        protected Color32[]             m_colors = null;
+        protected TMP_Text                  m_textMeshPro = null;
+        protected Mesh                      m_mesh = null;
+        protected Vector3[]                 m_vertices = null;
+        protected Color32[]                 m_colors = null;
 
-        protected DialogueConfig        m_dialogueConfig;
-        protected DynamicDialogueData   m_dynamicDatas;
-        protected int                   m_sentenceIndex = 0;
-        protected bool                  m_isCompute = false;
-        protected bool                  m_updateInCoroutine = false;
+        protected DialogueConfig            m_dialogueConfig;
+        protected DynamicDialogueData       m_dynamicDatas;
+        protected int                       m_sentenceIndex = 0;
+        protected TMP_AnimatedText_State    m_state = TMP_AnimatedText_State.State_Uncompute;
+        protected bool                      m_updateInCoroutine = false;
+
+        public TMP_AnimatedText_State GetState() => m_state;
+        public TMP_Text GetTextMeshPro() => m_textMeshPro;
+
+        public void CopyText(TMP_Text text)
+        {
+            if (m_textMeshPro == null)
+            {
+                Debug.LogError("No TMP_Text component found on the GameObject.");
+                return;
+            }
+
+            m_textMeshPro.text = text.text;
+
+            text.ForceMeshUpdate();
+            m_textMeshPro.ForceMeshUpdate();
+
+            TMP_TextInfo sourceTextInfo = text.textInfo;
+            TMP_TextInfo targetTextInfo = m_textMeshPro.textInfo;
+
+            if (sourceTextInfo.characterCount != targetTextInfo.characterCount)
+            {
+                Debug.LogError("Character counts do not match between source and target TMP_Text objects.");
+                return;
+            }
+
+            for (int i = 0; i < sourceTextInfo.meshInfo.Length; i++)
+            {
+                TMP_MeshInfo sourceMeshInfo = sourceTextInfo.meshInfo[i];
+                TMP_MeshInfo targetMeshInfo = targetTextInfo.meshInfo[i];
+
+                if (targetMeshInfo.vertices.Length != sourceMeshInfo.vertices.Length)
+                {
+                    targetTextInfo.meshInfo[i].ResizeMeshInfo(sourceMeshInfo.vertices.Length / 4);
+                }
+
+                System.Array.Copy(sourceMeshInfo.vertices, targetMeshInfo.vertices, sourceMeshInfo.vertices.Length);
+                System.Array.Copy(sourceMeshInfo.colors32, targetMeshInfo.colors32, sourceMeshInfo.colors32.Length);
+                System.Array.Copy(sourceMeshInfo.uvs0, targetMeshInfo.uvs0, sourceMeshInfo.uvs0.Length);
+                System.Array.Copy(sourceMeshInfo.normals, targetMeshInfo.normals, sourceMeshInfo.normals.Length);
+                System.Array.Copy(sourceMeshInfo.tangents, targetMeshInfo.tangents, sourceMeshInfo.tangents.Length);
+            }
+
+            for (int i = 0; i < targetTextInfo.meshInfo.Length; i++)
+            {
+                m_textMeshPro.UpdateGeometry(targetTextInfo.meshInfo[i].mesh, i);
+            }
+            Debug.Log(targetTextInfo.meshInfo.Length);
+        }
+
+
+
+        //     Debug.Log(text.text);
+
+        //     m_textMeshPro = gameObject.GetComponent<TMP_Text>();
+        //     Debug.Log(m_textMeshPro == null);
+            
+        //     m_textMeshPro.text = text.text;
+        //     m_textMeshPro.ForceMeshUpdate();
+
+        //     m_mesh = m_textMeshPro.mesh;
+        //     m_vertices = m_mesh.vertices;
+        //     m_colors = m_mesh.colors32;
+
+        //     foreach (var info in text.textInfo.characterInfo)
+        //     {
+        //         int vertexIndex = info.vertexIndex;
+
+        //         if (info.character == ' '|| info.character == '\n')
+        //             continue;
+
+        //         m_vertices[vertexIndex] = info.bottomLeft;
+        //         m_vertices[vertexIndex + 1] = info.topLeft;
+        //         m_vertices[vertexIndex + 2] = info.topRight;
+        //         m_vertices[vertexIndex + 3] = info.bottomRight;
+        //     }
+                
+        //     m_mesh.colors32 = m_colors;
+        //     m_mesh.vertices = m_vertices;
+        // }
+
+        // protected void Update()
+        // {
+        //     if (m_textMeshPro.enabled && !m_isTmpEnabled)
+        //     {
+        //     m_textMeshPro.ForceMeshUpdate();
+        //     }
+            
+        //     m_isTmpEnabled = m_textMeshPro.enabled;
+
+        //     if (m_pause)
+        //         return;
+
+        //     OnUpdate(Time.deltaTime);
+        // }
 
         private void Awake()
         {
@@ -41,14 +143,25 @@ namespace CustomArchitecture
 
             m_sentenceIndex = 0;
 
-            m_isCompute = true;
-
+            m_state = TMP_AnimatedText_State.State_Displaying;
             m_dialogueCoroutine = StartCoroutine(DialogueCoroutine());
         }
 
         public void StopDialogue()
         {
-            m_isCompute = false;
+            m_state = TMP_AnimatedText_State.State_Uncompute;
+            m_updateInCoroutine = false;
+            
+            if (m_dialogueCoroutine != null)
+            {
+                StopCoroutine(m_dialogueCoroutine);
+                m_dialogueCoroutine = null;
+            }
+        }
+
+        public override void Pause(bool pause)
+        {
+            base.Pause(pause);
         }
 
         protected void SetDialogue()
@@ -65,16 +178,18 @@ namespace CustomArchitecture
                 m_updateInCoroutine = true;
                 yield return StartCoroutine(ApparitionCoroutine());
                 m_updateInCoroutine = false;
-            
+                
                 if (!m_dialogueConfig.m_handleByInput)
                     yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
                 else
                     yield return new WaitWhile(() => m_isInputPressed == false);
 
+                yield return new WaitWhile(() => m_pause);
                 ++m_sentenceIndex;
             }
 
             m_sentenceIndex = Mathf.Clamp(m_sentenceIndex, 0, m_dialogueConfig.m_dialogueSentences.Length - 1);
+            m_state = TMP_AnimatedText_State.State_Idle;
         }
 
         private IEnumerator ApparitionCoroutine()
@@ -85,15 +200,48 @@ namespace CustomArchitecture
             }
             else if (m_dialogueConfig.m_dialogueSentences[m_sentenceIndex].m_apparitionType == DialogueApparitionType.SIMULTANEOUS)
             {
+                SetVertexAtCenter();
                 yield return StartCoroutine(SimultaneousApparition());
             }
+        }
+
+        protected void SetVertexAtCenter()
+        {
+            m_textMeshPro.ForceMeshUpdate();
+
+            m_mesh = m_textMeshPro.mesh;
+            m_vertices = m_mesh.vertices;
+            m_colors = m_mesh.colors32;
+
+            foreach (var data in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
+            {
+                for (int i = data.m_firstIndex; i < data.m_lastIndex; ++i)
+                {
+                    TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[i];
+
+                    int vertexIndex = info.vertexIndex;
+
+                    if (info.character == ' '|| info.character == '\n')
+                        continue;
+
+                    Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
+
+                    m_vertices[vertexIndex] = center;
+                    m_vertices[vertexIndex + 1] = center;
+                    m_vertices[vertexIndex + 2] = center;
+                    m_vertices[vertexIndex + 3] = center;
+                }
+            }
+                
+            m_mesh.colors32 = m_colors;
+            m_mesh.vertices = m_vertices;
         }
 
         protected override void OnUpdate(float elapsed_time)
         {
             base.OnUpdate(elapsed_time);
 
-            if (!m_isCompute || m_updateInCoroutine)
+            if (m_state == TMP_AnimatedText_State.State_Uncompute || m_updateInCoroutine)
                 return;
 
             m_textMeshPro.ForceMeshUpdate();
@@ -134,35 +282,6 @@ namespace CustomArchitecture
 
         protected IEnumerator SimultaneousApparition()
         {
-            m_textMeshPro.ForceMeshUpdate();
-
-            m_mesh = m_textMeshPro.mesh;
-            m_vertices = m_mesh.vertices;
-            m_colors = m_mesh.colors32;
-
-            foreach (var data in m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_animatedTextDatas)
-            {
-                for (int i = data.m_firstIndex; i < data.m_lastIndex; ++i)
-                {
-                    TMP_CharacterInfo info = m_textMeshPro.textInfo.characterInfo[i];
-
-                    int vertexIndex = info.vertexIndex;
-
-                    if (info.character == ' '|| info.character == '\n')
-                        continue;
-
-                    Vector3 center = new Vector3(info.topLeft.x + (info.topRight.x - info.topLeft.x) * 0.5f, info.bottomLeft.y + (info.topRight.y - info.bottomRight.y) * 0.5f, 1);
-
-                    m_vertices[vertexIndex] = center;
-                    m_vertices[vertexIndex + 1] = center;
-                    m_vertices[vertexIndex + 2] = center;
-                    m_vertices[vertexIndex + 3] = center;
-                }
-            }
-            
-            m_mesh.colors32 = m_colors;
-            m_mesh.vertices = m_vertices;
-            
             bool finish = false;
             float time = 0f;
 
@@ -203,7 +322,7 @@ namespace CustomArchitecture
                 m_mesh.colors32 = m_colors;
                 m_mesh.vertices = m_vertices;
 
-                yield return null;
+                yield return new WaitWhile(() => m_pause);
             }
         }
 

@@ -13,6 +13,7 @@ namespace Comic
         Voice_Beloved, // Bethany
         Voice_Bully, // Dylan
         Voice_Boss, // Yvick
+        Voice_Jacob,
         Voice_None
     }
 

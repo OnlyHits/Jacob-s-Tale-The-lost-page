@@ -44,7 +44,7 @@ Material:
     - _ColorMask: 15
     - _EnableExternalAlpha: 0
     - _Stencil: 1
-    - _StencilComp: 3
+    - _StencilComp: 6
     - _StencilOp: 0
     - _StencilReadMask: 1
     - _StencilWriteMask: 0

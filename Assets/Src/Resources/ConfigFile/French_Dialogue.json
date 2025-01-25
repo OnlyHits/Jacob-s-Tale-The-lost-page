@@ -8,7 +8,7 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 1,
+    "$rlength": 5,
     "$rcontent": [
         {
             "$k": 0,
@@ -24,11 +24,11 @@
                             "m_animatedText": {
                                 "$id": 3,
                                 "$type": "5|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp",
-                                "$rlength": 2,
+                                "$rlength": 1,
                                 "$rcontent": [
                                     {
                                         "$type": "6|CustomArchitecture.AnimatedTextConfig, Assembly-CSharp",
-                                        "m_text": "Bonjour je m'appelle",
+                                        "m_text": "Te voila enfin enfin Jacob!",
                                         "m_textModifier": 0,
                                         "m_colorModifier": 0,
                                         "m_solidColor": {
@@ -40,30 +40,9 @@
                                         },
                                         "m_gradientColor": {
                                             "$type": 7,
-                                            0,
-                                            0,
-                                            0,
-                                            0
-                                        },
-                                        "m_colorSpeedRandomness": 0
-                                    },
-                                    {
-                                        "$type": 6,
-                                        "m_text": " Bethany",
-                                        "m_textModifier": 3,
-                                        "m_colorModifier": 2,
-                                        "m_solidColor": {
-                                            "$type": 7,
-                                            172,
-                                            47,
-                                            183,
-                                            255
-                                        },
-                                        "m_gradientColor": {
-                                            "$type": 7,
-                                            61,
-                                            23,
-                                            212,
+                                            59,
+                                            59,
+                                            59,
                                             255
                                         },
                                         "m_colorSpeedRandomness": 0
@@ -77,18 +56,207 @@
                             "m_animatedText": {
                                 "$id": 4,
                                 "$type": 5,
-                                "$rlength": 2,
+                                "$rlength": 3,
                                 "$rcontent": [
                                     {
                                         "$type": 6,
-                                        "m_text": "Et je vais vous faire d\u00e9couvrir ",
+                                        "m_text": "...",
                                         "m_textModifier": 0,
                                         "m_colorModifier": 0,
                                         "m_solidColor": {
                                             "$type": 7,
-                                            84,
-                                            82,
-                                            82,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    },
+                                    {
+                                        "$type": 6,
+                                        "m_text": "...",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    },
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Tu te souviens de moi j'esp\u00e8re",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 1,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 5,
+                    "$type": 3,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 6,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Bien sur que non il ne se souvient pas de toi",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 7,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Faut dire que tu laisses g\u00e9n\u00e9ralement pas de bon souvenirs",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 1
+            }
+        },
+        {
+            "$k": 2,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 8,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 9,
+                                "$type": 5,
+                                "$rlength": 2,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Ta pas besoin d'\u00eatre m\u00e9chant gros ",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    },
+                                    {
+                                        "$type": 6,
+                                        "m_text": "FILS DE PUTE",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
                                             255
                                         },
                                         "m_gradientColor": {
@@ -99,36 +267,173 @@
                                             0
                                         },
                                         "m_colorSpeedRandomness": 0
-                                    },
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 3,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 10,
+                    "$type": 3,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 11,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
                                     {
                                         "$type": 6,
-                                        "m_text": "Les aventures de Jacob",
-                                        "m_textModifier": 2,
-                                        "m_colorModifier": 2,
+                                        "m_text": "CALMEZ-VOUS!",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
                                         "m_solidColor": {
                                             "$type": 7,
-                                            179,
-                                            179,
-                                            179,
+                                            0,
+                                            0,
+                                            0,
                                             255
                                         },
                                         "m_gradientColor": {
                                             "$type": 7,
-                                            0,
-                                            0,
-                                            0,
+                                            59,
+                                            59,
+                                            59,
                                             255
                                         },
                                         "m_colorSpeedRandomness": 0
                                     }
                                 ]
                             },
-                            "m_apparitionType": 0
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 12,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Vous faites peur \u00e0 notre invit\u00e9",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
                         }
                     ]
                 },
-                "m_handleByInput": true,
-                "m_durationBetweenSentence": 0.1
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 1
+            }
+        },
+        {
+            "$k": 4,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 13,
+                    "$type": 3,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 14,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Qu'est ce qu'il veux l'autre pinguin",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 15,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Ta grosse t\u00eate",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            59,
+                                            59,
+                                            59,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 1
             }
         }
     ]

@@ -29,8 +29,8 @@ namespace Comic
         public void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToMiddleSwitchPage(OnMiddleSwitchPage);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            // ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToMiddleSwitchPage(OnMiddleSwitchPage);
+            // ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
             m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
@@ -44,7 +44,7 @@ namespace Comic
                 float from = m_destRot.y;
                 float to = m_baseRot.y;
                 TranslateCanvas(from, to);
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
             }
             else if (nextPage)
             {
