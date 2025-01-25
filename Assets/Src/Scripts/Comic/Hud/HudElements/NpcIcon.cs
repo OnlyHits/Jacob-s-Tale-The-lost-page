@@ -15,6 +15,7 @@ namespace Comic
         private Tween                           m_scaleTween;
 
         public RectTransform GetBubbleAnchor() => m_bubbleAnchor;
+        public void SetBubbleAnchor(RectTransform tr) => m_bubbleAnchor = tr;
 
         public void Init(VoiceType type, Sprite sprite)
         {
@@ -49,8 +50,8 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, duration)
-                .SetEase(Ease.OutCirc)
+                .DOScale(Vector3.one, duration * .7f)
+                .SetEase(Ease.OutBack)
                 .OnComplete(() => m_scaleTween = null)
                 .OnKill(() => m_scaleTween = null);
 
@@ -58,7 +59,7 @@ namespace Comic
                 m_scaleTween.Pause();
         }
 
-        public void Disappear()
+        public void Disappear(float duration)
         {
             if (IsCompute())
             {
@@ -67,8 +68,8 @@ namespace Comic
             }
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.zero, .3f)
-                .SetEase(Ease.OutCirc)
+                .DOScale(Vector3.zero, duration * 1.3f)
+                .SetEase(Ease.InBack)
                 .OnComplete(() => { m_scaleTween = null; gameObject.SetActive(false); })
                 .OnKill(() => { m_scaleTween = null; gameObject.SetActive(false); });
 

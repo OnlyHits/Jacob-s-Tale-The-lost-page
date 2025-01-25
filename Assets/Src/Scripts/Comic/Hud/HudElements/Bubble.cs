@@ -11,10 +11,11 @@ namespace Comic
 {
     public class Bubble : BaseBehaviour
     {
-        private Dictionary<DialogueAppearIntensity, float> m_durationByIntensity = null;
+        private Dictionary<DialogueAppearIntensity, float>  m_durationByIntensity = null;
+        private float                                       m_disappearDuration = .3f;
 
         private Action<float>                           m_onAppearCallback;
-        private Action                                  m_onDisappearCallback;
+        private Action<float>                           m_onDisappearCallback;
 
         [SerializeField] private TMP_AnimatedText       m_dialogue;
         [SerializeField] private RectTransform          m_pinRect;
@@ -31,7 +32,7 @@ namespace Comic
             m_onAppearCallback += function;
         }
 
-        public void SubscribeToDisappearCallback(Action function)
+        public void SubscribeToDisappearCallback(Action<float> function)
         {
             m_onDisappearCallback -= function;
             m_onDisappearCallback += function;
@@ -46,9 +47,9 @@ namespace Comic
 
             m_durationByIntensity = new()
             {
-                { DialogueAppearIntensity.Intensity_Normal, 1f },
+                { DialogueAppearIntensity.Intensity_Normal, .7f },
                 { DialogueAppearIntensity.Intensity_Medium, .5f },
-                { DialogueAppearIntensity.Intensity_Hard, .2f},
+                { DialogueAppearIntensity.Intensity_Hard, .3f},
             };
         }
 
@@ -109,7 +110,7 @@ namespace Comic
                 && !m_iconRect.IsCompute());
 
             Disappear();
-            m_onDisappearCallback?.Invoke();
+            m_onDisappearCallback?.Invoke(m_disappearDuration);
 
             yield return new WaitWhile(() =>
                 m_scaleTween != null || m_pause);
@@ -174,10 +175,8 @@ namespace Comic
             }
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.zero, m_durationByIntensity[DialogueAppearIntensity.Intensity_Medium])
-                .SetEase(Ease.OutCirc);
-
-            m_scaleTween
+                .DOScale(Vector3.zero, m_disappearDuration)
+                .SetEase(Ease.InBack)
                 .OnComplete(() => m_scaleTween = null)
                 .OnKill(() => m_scaleTween = null);
 
@@ -196,7 +195,7 @@ namespace Comic
 
             m_scaleTween = transform.GetComponent<RectTransform>()
                 .DOScale(Vector3.one, m_durationByIntensity[DialogueAppearIntensity.Intensity_Normal])
-                .SetEase(Ease.OutCirc);
+                .SetEase(Ease.OutBack);
         }
 
         public void MediumAppear()
@@ -204,8 +203,8 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, .5f)
-                .SetEase(Ease.OutBounce);
+                .DOScale(Vector3.one, m_durationByIntensity[DialogueAppearIntensity.Intensity_Medium])
+                .SetEase(Ease.OutBack);
         }
 
         public void HardAppear()
@@ -214,7 +213,7 @@ namespace Comic
 
             m_scaleTween = transform.GetComponent<RectTransform>()
                 .DOScale(Vector3.one, m_durationByIntensity[DialogueAppearIntensity.Intensity_Hard])
-                .SetEase(Ease.OutBounce);
+                .SetEase(Ease.OutBack);
         }
 
         #endregion

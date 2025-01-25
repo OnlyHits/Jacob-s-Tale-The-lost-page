@@ -17,6 +17,7 @@ namespace Comic
 
     public class DialogueView : AView
     {
+        [SerializeField] protected RectTransform m_mainBubbleAnchor;
         [SerializeField] protected Transform m_bubbleContainer;
         [SerializeField] protected Transform m_iconContainer;
         [SerializeField] protected Transform m_mainIconContainer;
@@ -90,6 +91,8 @@ namespace Comic
             m_mainIcon.gameObject.SetActive(false);
             m_mainBubble.gameObject.SetActive(false);
 
+            m_mainIcon.SetBubbleAnchor(m_mainBubbleAnchor);
+
             m_mainBubble.SubscribeToAppearCallback(AppearIcon);
             m_mainBubble.SubscribeToDisappearCallback(DisappearIcon);
         }
@@ -148,9 +151,9 @@ namespace Comic
             m_mainIcon.Appear(intensity);
         }
 
-        public void DisappearIcon()
+        public void DisappearIcon(float intensity)
         {
-            m_mainIcon.Disappear();
+            m_mainIcon.Disappear(intensity);
         }
 
         public IEnumerator TriggerMainDialogue(PartOfDialogueConfig config)

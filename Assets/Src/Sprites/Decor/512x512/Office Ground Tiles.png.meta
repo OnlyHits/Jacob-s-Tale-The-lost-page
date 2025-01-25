@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Office Ground Tiles_0: -2680249652366215845
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
