@@ -51,7 +51,7 @@
                 "$id": 6,
                 "$type": 2,
                 "m_voiceType": 1,
-                "m_powerType": 0,
+                "m_powerType": 2,
                 "m_pages": {
                     "$id": 7,
                     "$type": 3,
@@ -80,7 +80,7 @@
                 "$id": 9,
                 "$type": 2,
                 "m_voiceType": 2,
-                "m_powerType": 0,
+                "m_powerType": 1,
                 "m_pages": {
                     "$id": 10,
                     "$type": 3,
@@ -109,7 +109,7 @@
                 "$id": 12,
                 "$type": 2,
                 "m_voiceType": 3,
-                "m_powerType": 0,
+                "m_powerType": 3,
                 "m_pages": {
                     "$id": 13,
                     "$type": 3,

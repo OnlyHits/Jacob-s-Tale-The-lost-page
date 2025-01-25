@@ -18,7 +18,7 @@ namespace Comic
         {
             base.Init();
 
-            Player player = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCharacterManager().GetPlayer();
+            Player player = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
 
             m_lookTarget = player.transform;
         }

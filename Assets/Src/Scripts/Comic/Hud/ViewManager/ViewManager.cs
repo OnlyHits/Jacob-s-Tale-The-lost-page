@@ -6,11 +6,11 @@ namespace Comic
 {
     public class ViewManager : BaseBehaviour
     {
-        private static ViewManager              m_instance;
-        [SerializeField] private AView          m_startingView;
-        [SerializeField] private AView[]        m_views;
-        private AView                           m_currentView;
-        private readonly Stack<AView>           m_history = new Stack<AView>();
+        private static ViewManager m_instance;
+        [SerializeField] private AView m_startingView;
+        [SerializeField] private AView[] m_views;
+        private AView m_currentView;
+        private readonly Stack<AView> m_history = new Stack<AView>();
 
 
         public T GetView<T>() where T : AView
@@ -49,7 +49,8 @@ namespace Comic
         {
             if (m_currentView != null)
             {
-                if (remember) {
+                if (remember)
+                {
                     m_history.Push(m_currentView);
                 }
                 m_currentView.Hide();
@@ -105,7 +106,7 @@ namespace Comic
         public void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(After);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().Test(Unactiv);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterCloneCanvasCallback(Unactiv);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(Before);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToMiddleSwitchPage(Middle);
 
@@ -116,7 +117,7 @@ namespace Comic
             }
 
             if (m_startingView != null)
-                Show(m_startingView, true);            
+                Show(m_startingView, true);
         }
     }
 }

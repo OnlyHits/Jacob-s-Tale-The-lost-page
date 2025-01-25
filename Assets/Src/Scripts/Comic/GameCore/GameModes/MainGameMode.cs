@@ -1,17 +1,15 @@
 using System;
 using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using CustomArchitecture;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 namespace Comic
 {
     public interface MainGameModeProvider
     {
-        public void Test(Action<bool> function);
+        public Player GetPlayer();
 
         public List<ChapterSavedData> GetUnlockChaptersData();
         public GameConfig GetGameConfig();
@@ -31,6 +29,8 @@ namespace Comic
         public void SubscribeToUnlockPower(Action<PowerType> function);
         public void SubscribeToUnlockChapter(Action<Chapters> function);
 
+        public void SubscribeToAfterCloneCanvasCallback(Action<bool> function);
+
         public void ClearSaveDebug();
     }
 
@@ -45,6 +45,7 @@ namespace Comic
         private ViewManager m_viewManager;
         private PageManager m_pageManager;
         private CharacterManager m_characterManager;
+        private PowerManager m_powerManager;
 
         private Action<VoiceType> m_onUnlockVoiceCallback;
         private Action<PowerType> m_onUnlockPowerCallback;
@@ -54,10 +55,12 @@ namespace Comic
         private Action<PowerType> m_onLockPowerCallback;
         private Action<Chapters> m_onLockChapterCallback;
 
+        public Player GetPlayer() => m_characterManager.GetPlayer();
         public List<ChapterSavedData> GetUnlockChaptersData() => m_gameProgression.GetUnlockedChaptersDatas();
         public GameConfig GetGameConfig() => m_gameConfig;
         public PageManager GetPageManager() => m_pageManager;
         public CharacterManager GetCharacterManager() => m_characterManager;
+        public PowerManager GetPowerManager() => m_powerManager;
         public override void OnLoadingEnded() { }
 
         public override void Init(AGameCore game_core, params object[] parameters)
@@ -72,6 +75,7 @@ namespace Comic
             m_pageManager = GetComponent<PageManager>();
             m_characterManager = GetComponent<CharacterManager>();
             m_dialogueManager = GetComponent<DialogueManager>();
+            m_powerManager = GetComponent<PowerManager>();
 
             if (GetUnlockChaptersData().Count == 0)
             {
@@ -84,6 +88,7 @@ namespace Comic
             m_pageManager.Init();
             m_characterManager.Init();
             m_dialogueManager.Init();
+            m_powerManager.Init();
 
             ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
         }
@@ -188,6 +193,23 @@ namespace Comic
 
         #region Callbacks
 
+        public void SubscribeToNextPowerSelected(Action<PowerType> function)
+        {
+        }
+        public void SubscribeToPrevPowerSelected(Action<PowerType> function)
+        {
+        }
+
+        public void SubscribeToNextPower(Action function)
+        {
+            GetPlayer().SubscribeToNextPower(function);
+        }
+
+        public void SubscribeToPrevPower(Action function)
+        {
+            GetPlayer().SubscribeToPrevPower(function);
+        }
+
         public void SubscribeToBeforeSwitchPage(Action<bool, Page, Page> function)
         {
             m_pageManager.SubscribeToBeforeSwitchPage(function);
@@ -203,9 +225,9 @@ namespace Comic
             m_pageManager.SubscribeToAfterSwitchPage(function);
         }
 
-        public void Test(Action<bool> function)
+        public void SubscribeToAfterCloneCanvasCallback(Action<bool> function)
         {
-            m_pageManager.Test(function);
+            m_pageManager.SubscribeToAfterCloneCanvasCallback(function);
         }
 
         public void SubscribeToLockChapter(Action<Chapters> function)

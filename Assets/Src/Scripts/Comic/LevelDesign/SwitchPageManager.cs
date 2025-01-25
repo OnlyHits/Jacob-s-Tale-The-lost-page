@@ -12,7 +12,7 @@ namespace Comic
         private Action<bool, Page, Page> m_onBeforeSwitchPageCallback;
         private Action<bool, Page, Page> m_onMiddleSwitchPageCallback;
         private Action<bool, Page, Page> m_onAfterSwitchPageCallback;
-        private Action<bool> m_onTest;
+        private Action<bool> m_onAfterCloneCanvasCallback;
 
         [Header("Canvas Duplication")]
         [SerializeField] private GameObject m_canvas;
@@ -20,10 +20,10 @@ namespace Comic
 
         #region CALLBACKS
 
-        public void Test(Action<bool> function)
+        public void SubscribeToAfterCloneCanvasCallback(Action<bool> function)
         {
-            m_onTest -= function;
-            m_onTest += function;
+            m_onAfterCloneCanvasCallback -= function;
+            m_onAfterCloneCanvasCallback += function;
         }
 
         public void SubscribeToBeforeSwitchPage(Action<bool, Page, Page> function)
@@ -61,7 +61,7 @@ namespace Comic
 
             SwitchCanvas(isNextPage, idxNewPage);
 
-            m_onTest?.Invoke(isNextPage);
+            m_onAfterCloneCanvasCallback?.Invoke(isNextPage);
 
             float delayEnableCurrentPage = isNextPage ? 0 : 0;
             float delayDisableCurrentPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage / 2;
