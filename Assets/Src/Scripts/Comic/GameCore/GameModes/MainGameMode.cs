@@ -29,6 +29,14 @@ namespace Comic
         public void SubscribeToUnlockPower(Action<PowerType> function);
         public void SubscribeToUnlockChapter(Action<Chapters> function);
 
+        public void SubscribeToNextPowerSelected(Action<PowerType> function);
+        public void SubscribeToPrevPowerSelected(Action<PowerType> function);
+        public void SubscribeToNextPower(Action function);
+        public void SubscribeToPrevPower(Action function);
+
+        public void SubscribeToBeforeSwitchPage(Action<bool, Page, Page> function);
+        public void SubscribeToMiddleSwitchPage(Action<bool, Page, Page> function);
+        public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function);
         public void SubscribeToAfterCloneCanvasCallback(Action<bool> function);
 
         public void ClearSaveDebug();
