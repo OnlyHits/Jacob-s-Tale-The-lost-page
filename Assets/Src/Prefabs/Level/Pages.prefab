@@ -779,6 +779,8 @@ MonoBehaviour:
   m_destTransform: {fileID: 2144114254852173438}
   m_destRotQuat: {x: 0, y: 0, z: 0, w: 0}
   m_duration: 2
+  m_holePrefab: {fileID: 2186330783918143341, guid: 1173b37ed896937bfa990ac44da7930d, type: 3}
+  m_hole: {fileID: 0}
   m_pageVisuals: []
 --- !u!1 &7411790842106933395
 GameObject:
