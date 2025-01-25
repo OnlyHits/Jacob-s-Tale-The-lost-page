@@ -10,7 +10,7 @@ namespace Comic
         [Header("Powers")]
         [SerializeField, ReadOnly] private List<Power> m_powers;
         [SerializeField, ReadOnly] private PowerType m_powerTypeSelected;
-        [SerializeField, ReadOnly] private Power m_powerSelected;
+        [SerializeField] private Power m_powerSelected;
 
         private Action m_onNextPower;
         private Action m_onPrevPower;
