@@ -65,6 +65,9 @@ MonoBehaviour:
   m_jumpForce: 6.5
   m_isFalling: 0
   m_pageManager: {fileID: 0}
+  m_powers: []
+  m_powerTypeSelected: 4
+  m_powerSelected: {fileID: 0}
 --- !u!50 &1141544891393073915
 Rigidbody2D:
   serializedVersion: 5
