@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CustomArchitecture;
+using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 
 namespace Comic
@@ -10,7 +11,7 @@ namespace Comic
         [Header("Powers")]
         [SerializeField, ReadOnly] private List<Power> m_powers;
         [SerializeField, ReadOnly] private PowerType m_powerTypeSelected;
-        [SerializeField, ReadOnly] private Power m_powerSelected;
+        [SerializeField] private Power m_powerSelected;
 
         private Action m_onNextPower;
         private Action m_onPrevPower;
@@ -92,7 +93,14 @@ namespace Comic
 
         private void PowerAction(bool on)
         {
-
+            if (on)
+            {
+                Debug.Log("ON | Power Action " + m_powerTypeSelected.ToString());
+            }
+            else
+            {
+                Debug.Log("OFF | Power Action " + m_powerTypeSelected.ToString());
+            }
         }
     }
 }
