@@ -32,7 +32,7 @@ namespace Comic
         #if UNITY_EDITOR
         [SerializeField, OnValueChanged("DebugGraphic")] private bool m_activeGraphic = true;
 
-        [SerializeField] private TMP_AnimatedText test;
+        [SerializeField] private TMP_AnimatedText   test;
 
         private void DebugGraphic()
         {
@@ -85,10 +85,13 @@ namespace Comic
 
             RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
             m_mainIcon.Init(VoiceType.Voice_None, m_iconSprites[ NpcIconType.Icon_Jacob_0]);
-            m_mainBubble.Init(m_mainIcon, container_rect, m_canvas);
+            m_mainBubble.Init(m_mainIcon, container_rect);
 
             m_mainIcon.gameObject.SetActive(false);
             m_mainBubble.gameObject.SetActive(false);
+
+            m_mainBubble.SubscribeToAppearCallback(AppearIcon);
+            m_mainBubble.SubscribeToDisappearCallback(DisappearIcon);
         }
 
         public override void Pause(bool pause)
@@ -136,7 +139,27 @@ namespace Comic
 
             RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
             m_datas[type].m_icon.Init(type, null);//GetSpriteByType(type));
-            m_datas[type].m_bubble.Init(m_datas[type].m_icon, container_rect, m_canvas);
+            m_datas[type].m_bubble.Init(m_datas[type].m_icon, container_rect);
+        }
+
+        public void AppearIcon(float intensity)
+        {
+            m_mainIcon.gameObject.SetActive(true);
+            m_mainIcon.Appear(intensity);
+        }
+
+        public void DisappearIcon()
+        {
+            m_mainIcon.Disappear();
+        }
+
+        public IEnumerator TriggerMainDialogue(PartOfDialogueConfig config)
+        {
+            m_mainIcon.SetIconSprite(m_iconSprites[config.m_iconType]);
+
+            m_mainBubble.SetupDialogue(config.m_associatedDialogue);
+
+            yield return StartCoroutine(m_mainBubble.DialogueCoroutine(config.m_intensity));
         }
 
         public IEnumerator TriggerVoiceDialogue(PartOfDialogueConfig config)

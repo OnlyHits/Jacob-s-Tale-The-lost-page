@@ -24,7 +24,7 @@
                         "m_iconType": 0,
                         "m_associatedDialogue": 0,
                         "m_intensity": 0,
-                        "m_isMainDialogue": false
+                        "m_isMainDialogue": true
                     },
                     {
                         "$id": 4,
@@ -42,7 +42,7 @@
                         "m_iconType": 0,
                         "m_associatedDialogue": 2,
                         "m_intensity": 1,
-                        "m_isMainDialogue": false
+                        "m_isMainDialogue": true
                     },
                     {
                         "$id": 6,

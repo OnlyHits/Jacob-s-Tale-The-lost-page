@@ -124,6 +124,41 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 407941450956071981, guid: 36e3ab84aecebb0c6baab7712bee6682, type: 3}
   m_PrefabInstance: {fileID: 1381096095826865386}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &254639402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 928763702802315636, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
+  m_PrefabInstance: {fileID: 3882208017803578542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &254639405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254639402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.46666667}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &256660679 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2650386863411933763, guid: 27c4c67b1673320f9b06fb64a4f523e0, type: 3}
@@ -1580,7 +1615,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 928763702802315636, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 254639405}
   m_SourcePrefab: {fileID: 100100000, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
 --- !u!224 &3882208017803578543 stripped
 RectTransform:
@@ -1752,7 +1790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492351302949553313, guid: d29cf2fb016e263c289dcb3c7acda828, type: 3}
       propertyPath: m_simultaneousApparitionDuration
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6139091091086728921, guid: d29cf2fb016e263c289dcb3c7acda828, type: 3}
       propertyPath: m_Name

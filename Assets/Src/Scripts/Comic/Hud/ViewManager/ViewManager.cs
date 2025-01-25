@@ -75,9 +75,6 @@ namespace Comic
         public void Before(bool active, Page _1, Page _2)
         {
             m_currentView.Pause(true);
-
-            // if (!active)
-            //     m_currentView.ActiveGraphic(false);
         }
 
         public void Middle(bool active, Page _1, Page _2)
