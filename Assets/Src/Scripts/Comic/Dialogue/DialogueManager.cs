@@ -27,6 +27,12 @@ namespace Comic
             InitDialogueView();
         }
 
+        public void SubscribeToNextPowerSelected(Action<PowerType> function)
+        {
+            m_changePowerCallback
+        }
+
+
         public void OnSwitchPower()
         {
             VoiceType type = m_dialogueView.HighlightNext();
