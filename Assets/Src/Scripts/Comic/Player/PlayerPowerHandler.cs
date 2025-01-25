@@ -23,6 +23,7 @@ namespace Comic
 
         [Header("Bully")]
         [SerializeField, ReadOnly] private bool m_canPushBoxes = false;
+        public bool CanPushBoxes() => m_canPushBoxes;
 
         private Action m_onNextPower;
         private Action m_onPrevPower;
