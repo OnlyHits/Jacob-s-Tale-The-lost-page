@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
@@ -16,6 +17,11 @@ namespace Comic
         public CaseCanvasEditor m_canvasEditor;
         public CaseColliderEditor m_colliderEditor;
         public CaseDecorEditor m_decorEditor;
+
+        [Space]
+        public Transform m_propsParent;
+        private List<Prop> m_props;
+
 
         #region DECOR FIELDS
         [Space]
@@ -61,9 +67,10 @@ namespace Comic
             m_colliderEditor?.Refresh();
             m_decorEditor?.Refresh();
 
-            //Vector3 childGlobalPosition = transform.position;
-            //transform.parent.position = childGlobalPosition;
-            //transform.SetParent(transform.parent, true);
+            m_propsParent.position = transform.position;
+            //var props = m_propsParent.GetComponentsInChildren<Prop>();
+            //foreach (Prop prop in props)
+            //    prop.transform.SetParent(m_propsParent, true);
 
             m_lastScale = transform.localScale;
             m_lastPosition = transform.position;
@@ -92,27 +99,3 @@ namespace Comic
     }
 }
 #endif
-
-
-public class AlignParentToChild : MonoBehaviour
-{
-    public Transform child;
-
-    public void AlignParent()
-    {
-        if (child == null)
-        {
-            Debug.LogError("Child Transform is not assigned.");
-            return;
-        }
-
-        // Store the child's current global position
-        Vector3 childGlobalPosition = child.position;
-
-        // Set the parent to the child's global position
-        transform.position = childGlobalPosition;
-
-        // Reassign the child to the parent
-        child.SetParent(transform, true); // 'true' ensures it retains its global position
-    }
-}

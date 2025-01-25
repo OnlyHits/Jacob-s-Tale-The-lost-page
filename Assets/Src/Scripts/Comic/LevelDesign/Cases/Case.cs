@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using CustomArchitecture;
+using DG.Tweening;
 using Unity.Cinemachine;
 using UnityEngine;
 using static Comic.Comic;
@@ -10,7 +12,13 @@ namespace Comic
     {
         [SerializeField] private List<Transform> m_allElements;
         [SerializeField] private Transform m_elements;
+        [SerializeField] private Transform m_propsParent;
         [SerializeField] private SpriteRenderer m_caseSprite;
+
+        private List<Tween> m_rotCaseTweens = new List<Tween>();
+        private bool m_isRotating = false;
+        private Vector3 m_currentRotation = Vector3.zero;
+
 
         public bool IsPlayerInCase()
         {
@@ -37,6 +45,44 @@ namespace Comic
             isPlayerIn = isInHeight && isInWidth;
 
             return isPlayerIn;
+        }
+
+        public bool IsRotating()
+        {
+            return m_isRotating;
+        }
+
+        public void Rotate180(float speed, Action endRotateCallback)
+        {
+            if (m_rotCaseTweens.Count > 0)
+                return;
+
+            m_isRotating = true;
+
+            List<Transform> transforms = GetCaseTransforms();
+            Vector3 destRot = m_currentRotation + new Vector3(0, 0, 180);
+            m_currentRotation += new Vector3(0, 0, 180);
+
+            foreach (Transform t in transforms)
+            {
+                Tween tween = t.DOLocalRotate(destRot, 0.5f);
+                tween.OnComplete(() =>
+                    {
+                        if (m_rotCaseTweens.Contains(tween))
+                        {
+                            m_rotCaseTweens.Remove(tween);
+                            m_isRotating = false;
+                            endRotateCallback?.Invoke();
+                        }
+                        tween = null;
+                    });
+                m_rotCaseTweens.Add(tween);
+            }
+        }
+
+        public Transform GetPropsParent()
+        {
+            return m_propsParent;
         }
 
         public List<Transform> GetCaseTransforms()

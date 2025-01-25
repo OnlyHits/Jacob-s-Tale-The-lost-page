@@ -153,38 +153,13 @@ namespace Comic
                 return;
             }
 
-            List<Transform> transforms = c.GetCaseTransforms();
-
-            foreach (Transform t in transforms)
+            if (c.IsRotating())
             {
-                t.DOKill();
-
-                Vector3 baseScale = t.localScale;
-
-                t.DOScale(t.localScale - t.localScale * 0.25f, 0.25f)
-                    .SetLoops(2, LoopType.Yoyo)
-                    .From(baseScale)
-                    .OnKill(() =>
-                    {
-                        t.localScale = baseScale;
-                    });
+                return;
             }
 
-            /*
-            Transform caseTransform = c.GetCaseTransform();
-
-            caseTransform.DOKill();
-
-            Vector3 baseScale = caseTransform.localScale;
-
-            caseTransform.DOScale(caseTransform.localScale - caseTransform.localScale * 0.25f, 0.25f)
-                .SetLoops(2, LoopType.Yoyo)
-                .From(baseScale)
-                .OnKill(() =>
-                {
-                    caseTransform.localScale = baseScale;
-                });
-                */
+            Pause(true);
+            c.Rotate180(0.5f, () => Pause(false));
         }
         #endregion ROTATE POWER
 

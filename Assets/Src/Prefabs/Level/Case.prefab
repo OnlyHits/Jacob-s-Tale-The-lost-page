@@ -187,6 +187,7 @@ MonoBehaviour:
   m_canvasEditor: {fileID: 1178080065683445783}
   m_colliderEditor: {fileID: 500790932137245250}
   m_decorEditor: {fileID: 5541744839787270563}
+  m_propsParent: {fileID: 3224222298490956230}
   m_decorType: 0
   m_backgroundSprite: {fileID: 21300000, guid: d42f401c35d67ee0eb7d9b502fa85187, type: 3}
   m_groundSprite: {fileID: 21300000, guid: 64659386ab7cb6f8aa3a2e82854be5c4, type: 3}
@@ -866,9 +867,11 @@ MonoBehaviour:
   m_pause: 0
   m_allElements:
   - {fileID: 8978730791782157836}
+  - {fileID: 3224222298490956230}
   - {fileID: 6010349044856126578}
   - {fileID: 8514401496207736787}
   m_elements: {fileID: 2563960877907049986}
+  m_propsParent: {fileID: 3224222298490956230}
   m_caseSprite: {fileID: 4831894460810933040}
 --- !u!1 &4798586584676182691
 GameObject:

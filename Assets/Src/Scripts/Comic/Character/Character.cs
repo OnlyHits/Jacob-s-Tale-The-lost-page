@@ -20,6 +20,7 @@ namespace Comic
 
         [Header("Others")]
         [SerializeField] protected Rigidbody2D m_rb;
+        [SerializeField] protected Collider2D m_collider;
         [HideInInspector] protected List<SpriteRenderer> m_sprites = new List<SpriteRenderer>();
 
         protected virtual void Awake()
@@ -46,6 +47,7 @@ namespace Comic
             base.Pause(pause);
             m_rb.simulated = !pause;
             m_animator.speed = pause ? 0 : 1f;
+            m_collider.enabled = !pause;
         }
 
         #region SPRITES
