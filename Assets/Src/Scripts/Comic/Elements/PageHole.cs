@@ -17,11 +17,6 @@ public class PageHole : BaseBehaviour
     private AnimHoleElements m_animHole;
     private SpriteRenderer m_spriteRd;
 
-    private void Awake()
-    {
-        //Init();
-    }
-
     public void Init()
     {
         m_spriteRd = GetComponentInChildren<SpriteRenderer>();
