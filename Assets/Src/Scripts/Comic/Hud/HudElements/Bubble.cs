@@ -4,27 +4,53 @@ using DG.Tweening.Core;
 using DG.Tweening.Plugins.Options;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
 
 namespace Comic
 {
     public class Bubble : BaseBehaviour
     {
+        private Dictionary<DialogueAppearIntensity, float> m_durationByIntensity = null;
+        private float m_disappearDuration = .3f;
+
+        private Action<float> m_onAppearCallback;
+        private Action<float> m_onDisappearCallback;
+
         [SerializeField] private TMP_AnimatedText m_dialogue;
         [SerializeField] private RectTransform m_pinRect;
         private NpcIcon m_iconRect;
         private RectTransform m_containerRect;
-        private Canvas m_canvas;
         private Tween m_scaleTween = null;
         private Coroutine m_dialogueCoroutine = null;
 
         public TMP_AnimatedText GetAnimatedText() => m_dialogue;
 
-        public void Init(NpcIcon icon_rect, RectTransform container_rect, Canvas canvas)
+        public void SubscribeToAppearCallback(Action<float> function)
+        {
+            m_onAppearCallback -= function;
+            m_onAppearCallback += function;
+        }
+
+        public void SubscribeToDisappearCallback(Action<float> function)
+        {
+            m_onDisappearCallback -= function;
+            m_onDisappearCallback += function;
+        }
+
+        public void Init(NpcIcon icon_rect, RectTransform container_rect)
         {
             m_iconRect = icon_rect;
             m_containerRect = container_rect;
-            m_canvas = canvas;
             gameObject.SetActive(false);
+            gameObject.GetComponent<RectTransform>().position = m_containerRect.position;
+
+            m_durationByIntensity = new()
+            {
+                { DialogueAppearIntensity.Intensity_Normal, .7f },
+                { DialogueAppearIntensity.Intensity_Medium, .5f },
+                { DialogueAppearIntensity.Intensity_Hard, .3f},
+            };
         }
 
         public override void Pause(bool pause)
@@ -37,14 +63,10 @@ namespace Comic
                 m_scaleTween.Pause();
             else if (!pause && m_scaleTween != null)
                 m_scaleTween.Play();
-
-            //Debug.Log("Bubble is pause : " + pause);
         }
 
         protected override void OnLateUpdate(float elapsed_time)
         {
-            //            SetBubblePosition();
-            //            ConstraintPosition();
             SetPinTransform();
         }
 
@@ -82,10 +104,13 @@ namespace Comic
         public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity)
         {
             Appear(intensity);
+            m_onAppearCallback?.Invoke(m_durationByIntensity[intensity]);
 
-            yield return new WaitUntil(() => IsDialogueComplete());
+            yield return new WaitUntil(() => IsDialogueComplete()
+                && !m_iconRect.IsCompute());
 
             Disappear();
+            m_onDisappearCallback?.Invoke(m_disappearDuration);
 
             yield return new WaitWhile(() =>
                 m_scaleTween != null || m_pause);
@@ -94,29 +119,6 @@ namespace Comic
         }
 
         #region Constraints
-
-        private void ConstraintPosition()
-        {
-            Vector3[] parentCorners = new Vector3[4];
-            Vector3[] childCorners = new Vector3[4];
-            RectTransform rect = gameObject.GetComponent<RectTransform>();
-
-            m_containerRect.GetWorldCorners(parentCorners);
-            rect.GetWorldCorners(childCorners);
-
-            Vector3 offset = Vector3.zero;
-
-            if (childCorners[0].x < parentCorners[0].x)
-                offset.x = parentCorners[0].x - childCorners[0].x;
-            if (childCorners[2].x > parentCorners[2].x)
-                offset.x = parentCorners[2].x - childCorners[2].x;
-            if (childCorners[0].y < parentCorners[0].y)
-                offset.y = parentCorners[0].y - childCorners[0].y;
-            if (childCorners[1].y > parentCorners[1].y)
-                offset.y = parentCorners[1].y - childCorners[1].y;
-
-            rect.position += offset;
-        }
 
         private void SetPinTransform()
         {
@@ -131,24 +133,6 @@ namespace Comic
             m_pinRect.localPosition = new Vector3(m_pinRect.localPosition.x, m_pinRect.localPosition.y, 0f);
             m_pinRect.rotation = Quaternion.LookRotation(m_pinRect.forward, direction);
             m_pinRect.sizeDelta = new Vector2(m_pinRect.rect.width, distance);
-        }
-
-        private void SetBubblePosition()
-        {
-
-            //            bubble_rect.pivot = new Vector2(.5f, .5f);
-            // gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.position);
-
-            // Vector3 offset_x = new Vector3(icon_rect.rect.width + bubble_rect.rect.width, 0, 0);
-            // Vector3 offset_y = new Vector3(0, container_rect.rect.height - bubble_rect.rect.height, 0);
-            // Vector3 top_position = container_rect.position + container_rect.TransformPoint(offset_y * .5f);
-            // Vector3 bot_position = container_rect.position - container_rect.TransformPoint(offset_y * .5f);
-
-            // float y_position = Mathf.Clamp(icon_rect.position.y, bot_position.y, top_position.y);
-
-            // bubble_rect.position = new Vector3(0, y_position, bubble_rect.position.z);
-
-            // gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.position);
         }
 
         #endregion
@@ -191,10 +175,8 @@ namespace Comic
             }
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.zero, .3f)
-                .SetEase(Ease.OutCirc);
-
-            m_scaleTween
+                .DOScale(Vector3.zero, m_disappearDuration)
+                .SetEase(Ease.InBack)
                 .OnComplete(() => m_scaleTween = null)
                 .OnKill(() => m_scaleTween = null);
 
@@ -212,8 +194,8 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, 1f)
-                .SetEase(Ease.OutCirc);
+                .DOScale(Vector3.one, m_durationByIntensity[DialogueAppearIntensity.Intensity_Normal])
+                .SetEase(Ease.OutBack);
         }
 
         public void MediumAppear()
@@ -221,8 +203,8 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, .5f)
-                .SetEase(Ease.OutBounce);
+                .DOScale(Vector3.one, m_durationByIntensity[DialogueAppearIntensity.Intensity_Medium])
+                .SetEase(Ease.OutBack);
         }
 
         public void HardAppear()
@@ -230,8 +212,8 @@ namespace Comic
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
-                .DOScale(Vector3.one, .2f)
-                .SetEase(Ease.OutBounce);
+                .DOScale(Vector3.one, m_durationByIntensity[DialogueAppearIntensity.Intensity_Hard])
+                .SetEase(Ease.OutBack);
         }
 
         #endregion

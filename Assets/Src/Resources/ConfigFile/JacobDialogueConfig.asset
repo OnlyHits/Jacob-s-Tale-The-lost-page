@@ -71,7 +71,7 @@ MonoBehaviour:
       Data: 0
     - Name: m_isMainDialogue
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -113,7 +113,7 @@ MonoBehaviour:
       Data: 1
     - Name: m_isMainDialogue
       Entry: 5
-      Data: false
+      Data: true
     - Name: 
       Entry: 8
       Data: 

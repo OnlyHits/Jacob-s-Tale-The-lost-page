@@ -1474,10 +1474,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueView
       objectReference: {fileID: 0}
-    - target: {fileID: 4470458293799536053, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5448202137927222160, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1556,6 +1552,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5448202137927222160, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5498066393031845046, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7411699088229907663, guid: 554c16cc19d06629a8f8745d176095c2, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1726,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5492351302949553313, guid: d29cf2fb016e263c289dcb3c7acda828, type: 3}
       propertyPath: m_simultaneousApparitionDuration
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6139091091086728921, guid: d29cf2fb016e263c289dcb3c7acda828, type: 3}
       propertyPath: m_Name

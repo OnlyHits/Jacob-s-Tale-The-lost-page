@@ -105,11 +105,13 @@ namespace Comic
 
         public IEnumerator DialogueCoroutine(DialogueName type)
         {
+            yield return new WaitForSeconds(2f);
+
             foreach (var part in m_dialogueConfig.GetConfig()[type])
             {
                 if (part.m_isMainDialogue)
                 {
-                    continue;
+                   yield return StartCoroutine(m_dialogueView.TriggerMainDialogue(part));
                 }
                 else
                 {
