@@ -574,9 +574,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -4525,7 +4525,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -4534,7 +4534,184 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Painting_Woman_0: 3106231826534064311
+      Painting_Woman_1: -8718047971021453225
+      Painting_Woman_10: -3335953135309803857
+      Painting_Woman_100: -1784393257378801256
+      Painting_Woman_101: 7331417119494568950
+      Painting_Woman_102: -8716804710709154939
+      Painting_Woman_103: -2180637343855558086
+      Painting_Woman_104: 6132248624034039223
+      Painting_Woman_105: -484723733737670630
+      Painting_Woman_106: -6959402893673505549
+      Painting_Woman_107: 6474140786610338975
+      Painting_Woman_108: 4320942428212587470
+      Painting_Woman_109: -375567543353297509
+      Painting_Woman_11: 1110441091526824865
+      Painting_Woman_110: -8333166907615080426
+      Painting_Woman_111: 5300014157286300867
+      Painting_Woman_112: 4673417848181524585
+      Painting_Woman_113: -4227719925972498603
+      Painting_Woman_114: -232370541903234913
+      Painting_Woman_115: 4235829492483621972
+      Painting_Woman_116: 7613391311362478741
+      Painting_Woman_117: -4325132479907859105
+      Painting_Woman_118: -1969105349743008560
+      Painting_Woman_119: -4664261279825690763
+      Painting_Woman_12: -1316139060191248506
+      Painting_Woman_120: -1501355184388799635
+      Painting_Woman_121: 6942900263214333723
+      Painting_Woman_122: 4883250138501648429
+      Painting_Woman_123: -623348067065726126
+      Painting_Woman_124: -4487179842906394983
+      Painting_Woman_125: 2012061310352123440
+      Painting_Woman_126: 2647372799291845535
+      Painting_Woman_127: -5089888867607985853
+      Painting_Woman_128: 5127141050650526894
+      Painting_Woman_129: -7072950389524402740
+      Painting_Woman_13: 7025657601685649555
+      Painting_Woman_130: -5356738265653411920
+      Painting_Woman_131: -7833815158577766264
+      Painting_Woman_132: -4513736269952528685
+      Painting_Woman_133: -235342973788186960
+      Painting_Woman_134: 4578573945204931420
+      Painting_Woman_135: -6004893801665638552
+      Painting_Woman_136: 3573569463391001423
+      Painting_Woman_137: -501342584160339812
+      Painting_Woman_138: 4878923369457341138
+      Painting_Woman_139: 1839116637970865350
+      Painting_Woman_14: -3661626077213491598
+      Painting_Woman_140: 8949498437285139445
+      Painting_Woman_141: 991641639188834717
+      Painting_Woman_142: -3701812183073382527
+      Painting_Woman_143: -7432415845981898418
+      Painting_Woman_144: 8610211680038718093
+      Painting_Woman_145: 7832683206582787994
+      Painting_Woman_146: -8591331443419876883
+      Painting_Woman_147: -4584275686145530712
+      Painting_Woman_148: 1073630693453456494
+      Painting_Woman_149: 496917312338426419
+      Painting_Woman_15: -2720714239263039087
+      Painting_Woman_150: -4031648096796036769
+      Painting_Woman_151: 4037140468606228187
+      Painting_Woman_152: -2472379771542111913
+      Painting_Woman_153: 7194866973782695263
+      Painting_Woman_154: -8717612270687746226
+      Painting_Woman_155: -8749837957041355572
+      Painting_Woman_156: 6005345431869473944
+      Painting_Woman_157: 1286744304568663692
+      Painting_Woman_158: 4203460081118164010
+      Painting_Woman_159: 1741567974264172496
+      Painting_Woman_16: -5523315719997729878
+      Painting_Woman_160: 8905441609085128090
+      Painting_Woman_161: 2504437031964564934
+      Painting_Woman_162: -3051883551629481459
+      Painting_Woman_163: 9100608038009399490
+      Painting_Woman_164: -6544663860314736628
+      Painting_Woman_165: 6772705950761300781
+      Painting_Woman_166: -1989895087189249597
+      Painting_Woman_167: -3346655579761204797
+      Painting_Woman_168: 9162453907362107374
+      Painting_Woman_169: 4175916821106332968
+      Painting_Woman_17: 8220251794092490770
+      Painting_Woman_170: 1022018789254084522
+      Painting_Woman_171: -8617716965449225278
+      Painting_Woman_172: 7906317182647240753
+      Painting_Woman_173: 3488878953101766812
+      Painting_Woman_174: -8912982169403158070
+      Painting_Woman_175: 6117069102386348382
+      Painting_Woman_176: 5911277829132227074
+      Painting_Woman_18: 5009182700111097063
+      Painting_Woman_19: -4060075640923390540
+      Painting_Woman_2: 8717845400321133121
+      Painting_Woman_20: -4655631096104355557
+      Painting_Woman_21: 2610755175023341419
+      Painting_Woman_22: 5496522983166880222
+      Painting_Woman_23: 2590586691218405446
+      Painting_Woman_24: -480552466415618499
+      Painting_Woman_25: -4132392698166432312
+      Painting_Woman_26: -3222027444982349796
+      Painting_Woman_27: 6837968240406724102
+      Painting_Woman_28: -1683355537515536149
+      Painting_Woman_29: -5264275820848833550
+      Painting_Woman_3: 4156942990602213388
+      Painting_Woman_30: 5010738546352876596
+      Painting_Woman_31: -8137412064042615026
+      Painting_Woman_32: -1354921844475675420
+      Painting_Woman_33: -5024566275715094757
+      Painting_Woman_34: 368614487918585318
+      Painting_Woman_35: -8209050790314733815
+      Painting_Woman_36: -6320532333811113207
+      Painting_Woman_37: -7643655274560581597
+      Painting_Woman_38: -6013209613988812426
+      Painting_Woman_39: 4457001489195451230
+      Painting_Woman_4: -8473523173612858099
+      Painting_Woman_40: -5772091794437644962
+      Painting_Woman_41: 4493735536178081288
+      Painting_Woman_42: 8121820108790539876
+      Painting_Woman_43: -5708800047807659063
+      Painting_Woman_44: 4611179853733894133
+      Painting_Woman_45: 4660337733413876579
+      Painting_Woman_46: 7262978096923815231
+      Painting_Woman_47: -5890860501163862039
+      Painting_Woman_48: 5116226951792546027
+      Painting_Woman_49: -6289583160697585518
+      Painting_Woman_5: -9182876153222338654
+      Painting_Woman_50: -1864964719909722895
+      Painting_Woman_51: -8630194218932393920
+      Painting_Woman_52: 7152758068817787670
+      Painting_Woman_53: 3547763110022617054
+      Painting_Woman_54: 8043007329454946539
+      Painting_Woman_55: -2734382409920529184
+      Painting_Woman_56: -4312474712716593022
+      Painting_Woman_57: 7128255280629460725
+      Painting_Woman_58: -2217389911170608997
+      Painting_Woman_59: 7890163550868534116
+      Painting_Woman_6: -1804453482471997101
+      Painting_Woman_60: -5939628543105154420
+      Painting_Woman_61: -1967061469392985096
+      Painting_Woman_62: 1999574943857453198
+      Painting_Woman_63: -7774233728880204382
+      Painting_Woman_64: -5417031659381278177
+      Painting_Woman_65: 1957649500619894649
+      Painting_Woman_66: -4273921553673879526
+      Painting_Woman_67: -3373996806419634716
+      Painting_Woman_68: -7714208754975186100
+      Painting_Woman_69: -455560827317858605
+      Painting_Woman_7: 4250903040010984883
+      Painting_Woman_70: 8878448454015548550
+      Painting_Woman_71: -7510590069003003008
+      Painting_Woman_72: -9217782511090806041
+      Painting_Woman_73: 3856297783769552521
+      Painting_Woman_74: 7332631314320621787
+      Painting_Woman_75: 8732882100550847640
+      Painting_Woman_76: -3278049240283790503
+      Painting_Woman_77: -8304081067598906881
+      Painting_Woman_78: 4935917836653188891
+      Painting_Woman_79: -3842574373257719388
+      Painting_Woman_8: 5612969175061887898
+      Painting_Woman_80: 4012002068832127653
+      Painting_Woman_81: 4335182078300299677
+      Painting_Woman_82: -5207965242066503363
+      Painting_Woman_83: 7144999305344789663
+      Painting_Woman_84: -9194756485477203964
+      Painting_Woman_85: -573927297868461412
+      Painting_Woman_86: 3112959693012027470
+      Painting_Woman_87: -6817224546519588822
+      Painting_Woman_88: -868147700395274117
+      Painting_Woman_89: -5700967510334318774
+      Painting_Woman_9: -4926180598928775532
+      Painting_Woman_90: -653793543352631308
+      Painting_Woman_91: 6908950460443779855
+      Painting_Woman_92: 6511348791320130755
+      Painting_Woman_93: -7077226839055945453
+      Painting_Woman_94: -838414692723324524
+      Painting_Woman_95: 2353220276743301826
+      Painting_Woman_96: 6308626111391382789
+      Painting_Woman_97: -7959169358383674734
+      Painting_Woman_98: 2552819212251213376
+      Painting_Woman_99: -7512453274837306374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

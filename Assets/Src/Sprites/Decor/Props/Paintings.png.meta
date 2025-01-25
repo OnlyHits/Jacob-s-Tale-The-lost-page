@@ -298,9 +298,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -2225,7 +2225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -2234,7 +2234,92 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Paintings_0: -7058793229908712487
+      Paintings_1: 973314779911330088
+      Paintings_10: 5686383857530353141
+      Paintings_11: -3691016489491251286
+      Paintings_12: -5157104955736793407
+      Paintings_13: 5838952799545648375
+      Paintings_14: 7035409747259935957
+      Paintings_15: -6862079675862687352
+      Paintings_16: -5996343805528815649
+      Paintings_17: 3201338658959373834
+      Paintings_18: 6080073234876655988
+      Paintings_19: -1913486008668936141
+      Paintings_2: -7416979955704210309
+      Paintings_20: -6818286335259719947
+      Paintings_21: -5361786344173168592
+      Paintings_22: 7623908287201172641
+      Paintings_23: 1730342337016467863
+      Paintings_24: 7517347650548393584
+      Paintings_25: 5017371973169332836
+      Paintings_26: -8231966284121545431
+      Paintings_27: 8937319970672532498
+      Paintings_28: -508804437495395178
+      Paintings_29: -6707225535842967001
+      Paintings_3: -3724869316114444954
+      Paintings_30: 7652008362012374866
+      Paintings_31: 2319823242084716132
+      Paintings_32: 2245643227050217834
+      Paintings_33: 2568214783288621010
+      Paintings_34: -5259148790680706732
+      Paintings_35: -643429306399486726
+      Paintings_36: -2360758046500337031
+      Paintings_37: -4368747273672748619
+      Paintings_38: -92185061896660295
+      Paintings_39: -6627960034803883875
+      Paintings_4: 8376729401139700508
+      Paintings_40: -3259409010924937277
+      Paintings_41: -7804636581790732657
+      Paintings_42: -6935094323061716287
+      Paintings_43: 1671068963745948516
+      Paintings_44: -7425948623471339367
+      Paintings_45: 5928273063236886462
+      Paintings_46: 4223184336127933080
+      Paintings_47: 2461205421294043830
+      Paintings_48: -537733717389281571
+      Paintings_49: 5721209049994896142
+      Paintings_5: -2972457009955882675
+      Paintings_50: -3041170116093326548
+      Paintings_51: -3881676441346326618
+      Paintings_52: 1258686585418870422
+      Paintings_53: 5264682632762013630
+      Paintings_54: 6969904291151734756
+      Paintings_55: 6961404785213785851
+      Paintings_56: -8421312330741599885
+      Paintings_57: -4889250003748874357
+      Paintings_58: -3209365546702064979
+      Paintings_59: -703206849270871337
+      Paintings_6: 3113477391215539690
+      Paintings_60: 2494274163790389643
+      Paintings_61: -3641718380616014708
+      Paintings_62: 2644497193913372625
+      Paintings_63: 4815489594790617773
+      Paintings_64: -5886078848944889877
+      Paintings_65: 8806179807244843998
+      Paintings_66: 1518366265374105073
+      Paintings_67: 1971952233143137404
+      Paintings_68: -308822601476536357
+      Paintings_69: 8382781305467282786
+      Paintings_7: 9076563221293691188
+      Paintings_70: 4804622826426919461
+      Paintings_71: 6591736376499943007
+      Paintings_72: 1337883138841174026
+      Paintings_73: -611853044088048705
+      Paintings_74: 917693008407868651
+      Paintings_75: -7848658865630885686
+      Paintings_76: -2191621392312860146
+      Paintings_77: -3253810213789071580
+      Paintings_78: -2994979670067605295
+      Paintings_79: -6953792918737630136
+      Paintings_8: 8164749872444360586
+      Paintings_80: 1754485160310302844
+      Paintings_81: 375138059498547299
+      Paintings_82: -1539779403414734913
+      Paintings_83: -2785090074032142725
+      Paintings_84: 3678936903914054406
+      Paintings_9: -6967425928045344061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
