@@ -65,7 +65,7 @@ namespace Comic
                 m_scaleTween.Play();
         }
 
-        protected override void OnLateUpdate(float elapsed_time)
+        protected override void OnUpdate(float elapsed_time)
         {
             SetPinTransform();
         }

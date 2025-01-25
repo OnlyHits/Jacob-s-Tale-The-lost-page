@@ -185,6 +185,7 @@ namespace CustomArchitecture
                     yield return new WaitWhile(() => m_isInputPressed == false);
 
                 yield return new WaitWhile(() => m_pause);
+
                 ++m_sentenceIndex;
             }
 
