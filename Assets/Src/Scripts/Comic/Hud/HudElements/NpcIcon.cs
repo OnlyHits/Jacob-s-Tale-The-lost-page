@@ -13,9 +13,13 @@ namespace Comic
         [SerializeField] private RectTransform  m_bubbleAnchor;
         [SerializeField] private Image          m_iconImage;
         private Tween                           m_scaleTween;
+        private bool                            m_isHighlight;
 
+        public void Highlight(bool highlight) => m_isHighlight = highlight;
+        public bool IsHighlight() => m_isHighlight;
         public RectTransform GetBubbleAnchor() => m_bubbleAnchor;
         public void SetBubbleAnchor(RectTransform tr) => m_bubbleAnchor = tr;
+        public VoiceType GetVoiceType() => m_type;
 
         public void Init(VoiceType type, Sprite sprite)
         {

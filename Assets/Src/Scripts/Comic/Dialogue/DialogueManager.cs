@@ -14,6 +14,7 @@ namespace Comic
         [SerializeField] private DialogueView   m_dialogueView;
         private JacobDialogueConfig             m_dialogueConfig;
         private Coroutine                       m_dialogueCoroutine;
+        private Action<PowerType>               m_changePowerCallback;
 
         public void Init()
         {
@@ -24,6 +25,13 @@ namespace Comic
             m_dialogueCoroutine = null;
 
             InitDialogueView();
+        }
+
+        public void OnSwitchPower()
+        {
+            VoiceType type = m_dialogueView.HighlightNext();
+
+            m_changePowerCallback?.Invoke(ProgressionUtils.GetPowerByVoice(type));
         }
 
         #region VoiceIcon

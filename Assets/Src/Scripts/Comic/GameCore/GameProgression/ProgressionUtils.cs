@@ -17,5 +17,19 @@ namespace Comic
 
             return false;
         }
+
+        public static PowerType GetPowerByVoice(VoiceType type)
+        {
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
+            {
+                if (ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType)
+                    == type && data.m_hasUnlockPower)
+                {
+                    return ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPowerByChapter(data.m_chapterType);
+                }
+            }
+
+            return PowerType.Power_None;
+        }
    }
 }

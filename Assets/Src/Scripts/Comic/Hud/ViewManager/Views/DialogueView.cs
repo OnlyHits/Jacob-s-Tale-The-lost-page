@@ -106,6 +106,31 @@ namespace Comic
             }
         }
 
+        public VoiceType HighlightNext()
+        {
+            bool find = false;
+            VoiceType type = VoiceType.Voice_None;
+        
+            foreach (var data in m_datas)
+            {
+                if (data.Value.m_icon.IsHighlight())
+                {
+                    find = true;
+                    data.Value.m_icon.Highlight(false);
+                    continue;
+                }
+
+                if (find)
+                {
+                    data.Value.m_icon.Highlight(true);
+                    type = data.Value.m_icon.GetVoiceType();
+                    break;
+                }
+            }
+
+            return type;
+        }
+
         public void RemoveVoice(VoiceType type)
         {
             if (!m_datas.ContainsKey(type))
