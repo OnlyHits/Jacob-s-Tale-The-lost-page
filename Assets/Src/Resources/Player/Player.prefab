@@ -70,6 +70,10 @@ MonoBehaviour:
   m_powerTypeSelected: 4
   m_powerSelected: {fileID: 0}
   m_dummyPrefab: {fileID: 6834687391076056268, guid: 5d94f566fc6030f69b24ba57ad737a4f, type: 3}
+  m_dummyMaxNb: 5
+  m_dummyLifeTime: 2
+  m_dummies: []
+  m_canPushBoxes: 0
 --- !u!50 &1141544891393073915
 Rigidbody2D:
   serializedVersion: 5

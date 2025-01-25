@@ -4,6 +4,7 @@ using CustomArchitecture;
 using DG.Tweening;
 using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 namespace Comic
 {
@@ -16,11 +17,16 @@ namespace Comic
 
         [Header("Dummy")]
         [SerializeField] private GameObject m_dummyPrefab;
-        private List<GameObject> m_dummies = new List<GameObject>();
+        [SerializeField] private int m_dummyMaxNb = 5;
+        [SerializeField] private float m_dummyLifeTime;
+        [SerializeField, ReadOnly] private List<GameObject> m_dummies = new List<GameObject>();
 
+        [Header("Bully")]
+        [SerializeField, ReadOnly] private bool m_canPushBoxes = false;
 
         private Action m_onNextPower;
         private Action m_onPrevPower;
+
 
         private void Start()
         {
@@ -77,40 +83,28 @@ namespace Comic
         }
         #endregion POWERS ADD & REMOVE
 
-        #region ON POWER SELECTED
-        private void OnPowerSelected(PowerType powerType)
-        {
-            Power power = GetPowerByType(powerType);
-            if (power == null) return;
-            m_powerTypeSelected = powerType;
-            m_powerSelected = power;
-        }
-        #endregion ON POWER SELECTED
-
         #region ON SWITCH PAGE
+
         private void OnBeforeSwitchPage(bool _1, Page p1, Page p2)
         {
-            DestroyDummies();
+            //DestroyDummies();
         }
 
         private void OnAfterSwitchPage(bool _1, Page p1, Page p2)
         {
 
         }
+
         #endregion ON SWITCH PAGE
 
-        private Power GetPowerByType(PowerType powerType)
+        private void OnPowerSelected(PowerType powerType)
         {
-            foreach (Power pow in m_powers)
-            {
-                if (pow.GetPowerType() == powerType)
-                {
-                    return pow;
-                }
-            }
+            Power power = GetPowerByType(powerType);
+            if (power == null) return;
+            m_powerTypeSelected = powerType;
+            m_powerSelected = power;
 
-            Debug.LogWarning("Trying to select power " + powerType.ToString() + " which is not in player power list");
-            return null;
+            EnableBullyPower(powerType == PowerType.Power_Telekinesis);
         }
 
         private void PowerAction(bool on)
@@ -121,21 +115,35 @@ namespace Comic
 
             if (m_powerTypeSelected == PowerType.Power_LegUp)
             {
-
+                LegUpPower(on);
             }
             else if (m_powerTypeSelected == PowerType.Power_Dummy)
             {
-                DummyPower();
-            }
-            else if (m_powerTypeSelected == PowerType.Power_Telekinesis)
-            {
-
+                DummyPower(on);
             }
             else if (m_powerTypeSelected == PowerType.Power_Rotate_Room)
             {
                 RotatePower(on);
             }
         }
+
+        #region LEGUP POWER
+
+        private void LegUpPower(bool on)
+        {
+
+        }
+
+        #endregion LEGUP POWER
+
+        #region BULLY POWER
+
+        private void EnableBullyPower(bool enable)
+        {
+            m_canPushBoxes = enable;
+        }
+
+        #endregion BULLY POWER
 
         #region ROTATE POWER
         private void RotatePower(bool on)
@@ -164,13 +172,32 @@ namespace Comic
         #endregion ROTATE POWER
 
         #region DUMMY POWER
-        private void DummyPower()
+        private void DummyPower(bool on)
         {
+            if (!on)
+            {
+                return;
+            }
             GameObject dummy = Instantiate(m_dummyPrefab);
+
             dummy.transform.position = transform.position;
+
+            if (m_dummies.Count >= m_dummyMaxNb)
+            {
+                Destroy(m_dummies[0]);
+                m_dummies.RemoveAt(0);
+            }
             m_dummies.Add(dummy);
+
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_dummyLifeTime, () =>
+            {
+                if (dummy != null)
+                {
+                    Destroy(dummy);
+                }
+            }));
         }
-        private void DestroyDummies()
+        private void DestroyAllDummies()
         {
             foreach (GameObject dummy in m_dummies)
             {
@@ -181,5 +208,19 @@ namespace Comic
             }
         }
         #endregion DUMMY POWER
+
+        private Power GetPowerByType(PowerType powerType)
+        {
+            foreach (Power pow in m_powers)
+            {
+                if (pow.GetPowerType() == powerType)
+                {
+                    return pow;
+                }
+            }
+
+            Debug.LogWarning("Trying to select power " + powerType.ToString() + " which is not in player power list");
+            return null;
+        }
     }
 }
