@@ -1,8 +1,6 @@
 using UnityEngine;
-using Unity.Cinemachine;
 using CustomArchitecture;
 using DG.Tweening;
-using System.Collections.Generic;
 
 namespace Comic
 {
@@ -44,7 +42,6 @@ namespace Comic
                 float from = m_destRot.y;
                 float to = m_baseRot.y;
                 TranslateCanvas(from, to);
-                //gameObject.SetActive(false);
             }
             else if (nextPage)
             {
@@ -56,26 +53,10 @@ namespace Comic
 
         private void OnMiddleSwitchPage(bool nextPage, Page p1, Page p2)
         {
-            if (!nextPage)
-            {
-                gameObject.SetActive(true);
-            }
-            else if (nextPage)
-            {
-                gameObject.SetActive(false);
-            }
         }
 
         private void OnAfterSwitchPage(bool nextPage, Page p1, Page p2)
         {
-            if (!nextPage)
-            {
-
-            }
-            else if (nextPage)
-            {
-                gameObject.SetActive(true);
-            }
         }
 
         private void TranslateCanvas(float from, float to)
