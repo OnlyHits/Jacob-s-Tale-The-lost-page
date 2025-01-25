@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using CustomArchitecture;
 using DG.Tweening;
 using UnityEngine;
+using static Comic.Comic;
 
 namespace Comic
 {
@@ -12,6 +13,10 @@ namespace Comic
         [SerializeField, ReadOnly] private Quaternion m_destRotQuat;
         [SerializeField, ReadOnly] private float m_duration = 1f;
         private Tween m_switchPageTween = null;
+
+        [Header("Animation Hole")]
+        [SerializeField] private PageHole m_holePrefab;
+        [SerializeField, ReadOnly] private PageHole m_hole;
 
         [Header("Page Visuals")]
         [SerializeField, ReadOnly] private List<PageVisual> m_pageVisuals = new List<PageVisual>();
@@ -61,12 +66,27 @@ namespace Comic
         {
             if (nextPage)
             {
-                newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
+                InstantiateHole(newPage);
+
+                StartCoroutine(CoroutineUtils.InvokeOnDelay(0.5f / 3, () =>
+                {
+                    newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
+                }));
             }
             else if (nextPage == false)
             {
                 currentPage.gameObject.GetComponent<PageVisual>().ResetDefault();
             }
+        }
+
+        private void InstantiateHole(Page page)
+        {
+            Vector3 playerPos = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCharacterManager().GetPlayer().transform.position;
+
+            m_hole = Instantiate(m_holePrefab, page.transform);
+            m_hole.Init();
+            m_hole.Setup(playerPos, frontLayerId, 0.5f);
+            m_hole.Play();
         }
 
         private void TranslatePage(Quaternion from, Quaternion to, Page page)

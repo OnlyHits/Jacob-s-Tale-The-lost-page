@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_pause: 0
   m_faceRight: 1
+  m_animator: {fileID: 3625392227356046605}
   m_headPositionGoRight: {fileID: 8554007878969580278}
   m_headPositionGoLeft: {fileID: 368653005528985960}
   m_head: {fileID: 3655190391554620544}
@@ -64,7 +65,6 @@ MonoBehaviour:
   m_jumpForce: 6.5
   m_isFalling: 0
   m_pageManager: {fileID: 0}
-  m_animator: {fileID: 3625392227356046605}
 --- !u!50 &1141544891393073915
 Rigidbody2D:
   serializedVersion: 5
@@ -245,7 +245,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &2869591667291440841
 GameObject:
@@ -332,7 +332,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
+  m_MaskInteraction: 1
   m_SpriteSortPoint: 0
 --- !u!1 &3697266330499355254
 GameObject:
