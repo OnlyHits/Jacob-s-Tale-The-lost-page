@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
 using CustomArchitecture;
-using NUnit.Framework;
-using Sirenix.OdinInspector;
-using Sirenix.Serialization;
 using UnityEngine;
 
 namespace Comic
@@ -16,6 +12,15 @@ namespace Comic
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockPower(OnUnlockPower);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockPower(OnLockPower);
+
+            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
+            {
+                if (data.m_hasUnlockPower)
+                {
+                    PowerType powerType = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPowerByChapter(data.m_chapterType);
+                    OnUnlockPower(powerType);
+                }
+            }
         }
 
 

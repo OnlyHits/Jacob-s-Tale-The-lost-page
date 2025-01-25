@@ -10,12 +10,16 @@ namespace Comic
     {
         [Header("Powers")]
         [SerializeField, ReadOnly] private List<Power> m_powers;
-        [SerializeField, ReadOnly] private PowerType m_powerTypeSelected;
-        [SerializeField] private Power m_powerSelected;
+        [SerializeField, ReadOnly] private PowerType m_powerTypeSelected = PowerType.Power_None;
+        [SerializeField, ReadOnly] private Power m_powerSelected;
 
         private Action m_onNextPower;
         private Action m_onPrevPower;
 
+        private void Start()
+        {
+            OnPowerSelected(PowerType.Power_LegUp);
+        }
 
         #region CALLBACKS
         public void SubscribeToNextPower(Action function)
@@ -43,16 +47,6 @@ namespace Comic
         }
         #endregion ON POWER SELECT
 
-        #region ON POWER SELECTED
-        private void OnPowerSelected(PowerType powerType)
-        {
-            Power power = GetPowerByType(powerType);
-            if (power == null) return;
-            m_powerTypeSelected = powerType;
-            m_powerSelected = power;
-        }
-        #endregion ON POWER SELECTED
-
         #region POWERS ADD & REMOVE
         public void AddPower(Power power)
         {
@@ -76,6 +70,14 @@ namespace Comic
             m_powers.Remove(power);
         }
         #endregion POWERS ADD & REMOVE
+
+        private void OnPowerSelected(PowerType powerType)
+        {
+            Power power = GetPowerByType(powerType);
+            if (power == null) return;
+            m_powerTypeSelected = powerType;
+            m_powerSelected = power;
+        }
 
         private Power GetPowerByType(PowerType powerType)
         {
