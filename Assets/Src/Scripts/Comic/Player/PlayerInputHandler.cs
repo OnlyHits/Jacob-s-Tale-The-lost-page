@@ -61,10 +61,54 @@ namespace Comic
             {
             }
         }
+
         private void OnInteract(InputType input, bool b)
         {
             if (input == InputType.PRESSED)
             {
+            }
+            else if (input == InputType.COMPUTED)
+            {
+            }
+            else if (input == InputType.RELEASED)
+            {
+            }
+        }
+
+        private void OnPower(InputType input, bool b)
+        {
+            if (input == InputType.PRESSED)
+            {
+                PowerAction(true);
+            }
+            else if (input == InputType.COMPUTED)
+            {
+            }
+            else if (input == InputType.RELEASED)
+            {
+                PowerAction(false);
+            }
+        }
+
+        private void OnNextPower(InputType input, bool b)
+        {
+            if (input == InputType.PRESSED)
+            {
+                SelectNextPower();
+            }
+            else if (input == InputType.COMPUTED)
+            {
+            }
+            else if (input == InputType.RELEASED)
+            {
+            }
+        }
+
+        private void OnPrevPower(InputType input, bool b)
+        {
+            if (input == InputType.PRESSED)
+            {
+                SelectPrevPower();
             }
             else if (input == InputType.COMPUTED)
             {

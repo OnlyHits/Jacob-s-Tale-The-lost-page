@@ -33,7 +33,7 @@ namespace Comic
         public virtual void Init()
         {
             // Get spawn pos & set pos
-            //ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCharacterManager().GetPlayer();
+            //ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
         }
 
         protected override void OnUpdate(float elapsed_time)

@@ -81,7 +81,7 @@ namespace Comic
 
         private void InstantiateHole(Page page)
         {
-            Vector3 playerPos = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCharacterManager().GetPlayer().transform.position;
+            Vector3 playerPos = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().transform.position;
 
             m_hole = Instantiate(m_holePrefab, page.transform);
             m_hole.Init();

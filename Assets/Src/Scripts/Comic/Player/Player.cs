@@ -36,6 +36,9 @@ namespace Comic
             m_inputsController.onInteractAction += OnInteract;
             m_inputsController.onNextPageAction += OnNextPage;
             m_inputsController.onPrevPageAction += OnPrevPage;
+            m_inputsController.onPowerAction += OnPower;
+            m_inputsController.onNextPowerAction += OnNextPower;
+            m_inputsController.onPrevPowerAction += OnPrevPower;
 
             m_inputsController.Init();
         }
@@ -45,6 +48,9 @@ namespace Comic
             base.Init();
 
             m_pageManager = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager();
+
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToNextPowerSelected(OnNextPowerSelected);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToPrevPowerSelected(OnPrevPowerSelected);
         }
 
         public override void Pause(bool pause = true)

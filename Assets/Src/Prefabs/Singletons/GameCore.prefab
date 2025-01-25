@@ -14,8 +14,10 @@ GameObject:
   - component: {fileID: 3794679898935460330}
   - component: {fileID: 6305320286240585526}
   - component: {fileID: 5761145201504397644}
+  - component: {fileID: 5784148563931154457}
   - component: {fileID: 2573248173068338771}
   - component: {fileID: 4075999506579669603}
+  - component: {fileID: 6814327009217657937}
   m_Layer: 0
   m_Name: GameCore
   m_TagString: Untagged
@@ -97,6 +99,7 @@ MonoBehaviour:
   m_startingView: {fileID: 0}
   m_views:
   - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &5761145201504397644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +122,27 @@ MonoBehaviour:
   m_currentPage: {fileID: 0}
   m_currentPageIndex: 0
   m_unlockedPageList: []
-  m_durationSwitchPage: 2
+  m_durationSwitchPage: 0.5
+  m_canvas: {fileID: 0}
+  m_canvasDuplicated: {fileID: 0}
+--- !u!114 &5784148563931154457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738079250973514455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282f6e4fd8098eeb29acfda2b5fd7112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pause: 0
+  m_allPowers:
+  - {fileID: 8296222945276671203, guid: 8962628dc1ea78d4797898239ad4f654, type: 3}
+  - {fileID: 8296222945276671203, guid: 76b0b2c649de32ce2b1482da302a7215, type: 3}
+  - {fileID: 8296222945276671203, guid: f7d576918fca198a880f41ae5f5b62f2, type: 3}
+  - {fileID: 8296222945276671203, guid: 1e9d051287abdabbb9389fd77c31fc87, type: 3}
 --- !u!114 &2573248173068338771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,3 +170,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlock: 1
+--- !u!114 &6814327009217657937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3738079250973514455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bce4e0982f794f5ce9017cfa957c2941, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pause: 0
+  m_dialogueView: {fileID: 0}

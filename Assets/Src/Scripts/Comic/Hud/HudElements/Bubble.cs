@@ -9,13 +9,13 @@ namespace Comic
 {
     public class Bubble : BaseBehaviour
     {
-        [SerializeField] private TMP_AnimatedText       m_dialogue;
-        [SerializeField] private RectTransform          m_pinRect;
-        private NpcIcon                                 m_iconRect;
-        private RectTransform                           m_containerRect;
-        private Canvas                                  m_canvas;
-        private Tween                                   m_scaleTween = null;
-        private Coroutine                               m_dialogueCoroutine = null;
+        [SerializeField] private TMP_AnimatedText m_dialogue;
+        [SerializeField] private RectTransform m_pinRect;
+        private NpcIcon m_iconRect;
+        private RectTransform m_containerRect;
+        private Canvas m_canvas;
+        private Tween m_scaleTween = null;
+        private Coroutine m_dialogueCoroutine = null;
 
         public TMP_AnimatedText GetAnimatedText() => m_dialogue;
 
@@ -38,13 +38,13 @@ namespace Comic
             else if (!pause && m_scaleTween != null)
                 m_scaleTween.Play();
 
-            Debug.Log("Bubble is pause : " + pause);
+            //Debug.Log("Bubble is pause : " + pause);
         }
 
         protected override void OnLateUpdate(float elapsed_time)
         {
-//            SetBubblePosition();
-//            ConstraintPosition();
+            //            SetBubblePosition();
+            //            ConstraintPosition();
             SetPinTransform();
         }
 
@@ -69,10 +69,10 @@ namespace Comic
         {
             if (m_pause)
                 return false;
-            
+
             if (m_dialogue.GetState() == TMP_AnimatedText_State.State_Displaying)
                 return false;
-            
+
             if (m_scaleTween != null && m_scaleTween.IsActive())
                 return false;
 
@@ -126,7 +126,7 @@ namespace Comic
             float distance = Vector2.Distance(
                 m_pinRect.InverseTransformPoint(m_iconRect.GetBubbleAnchor().position),
                 m_pinRect.InverseTransformPoint(self_position));
-            
+
             m_pinRect.position = (self_position + (Vector2)m_iconRect.GetBubbleAnchor().position) * .5f;
             m_pinRect.localPosition = new Vector3(m_pinRect.localPosition.x, m_pinRect.localPosition.y, 0f);
             m_pinRect.rotation = Quaternion.LookRotation(m_pinRect.forward, direction);
@@ -136,7 +136,7 @@ namespace Comic
         private void SetBubblePosition()
         {
 
-//            bubble_rect.pivot = new Vector2(.5f, .5f);
+            //            bubble_rect.pivot = new Vector2(.5f, .5f);
             // gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.position);
 
             // Vector3 offset_x = new Vector3(icon_rect.rect.width + bubble_rect.rect.width, 0, 0);
@@ -150,9 +150,9 @@ namespace Comic
 
             // gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.position);
         }
-        
+
         #endregion
-    
+
         #region EaseCoroutine
 
         public void Appear(DialogueAppearIntensity intensity)

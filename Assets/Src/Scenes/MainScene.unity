@@ -803,25 +803,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1572789555}
   m_SourcePrefab: {fileID: 100100000, guid: 558f0227e600ee601a03829b3a084b66, type: 3}
---- !u!1 &400765438 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3738079250973514455, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
-  m_PrefabInstance: {fileID: 6983661326569699229}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &400765447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 400765438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bce4e0982f794f5ce9017cfa957c2941, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_pause: 0
-  m_dialogueView: {fileID: 3882208017803578544}
 --- !u!114 &488793323 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4262806275667865400, guid: 27c4c67b1673320f9b06fb64a4f523e0, type: 3}
@@ -1655,10 +1636,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1928044578}
     - target: {fileID: 5761145201504397644, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
-      propertyPath: m_durationSwitchPage
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761145201504397644, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
       propertyPath: 'm_pageList.Array.data[0]'
       value: 
       objectReference: {fileID: 488793323}
@@ -1683,10 +1660,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3882208017803578544}
     - target: {fileID: 6305320286240585526, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
-      propertyPath: m_views.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6305320286240585526, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
       propertyPath: 'm_views.Array.data[0]'
       value: 
       objectReference: {fileID: 3882208017803578544}
@@ -1694,13 +1667,14 @@ PrefabInstance:
       propertyPath: 'm_views.Array.data[1]'
       value: 
       objectReference: {fileID: 1572789555}
+    - target: {fileID: 6814327009217657937, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
+      propertyPath: m_dialogueView
+      value: 
+      objectReference: {fileID: 3882208017803578544}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3738079250973514455, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 400765447}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
 --- !u!1001 &8219911301211172596
 PrefabInstance:

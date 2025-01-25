@@ -18,6 +18,9 @@ namespace Comic
             private InputAction m_interactAction;
             private InputAction m_nextPageAction;
             private InputAction m_prevPageAction;
+            private InputAction m_powerAction;
+            private InputAction m_nextPowerAction;
+            private InputAction m_prevPowerAction;
 
             #endregion ACTIONS
 
@@ -29,6 +32,9 @@ namespace Comic
             public Action<InputType, bool> onInteractAction;
             public Action<InputType, bool> onNextPageAction;
             public Action<InputType, bool> onPrevPageAction;
+            public Action<InputType, bool> onPowerAction;
+            public Action<InputType, bool> onNextPowerAction;
+            public Action<InputType, bool> onPrevPowerAction;
 
             #endregion CALLBACKS
 
@@ -47,6 +53,9 @@ namespace Comic
                 m_interactAction = InputSystem.actions.FindAction("Interact");
                 m_nextPageAction = InputSystem.actions.FindAction("NextPage");
                 m_prevPageAction = InputSystem.actions.FindAction("PrevPage");
+                m_powerAction = InputSystem.actions.FindAction("Power");
+                m_nextPowerAction = InputSystem.actions.FindAction("NextPower");
+                m_prevPowerAction = InputSystem.actions.FindAction("PrevPower");
             }
 
             private void InitInputActions()
@@ -58,6 +67,9 @@ namespace Comic
                 InputActionStruct<bool> iInteract = new InputActionStruct<bool>(m_interactAction, onInteractAction, false);
                 InputActionStruct<bool> iNextPage = new InputActionStruct<bool>(m_nextPageAction, onNextPageAction, false);
                 InputActionStruct<bool> iPrevPage = new InputActionStruct<bool>(m_prevPageAction, onPrevPageAction, false);
+                InputActionStruct<bool> iPower = new InputActionStruct<bool>(m_powerAction, onPowerAction, false);
+                InputActionStruct<bool> iNextPower = new InputActionStruct<bool>(m_nextPowerAction, onNextPowerAction, false);
+                InputActionStruct<bool> iPrevPower = new InputActionStruct<bool>(m_prevPowerAction, onPrevPowerAction, false);
 
                 m_inputActionStructsV2.Add(iMove);
                 m_inputActionStructsV2.Add(iLook);
@@ -66,6 +78,9 @@ namespace Comic
                 m_inputActionStructsBool.Add(iInteract);
                 m_inputActionStructsBool.Add(iNextPage);
                 m_inputActionStructsBool.Add(iPrevPage);
+                m_inputActionStructsBool.Add(iPower);
+                m_inputActionStructsBool.Add(iNextPower);
+                m_inputActionStructsBool.Add(iPrevPower);
             }
 
             protected override void OnLateUpdate(float elapsed_time)
