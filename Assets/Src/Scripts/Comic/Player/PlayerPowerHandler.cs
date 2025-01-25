@@ -43,15 +43,7 @@ namespace Comic
         #endregion ON POWER SELECT
 
         #region ON POWER SELECTED
-        private void OnNextPowerSelected(PowerType powerType)
-        {
-            Power power = GetPowerByType(powerType);
-            if (power == null) return;
-            m_powerTypeSelected = powerType;
-            m_powerSelected = power;
-        }
-
-        private void OnPrevPowerSelected(PowerType powerType)
+        private void OnPowerSelected(PowerType powerType)
         {
             Power power = GetPowerByType(powerType);
             if (power == null) return;
