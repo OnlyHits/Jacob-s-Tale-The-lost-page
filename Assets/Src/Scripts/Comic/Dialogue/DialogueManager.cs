@@ -39,18 +39,15 @@ namespace Comic
 
         private void GetNextIndex(bool next)
         {
-            if (next)
+            var unlockChapters = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData();
+            var gameConfig = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig();
+            int chapterCount = unlockChapters.Count;
+
+            do
             {
-                m_powerIndex += 1;
-                if (m_powerIndex >= ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData().Count)
-                    m_powerIndex = 0;
+                m_powerIndex = next ? (m_powerIndex + 1) % chapterCount : (m_powerIndex - 1 + chapterCount) % chapterCount;
             }
-            else
-            {
-                m_powerIndex -= 1;
-                if (m_powerIndex < 0)
-                    m_powerIndex = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData().Count - 1;
-            }
+            while (gameConfig.GetPowerByChapter(unlockChapters[m_powerIndex].m_chapterType) == PowerType.Power_None);
         }
 
         public void OnSwitchPower(bool next)
