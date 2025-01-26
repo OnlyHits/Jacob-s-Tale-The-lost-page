@@ -49,6 +49,14 @@ namespace CustomArchitecture
         MainStory_UnlockBF_BestFriend_4,
         MainStory_UnlockBF_Choice_1,
         MainStory_UnlockBF_Choice_2,
+        MainStory_UnlockBully_Bully_1,
+        MainStory_UnlockBully_Jacob_1,
+        MainStory_UnlockBully_Jacob_2,
+        MainStory_UnlockBully_Bully_2,
+        MainStory_UnlockBully_BestFriend_1,
+        MainStory_UnlockBully_Jacob_3,
+        MainStory_UnlockBully_Bully_3,
+        MainStory_UnlockBully_BestFriend_2,
     }
 
     public struct DynamicAnimatedTextData

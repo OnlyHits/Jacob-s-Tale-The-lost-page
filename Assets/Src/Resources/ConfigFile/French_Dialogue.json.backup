@@ -8,7 +8,7 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 17,
+    "$rlength": 23,
     "$rcontent": [
         {
             "$k": 0,
@@ -1831,6 +1831,416 @@
                 },
                 "m_handleByInput": false,
                 "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 17,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 68,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 69,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Et toi!\\nViens par ici",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 18,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 70,
+                    "$type": 3,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 71,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Oh non pas lui...",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 72,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "C'est vraiment pas mon jour aujourd'hui",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 0
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 19,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 73,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 74,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Oui, qu'est ce qu'il y a je peux t'aider? ",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 20,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 75,
+                    "$type": 3,
+                    "$rlength": 3,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 76,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Tiens tiens, ce serait pas le petit Jacob",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 77,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Toujours le nez dans tes BD \u00e0 ce que je vois",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 78,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Tu fais vraiment piti\u00e9 ",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 21,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 79,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 80,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Tu va le laisser te parler comme ca!? D\u00e9fend toi un peu",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 2
+            }
+        },
+        {
+            "$k": 22,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 81,
+                    "$type": 3,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 82,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Oui ta raison, on est dans ma t\u00eate je peux me d\u00e9fendre",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 83,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Tu me parles pas comme ca ",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 3
             }
         }
     ]
