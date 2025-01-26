@@ -88,6 +88,12 @@ namespace CustomArchitecture
         MainStory_UnlockBL_BL_6,
         MainStory_UnlockBL_Choice_1,
         MainStory_UnlockBL_Choice_2,
+        MainStory_UnlockBoss_Boss_1,
+        MainStory_UnlockBoss_Jacob_1,
+        MainStory_UnlockBoss_BestFriend_1,
+        MainStory_UnlockBoss_Boss_2,
+        MainStory_UnlockBoss_Bully_1,
+        MainStory_UnlockBoss_BL_1,
     }
 
     public struct DynamicAnimatedTextData
