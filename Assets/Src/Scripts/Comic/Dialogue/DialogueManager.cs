@@ -117,7 +117,7 @@ namespace Comic
 
         private void Start()
         {
-            StartDialogue(DialogueName.Dialogue_UnlockBully);
+            StartDialogue(DialogueName.Dialogue_UnlockBL);
         }
 
         public void StartDialogue(DialogueName type)
