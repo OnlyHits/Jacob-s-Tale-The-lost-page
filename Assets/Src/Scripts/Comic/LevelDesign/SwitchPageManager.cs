@@ -18,6 +18,9 @@ namespace Comic
         [SerializeField] private GameObject m_canvas;
         [SerializeField, ReadOnly] private GameObject m_canvasDuplicated;
 
+        public Canvas GetCanvasComponent() => m_canvas.GetComponent<Canvas>();
+
+
         #region CALLBACKS
 
         public void SubscribeToAfterCloneCanvasCallback(Action<bool> function)

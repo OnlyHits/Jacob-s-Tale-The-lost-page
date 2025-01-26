@@ -11,12 +11,9 @@ namespace Comic
         [SerializeField, ReadOnly] private Page m_currentPage;
         [SerializeField, ReadOnly] private int m_currentPageIndex;
         [SerializeField, ReadOnly] private List<Page> m_unlockedPageList = new List<Page>();
-
-
-        private void Awake()
-        {
-
-        }
+        [SerializeField] private PageVisualManager m_pageVisual;
+        [SerializeField] private float m_durationStartGame = 5f;
+        [SerializeField] private float m_durationEndGame = 10f;
 
         private void Start()
         {
@@ -26,13 +23,69 @@ namespace Comic
             }
 
             SwitchPageByIndex(m_currentPageIndex);
+
+            OnStartGame();
         }
 
         public void Init()
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToEndGame(OnEndGame);
         }
+
+        #region START & END GAME
+
+        private void OnStartGame()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(true);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(true);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = false;
+
+            foreach (var page in m_pageList) page.gameObject.SetActive(false);
+            m_pageVisual.m_coverPage.SetActive(true);
+            m_pageVisual.m_bgBookVisual.SetActive(false);
+            m_pageVisual.m_endPage.SetActive(false);
+
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationStartGame, () =>
+            {
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(false);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(false);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = true;
+
+                foreach (var page in m_pageList) page.gameObject.SetActive(true);
+                m_pageVisual.m_coverPage.SetActive(false);
+                m_pageVisual.m_bgBookVisual.SetActive(true);
+                m_pageVisual.m_endPage.SetActive(false);
+            }));
+
+        }
+
+        private void OnEndGame()
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(true);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(true);
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = false;
+
+            foreach (var page in m_pageList) page.gameObject.SetActive(false);
+            m_pageVisual.m_bgBookVisual.SetActive(true);
+            m_pageVisual.m_endPage.SetActive(true);
+            m_pageVisual.m_coverPage.SetActive(false);
+
+            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationEndGame, () =>
+            {
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(false);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(false);
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = true;
+
+                foreach (var page in m_pageList) page.gameObject.SetActive(true);
+                m_pageVisual.m_bgBookVisual.SetActive(true);
+                m_pageVisual.m_endPage.SetActive(false);
+                m_pageVisual.m_coverPage.SetActive(false);
+            }));
+        }
+
+        #endregion START & END GAME
 
         #region ON LOCK & UNLOCK CHAPTERS
         private void OnUnlockChapter(Chapters chapterUnlocked)

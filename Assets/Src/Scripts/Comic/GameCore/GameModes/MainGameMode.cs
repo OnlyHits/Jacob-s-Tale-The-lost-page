@@ -5,6 +5,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
+using Unity.VisualScripting;
 
 namespace Comic
 {
@@ -65,8 +66,11 @@ namespace Comic
         private Action<PowerType> m_onLockPowerCallback;
         private Action<Chapters> m_onLockChapterCallback;
 
-        public InputActionAsset GetInputAsset() => ComicGameCore.Instance.GetInputAsset();
+        private Action m_playEndGame;
 
+        public Canvas GetCanvas() => m_pageManager.GetCanvasComponent();
+        public ViewManager GetViewManager() => m_viewManager;
+        public InputActionAsset GetInputAsset() => ComicGameCore.Instance.GetInputAsset();
         public NavigationInput GetNavigationInput() => m_hudNavigationInput;
         public Player GetPlayer() => m_characterManager.GetPlayer();
         public Page GetCurrentPage() => m_pageManager.GetCurrentPage();
@@ -109,6 +113,21 @@ namespace Comic
 
             ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
         }
+
+        #region END GAME
+
+        public void PlayEndGame()
+        {
+            m_playEndGame?.Invoke();
+        }
+
+        public void SubscribeToEndGame(Action function)
+        {
+            m_playEndGame -= function;
+            m_playEndGame += function;
+        }
+
+        #endregion END GAME
 
         #region Progression
 

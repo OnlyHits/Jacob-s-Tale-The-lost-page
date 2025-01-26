@@ -19,6 +19,9 @@ namespace Comic
         [SerializeField, ReadOnly] private PageHole m_hole;
 
         [Header("Page Visuals")]
+        public GameObject m_bgBookVisual;
+        public GameObject m_coverPage;
+        public GameObject m_endPage;
         [SerializeField, ReadOnly] private List<PageVisual> m_pageVisuals = new List<PageVisual>();
 
         private void Awake()
@@ -38,6 +41,7 @@ namespace Comic
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+
             m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
