@@ -70,7 +70,12 @@ namespace Comic
         {
             Dictionary<VoiceType, int> npcsSpawnPages = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetNpcsSpawnPageByChapter(chapter); ;
 
-            if (npcsSpawnPages.IsNullOrEmpty())
+            if (npcsSpawnPages == null)
+            {
+                return;
+            }
+
+            if (npcsSpawnPages.Count <= 0)
             {
                 return;
             }
