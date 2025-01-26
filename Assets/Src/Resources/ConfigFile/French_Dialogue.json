@@ -2915,7 +2915,7 @@
                     ]
                 },
                 "m_handleByInput": false,
-                "m_durationBetweenSentence": 1.5
+                "m_durationBetweenSentence": 2
             }
         },
         {
@@ -3009,7 +3009,7 @@
                     ]
                 },
                 "m_handleByInput": false,
-                "m_durationBetweenSentence": 1.5
+                "m_durationBetweenSentence": 2
             }
         },
         {
