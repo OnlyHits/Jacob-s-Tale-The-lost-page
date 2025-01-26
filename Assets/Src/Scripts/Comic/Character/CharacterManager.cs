@@ -20,7 +20,15 @@ namespace Comic
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(OnLockVoice);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
+        }
 
+        private void Start()
+        {
+            SpawnCharacters();
+        }
+
+        private void SpawnCharacters()
+        {
             foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
             {
                 // Spawn NPCS
@@ -68,7 +76,8 @@ namespace Comic
 
         private void TrySpawnNPCsByChapter(Chapters chapter)
         {
-            Dictionary<VoiceType, int> npcsSpawnPages = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetNpcsSpawnPageByChapter(chapter); ;
+            var gameConfig = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig();
+            Dictionary<VoiceType, int> npcsSpawnPages = gameConfig.GetNpcsSpawnPageByChapter(chapter);
 
             if (npcsSpawnPages == null)
             {

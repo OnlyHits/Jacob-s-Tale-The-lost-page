@@ -1509,7 +1509,63 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HeadIcon_Normal_0: -6537981185342927558
+      HeadIcon_Normal_1: 2280345081911222287
+      HeadIcon_Normal_10: 860766928703460704
+      HeadIcon_Normal_11: 6026080948967963584
+      HeadIcon_Normal_12: -3392570932170599660
+      HeadIcon_Normal_13: -7660997137326008837
+      HeadIcon_Normal_14: 3651286314271338744
+      HeadIcon_Normal_15: -7015252819680226167
+      HeadIcon_Normal_16: 6624669679143982210
+      HeadIcon_Normal_17: -5003800367496608177
+      HeadIcon_Normal_18: -5517589852459387572
+      HeadIcon_Normal_19: -3649390073103028660
+      HeadIcon_Normal_2: 9201703463289725006
+      HeadIcon_Normal_20: -3511590266498189408
+      HeadIcon_Normal_21: 3987171290858863181
+      HeadIcon_Normal_22: -4901934350483275216
+      HeadIcon_Normal_23: 1500440506791442392
+      HeadIcon_Normal_24: 1777183339518237459
+      HeadIcon_Normal_25: 6599352069931061321
+      HeadIcon_Normal_26: -6392739031328921056
+      HeadIcon_Normal_27: 761816191829637492
+      HeadIcon_Normal_28: -4625375183816941573
+      HeadIcon_Normal_29: -1295368081129638361
+      HeadIcon_Normal_3: -2139496643706474922
+      HeadIcon_Normal_30: -5073451899803906211
+      HeadIcon_Normal_31: -1013758787155714831
+      HeadIcon_Normal_32: 7090484400614865620
+      HeadIcon_Normal_33: 5659154620865624107
+      HeadIcon_Normal_34: 9206185291256811066
+      HeadIcon_Normal_35: -4496233395366947295
+      HeadIcon_Normal_36: 2231611465183923875
+      HeadIcon_Normal_37: 26488556131945816
+      HeadIcon_Normal_38: 940228395909338283
+      HeadIcon_Normal_39: -4000610424503425618
+      HeadIcon_Normal_4: -2384114508298774808
+      HeadIcon_Normal_40: 3331771859375866522
+      HeadIcon_Normal_41: 3222663311452130960
+      HeadIcon_Normal_42: -4327577373628211672
+      HeadIcon_Normal_43: 4151128134208793729
+      HeadIcon_Normal_44: 3220757196048251532
+      HeadIcon_Normal_45: 2366887196007303220
+      HeadIcon_Normal_46: 8204800296368607766
+      HeadIcon_Normal_47: 1054464678786778979
+      HeadIcon_Normal_48: 7163981679671654282
+      HeadIcon_Normal_49: 6147779430958031737
+      HeadIcon_Normal_5: -7468315208741187189
+      HeadIcon_Normal_50: 2184825589330581758
+      HeadIcon_Normal_51: -2456929908701904265
+      HeadIcon_Normal_52: 7385018507685401276
+      HeadIcon_Normal_53: -3394102853611855299
+      HeadIcon_Normal_54: 203225417938381108
+      HeadIcon_Normal_55: 1088907676143898550
+      HeadIcon_Normal_6: 4471126777920593416
+      HeadIcon_Normal_7: 6224576495061753313
+      HeadIcon_Normal_8: -3223376765268551545
+      HeadIcon_Normal_9: -102377337295154122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
