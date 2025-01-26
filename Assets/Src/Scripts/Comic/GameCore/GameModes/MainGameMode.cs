@@ -129,8 +129,8 @@ namespace Comic
 
         public void TriggerDialogue(DialogueName type)
         {
-            GetPlayer().Pause(true);
-            m_dialogueManager.StartDialogue(type);
+            if (m_dialogueManager.StartDialogue(type))
+                GetPlayer().Pause(true);
         }
 
         #region Progression

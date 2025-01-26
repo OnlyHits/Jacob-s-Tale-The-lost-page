@@ -136,18 +136,18 @@ namespace Comic
         {
         }
 
-        public void StartDialogue(DialogueName type)
+        public bool StartDialogue(DialogueName type)
         {
             if (m_mainStory.ContainsKey(type) && m_mainStory[type])
             {
                 Debug.LogWarning("Already trigger this dialogue");
-                return;
+                return false;
             }
 
             if (!m_dialogueConfig.GetConfig().ContainsKey(type))
             {
                 Debug.LogWarning("Doesnt find dialogue");
-                return;
+                return false;
             }
 
             foreach (var t in m_dialogueConfig.GetConfig()[type])
@@ -156,7 +156,7 @@ namespace Comic
                 if (!t.m_isMainDialogue && !ProgressionUtils.HasUnlockVoice(t.m_speaker))
                 {
                     Debug.LogWarning("You need to unlock " + t.m_speaker.ToString() + " before starting this dialogue");
-                    return;
+                    return false;
                 }
             }
             
@@ -164,6 +164,8 @@ namespace Comic
                 m_mainStory[type] = true;
  
             m_dialogueCoroutine = StartCoroutine(DialogueCoroutine(type));
+
+            return true;
         }
 
         public IEnumerator DialogueCoroutine(DialogueName type)
