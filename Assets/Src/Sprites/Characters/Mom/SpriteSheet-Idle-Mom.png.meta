@@ -1,0 +1,277 @@
+fileFormatVersion: 2
+guid: 3b535504730faf5a9b706b98aa1fd376
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1886108031259689068
+    second: SpriteSheet-Idle-Mom_0
+  - first:
+      213: 2270893933416627209
+    second: SpriteSheet-Idle-Mom_1
+  - first:
+      213: -3110570412462670378
+    second: SpriteSheet-Idle-Mom_2
+  - first:
+      213: -9093532410038743808
+    second: SpriteSheet-Idle-Mom_3
+  - first:
+      213: -3783853868940114995
+    second: SpriteSheet-Idle-Mom_4
+  - first:
+      213: 6884090801949985970
+    second: SpriteSheet-Idle-Mom_5
+  - first:
+      213: 4448467236342115133
+    second: SpriteSheet-Idle-Mom_6
+  - first:
+      213: 9190469840726499391
+    second: SpriteSheet-Idle-Mom_7
+  - first:
+      213: 3976041242046646919
+    second: SpriteSheet-Idle-Mom_8
+  - first:
+      213: 431515068704532808
+    second: SpriteSheet-Idle-Mom_9
+  - first:
+      213: 408520971660560913
+    second: SpriteSheet-Idle-Mom_10
+  - first:
+      213: -8154565210077849265
+    second: SpriteSheet-Idle-Mom_11
+  - first:
+      213: -253662742217817802
+    second: SpriteSheet-Idle-Mom_12
+  - first:
+      213: 860515730518801583
+    second: SpriteSheet-Idle-Mom_13
+  - first:
+      213: 2203957766128544154
+    second: SpriteSheet-Idle-Mom_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Mom_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 361
+        width: 164
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60ce3be24dcc2a10800000000000000
+      internalID: 1886108031259689068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Mom_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 361
+        width: 164
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660ffc93b4b0739699b8048fce7bba59
+      internalID: 2270893933416627209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Mom_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 361
+        width: 164
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff921a3d39d0d120a825dfefeee81263
+      internalID: -3110570412462670378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Mom_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 164
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407b51ce08e4e86099127f2171b8b982
+      internalID: -9093532410038743808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Mom_4
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 210
+        width: 164
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794b779677d09fd18ba1fa6b98cf8924
+      internalID: -3783853868940114995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet-Idle-Mom_0: 1886108031259689068
+      SpriteSheet-Idle-Mom_1: 2270893933416627209
+      SpriteSheet-Idle-Mom_2: -3110570412462670378
+      SpriteSheet-Idle-Mom_3: -9093532410038743808
+      SpriteSheet-Idle-Mom_4: -3783853868940114995
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
