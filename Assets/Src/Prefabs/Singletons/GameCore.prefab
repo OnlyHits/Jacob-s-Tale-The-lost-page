@@ -120,9 +120,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_currentPage: {fileID: 0}
   m_currentPageIndex: 0
   m_unlockedPageList: []
+  m_pageVisual: {fileID: 0}
+  m_durationStartGame: 5
+  m_durationEndGame: 10
   m_durationSwitchPage: 0.5
   m_canvas: {fileID: 0}
   m_canvasDuplicated: {fileID: 0}

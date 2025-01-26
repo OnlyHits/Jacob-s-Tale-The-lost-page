@@ -23,6 +23,14 @@ public class Shortcuts : MonoBehaviour
         {
             ComicGameCore.Instance.GetGameMode<MainGameMode>().PlayEndGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Time.timeScale = 5f;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift)) {
+            Time.timeScale = 1f;
+        }
     }
 
     private void CheckInputSave()
