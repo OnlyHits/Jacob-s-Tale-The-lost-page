@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;
 using CustomArchitecture;
 using DG.Tweening;
-using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
-using UnityEngine.InputSystem.LowLevel;
 
 namespace Comic
 {
@@ -116,7 +114,7 @@ namespace Comic
 
         private void PowerAction(bool on)
         {
-            Debug.Log(on ? "ON" : "OFF" + " | Power Action " + m_powerTypeSelected.ToString());
+            //Debug.Log(on ? "ON" : "OFF" + " | Power Action " + m_powerTypeSelected.ToString());
 
             m_powerSelected?.Activate(on);
 
@@ -198,7 +196,9 @@ namespace Comic
             {
                 return;
             }
-            GameObject dummy = Instantiate(m_dummyPrefab);
+
+            Case currentCase = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCurrentCase();
+            GameObject dummy = Instantiate(m_dummyPrefab, currentCase.transform);
 
             dummy.transform.position = transform.position;
 
