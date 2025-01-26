@@ -135,7 +135,7 @@ namespace CustomArchitecture
                 Debug.LogError("Game mode doesn't exist");
                 return;
             }
-            
+
             StopGameMode();
 
             m_currentGameMode = game_mode;

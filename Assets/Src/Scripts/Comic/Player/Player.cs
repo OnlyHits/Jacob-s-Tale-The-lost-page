@@ -6,7 +6,8 @@ namespace Comic
 {
     public partial class Player : Character
     {
-        [SerializeField, ReadOnly] private PlayerInputsController m_inputsController;
+        [Header("Inputs")]
+        [SerializeField] private PlayerInputsController m_inputsController;
 
         [Header("Grounded")]
         [SerializeField, ReadOnly] private bool m_isGrounded = false;
@@ -28,7 +29,8 @@ namespace Comic
         protected override void Awake()
         {
             base.Awake();
-            m_inputsController = gameObject.AddComponent<PlayerInputsController>();
+
+            //m_inputsController = gameObject.AddComponent<PlayerInputsController>();
             m_inputsController.onMoveAction += OnMove;
             m_inputsController.onLookAction += OnLook;
             m_inputsController.onJumpAction += OnJump;
@@ -39,13 +41,13 @@ namespace Comic
             m_inputsController.onPowerAction += OnPower;
             m_inputsController.onNextPowerAction += OnNextPower;
             m_inputsController.onPrevPowerAction += OnPrevPower;
-
-            m_inputsController.Init();
         }
 
         public override void Init()
         {
             base.Init();
+
+            InitInputController();
 
             m_pageManager = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager();
 
@@ -53,6 +55,11 @@ namespace Comic
 
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+        }
+
+        private void InitInputController()
+        {
+            m_inputsController.Init();
         }
 
         public override void Pause(bool pause = true)

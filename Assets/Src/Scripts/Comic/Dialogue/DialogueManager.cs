@@ -11,11 +11,11 @@ namespace Comic
 {
     public class DialogueManager : BaseBehaviour
     {
-        [SerializeField] private DialogueView   m_dialogueView;
-        private JacobDialogueConfig             m_dialogueConfig;
-        private Coroutine                       m_dialogueCoroutine;
-        private Action<PowerType>               m_changePowerCallback;
-        private int                             m_powerIndex = 0;
+        [SerializeField] private DialogueView m_dialogueView;
+        private JacobDialogueConfig m_dialogueConfig;
+        private Coroutine m_dialogueCoroutine;
+        private Action<PowerType> m_changePowerCallback;
+        private int m_powerIndex = 0;
 
         public void Init()
         {
@@ -138,7 +138,7 @@ namespace Comic
                 }
             }
 
-           m_dialogueCoroutine = StartCoroutine(DialogueCoroutine(type));
+            m_dialogueCoroutine = StartCoroutine(DialogueCoroutine(type));
         }
 
         public IEnumerator DialogueCoroutine(DialogueName type)
@@ -149,11 +149,11 @@ namespace Comic
             {
                 if (part.m_isMainDialogue)
                 {
-                   yield return StartCoroutine(m_dialogueView.TriggerMainDialogue(part));
+                    yield return StartCoroutine(m_dialogueView.TriggerMainDialogue(part));
                 }
                 else
                 {
-                   yield return StartCoroutine(m_dialogueView.TriggerVoiceDialogue(part));
+                    yield return StartCoroutine(m_dialogueView.TriggerVoiceDialogue(part));
                 }
 
                 yield return new WaitForSeconds(part.m_waitAfterDisappear);

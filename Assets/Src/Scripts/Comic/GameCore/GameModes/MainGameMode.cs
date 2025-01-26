@@ -47,7 +47,7 @@ namespace Comic
     {
         private GameConfig m_gameConfig;
         private GameProgression m_gameProgression;// regrouper avec settings dans une subclass
-        //private PauseInput m_pauseInput; // ca va etre integré direct dans gamemode
+        private PauseInput m_pauseInput; // ca va etre integré direct dans gamemode
         private NavigationInput m_hudNavigationInput; // ca degage
         private DialogueManager m_dialogueManager;
 
@@ -81,7 +81,7 @@ namespace Comic
 
             m_gameConfig = SerializedScriptableObject.CreateInstance<GameConfig>();
             m_gameProgression = new GameProgression();
-            //m_pauseInput = GetComponent<PauseInput>();
+            m_pauseInput = GetComponent<PauseInput>();
             m_hudNavigationInput = GetComponent<NavigationInput>();
             m_viewManager = GetComponent<ViewManager>();
             m_pageManager = GetComponent<PageManager>();
