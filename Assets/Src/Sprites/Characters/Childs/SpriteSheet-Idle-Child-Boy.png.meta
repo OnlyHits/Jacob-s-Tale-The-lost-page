@@ -1,0 +1,248 @@
+fileFormatVersion: 2
+guid: f005ad3d8bb272745ae7d80329e4957a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3270109355005020134
+    second: SpriteSheet-Idle-Child-Boy_0
+  - first:
+      213: -8541986379443109802
+    second: SpriteSheet-Idle-Child-Boy_1
+  - first:
+      213: -2908072380692552190
+    second: SpriteSheet-Idle-Child-Boy_2
+  - first:
+      213: 2808335806407179093
+    second: SpriteSheet-Idle-Child-Boy_3
+  - first:
+      213: -7250221416729454200
+    second: SpriteSheet-Idle-Child-Boy_4
+  - first:
+      213: 8926072384844169292
+    second: SpriteSheet-Idle-Child-Boy_5
+  - first:
+      213: -5571641651405305828
+    second: SpriteSheet-Idle-Child-Boy_6
+  - first:
+      213: -2117538868017412697
+    second: SpriteSheet-Idle-Child-Boy_7
+  - first:
+      213: -8712042122820052860
+    second: SpriteSheet-Idle-Child-Boy_8
+  - first:
+      213: -5223301250778945737
+    second: SpriteSheet-Idle-Child-Boy_9
+  - first:
+      213: 4616999681385031809
+    second: SpriteSheet-Idle-Child-Boy_10
+  - first:
+      213: -6438248633684704239
+    second: SpriteSheet-Idle-Child-Boy_11
+  - first:
+      213: -1385868778621788086
+    second: SpriteSheet-Idle-Child-Boy_12
+  - first:
+      213: -8338026365920018108
+    second: SpriteSheet-Idle-Child-Boy_13
+  - first:
+      213: 8235839929865717331
+    second: SpriteSheet-Idle-Child-Boy_14
+  - first:
+      213: 1501044088137982052
+    second: SpriteSheet-Idle-Child-Boy_15
+  - first:
+      213: 4020535392676844459
+    second: SpriteSheet-Idle-Child-Boy_16
+  - first:
+      213: 6220957450295602188
+    second: SpriteSheet-Idle-Child-Boy_17
+  - first:
+      213: 2003655580521893703
+    second: SpriteSheet-Idle-Child-Boy_18
+  - first:
+      213: 7395363022284172520
+    second: SpriteSheet-Idle-Child-Boy_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Child-Boy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 396
+        width: 170
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a187e3e0edc3e92d0800000000000000
+      internalID: -3270109355005020134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Child-Boy_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 396
+        width: 170
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650811135a4c47980800000000000000
+      internalID: -8541986379443109802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Child-Boy_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 396
+        width: 170
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20622bfc39374a7d0800000000000000
+      internalID: -2908072380692552190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet-Idle-Child-Boy_0: -3270109355005020134
+      SpriteSheet-Idle-Child-Boy_1: -8541986379443109802
+      SpriteSheet-Idle-Child-Boy_2: -2908072380692552190
+      SpriteSheet-Idle-Child-Boy_3: 2808335806407179093
+      SpriteSheet-Idle-Child-Boy_4: -7250221416729454200
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

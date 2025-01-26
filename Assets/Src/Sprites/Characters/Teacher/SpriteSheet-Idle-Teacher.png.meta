@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: 1f085664aa04b48f5b335a82c3715d7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3944992823234200037
+    second: SpriteSheet-Idle-Teacher_0
+  - first:
+      213: 8917693492963937780
+    second: SpriteSheet-Idle-Teacher_1
+  - first:
+      213: 4910642648096197754
+    second: SpriteSheet-Idle-Teacher_2
+  - first:
+      213: -6043342671074038616
+    second: SpriteSheet-Idle-Teacher_3
+  - first:
+      213: 3207792753688361939
+    second: SpriteSheet-Idle-Teacher_4
+  - first:
+      213: -2379219276210324799
+    second: SpriteSheet-Idle-Teacher_5
+  - first:
+      213: -2893588149602437112
+    second: SpriteSheet-Idle-Teacher_6
+  - first:
+      213: -2945651358911096931
+    second: SpriteSheet-Idle-Teacher_7
+  - first:
+      213: 1411885248193092727
+    second: SpriteSheet-Idle-Teacher_8
+  - first:
+      213: 3253243155388725609
+    second: SpriteSheet-Idle-Teacher_9
+  - first:
+      213: -6695270390489870494
+    second: SpriteSheet-Idle-Teacher_10
+  - first:
+      213: -613780423338837582
+    second: SpriteSheet-Idle-Teacher_11
+  - first:
+      213: -8156375413403582054
+    second: SpriteSheet-Idle-Teacher_12
+  - first:
+      213: -5778548308818087870
+    second: SpriteSheet-Idle-Teacher_13
+  - first:
+      213: -4429846276582981573
+    second: SpriteSheet-Idle-Teacher_14
+  - first:
+      213: 691678607486215236
+    second: SpriteSheet-Idle-Teacher_15
+  - first:
+      213: 3414977488880499072
+    second: SpriteSheet-Idle-Teacher_16
+  - first:
+      213: -8617691625733194095
+    second: SpriteSheet-Idle-Teacher_17
+  - first:
+      213: -81668905230634240
+    second: SpriteSheet-Idle-Teacher_18
+  - first:
+      213: -6164220767340433409
+    second: SpriteSheet-Idle-Teacher_19
+  - first:
+      213: -2155227625983152024
+    second: SpriteSheet-Idle-Teacher_20
+  - first:
+      213: -9143270720689550424
+    second: SpriteSheet-Idle-Teacher_21
+  - first:
+      213: -6318724055256677464
+    second: SpriteSheet-Idle-Teacher_22
+  - first:
+      213: -5077415752449190271
+    second: SpriteSheet-Idle-Teacher_23
+  - first:
+      213: 821786185496409443
+    second: SpriteSheet-Idle-Teacher_24
+  - first:
+      213: 5622741896539613682
+    second: SpriteSheet-Idle-Teacher_25
+  - first:
+      213: -5781642545886348607
+    second: SpriteSheet-Idle-Teacher_26
+  - first:
+      213: -765386730269958207
+    second: SpriteSheet-Idle-Teacher_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Teacher_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 165
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65681b1b9eeb8f23bb16ecceaa72fb51
+      internalID: -563476198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Teacher_1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 351
+        width: 165
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d709108226c69ffdf9f07a04612f9cca
+      internalID: 1168144374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Teacher_2
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 351
+        width: 165
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d1f68899ae1ec9da7d044e1f0daf70
+      internalID: -2111400517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0eeea96416680fd15a9ae8a73a0df87c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet-Idle-Teacher_0: -563476198
+      SpriteSheet-Idle-Teacher_1: 1168144374
+      SpriteSheet-Idle-Teacher_2: -2111400517
+      SpriteSheet-Idle-Teacher_3: 1468008713
+      SpriteSheet-Idle-Teacher_4: 1162857825
+      SpriteSheet-Idle-Teacher_5: -912208945
+      SpriteSheet-Idle-Teacher_6: 2040523405
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

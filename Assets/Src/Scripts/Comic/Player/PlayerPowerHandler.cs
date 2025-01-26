@@ -22,7 +22,9 @@ namespace Comic
         [SerializeField, ReadOnly] private List<GameObject> m_dummies = new List<GameObject>();
 
         [Header("Bully")]
+        [SerializeField, ReadOnly] private bool m_isPushingBox = false;
         [SerializeField, ReadOnly] private bool m_canPushBoxes = false;
+        public bool IsPushingBox() => m_isPushingBox;
         public bool CanPushBoxes() => m_canPushBoxes;
 
         private Action m_onNextPower;
@@ -105,6 +107,10 @@ namespace Comic
             m_powerTypeSelected = powerType;
             m_powerSelected = power;
 
+            LegUpPower(false);
+            //DummyPower(false);
+            BullyPower(false);
+            //RotatePower(false);
             EnableBullyPower(powerType == PowerType.Power_Telekinesis);
         }
 
@@ -121,6 +127,10 @@ namespace Comic
             else if (m_powerTypeSelected == PowerType.Power_Dummy)
             {
                 DummyPower(on);
+            }
+            else if (m_powerTypeSelected == PowerType.Power_Telekinesis)
+            {
+                BullyPower(on);
             }
             else if (m_powerTypeSelected == PowerType.Power_Rotate_Room)
             {
@@ -142,6 +152,15 @@ namespace Comic
         private void EnableBullyPower(bool enable)
         {
             m_canPushBoxes = enable;
+        }
+
+        private void BullyPower(bool on)
+        {
+            if (!m_canPushBoxes)
+            {
+                return;
+            }
+            m_isPushingBox = on;
         }
 
         #endregion BULLY POWER

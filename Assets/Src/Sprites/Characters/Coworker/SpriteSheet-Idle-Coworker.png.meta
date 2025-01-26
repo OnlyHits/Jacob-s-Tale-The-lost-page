@@ -1,0 +1,307 @@
+fileFormatVersion: 2
+guid: b8bbf4d18b92b2b3c9f9e934b5821f1f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8103841253798682246
+    second: SpriteSheet-Idle-Coworker_0
+  - first:
+      213: 6858500955285571349
+    second: SpriteSheet-Idle-Coworker_1
+  - first:
+      213: -5002274525814172618
+    second: SpriteSheet-Idle-Coworker_2
+  - first:
+      213: 3855616019693160639
+    second: SpriteSheet-Idle-Coworker_3
+  - first:
+      213: 5701143468833960390
+    second: SpriteSheet-Idle-Coworker_4
+  - first:
+      213: -7797909169352436366
+    second: SpriteSheet-Idle-Coworker_5
+  - first:
+      213: -6117843986915257923
+    second: SpriteSheet-Idle-Coworker_6
+  - first:
+      213: -463373681211741483
+    second: SpriteSheet-Idle-Coworker_7
+  - first:
+      213: -1021651583401591434
+    second: SpriteSheet-Idle-Coworker_8
+  - first:
+      213: 1561964637308480852
+    second: SpriteSheet-Idle-Coworker_9
+  - first:
+      213: -5155844138194204120
+    second: SpriteSheet-Idle-Coworker_10
+  - first:
+      213: -3960451189424542908
+    second: SpriteSheet-Idle-Coworker_11
+  - first:
+      213: -5643820366223817799
+    second: SpriteSheet-Idle-Coworker_12
+  - first:
+      213: 7991983339728325596
+    second: SpriteSheet-Idle-Coworker_13
+  - first:
+      213: 4420552117585647338
+    second: SpriteSheet-Idle-Coworker_14
+  - first:
+      213: 4854174057343260335
+    second: SpriteSheet-Idle-Coworker_15
+  - first:
+      213: -6058081369163080526
+    second: SpriteSheet-Idle-Coworker_16
+  - first:
+      213: -1899125597172278645
+    second: SpriteSheet-Idle-Coworker_17
+  - first:
+      213: 331079067544621795
+    second: SpriteSheet-Idle-Coworker_18
+  - first:
+      213: -6823074451474837171
+    second: SpriteSheet-Idle-Coworker_19
+  - first:
+      213: 1454870196622609090
+    second: SpriteSheet-Idle-Coworker_20
+  - first:
+      213: -5300820803574180049
+    second: SpriteSheet-Idle-Coworker_21
+  - first:
+      213: 8838965288138745038
+    second: SpriteSheet-Idle-Coworker_22
+  - first:
+      213: 1978643513661481685
+    second: SpriteSheet-Idle-Coworker_23
+  - first:
+      213: 7645108186082636162
+    second: SpriteSheet-Idle-Coworker_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Coworker_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 361
+        width: 170
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a716c2fc05f598f80800000000000000
+      internalID: -8103841253798682246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Coworker_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 361
+        width: 170
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517497be74a4e2f50800000000000000
+      internalID: 6858500955285571349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Coworker_2
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 361
+        width: 170
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6345cdb62d9549ab0800000000000000
+      internalID: -5002274525814172618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Coworker_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 170
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb8cd1c8756e18530800000000000000
+      internalID: 3855616019693160639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet-Idle-Coworker_4
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 210
+        width: 170
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c1f26967c78e1f40800000000000000
+      internalID: 5701143468833960390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SpriteSheet-Idle-Coworker_0: -8103841253798682246
+      SpriteSheet-Idle-Coworker_1: 6858500955285571349
+      SpriteSheet-Idle-Coworker_2: -5002274525814172618
+      SpriteSheet-Idle-Coworker_3: 3855616019693160639
+      SpriteSheet-Idle-Coworker_4: 5701143468833960390
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

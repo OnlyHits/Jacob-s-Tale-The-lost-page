@@ -73,6 +73,7 @@ MonoBehaviour:
   m_dummyMaxNb: 5
   m_dummyLifeTime: 2
   m_dummies: []
+  m_isPushingBox: 0
   m_canPushBoxes: 0
 --- !u!50 &1141544891393073915
 Rigidbody2D:
@@ -90,7 +91,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 9a3c8af23bca2a9ce98a9c396913c372, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
