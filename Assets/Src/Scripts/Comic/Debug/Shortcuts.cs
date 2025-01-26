@@ -26,7 +26,7 @@ public class Shortcuts : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Time.timeScale = 5f;
+            Time.timeScale = 10f;
         }
         if (Input.GetKeyUp(KeyCode.LeftShift)) {
             Time.timeScale = 1f;
