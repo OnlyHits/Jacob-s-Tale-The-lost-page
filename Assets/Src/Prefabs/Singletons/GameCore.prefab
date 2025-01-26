@@ -83,6 +83,7 @@ MonoBehaviour:
   m_pause: 0
   m_inputActionStructsV2: []
   m_inputActionStructsBool: []
+  m_inputActionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!114 &6305320286240585526
 MonoBehaviour:
   m_ObjectHideFlags: 0

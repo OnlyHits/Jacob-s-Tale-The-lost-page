@@ -29,10 +29,10 @@ namespace Comic
         private Action m_onPrevPower;
 
 
-        private void Start()
-        {
-            OnPowerSelected(PowerType.Power_Rotate_Room);
-        }
+        //private void Start()
+        //{
+        //    OnPowerSelected(PowerType.Power_Rotate_Room);
+        //}
 
         #region CALLBACKS
         public void SubscribeToNextPower(Action function)

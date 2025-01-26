@@ -8,6 +8,8 @@ namespace Comic
 {
     public class NavigationInput : AInputManager
     {
+        public InputActionAsset m_inputActionAsset;
+
         #region ACTIONS
         private InputAction m_navigationAction;
         private InputAction m_validateAction;
@@ -48,9 +50,9 @@ namespace Comic
 
         private void FindAction()
         {
-            m_cancelAction = InputSystem.actions.FindAction("Cancel");
-            m_validateAction = InputSystem.actions.FindAction("Validate");
-            m_navigationAction = InputSystem.actions.FindAction("Navigation");
+            m_cancelAction = m_inputActionAsset.FindAction("Cancel");
+            m_validateAction = m_inputActionAsset.FindAction("Validate");
+            m_navigationAction = m_inputActionAsset.FindAction("Navigation");
         }
 
         private void InitInputActions()

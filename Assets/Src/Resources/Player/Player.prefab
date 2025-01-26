@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2108855957422711135}
   - component: {fileID: 1201119695036820635}
+  - component: {fileID: 4049376364462170266}
   - component: {fileID: 1141544891393073915}
   - component: {fileID: 1952538670905112991}
   - component: {fileID: 3625392227356046605}
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_head: {fileID: 3655190391554620544}
   m_rb: {fileID: 1141544891393073915}
   m_collider: {fileID: 1952538670905112991}
-  m_inputsController: {fileID: 0}
+  m_inputsController: {fileID: 4049376364462170266}
   m_isGrounded: 0
   m_isMoving: 0
   m_speed: 250
@@ -75,6 +76,22 @@ MonoBehaviour:
   m_dummies: []
   m_isPushingBox: 0
   m_canPushBoxes: 0
+--- !u!114 &4049376364462170266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52946288444514457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df23b201c7e4178ef949da9f39204a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_pause: 0
+  m_inputActionStructsV2: []
+  m_inputActionStructsBool: []
+  m_inputActionAsset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
 --- !u!50 &1141544891393073915
 Rigidbody2D:
   serializedVersion: 5
