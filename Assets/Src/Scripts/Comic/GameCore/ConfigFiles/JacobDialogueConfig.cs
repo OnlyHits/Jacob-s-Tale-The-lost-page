@@ -40,6 +40,9 @@ namespace Comic
         Dialogue_Welcome,
         Dialogue_ChangePage,
         Dialogue_UnlockBF,
+        Dialogue_UnlockBL,
+        Dialogue_UnlockBoss,
+        Dialogue_LostPage
     }
 
     [System.Serializable]

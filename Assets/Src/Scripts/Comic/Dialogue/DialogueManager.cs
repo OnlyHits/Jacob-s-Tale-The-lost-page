@@ -42,10 +42,13 @@ namespace Comic
             var unlockChapters = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData();
             var gameConfig = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig();
             int chapterCount = unlockChapters.Count;
-
+            int i = 0;
             do
             {
+                if (i == chapterCount)
+                    break;
                 m_powerIndex = next ? (m_powerIndex + 1) % chapterCount : (m_powerIndex - 1 + chapterCount) % chapterCount;
+                ++i;
             }
             while (gameConfig.GetPowerByChapter(unlockChapters[m_powerIndex].m_chapterType) == PowerType.Power_None);
         }
