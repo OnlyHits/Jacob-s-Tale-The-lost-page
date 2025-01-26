@@ -19,6 +19,7 @@ namespace Comic
         Icon_Jacob_2,
         Icon_Jacob_3,
         Icon_Jacob_4,
+        Icon_Mom
     }
     
     public enum DialogueBubbleType
