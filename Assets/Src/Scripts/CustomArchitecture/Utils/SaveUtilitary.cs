@@ -15,7 +15,7 @@ namespace CustomArchitecture
 
     public class SaveUtilitary<T>
     {
-        private readonly string                 m_configPath = "/StreamingAssets/";//"Assets/Src/Resources/ConfigFile/";
+        private readonly string                 m_configPath = "Assets/Src/Resources/ConfigFile/";
         private string                          m_paths = "default_path";
         private bool                            m_backup = true;
         private string                          m_backupExtension = ".backup";
@@ -39,7 +39,8 @@ namespace CustomArchitecture
 
             if (type == FileType.ConfigFile)
             {
-                m_paths = m_configPath + file_path;
+                m_paths = Path.Combine(Application.streamingAssetsPath + file_path);
+//                m_paths = m_configPath + file_path;
             }
             else if (type == FileType.SaveFile)
             {
