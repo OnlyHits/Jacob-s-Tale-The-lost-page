@@ -1,4 +1,5 @@
 #if UNITY_EDITOR
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
@@ -16,6 +17,11 @@ namespace Comic
         public CaseCanvasEditor m_canvasEditor;
         public CaseColliderEditor m_colliderEditor;
         public CaseDecorEditor m_decorEditor;
+
+        [Space]
+        public Transform m_propsParent;
+        private List<Prop> m_props;
+
 
         #region DECOR FIELDS
         [Space]
@@ -37,6 +43,7 @@ namespace Comic
 
         private Vector3 m_lastPosition = Vector2.zero;
         private Vector3 m_lastScale = Vector2.zero;
+        private Vector3 m_lastRotation = Vector2.zero;
 
         [Button("Refresh All")]
         private void RefreshComponents()
@@ -51,7 +58,7 @@ namespace Comic
 
         private void TryRefresh()
         {
-            if (m_lastScale == transform.localScale && m_lastPosition == transform.position)
+            if (m_lastScale == transform.localScale && m_lastPosition == transform.position && m_lastRotation == transform.eulerAngles)
             {
                 return;
             }
@@ -60,8 +67,11 @@ namespace Comic
             m_colliderEditor?.Refresh();
             m_decorEditor?.Refresh();
 
+            m_propsParent.position = transform.position;
+
             m_lastScale = transform.localScale;
             m_lastPosition = transform.position;
+            m_lastRotation = transform.eulerAngles;
         }
 
         private void OnDecorFieldChanged()

@@ -89,6 +89,7 @@ MonoBehaviour:
   m_headPositionGoLeft: {fileID: 2550737039756732490}
   m_head: {fileID: 4451904629105018122}
   m_rb: {fileID: 9137852728363733997}
+  m_collider: {fileID: 3717280006335228733}
   m_lookTarget: {fileID: 0}
 --- !u!95 &877222088066885584
 Animator:

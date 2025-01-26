@@ -5,6 +5,8 @@ namespace Comic
 {
     public static class Comic
     {
+        public static readonly string playerLayerName = "Player";
+
         public static readonly string frontLayerName = "SwitchPage";
         public static readonly string backLayerName = "NotSwitchPage";
         public static readonly string defaultLayerName = "Default";

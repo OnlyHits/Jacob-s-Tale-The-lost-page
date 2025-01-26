@@ -37,7 +37,9 @@ namespace Comic
 
     public enum DialogueName
     {
-        DialogueWelcome,
+        Dialogue_Welcome,
+        Dialogue_ChangePage,
+        Dialogue_UnlockBF,
     }
 
     [System.Serializable]

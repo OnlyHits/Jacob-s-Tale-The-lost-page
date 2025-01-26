@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using CustomArchitecture;
-using Sirenix.Serialization.Internal;
 using Sirenix.Utilities;
 using UnityEngine;
 
@@ -36,28 +34,19 @@ namespace Comic
             ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
         }
 
-        public Transform GetSpawnPointByPageIndex(int indexPage)
-        {
-            if (indexPage >= m_pageList.Count)
-            {
-                Debug.LogWarning("Try to get page index " + indexPage.ToString() + " which does not exist in PageManager");
-                return null;
-            }
-            Page page = m_pageList[indexPage];
-
-            return page.TryGetSpawnPoint();
-        }
-
+        #region ON LOCK & UNLOCK CHAPTERS
         private void OnUnlockChapter(Chapters chapterUnlocked)
         {
             UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));
         }
-
         private void OnLockChapter(Chapters chapterUnlocked)
         {
             LockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));
         }
 
+        #endregion ON LOCK & UNLOCK CHAPTERS
+
+        #region LOCK & UNLOCK PAGES
         private void LockPages(List<int> pageIndexes)
         {
             if (pageIndexes.IsNullOrEmpty())
@@ -76,7 +65,6 @@ namespace Comic
                 }
             }
         }
-
         private void UnlockPages(List<int> pageIndexes)
         {
             if (pageIndexes.IsNullOrEmpty())
@@ -90,6 +78,9 @@ namespace Comic
             }
         }
 
+        #endregion LOCK & UNLOCK PAGES
+
+        #region TRY NEXT & PREV PAGE
         public bool TryNextPage()
         {
             int nextIdx = m_currentPageIndex + 1;
@@ -110,6 +101,29 @@ namespace Comic
 
             SwitchPage(false, prevIdx);
             return true;
+        }
+
+        #endregion TRY NEXT & PREV PAGE
+
+        public Transform GetSpawnPointByPageIndex(int indexPage)
+        {
+            if (indexPage >= m_pageList.Count)
+            {
+                Debug.LogWarning("Try to get page index " + indexPage.ToString() + " which does not exist in PageManager");
+                return null;
+            }
+            Page page = m_pageList[indexPage];
+
+            return page.TryGetSpawnPoint();
+        }
+
+        public Page GetCurrentPage()
+        {
+            return m_currentPage;
+        }
+        public Case GetCurrentCase()
+        {
+            return m_currentPage.GetCurrentCase();
         }
     }
 }
