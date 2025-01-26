@@ -56,6 +56,7 @@ namespace CustomArchitecture
         MainStory_UnlockBully_BestFriend_1,
         MainStory_UnlockBully_Jacob_3,
         MainStory_UnlockBully_Bully_3,
+        MainStory_UnlockBully_Jacob_4,
         MainStory_UnlockBully_BestFriend_2,
     }
 

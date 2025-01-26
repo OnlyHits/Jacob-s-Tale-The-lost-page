@@ -8,7 +8,7 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 3,
+    "$rlength": 4,
     "$rcontent": [
         {
             "$k": 0,
@@ -203,6 +203,93 @@
                         "m_waitAfterDisappear": 0,
                         "m_choiceOneDialogue": 15,
                         "m_choiceTwoDialogue": 16
+                    }
+                ]
+            }
+        },
+        {
+            "$k": 3,
+            "$v": {
+                "$id": 20,
+                "$type": 2,
+                "$rlength": 7,
+                "$rcontent": [
+                    {
+                        "$id": 21,
+                        "$type": 3,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 17,
+                        "m_intensity": 2,
+                        "m_bubbleType": 1,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 22,
+                        "$type": 3,
+                        "m_speaker": 4,
+                        "m_iconType": 7,
+                        "m_associatedDialogue": 18,
+                        "m_intensity": 0,
+                        "m_bubbleType": 2,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 23,
+                        "$type": 3,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 20,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 24,
+                        "$type": 3,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
+                        "m_associatedDialogue": 21,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 25,
+                        "$type": 3,
+                        "m_speaker": 4,
+                        "m_iconType": 7,
+                        "m_associatedDialogue": 22,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 26,
+                        "$type": 3,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 23,
+                        "m_intensity": 2,
+                        "m_bubbleType": 1,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 27,
+                        "$type": 3,
+                        "m_speaker": 4,
+                        "m_iconType": 7,
+                        "m_associatedDialogue": 24,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
                     }
                 ]
             }

@@ -522,10 +522,10 @@ namespace CustomArchitecture
 
         public override void Init()
         {
-            onDialogueInput += OnDialogueInput;
+            // onDialogueInput += OnDialogueInput;
 
-            FindAction();
-            InitInputActions();
+            // FindAction();
+            // InitInputActions();
         }
 
         private void FindAction()

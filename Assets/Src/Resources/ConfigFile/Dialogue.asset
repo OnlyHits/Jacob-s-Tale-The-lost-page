@@ -40,7 +40,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 21
+      Data: 24
     - Name: 
       Entry: 7
       Data: 
@@ -4553,114 +4553,6 @@ MonoBehaviour:
       Data: 
     - Name: m_apparitionType
       Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_handleByInput
-      Entry: 5
-      Data: false
-    - Name: m_durationBetweenSentence
-      Entry: 4
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 19
-    - Name: $v
-      Entry: 7
-      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
-    - Name: m_dialogueSentences
-      Entry: 7
-      Data: 73|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
-    - Name: m_animatedText
-      Entry: 7
-      Data: 74|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
-    - Name: m_text
-      Entry: 1
-      Data: 'Oui, qu''est ce qu''il y a je peux t''aider? '
-    - Name: m_textModifier
-      Entry: 3
-      Data: 3
-    - Name: m_colorModifier
-      Entry: 3
-      Data: 0
-    - Name: m_solidColor
-      Entry: 7
-      Data: UnityEngine.Color32, UnityEngine.CoreModule
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 255
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_gradientColor
-      Entry: 7
-      Data: UnityEngine.Color32, UnityEngine.CoreModule
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_colorSpeedRandomness
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: m_apparitionType
-      Entry: 3
       Data: 1
     - Name: 
       Entry: 8
@@ -4694,7 +4586,7 @@ MonoBehaviour:
       Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
     - Name: m_dialogueSentences
       Entry: 7
-      Data: 75|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+      Data: 73|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 3
@@ -4703,7 +4595,7 @@ MonoBehaviour:
       Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
     - Name: m_animatedText
       Entry: 7
-      Data: 76|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+      Data: 74|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
@@ -4778,7 +4670,7 @@ MonoBehaviour:
       Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
     - Name: m_animatedText
       Entry: 7
-      Data: 77|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+      Data: 75|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
@@ -4853,7 +4745,7 @@ MonoBehaviour:
       Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
     - Name: m_animatedText
       Entry: 7
-      Data: 78|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+      Data: 76|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
     - Name: 
       Entry: 12
       Data: 1
@@ -4934,7 +4826,589 @@ MonoBehaviour:
       Data: false
     - Name: m_durationBetweenSentence
       Entry: 4
-      Data: 2
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 21
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 77|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 78|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: "Tu va le laisser te parler comme ca!? D\xE9fend toi un peu"
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 22
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 79|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 80|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: "Oui ta raison, on est dans ma t\xEAte je peux me d\xE9fendre"
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 81|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: Tu me parles pas comme ca, j'ai le droit au respect
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 82|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: On est plus des gamins, tu ne me fait pas peur
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 23
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 83|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 84|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: ferme ta gueule
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 24
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 85|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 86|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: Pardon\n...
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

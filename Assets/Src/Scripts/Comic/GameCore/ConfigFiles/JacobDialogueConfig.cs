@@ -40,6 +40,7 @@ namespace Comic
         Dialogue_Welcome,
         Dialogue_ChangePage,
         Dialogue_UnlockBF,
+        Dialogue_UnlockBully,
         Dialogue_UnlockBL,
         Dialogue_UnlockBoss,
         Dialogue_LostPage

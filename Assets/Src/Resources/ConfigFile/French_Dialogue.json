@@ -8,7 +8,7 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 23,
+    "$rlength": 24,
     "$rcontent": [
         {
             "$k": 0,
@@ -1951,53 +1951,6 @@
                                     }
                                 ]
                             },
-                            "m_apparitionType": 0
-                        }
-                    ]
-                },
-                "m_handleByInput": false,
-                "m_durationBetweenSentence": 2
-            }
-        },
-        {
-            "$k": 19,
-            "$v": {
-                "$type": 2,
-                "m_dialogueSentences": {
-                    "$id": 73,
-                    "$type": 3,
-                    "$rlength": 1,
-                    "$rcontent": [
-                        {
-                            "$type": 4,
-                            "m_animatedText": {
-                                "$id": 74,
-                                "$type": 5,
-                                "$rlength": 1,
-                                "$rcontent": [
-                                    {
-                                        "$type": 6,
-                                        "m_text": "Oui, qu'est ce qu'il y a je peux t'aider? ",
-                                        "m_textModifier": 3,
-                                        "m_colorModifier": 0,
-                                        "m_solidColor": {
-                                            "$type": 7,
-                                            0,
-                                            0,
-                                            0,
-                                            255
-                                        },
-                                        "m_gradientColor": {
-                                            "$type": 7,
-                                            0,
-                                            0,
-                                            0,
-                                            0
-                                        },
-                                        "m_colorSpeedRandomness": 0
-                                    }
-                                ]
-                            },
                             "m_apparitionType": 1
                         }
                     ]
@@ -2011,14 +1964,14 @@
             "$v": {
                 "$type": 2,
                 "m_dialogueSentences": {
-                    "$id": 75,
+                    "$id": 73,
                     "$type": 3,
                     "$rlength": 3,
                     "$rcontent": [
                         {
                             "$type": 4,
                             "m_animatedText": {
-                                "$id": 76,
+                                "$id": 74,
                                 "$type": 5,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -2050,7 +2003,7 @@
                         {
                             "$type": 4,
                             "m_animatedText": {
-                                "$id": 77,
+                                "$id": 75,
                                 "$type": 5,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -2082,7 +2035,7 @@
                         {
                             "$type": 4,
                             "m_animatedText": {
-                                "$id": 78,
+                                "$id": 76,
                                 "$type": 5,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -2114,7 +2067,7 @@
                     ]
                 },
                 "m_handleByInput": false,
-                "m_durationBetweenSentence": 2
+                "m_durationBetweenSentence": 3
             }
         },
         {
@@ -2122,14 +2075,14 @@
             "$v": {
                 "$type": 2,
                 "m_dialogueSentences": {
-                    "$id": 79,
+                    "$id": 77,
                     "$type": 3,
                     "$rlength": 1,
                     "$rcontent": [
                         {
                             "$type": 4,
                             "m_animatedText": {
-                                "$id": 80,
+                                "$id": 78,
                                 "$type": 5,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -2161,7 +2114,7 @@
                     ]
                 },
                 "m_handleByInput": false,
-                "m_durationBetweenSentence": 2
+                "m_durationBetweenSentence": 3
             }
         },
         {
@@ -2169,14 +2122,14 @@
             "$v": {
                 "$type": 2,
                 "m_dialogueSentences": {
-                    "$id": 81,
+                    "$id": 79,
                     "$type": 3,
-                    "$rlength": 2,
+                    "$rlength": 3,
                     "$rcontent": [
                         {
                             "$type": 4,
                             "m_animatedText": {
-                                "$id": 82,
+                                "$id": 80,
                                 "$type": 5,
                                 "$rlength": 1,
                                 "$rcontent": [
@@ -2208,13 +2161,45 @@
                         {
                             "$type": 4,
                             "m_animatedText": {
-                                "$id": 83,
+                                "$id": 81,
                                 "$type": 5,
                                 "$rlength": 1,
                                 "$rcontent": [
                                     {
                                         "$type": 6,
-                                        "m_text": "Tu me parles pas comme ca ",
+                                        "m_text": "Tu me parles pas comme ca, j'ai le droit au respect",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 82,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "On est plus des gamins, tu ne me fait pas peur",
                                         "m_textModifier": 3,
                                         "m_colorModifier": 0,
                                         "m_solidColor": {
@@ -2241,6 +2226,100 @@
                 },
                 "m_handleByInput": false,
                 "m_durationBetweenSentence": 3
+            }
+        },
+        {
+            "$k": 23,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 83,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 84,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "ferme ta gueule",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 1
+            }
+        },
+        {
+            "$k": 24,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 85,
+                    "$type": 3,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 86,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Pardon",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 1
             }
         }
     ]
