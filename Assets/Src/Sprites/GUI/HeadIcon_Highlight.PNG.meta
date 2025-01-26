@@ -1,0 +1,1517 @@
+fileFormatVersion: 2
+guid: 78283dce15c99a6ea8fd29b37fbc0cb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2217983391654427237
+    second: HeadIcon_Highlight_0
+  - first:
+      213: 1475777514652340637
+    second: HeadIcon_Highlight_1
+  - first:
+      213: 8021597972486468771
+    second: HeadIcon_Highlight_2
+  - first:
+      213: -925822608212000338
+    second: HeadIcon_Highlight_3
+  - first:
+      213: -3583593362090316966
+    second: HeadIcon_Highlight_4
+  - first:
+      213: 4463739505545295659
+    second: HeadIcon_Highlight_5
+  - first:
+      213: -3096117142702987245
+    second: HeadIcon_Highlight_6
+  - first:
+      213: -8938582614977352596
+    second: HeadIcon_Highlight_7
+  - first:
+      213: -8483397958464408024
+    second: HeadIcon_Highlight_8
+  - first:
+      213: 3250208193538373827
+    second: HeadIcon_Highlight_9
+  - first:
+      213: 9142413090900920135
+    second: HeadIcon_Highlight_10
+  - first:
+      213: 6891411625572806233
+    second: HeadIcon_Highlight_11
+  - first:
+      213: -664623832967790740
+    second: HeadIcon_Highlight_12
+  - first:
+      213: -1251268028448665861
+    second: HeadIcon_Highlight_13
+  - first:
+      213: 8672991257202536884
+    second: HeadIcon_Highlight_14
+  - first:
+      213: 3764744869065993590
+    second: HeadIcon_Highlight_15
+  - first:
+      213: -8452717462730088803
+    second: HeadIcon_Highlight_16
+  - first:
+      213: 7281240087225722357
+    second: HeadIcon_Highlight_17
+  - first:
+      213: -5122402590300478604
+    second: HeadIcon_Highlight_18
+  - first:
+      213: 8791732670992123407
+    second: HeadIcon_Highlight_19
+  - first:
+      213: 3259303059803465145
+    second: HeadIcon_Highlight_20
+  - first:
+      213: 1677610262459259697
+    second: HeadIcon_Highlight_21
+  - first:
+      213: 8052607692318993268
+    second: HeadIcon_Highlight_22
+  - first:
+      213: -2169402341044093522
+    second: HeadIcon_Highlight_23
+  - first:
+      213: 8759266230074548199
+    second: HeadIcon_Highlight_24
+  - first:
+      213: 2363090660093717731
+    second: HeadIcon_Highlight_25
+  - first:
+      213: -3333333182514487205
+    second: HeadIcon_Highlight_26
+  - first:
+      213: -949398717150217434
+    second: HeadIcon_Highlight_27
+  - first:
+      213: -3831392043207552537
+    second: HeadIcon_Highlight_28
+  - first:
+      213: -7132265587146034354
+    second: HeadIcon_Highlight_29
+  - first:
+      213: 7612217890261381196
+    second: HeadIcon_Highlight_30
+  - first:
+      213: 477062047109239476
+    second: HeadIcon_Highlight_31
+  - first:
+      213: -2535099750661301802
+    second: HeadIcon_Highlight_32
+  - first:
+      213: -2720287557565569415
+    second: HeadIcon_Highlight_33
+  - first:
+      213: -2891704922148477649
+    second: HeadIcon_Highlight_34
+  - first:
+      213: -987733957066104483
+    second: HeadIcon_Highlight_35
+  - first:
+      213: 5366726552133685208
+    second: HeadIcon_Highlight_36
+  - first:
+      213: 215549485139453885
+    second: HeadIcon_Highlight_37
+  - first:
+      213: -6841144617278280903
+    second: HeadIcon_Highlight_38
+  - first:
+      213: -233129343151069282
+    second: HeadIcon_Highlight_39
+  - first:
+      213: -437035745215132869
+    second: HeadIcon_Highlight_40
+  - first:
+      213: -2435437599355323095
+    second: HeadIcon_Highlight_41
+  - first:
+      213: -904085495409076174
+    second: HeadIcon_Highlight_42
+  - first:
+      213: 3087032032427038923
+    second: HeadIcon_Highlight_43
+  - first:
+      213: 8527462716075054356
+    second: HeadIcon_Highlight_44
+  - first:
+      213: 398019817297654140
+    second: HeadIcon_Highlight_45
+  - first:
+      213: -7767769107560850806
+    second: HeadIcon_Highlight_46
+  - first:
+      213: 4330591728276042948
+    second: HeadIcon_Highlight_47
+  - first:
+      213: 4407410278394120564
+    second: HeadIcon_Highlight_48
+  - first:
+      213: -41121867966183327
+    second: HeadIcon_Highlight_49
+  - first:
+      213: -4493245838347909988
+    second: HeadIcon_Highlight_50
+  - first:
+      213: 3333293114753906981
+    second: HeadIcon_Highlight_51
+  - first:
+      213: 6191493745297995499
+    second: HeadIcon_Highlight_52
+  - first:
+      213: -6724062574675837669
+    second: HeadIcon_Highlight_53
+  - first:
+      213: 3932947630107784270
+    second: HeadIcon_Highlight_54
+  - first:
+      213: -6633751186794348084
+    second: HeadIcon_Highlight_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b95c8be4bd32831e0800000000000000
+      internalID: -2217983391654427237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_1
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 2032
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d919c50a4d30b7410800000000000000
+      internalID: 1475777514652340637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 2015
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a4bc011bd0725f60800000000000000
+      internalID: 8021597972486468771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 2016
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea18f783e31d623f0800000000000000
+      internalID: -925822608212000338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_4
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 2016
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ba829e2d4844ec0800000000000000
+      internalID: -3583593362090316966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_5
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 2015
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27b7ed2e6362fd30800000000000000
+      internalID: 4463739505545295659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_6
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 1990
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318e036dcd16805d0800000000000000
+      internalID: -3096117142702987245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_7
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 1990
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ceac66876c3f380800000000000000
+      internalID: -8938582614977352596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_8
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1990
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8267475f08ae44a80800000000000000
+      internalID: -8483397958464408024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_9
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 1990
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c83be5b12f0b1d20800000000000000
+      internalID: 3250208193538373827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_10
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 1990
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 747c701844060ee70800000000000000
+      internalID: 9142413090900920135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_11
+      rect:
+        serializedVersion: 2
+        x: 1843
+        y: 1990
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ea3477c5633af50800000000000000
+      internalID: 6891411625572806233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_12
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 1980
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f32be2528c6c6f0800000000000000
+      internalID: -664623832967790740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_13
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 1979
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe838d8b5a92aee0800000000000000
+      internalID: -1251268028448665861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1777
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b130a1d897ac5870800000000000000
+      internalID: 8672991257202536884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_15
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1727
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d27ae038f0f3430800000000000000
+      internalID: 3764744869065993590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_16
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 1654
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e5b37804ae1ba80800000000000000
+      internalID: -8452717462730088803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1604
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f56c6b18492c0560800000000000000
+      internalID: 7281240087225722357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_18
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 1378
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4736998dbf199e8b0800000000000000
+      internalID: -5122402590300478604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_19
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 1364
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f068eae9842820a70800000000000000
+      internalID: 8791732670992123407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_20
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 1328
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5ede64dde5b3d20800000000000000
+      internalID: 3259303059803465145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_21
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1253
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b1f6535a1184710800000000000000
+      internalID: 1677610262459259697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_22
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1110
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47b6048180c90cf60800000000000000
+      internalID: 8052607692318993268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_23
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 1053
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead7a27901cb4e1e0800000000000000
+      internalID: -2169402341044093522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_24
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 1023
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef1ba84a3a2f8970800000000000000
+      internalID: 8759266230074548199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_25
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 1024
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecede66f626bc020800000000000000
+      internalID: 2363090660093717731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_26
+      rect:
+        serializedVersion: 2
+        x: 2029
+        y: 864
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50a33a912f9db1d0800000000000000
+      internalID: -3333333182514487205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 749
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bbc0a95ee03d2f0800000000000000
+      internalID: -949398717150217434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_28
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 736
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e11b5d7c3924dac0800000000000000
+      internalID: -3831392043207552537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_29
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 699
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43fa62ac3a150d90800000000000000
+      internalID: -7132265587146034354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4037e507d704a960800000000000000
+      internalID: 7612217890261381196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_31
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 471
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b254cd776dde9600800000000000000
+      internalID: 477062047109239476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_32
+      rect:
+        serializedVersion: 2
+        x: 2019
+        y: 336
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d9d6a3553481dcd0800000000000000
+      internalID: -2535099750661301802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_33
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 300
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976a36c01e89f3ad0800000000000000
+      internalID: -2720287557565569415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_34
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 225
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f256718b1b99ed7d0800000000000000
+      internalID: -2891704922148477649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_35
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 124
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d51eb74033dda42f0800000000000000
+      internalID: -987733957066104483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_36
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 124
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dfc5927d517a7a40800000000000000
+      internalID: 5366726552133685208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_37
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 112
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7614d5d19cdf200800000000000000
+      internalID: 215549485139453885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_38
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 112
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b6d0e673f5f01a0800000000000000
+      internalID: -6841144617278280903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_39
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 112
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e97a2caf812c3ccf0800000000000000
+      internalID: -233129343151069282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_40
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 99
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bcd442e465fe9f0800000000000000
+      internalID: -437035745215132869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_41
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 99
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92dbbc92866933ed0800000000000000
+      internalID: -2435437599355323095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_42
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 99
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2381f8f280b0473f0800000000000000
+      internalID: -904085495409076174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_43
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 99
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc8d017174757da20800000000000000
+      internalID: 3087032032427038923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_44
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 84
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4159a0be822a75670800000000000000
+      internalID: 8527462716075054356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_45
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 84
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c71b79f3aec068500800000000000000
+      internalID: 398019817297654140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_46
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 84
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8a159ee627533490800000000000000
+      internalID: -7767769107560850806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_47
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 84
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4732f7b3a591c30800000000000000
+      internalID: 4330591728276042948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_48
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 84
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4794617fb444a2d30800000000000000
+      internalID: 4407410278394120564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_49
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 84
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168006301e7ed6ff0800000000000000
+      internalID: -41121867966183327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_50
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 81
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9445cc57b8c4a1c0800000000000000
+      internalID: -4493245838347909988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_51
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52979256d6c324e20800000000000000
+      internalID: 3333293114753906981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_52
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be63a85e1ca9ce550800000000000000
+      internalID: 6191493745297995499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_53
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1db2f4c6b45fa2a0800000000000000
+      internalID: -6724062574675837669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_54
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 28
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e44f9cc2803a49630800000000000000
+      internalID: 3932947630107784270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeadIcon_Highlight_55
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 13
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc10cc6517e20f3a0800000000000000
+      internalID: -6633751186794348084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

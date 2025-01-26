@@ -610,7 +610,7 @@
             "$v": {
                 "$id": 56,
                 "$type": 2,
-                "$rlength": 6,
+                "$rlength": 8,
                 "$rcontent": [
                     {
                         "$id": 57,
@@ -676,6 +676,28 @@
                         "m_intensity": 0,
                         "m_bubbleType": 2,
                         "m_isMainDialogue": false,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 63,
+                        "$type": 3,
+                        "m_speaker": 3,
+                        "m_iconType": 3,
+                        "m_associatedDialogue": 62,
+                        "m_intensity": 2,
+                        "m_bubbleType": 1,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 64,
+                        "$type": 3,
+                        "m_speaker": 3,
+                        "m_iconType": 11,
+                        "m_associatedDialogue": 63,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
                         "m_waitAfterDisappear": 0
                     }
                 ]

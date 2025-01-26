@@ -129,7 +129,6 @@ namespace Comic
                 UnlockChapter(Chapters.The_Third_Chapter, true, true);
             else if (type == DialogueName.Dialogue_UnlockBoss)
                 PlayEndGame();
-//                UnlockChapter(Chapters.The_Fourth_Chapter, true, true);
         }
 
         public void TriggerDialogue(DialogueName type)

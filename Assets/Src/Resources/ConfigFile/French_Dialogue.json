@@ -8,7 +8,7 @@
         "$rcontent": [
         ]
     },
-    "$rlength": 61,
+    "$rlength": 63,
     "$rcontent": [
         {
             "$k": 0,
@@ -4578,7 +4578,7 @@
                                 "$rcontent": [
                                     {
                                         "$type": 6,
-                                        "m_text": "BOUGE PAS:",
+                                        "m_text": "BOUGE PAS!",
                                         "m_textModifier": 3,
                                         "m_colorModifier": 0,
                                         "m_solidColor": {
@@ -4763,6 +4763,324 @@
                 },
                 "m_handleByInput": false,
                 "m_durationBetweenSentence": 1.5
+            }
+        },
+        {
+            "$k": 62,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 183,
+                    "$type": 3,
+                    "$rlength": 4,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 184,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Elle....",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 185,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Elle prend posession de mon corps",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 0
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 186,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "NON PAS CAAAAAAAAA",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 187,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "AAAARRGH",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 1.5
+            }
+        },
+        {
+            "$k": 63,
+            "$v": {
+                "$type": 2,
+                "m_dialogueSentences": {
+                    "$id": 188,
+                    "$type": 3,
+                    "$rlength": 5,
+                    "$rcontent": [
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 189,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Jacob te voila enfin",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 190,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Tu as finis le premier chapitre d'une longue \u00e9pop\u00e9e",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 191,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Mais il te reste des \u00e9preuves \u00e0 franchir avant de revenir dans ton monde",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 192,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "Sois fier de ce que tu as accompli, on se reverra tr\u00e8s bientot",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 193,
+                                "$type": 5,
+                                "$rlength": 1,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "...",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            },
+                            "m_apparitionType": 1
+                        }
+                    ]
+                },
+                "m_handleByInput": false,
+                "m_durationBetweenSentence": 3
             }
         }
     ]

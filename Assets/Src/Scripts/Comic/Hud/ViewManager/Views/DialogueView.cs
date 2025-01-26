@@ -79,6 +79,7 @@ namespace Comic
                 { NpcIconType.Icon_Jacob_3, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-3") },
                 { NpcIconType.Icon_Jacob_4, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-4") },
                 { NpcIconType.Icon_Mom, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Mom") },
+                { NpcIconType.Icon_The_Lost_Page, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-LostPage") },
             };
 
             m_bubbles = new()

@@ -12,14 +12,24 @@ namespace Comic
         private VoiceType                       m_type;
         [SerializeField] private RectTransform  m_bubbleAnchor;
         [SerializeField] private Image          m_iconImage;
+        [SerializeField] private Image          m_bgImage;
         private Tween                           m_scaleTween;
         private bool                            m_isHighlight;
+        [SerializeField] private Sprite[]       m_iconspr;
 
-        public void Highlight(bool highlight) => m_isHighlight = highlight;
         public bool IsHighlight() => m_isHighlight;
         public RectTransform GetBubbleAnchor() => m_bubbleAnchor;
         public void SetBubbleAnchor(RectTransform tr) => m_bubbleAnchor = tr;
         public VoiceType GetVoiceType() => m_type;
+
+        public void Highlight(bool highlight)
+        {
+            m_isHighlight = highlight;
+            if (m_isHighlight)
+                GetComponent<Image>().sprite = m_iconspr[0];
+            else
+                GetComponent<Image>().sprite = m_iconspr[1];
+        }
 
         public void Init(VoiceType type, Sprite sprite)
         {

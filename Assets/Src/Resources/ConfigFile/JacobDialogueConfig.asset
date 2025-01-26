@@ -40,7 +40,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 7
       Data: 
@@ -1480,6 +1480,244 @@ MonoBehaviour:
     - Name: m_choiceTwoDialogue
       Entry: 3
       Data: 55
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 7
+      Data: 56|System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 8
+    - Name: 
+      Entry: 7
+      Data: 57|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 3
+    - Name: m_iconType
+      Entry: 3
+      Data: 3
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 56
+    - Name: m_intensity
+      Entry: 3
+      Data: 2
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 1
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 58|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 4
+    - Name: m_iconType
+      Entry: 3
+      Data: 9
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 57
+    - Name: m_intensity
+      Entry: 3
+      Data: 0
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 0
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 59|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 0
+    - Name: m_iconType
+      Entry: 3
+      Data: 1
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 58
+    - Name: m_intensity
+      Entry: 3
+      Data: 0
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 2
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: false
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 60|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 3
+    - Name: m_iconType
+      Entry: 3
+      Data: 3
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 59
+    - Name: m_intensity
+      Entry: 3
+      Data: 2
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 1
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 61|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 2
+    - Name: m_iconType
+      Entry: 3
+      Data: 4
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 60
+    - Name: m_intensity
+      Entry: 3
+      Data: 0
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 2
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: false
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 62|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 1
+    - Name: m_iconType
+      Entry: 3
+      Data: 0
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 61
+    - Name: m_intensity
+      Entry: 3
+      Data: 0
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 2
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: false
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 63|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 3
+    - Name: m_iconType
+      Entry: 3
+      Data: 3
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 62
+    - Name: m_intensity
+      Entry: 3
+      Data: 2
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 1
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 64|Comic.PartOfDialogueConfig, Assembly-CSharp
+    - Name: m_speaker
+      Entry: 3
+      Data: 3
+    - Name: m_iconType
+      Entry: 3
+      Data: 11
+    - Name: m_associatedDialogue
+      Entry: 3
+      Data: 63
+    - Name: m_intensity
+      Entry: 3
+      Data: 0
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 0
+    - Name: m_isMainDialogue
+      Entry: 5
+      Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
