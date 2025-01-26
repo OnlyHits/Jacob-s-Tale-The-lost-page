@@ -19,11 +19,12 @@ namespace Comic
 
         [SerializeField] private TMP_AnimatedText m_dialogue;
         [SerializeField] private RectTransform m_pinRect;
-        private NpcIcon m_iconRect;
+        private NpcIcon m_target;
         private RectTransform m_containerRect;
         private Tween m_scaleTween = null;
         private Coroutine m_dialogueCoroutine = null;
 
+        public void SetTarget(NpcIcon icon) => m_target = icon;
         public TMP_AnimatedText GetAnimatedText() => m_dialogue;
 
         public void SubscribeToAppearCallback(Action<float> function)
@@ -38,9 +39,9 @@ namespace Comic
             m_onDisappearCallback += function;
         }
 
-        public void Init(NpcIcon icon_rect, RectTransform container_rect)
+        public virtual void Init(RectTransform container_rect)
         {
-            m_iconRect = icon_rect;
+            // m_target = icon_rect;
             m_containerRect = container_rect;
             gameObject.SetActive(false);
             gameObject.GetComponent<RectTransform>().position = m_containerRect.position;
@@ -65,9 +66,10 @@ namespace Comic
                 m_scaleTween.Play();
         }
 
-        protected override void OnUpdate(float elapsed_time)
+        protected override void OnLateUpdate(float elapsed_time)
         {
-            SetPinTransform();
+            if (m_target != null)
+                SetPinTransform();
         }
 
         public void SetupDialogue(DialogueType type)
@@ -81,8 +83,6 @@ namespace Comic
 
             DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
             DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
-
-            gameObject.SetActive(true);
 
             m_dialogue.StartDialogue(config, datas);
         }
@@ -101,19 +101,28 @@ namespace Comic
             return true;
         }
 
-        public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity)
+        protected virtual IEnumerator WaitForInput()
+        {
+            yield return null;
+        }
+
+        public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity, bool wait_input)
         {
             Appear(intensity);
             m_onAppearCallback?.Invoke(m_durationByIntensity[intensity]);
 
             yield return new WaitUntil(() => IsDialogueComplete()
-                && !m_iconRect.IsCompute());
+                && (m_target != null && !m_target.IsCompute()));
+
+            if (wait_input)
+                yield return StartCoroutine(WaitForInput());
 
             Disappear();
             m_onDisappearCallback?.Invoke(m_disappearDuration);
 
             yield return new WaitWhile(() =>
                 m_scaleTween != null || m_pause);
+
 
             gameObject.SetActive(false);
         }
@@ -124,12 +133,12 @@ namespace Comic
         {
             RectTransform rect = gameObject.GetComponent<RectTransform>();
             Vector2 self_position = rect.TransformPoint(rect.rect.center);
-            Vector2 direction = (self_position - (Vector2)m_iconRect.GetBubbleAnchor().position).normalized;
+            Vector2 direction = (self_position - (Vector2)m_target.GetBubbleAnchor().position).normalized;
             float distance = Vector2.Distance(
-                m_pinRect.InverseTransformPoint(m_iconRect.GetBubbleAnchor().position),
+                m_pinRect.InverseTransformPoint(m_target.GetBubbleAnchor().position),
                 m_pinRect.InverseTransformPoint(self_position));
 
-            m_pinRect.position = (self_position + (Vector2)m_iconRect.GetBubbleAnchor().position) * .5f;
+            m_pinRect.position = (self_position + (Vector2)m_target.GetBubbleAnchor().position) * .5f;
             m_pinRect.localPosition = new Vector3(m_pinRect.localPosition.x, m_pinRect.localPosition.y, 0f);
             m_pinRect.rotation = Quaternion.LookRotation(m_pinRect.forward, direction);
             m_pinRect.sizeDelta = new Vector2(m_pinRect.rect.width, distance);
@@ -141,7 +150,8 @@ namespace Comic
 
         public void Appear(DialogueAppearIntensity intensity)
         {
-            gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.GetBubbleAnchor().position);
+            if (m_target != null)
+                gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_target.GetBubbleAnchor().position);
 
             if (IsCompute())
             {
@@ -166,7 +176,7 @@ namespace Comic
 
         public void Disappear()
         {
-            gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_iconRect.GetBubbleAnchor().position);
+            gameObject.GetComponent<RectTransform>().SetPivotInWorldSpace(m_target.GetBubbleAnchor().position);
 
             if (IsCompute())
             {

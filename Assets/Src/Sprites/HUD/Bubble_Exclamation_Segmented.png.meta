@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: ed2dcbce0ea967f929731da6e1064c8a
+guid: 79b0f8315f7a077d7828a4cc991ea804
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6003993778780154509
-    second: Bubble_Speech_0
+      213: 2990089718215009469
+    second: Bubble_Exclamation_Segmented_0
+  - first:
+      213: -6685519696528679146
+    second: Bubble_Exclamation_Segmented_1
+  - first:
+      213: -5916234810295820212
+    second: Bubble_Exclamation_Segmented_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_Speech_0
+      name: Bubble_Exclamation_Segmented_0
       rect:
         serializedVersion: 2
-        x: 96
-        y: 284
-        width: 1867
-        height: 1560
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8aa8d10888725350800000000000000
-      internalID: 6003993778780154509
+      spriteID: db4e0cca1ceee7920800000000000000
+      internalID: 2990089718215009469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_Exclamation_Segmented_1
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 2024
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61fd785e1434833a0800000000000000
+      internalID: -6685519696528679146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_Exclamation_Segmented_2
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c40648c19cf45eda0800000000000000
+      internalID: -5916234810295820212
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_Speech_0: 6003993778780154509
+      Bubble_Exclamation_Segmented_0: 2990089718215009469
+      Bubble_Exclamation_Segmented_1: -6685519696528679146
+      Bubble_Exclamation_Segmented_2: -5916234810295820212
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

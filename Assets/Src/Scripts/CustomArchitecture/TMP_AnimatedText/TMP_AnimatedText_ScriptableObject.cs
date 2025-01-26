@@ -32,11 +32,23 @@ namespace CustomArchitecture
 
     public enum DialogueType
     {
-        Bethany_Welcome,
-        BestFriend_Welcome_Response_1,
-        Bethany_Welcome_Response_1,
-        Boss_Welcome_Response_1,
-        BestFriend_Welcome_Response_2,
+        Prequel,
+        Tutorial_ChangePage_Jacob_1,
+        Tutorial_ChangePage_Mom_1,
+        Tutorial_ChangePage_Jacob_2,
+        Tutorial_ChangePage_Mom_2,
+        Tutorial_ChangePage_Jacob_3,
+        Tutorial_ChangePage_Mom_3,
+        Tutorial_ChangePage_Jacob_4,
+        MainStory_UnlockBF_BestFriend_1,
+        MainStory_UnlockBF_Jacob_1,
+        MainStory_UnlockBF_BestFriend_2,
+        MainStory_UnlockBF_Jacob_2,
+        MainStory_UnlockBF_BestFriend_3,
+        MainStory_UnlockBF_Jacob_3,
+        MainStory_UnlockBF_BestFriend_4,
+        MainStory_UnlockBF_Choice_1,
+        MainStory_UnlockBF_Choice_2,
     }
 
     public struct DynamicAnimatedTextData

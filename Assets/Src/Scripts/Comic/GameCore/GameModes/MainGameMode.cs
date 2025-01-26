@@ -64,6 +64,7 @@ namespace Comic
         private Action<PowerType> m_onLockPowerCallback;
         private Action<Chapters> m_onLockChapterCallback;
 
+        public NavigationInput GetNavigationInput() => m_hudNavigationInput;
         public Player GetPlayer() => m_characterManager.GetPlayer();
         public Page GetCurrentPage() => m_pageManager.GetCurrentPage();
         public Case GetCurrentCase() => m_pageManager.GetCurrentCase();
@@ -94,12 +95,14 @@ namespace Comic
             }
 
             m_pauseInput.Init();
-            m_hudNavigationInput.Init();
             m_viewManager.Init();
             m_pageManager.Init();
             m_characterManager.Init();
             m_dialogueManager.Init();
             m_powerManager.Init();
+
+            // have to be last here
+            m_hudNavigationInput.Init();
 
             ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
         }
@@ -299,7 +302,7 @@ namespace Comic
 
             // if (m_pause)
             // {
-            //     m_hudNavigationInput.Update();
+            //     m_hudNavigationInput.OnUpdate();
             // }
 
         }

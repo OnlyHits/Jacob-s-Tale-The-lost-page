@@ -21,6 +21,13 @@ namespace Comic
         Icon_Jacob_4,
     }
     
+    public enum DialogueBubbleType
+    {
+        BubbleType_Speech,
+        BubbleType_Exclamation,
+        BubbleType_Thinking
+    }
+
     public enum DialogueAppearIntensity
     {
         Intensity_Normal,
@@ -30,17 +37,38 @@ namespace Comic
 
     public enum DialogueName
     {
-        DialogueWelcome,
+        Dialogue_Welcome,
+        Dialogue_ChangePage,
+        Dialogue_UnlockBF,
+    }
+
+    [System.Serializable]
+    public class PartOfDialogueChoiceConfig : PartOfDialogueConfig
+    {
+        public DialogueType m_choiceOneDialogue;
+        public DialogueType m_choiceTwoDialogue;
+
+        public override bool IsMultipleChoice()
+        {
+            return true;
+        }
     }
 
     [System.Serializable]
     public class PartOfDialogueConfig
     {
+        public virtual bool IsMultipleChoice()
+        {
+            return false;
+        }
+
         public VoiceType m_speaker;
         public NpcIconType m_iconType;
         public DialogueType m_associatedDialogue;
         public DialogueAppearIntensity m_intensity;
+        public DialogueBubbleType m_bubbleType;
         public bool m_isMainDialogue;
+        public float m_waitAfterDisappear = 0f;        
     }
 
     [CreateAssetMenu(fileName = "JacobDialogueConfig", menuName = "Comic/JacobDialogueConfig")]

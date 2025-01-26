@@ -14,6 +14,7 @@ namespace Comic
         Voice_Bully, // Dylan
         Voice_Boss, // Yvick
         Voice_Jacob,
+        Voice_Mom,
         Voice_None
     }
 

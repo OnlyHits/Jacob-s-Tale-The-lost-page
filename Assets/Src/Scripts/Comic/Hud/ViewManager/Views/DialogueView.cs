@@ -12,20 +12,26 @@ namespace Comic
     public class VoiceViewDatas
     {
         public NpcIcon m_icon;
-        public Bubble m_bubble;
+    }
+
+    public class BubbleGraphicData
+    {
+        public GameObject m_regularBubble;
+        public GameObject m_choiceBubble;
     }
 
     public class DialogueView : AView
     {
-        [SerializeField] protected RectTransform m_mainBubbleAnchor;
+        [SerializeField] protected RectTransform m_bubbleAnchor;
         [SerializeField] protected Transform m_bubbleContainer;
         [SerializeField] protected Transform m_iconContainer;
         [SerializeField] protected Transform m_mainIconContainer;
+        
+        private Dictionary<DialogueBubbleType, BubbleGraphicData> m_bubbles;
 
         private Dictionary<VoiceType, VoiceViewDatas> m_datas;
 
-        private NpcIcon m_mainIcon;
-        private Bubble m_mainBubble;
+        private NpcIcon             m_mainIcon;
 
         [SerializeField] protected Canvas m_canvas;
         private Dictionary<NpcIconType, Sprite> m_iconSprites;
@@ -74,6 +80,30 @@ namespace Comic
                 { NpcIconType.Icon_Jacob_4, Resources.Load<Sprite>("GUI/Icon/Sprites/Face-Jacob-4") },
             };
 
+            m_bubbles = new()
+            {
+                { DialogueBubbleType.BubbleType_Speech, new BubbleGraphicData() },
+                { DialogueBubbleType.BubbleType_Exclamation, new BubbleGraphicData() },
+                { DialogueBubbleType.BubbleType_Thinking, new BubbleGraphicData() },
+            };
+            
+            m_bubbles[DialogueBubbleType.BubbleType_Speech].m_regularBubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble/Bubble_Speech_Regular"), m_bubbleContainer);
+            m_bubbles[DialogueBubbleType.BubbleType_Speech].m_choiceBubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble/Bubble_Speech_Choice"), m_bubbleContainer);
+
+            m_bubbles[DialogueBubbleType.BubbleType_Exclamation].m_regularBubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble/Bubble_Exclamation_Regular"), m_bubbleContainer);
+            m_bubbles[DialogueBubbleType.BubbleType_Exclamation].m_choiceBubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble/Bubble_Exclamation_Choice"), m_bubbleContainer);
+
+            m_bubbles[DialogueBubbleType.BubbleType_Thinking].m_regularBubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble/Bubble_Thinking_Regular"), m_bubbleContainer);
+            m_bubbles[DialogueBubbleType.BubbleType_Thinking].m_choiceBubble = Instantiate(Resources.Load<GameObject>("GUI/Bubble/Bubble_Thinking_Choice"), m_bubbleContainer);
+
+            foreach (var d in m_bubbles)
+            {
+                d.Value.m_regularBubble.SetActive(false);
+                d.Value.m_regularBubble.GetComponent<Bubble>().Init(m_bubbleContainer.GetComponent<RectTransform>());
+                d.Value.m_choiceBubble.SetActive(false);
+                d.Value.m_choiceBubble.GetComponent<Bubble>().Init(m_bubbleContainer.GetComponent<RectTransform>());
+            }
+
             InitMainIcon();
         }
 
@@ -81,20 +111,22 @@ namespace Comic
         {
             GameObject main_icon = Instantiate(Resources.Load<GameObject>("GUI/Icon/IconFrame_Speaker"), m_mainIconContainer);
             m_mainIcon = main_icon.GetComponent<NpcIcon>();
-            GameObject main_bubble = Instantiate(Resources.Load<GameObject>("GUI/IconBubble_Speaker"), m_bubbleContainer);
-            m_mainBubble = main_bubble.GetComponent<Bubble>();
 
             RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
-            m_mainIcon.Init(VoiceType.Voice_None, m_iconSprites[ NpcIconType.Icon_Jacob_0]);
-            m_mainBubble.Init(m_mainIcon, container_rect);
+            m_mainIcon.Init(VoiceType.Voice_None, m_iconSprites[NpcIconType.Icon_Jacob_0]);
+
+            m_mainIcon.SetBubbleAnchor(m_bubbleAnchor);
 
             m_mainIcon.gameObject.SetActive(false);
-            m_mainBubble.gameObject.SetActive(false);
 
-            m_mainIcon.SetBubbleAnchor(m_mainBubbleAnchor);
+            foreach (var d in m_bubbles)
+            {
+                d.Value.m_choiceBubble.GetComponent<Bubble>().SubscribeToAppearCallback(AppearIcon);
+                d.Value.m_choiceBubble.GetComponent<Bubble>().SubscribeToDisappearCallback(DisappearIcon);
 
-            m_mainBubble.SubscribeToAppearCallback(AppearIcon);
-            m_mainBubble.SubscribeToDisappearCallback(DisappearIcon);
+                d.Value.m_regularBubble.GetComponent<Bubble>().SubscribeToAppearCallback(AppearIcon);
+                d.Value.m_regularBubble.GetComponent<Bubble>().SubscribeToDisappearCallback(DisappearIcon);
+            }
         }
 
         public override void Pause(bool pause)
@@ -102,8 +134,15 @@ namespace Comic
             foreach (var d in m_datas)
             {
                 d.Value.m_icon.Pause(pause);
-                d.Value.m_bubble.Pause(pause);
             }
+            
+            foreach (var b in m_bubbles)
+            {
+                b.Value.m_regularBubble.GetComponent<Bubble>().Pause(pause);
+                b.Value.m_choiceBubble.GetComponent<Bubble>().Pause(pause);
+            }
+
+
         }
 
         public void Highlight(VoiceType type)
@@ -132,9 +171,7 @@ namespace Comic
             {
                 if (m_datas[type].m_icon != null)
                     Destroy(m_datas[type].m_icon.gameObject);
-                if (m_datas[type].m_bubble != null)
-                    Destroy(m_datas[type].m_bubble.gameObject);
-                
+
                 m_datas.Remove(type);
             }
         }
@@ -148,17 +185,12 @@ namespace Comic
             }
 
             GameObject icon = Instantiate(Resources.Load<GameObject>("GUI/Icon/IconFrame_Voice"), m_iconContainer);
-            GameObject bubble = Instantiate(Resources.Load<GameObject>("GUI/IconBubble_Voice"), m_bubbleContainer);
- 
-            bubble.SetActive(false);
- 
+  
             m_datas.Add(type, new VoiceViewDatas());
             m_datas[type].m_icon = icon.GetComponent<NpcIcon>();
-            m_datas[type].m_bubble = bubble.GetComponent<Bubble>();
 
             RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
-            m_datas[type].m_icon.Init(type, null);//GetSpriteByType(type));
-            m_datas[type].m_bubble.Init(m_datas[type].m_icon, container_rect);
+            m_datas[type].m_icon.Init(type, m_iconSprites[NpcIconType.Icon_Beloved]);
         }
 
         public void AppearIcon(float intensity)
@@ -172,13 +204,49 @@ namespace Comic
             m_mainIcon.Disappear(intensity);
         }
 
+        private Bubble GetBubbleByType(DialogueBubbleType type, bool choice)
+        {
+            return (choice ? m_bubbles[type].m_choiceBubble.GetComponent<Bubble>() : m_bubbles[type].m_regularBubble.GetComponent<Bubble>());
+        }
+
+        private IEnumerator SetupAndStartDialogue(PartOfDialogueConfig config, bool target_main)
+        {
+            if (config.IsMultipleChoice())
+            {
+                GetBubbleByType(config.m_bubbleType, true).SetupDialogue(config.m_associatedDialogue);
+                ((BubbleChoice)GetBubbleByType(config.m_bubbleType, true)).SetupChoiceOne(((PartOfDialogueChoiceConfig)config).m_choiceOneDialogue);
+                ((BubbleChoice)GetBubbleByType(config.m_bubbleType, true)).SetupChoiceTwo(((PartOfDialogueChoiceConfig)config).m_choiceTwoDialogue);
+        
+                if (target_main)
+                    GetBubbleByType(config.m_bubbleType, true).SetTarget(m_mainIcon);
+                else
+                    GetBubbleByType(config.m_bubbleType, true).SetTarget(m_datas[config.m_speaker].m_icon);
+        
+                yield return StartCoroutine(GetBubbleByType(config.m_bubbleType, true).DialogueCoroutine(config.m_intensity, true));
+            }
+            else
+            {
+                GetBubbleByType(config.m_bubbleType, false).SetupDialogue(config.m_associatedDialogue);
+
+                if (target_main)
+                    GetBubbleByType(config.m_bubbleType, false).SetTarget(m_mainIcon);
+                else
+                    GetBubbleByType(config.m_bubbleType, false).SetTarget(m_datas[config.m_speaker].m_icon);
+
+                yield return StartCoroutine(GetBubbleByType(config.m_bubbleType, false).DialogueCoroutine(config.m_intensity, false));
+            }
+        }
+
         public IEnumerator TriggerMainDialogue(PartOfDialogueConfig config)
         {
             m_mainIcon.SetIconSprite(m_iconSprites[config.m_iconType]);
 
-            m_mainBubble.SetupDialogue(config.m_associatedDialogue);
+            if (config.IsMultipleChoice())
+                GetBubbleByType(config.m_bubbleType, true).gameObject.SetActive(true);
+            else
+                GetBubbleByType(config.m_bubbleType, false).gameObject.SetActive(true);
 
-            yield return StartCoroutine(m_mainBubble.DialogueCoroutine(config.m_intensity));
+            yield return StartCoroutine(SetupAndStartDialogue(config, true));
         }
 
         public IEnumerator TriggerVoiceDialogue(PartOfDialogueConfig config)
@@ -189,11 +257,14 @@ namespace Comic
             }
             else
             {
+                if (config.IsMultipleChoice())
+                    GetBubbleByType(config.m_bubbleType, true).gameObject.SetActive(true);
+                else
+                    GetBubbleByType(config.m_bubbleType, false).gameObject.SetActive(true);
+
                 m_datas[config.m_speaker].m_icon.SetIconSprite(m_iconSprites[config.m_iconType]);
-
-                m_datas[config.m_speaker].m_bubble.SetupDialogue(config.m_associatedDialogue);
-
-                yield return StartCoroutine(m_datas[config.m_speaker].m_bubble.DialogueCoroutine(config.m_intensity));
+    
+                yield return StartCoroutine(SetupAndStartDialogue(config, false));
             }
         }
     }

@@ -114,7 +114,7 @@ namespace Comic
 
         private void Start()
         {
-            StartDialogue(DialogueName.DialogueWelcome);
+            StartDialogue(DialogueName.Dialogue_UnlockBF);
         }
 
         public void StartDialogue(DialogueName type)
@@ -128,7 +128,7 @@ namespace Comic
             foreach (var t in m_dialogueConfig.GetConfig()[type])
             {
                 // check that view has unlocked the icon & bubble if not main icon
-                if (!ProgressionUtils.HasUnlockVoice(t.m_speaker))
+                if (!t.m_isMainDialogue && !ProgressionUtils.HasUnlockVoice(t.m_speaker))
                 {
                     Debug.LogWarning("You need to unlock " + t.m_speaker.ToString() + " before starting this dialogue");
                     return;
@@ -152,6 +152,8 @@ namespace Comic
                 {
                    yield return StartCoroutine(m_dialogueView.TriggerVoiceDialogue(part));
                 }
+
+                yield return new WaitForSeconds(part.m_waitAfterDisappear);
             }
         }
 

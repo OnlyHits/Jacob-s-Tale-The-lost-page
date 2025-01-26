@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: afd74e2acd25e69848b82ea6652dda1e
+guid: fa81cb944e315fe41b98d86cdb4d264d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4268060969350128035
-    second: Bubble_Thinking_0
+      213: -8130918394400597561
+    second: Bubble_Speech_Segmented_0
   - first:
-      213: -8943911125749345284
-    second: Bubble_Thinking_1
+      213: 4184481568797172710
+    second: Bubble_Speech_Segmented_1
   - first:
-      213: 7535628762516817005
-    second: Bubble_Thinking_2
+      213: 8191562156062313166
+    second: Bubble_Speech_Segmented_2
+  - first:
+      213: 4404275900633747872
+    second: Bubble_Speech_Segmented_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,13 +109,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_Thinking_0
+      name: Bubble_Speech_Segmented_0
       rect:
         serializedVersion: 2
-        x: 250
+        x: 110
+        y: 565
+        width: 1805
+        height: 1452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c9101cbccc292f80800000000000000
+      internalID: -8130918394400597561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bubble_Speech_Segmented_1
+      rect:
+        serializedVersion: 2
+        x: 1489
         y: 454
-        width: 1790
-        height: 1537
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +146,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a1e2d5a6d23b3b30800000000000000
-      internalID: 4268060969350128035
+      spriteID: 6e3235501d3421a30800000000000000
+      internalID: 4184481568797172710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubble_Thinking_1
+      name: Bubble_Speech_Segmented_2
       rect:
         serializedVersion: 2
-        x: 336
-        y: 389
-        width: 305
-        height: 273
+        x: 1679
+        y: 396
+        width: 11
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf3db0fc738d0e380800000000000000
-      internalID: -8943911125749345284
+      spriteID: eca80a351664ea170800000000000000
+      internalID: 8191562156062313166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubble_Thinking_2
+      name: Bubble_Speech_Segmented_3
       rect:
         serializedVersion: 2
-        x: 161
-        y: 281
-        width: 165
-        height: 168
+        x: 1462
+        y: 363
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d64080d1f6ee39860800000000000000
-      internalID: 7535628762516817005
+      spriteID: 0a19616c8912f1d30800000000000000
+      internalID: 4404275900633747872
       vertices: []
       indices: 
       edges: []
@@ -185,9 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_Thinking_0: 4268060969350128035
-      Bubble_Thinking_1: -8943911125749345284
-      Bubble_Thinking_2: 7535628762516817005
+      Bubble_Speech_Segmented_0: -8130918394400597561
+      Bubble_Speech_Segmented_1: 4184481568797172710
+      Bubble_Speech_Segmented_2: 8191562156062313166
+      Bubble_Speech_Segmented_3: 4404275900633747872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

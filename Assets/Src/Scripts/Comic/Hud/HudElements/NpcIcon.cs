@@ -51,6 +51,7 @@ namespace Comic
                 m_scaleTween = null;
             }
 
+            gameObject.SetActive(true);
             transform.GetComponent<RectTransform>().localScale = Vector3.zero;
 
             m_scaleTween = transform.GetComponent<RectTransform>()
@@ -61,6 +62,8 @@ namespace Comic
 
             if (m_pause)
                 m_scaleTween.Pause();
+            else
+                m_scaleTween.Play();
         }
 
         public void Disappear(float duration)
@@ -79,6 +82,9 @@ namespace Comic
 
             if (m_pause)
                 m_scaleTween.Pause();
+            else
+                m_scaleTween.Play();
+
         }
 
         public bool IsCompute()
