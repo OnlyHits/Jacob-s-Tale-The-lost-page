@@ -1,0 +1,178 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[Comic.Chapters, Assembly-CSharp],[Comic.ChapterConfig, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.EnumEqualityComparer`1[[Comic.Chapters, Assembly-CSharp]], mscorlib",
+        "$rlength": 0,
+        "$rcontent": [
+        ]
+    },
+    "$rlength": 5,
+    "$rcontent": [
+        {
+            "$k": 1,
+            "$v": {
+                "$id": 2,
+                "$type": "2|Comic.ChapterConfig, Assembly-CSharp",
+                "m_voiceType": 0,
+                "m_powerType": 0,
+                "m_pages": {
+                    "$id": 3,
+                    "$type": "3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib",
+                    "$rlength": 3,
+                    "$rcontent": [
+                        3,
+                        4,
+                        5
+                    ]
+                },
+                "m_npcSpawnByPage": {
+                    "$id": 4,
+                    "$type": "4|System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32, mscorlib]], mscorlib",
+                    "comparer": {
+                        "$id": 5,
+                        "$type": "5|System.Collections.Generic.EnumEqualityComparer`1[[Comic.VoiceType, Assembly-CSharp]], mscorlib",
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$k": 2,
+                            "$v": 4
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 2,
+            "$v": {
+                "$id": 6,
+                "$type": 2,
+                "m_voiceType": 2,
+                "m_powerType": 1,
+                "m_pages": {
+                    "$id": 7,
+                    "$type": 3,
+                    "$rlength": 3,
+                    "$rcontent": [
+                        6,
+                        7,
+                        8
+                    ]
+                },
+                "m_npcSpawnByPage": {
+                    "$id": 8,
+                    "$type": 4,
+                    "comparer": $iref:5,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$k": 1,
+                            "$v": 7
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 3,
+            "$v": {
+                "$id": 9,
+                "$type": 2,
+                "m_voiceType": 1,
+                "m_powerType": 2,
+                "m_pages": {
+                    "$id": 10,
+                    "$type": 3,
+                    "$rlength": 3,
+                    "$rcontent": [
+                        9,
+                        10,
+                        11
+                    ]
+                },
+                "m_npcSpawnByPage": {
+                    "$id": 11,
+                    "$type": 4,
+                    "comparer": $iref:5,
+                    "$rlength": 1,
+                    "$rcontent": [
+                        {
+                            "$k": 3,
+                            "$v": 10
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 4,
+            "$v": {
+                "$id": 12,
+                "$type": 2,
+                "m_voiceType": 3,
+                "m_powerType": 3,
+                "m_pages": {
+                    "$id": 13,
+                    "$type": 3,
+                    "$rlength": 0,
+                    "$rcontent": [
+                    ]
+                },
+                "m_npcSpawnByPage": {
+                    "$id": 14,
+                    "$type": 4,
+                    "comparer": {
+                        "$id": 15,
+                        "$type": 5,
+                        "$rlength": 0,
+                        "$rcontent": [
+                        ]
+                    },
+                    "$rlength": 0,
+                    "$rcontent": [
+                    ]
+                }
+            }
+        },
+        {
+            "$k": 0,
+            "$v": {
+                "$id": 16,
+                "$type": 2,
+                "m_voiceType": 6,
+                "m_powerType": 4,
+                "m_pages": {
+                    "$id": 17,
+                    "$type": 3,
+                    "$rlength": 3,
+                    "$rcontent": [
+                        0,
+                        1,
+                        2
+                    ]
+                },
+                "m_npcSpawnByPage": {
+                    "$id": 18,
+                    "$type": 4,
+                    "comparer": $iref:5,
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$k": 5,
+                            "$v": 0
+                        },
+                        {
+                            "$k": 0,
+                            "$v": 1
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

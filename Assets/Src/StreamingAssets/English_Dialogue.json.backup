@@ -1,0 +1,132 @@
+{
+    "$id": 0,
+    "$type": "0|System.Collections.Generic.Dictionary`2[[CustomArchitecture.DialogueType, Assembly-CSharp],[CustomArchitecture.DialogueConfig, Assembly-CSharp]], mscorlib",
+    "comparer": {
+        "$id": 1,
+        "$type": "1|System.Collections.Generic.EnumEqualityComparer`1[[CustomArchitecture.DialogueType, Assembly-CSharp]], mscorlib",
+        "$rlength": 0,
+        "$rcontent": [
+        ]
+    },
+    "$rlength": 1,
+    "$rcontent": [
+        {
+            "$k": 0,
+            "$v": {
+                "$type": "2|CustomArchitecture.DialogueConfig, Assembly-CSharp",
+                "m_dialogueSentences": {
+                    "$id": 2,
+                    "$type": "3|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp",
+                    "$rlength": 2,
+                    "$rcontent": [
+                        {
+                            "$type": "4|CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp",
+                            "m_animatedText": {
+                                "$id": 3,
+                                "$type": "5|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp",
+                                "$rlength": 2,
+                                "$rcontent": [
+                                    {
+                                        "$type": "6|CustomArchitecture.AnimatedTextConfig, Assembly-CSharp",
+                                        "m_text": "Hello my name is ",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": "7|UnityEngine.Color32, UnityEngine.CoreModule",
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    },
+                                    {
+                                        "$type": 6,
+                                        "m_text": " Bethany",
+                                        "m_textModifier": 3,
+                                        "m_colorModifier": 2,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            172,
+                                            47,
+                                            183,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            61,
+                                            23,
+                                            212,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "$type": 4,
+                            "m_animatedText": {
+                                "$id": 4,
+                                "$type": 5,
+                                "$rlength": 2,
+                                "$rcontent": [
+                                    {
+                                        "$type": 6,
+                                        "m_text": "And im going to show you",
+                                        "m_textModifier": 0,
+                                        "m_colorModifier": 0,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            84,
+                                            82,
+                                            82,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            0
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    },
+                                    {
+                                        "$type": 6,
+                                        "m_text": "The Jacbo's tale",
+                                        "m_textModifier": 2,
+                                        "m_colorModifier": 2,
+                                        "m_solidColor": {
+                                            "$type": 7,
+                                            179,
+                                            179,
+                                            179,
+                                            255
+                                        },
+                                        "m_gradientColor": {
+                                            "$type": 7,
+                                            0,
+                                            0,
+                                            0,
+                                            255
+                                        },
+                                        "m_colorSpeedRandomness": 0
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "m_handleByInput": false
+            }
+        }
+    ]
+}
