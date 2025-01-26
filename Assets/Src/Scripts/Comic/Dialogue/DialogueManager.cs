@@ -134,6 +134,7 @@ namespace Comic
 
         private void Start()
         {
+            StartDialogue(DialogueName.Dialogue_UnlockBoss);
         }
 
         public bool StartDialogue(DialogueName type)

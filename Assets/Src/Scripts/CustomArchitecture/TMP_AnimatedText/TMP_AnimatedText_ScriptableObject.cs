@@ -94,6 +94,7 @@ namespace CustomArchitecture
         MainStory_UnlockBoss_Boss_2,
         MainStory_UnlockBoss_Bully_1,
         MainStory_UnlockBoss_BL_1,
+        MainStory_UnlockBoss_Boss_3,
     }
 
     public struct DynamicAnimatedTextData

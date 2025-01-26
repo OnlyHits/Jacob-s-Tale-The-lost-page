@@ -119,6 +119,8 @@ namespace Comic
 
         public void OnEndMainDialogue(DialogueName type)
         {
+            GetPlayer().Pause(false);
+
             if (type == DialogueName.Dialogue_UnlockBF)
                 UnlockChapter(Chapters.The_First_Chapter, true, true);
             else if (type == DialogueName.Dialogue_UnlockBully)
@@ -126,9 +128,8 @@ namespace Comic
             else if (type == DialogueName.Dialogue_UnlockBL)
                 UnlockChapter(Chapters.The_Third_Chapter, true, true);
             else if (type == DialogueName.Dialogue_UnlockBoss)
-                UnlockChapter(Chapters.The_Fourth_Chapter, true, true);
-
-            GetPlayer().Pause(false);
+                PlayEndGame();
+//                UnlockChapter(Chapters.The_Fourth_Chapter, true, true);
         }
 
         public void TriggerDialogue(DialogueName type)
