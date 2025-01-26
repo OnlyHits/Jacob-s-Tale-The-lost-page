@@ -20,9 +20,11 @@
                 "m_pages": {
                     "$id": 3,
                     "$type": "3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib",
-                    "$rlength": 1,
+                    "$rlength": 3,
                     "$rcontent": [
-                        1
+                        3,
+                        4,
+                        5
                     ]
                 },
                 "m_npcSpawnByPage": {
@@ -50,14 +52,16 @@
             "$v": {
                 "$id": 6,
                 "$type": 2,
-                "m_voiceType": 1,
-                "m_powerType": 2,
+                "m_voiceType": 2,
+                "m_powerType": 1,
                 "m_pages": {
                     "$id": 7,
                     "$type": 3,
-                    "$rlength": 1,
+                    "$rlength": 3,
                     "$rcontent": [
-                        2
+                        6,
+                        7,
+                        8
                     ]
                 },
                 "m_npcSpawnByPage": {
@@ -79,14 +83,16 @@
             "$v": {
                 "$id": 9,
                 "$type": 2,
-                "m_voiceType": 2,
-                "m_powerType": 1,
+                "m_voiceType": 1,
+                "m_powerType": 2,
                 "m_pages": {
                     "$id": 10,
                     "$type": 3,
-                    "$rlength": 1,
+                    "$rlength": 3,
                     "$rcontent": [
-                        3
+                        9,
+                        10,
+                        11
                     ]
                 },
                 "m_npcSpawnByPage": {
@@ -139,22 +145,28 @@
             "$v": {
                 "$id": 16,
                 "$type": 2,
-                "m_voiceType": 4,
+                "m_voiceType": 6,
                 "m_powerType": 4,
                 "m_pages": {
                     "$id": 17,
                     "$type": 3,
-                    "$rlength": 1,
+                    "$rlength": 3,
                     "$rcontent": [
-                        0
+                        0,
+                        1,
+                        2
                     ]
                 },
                 "m_npcSpawnByPage": {
                     "$id": 18,
                     "$type": 4,
                     "comparer": $iref:5,
-                    "$rlength": 1,
+                    "$rlength": 2,
                     "$rcontent": [
+                        {
+                            "$k": 5,
+                            "$v": 1
+                        },
                         {
                             "$k": 0,
                             "$v": 0

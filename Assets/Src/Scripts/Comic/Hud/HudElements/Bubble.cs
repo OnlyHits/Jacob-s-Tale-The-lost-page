@@ -106,10 +106,12 @@ namespace Comic
             yield return null;
         }
 
-        public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity, bool wait_input)
+        public IEnumerator DialogueCoroutine(DialogueAppearIntensity intensity, bool wait_input, bool target_main)
         {
             Appear(intensity);
-            m_onAppearCallback?.Invoke(m_durationByIntensity[intensity]);
+
+            if (target_main)
+                m_onAppearCallback?.Invoke(m_durationByIntensity[intensity]);
 
             yield return new WaitUntil(() => IsDialogueComplete()
                 && (m_target != null && !m_target.IsCompute()));
@@ -118,11 +120,12 @@ namespace Comic
                 yield return StartCoroutine(WaitForInput());
 
             Disappear();
-            m_onDisappearCallback?.Invoke(m_disappearDuration);
+
+            if (target_main)
+                m_onDisappearCallback?.Invoke(m_disappearDuration);
 
             yield return new WaitWhile(() =>
                 m_scaleTween != null || m_pause);
-
 
             gameObject.SetActive(false);
         }

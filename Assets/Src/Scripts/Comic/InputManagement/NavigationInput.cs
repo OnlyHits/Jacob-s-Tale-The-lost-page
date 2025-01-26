@@ -70,44 +70,5 @@ namespace Comic
         {
             base.OnUpdate(elapsed_time);
         }
-
-        private void OnNavigate(InputType input, Vector2 v)
-        {
-            if (input == InputType.PRESSED)
-            {
-            }
-            else if (input == InputType.COMPUTED)
-            {
-            }
-            else if (input == InputType.RELEASED)
-            {
-            }
-        }
-
-        private void OnValidation(InputType input, bool b)
-        {
-            if (input == InputType.PRESSED)
-            {
-            }
-            else if (input == InputType.COMPUTED)
-            {
-            }
-            else if (input == InputType.RELEASED)
-            {
-            }
-        }
-
-        private void OnCancel(InputType input, bool b)
-        {
-            if (input == InputType.PRESSED)
-            {
-            }
-            else if (input == InputType.COMPUTED)
-            {
-            }
-            else if (input == InputType.RELEASED)
-            {
-            }
-        }
-    }
+   }
 }

@@ -41,6 +41,8 @@ namespace Comic
         public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function);
         public void SubscribeToAfterCloneCanvasCallback(Action<bool> function);
 
+        public void TriggerDialogue(DialogueName type);
+
         public void ClearSaveDebug();
     }
 
@@ -108,6 +110,27 @@ namespace Comic
             m_hudNavigationInput.Init();
 
             ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
+            m_dialogueManager.SubscribeToEndDialogue(OnEndMainDialogue);
+        }
+
+        public void OnEndMainDialogue(DialogueName type)
+        {
+            if (type == DialogueName.Dialogue_UnlockBF)
+                UnlockChapter(Chapters.The_First_Chapter, true, true);
+            else if (type == DialogueName.Dialogue_UnlockBully)
+                UnlockChapter(Chapters.The_Second_Chapter, true, true);
+            else if (type == DialogueName.Dialogue_UnlockBL)
+                UnlockChapter(Chapters.The_Third_Chapter, true, true);
+            else if (type == DialogueName.Dialogue_UnlockBoss)
+                UnlockChapter(Chapters.The_Fourth_Chapter, true, true);
+
+            GetPlayer().Pause(false);
+        }
+
+        public void TriggerDialogue(DialogueName type)
+        {
+            GetPlayer().Pause(true);
+            m_dialogueManager.StartDialogue(type);
         }
 
         #region Progression

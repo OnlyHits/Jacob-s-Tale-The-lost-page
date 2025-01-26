@@ -190,7 +190,15 @@ namespace Comic
             m_datas[type].m_icon = icon.GetComponent<NpcIcon>();
 
             RectTransform container_rect = m_bubbleContainer.GetComponent<RectTransform>();
-            m_datas[type].m_icon.Init(type, m_iconSprites[NpcIconType.Icon_Beloved]);
+
+            if (type == VoiceType.Voice_BestFriend)
+                m_datas[type].m_icon.Init(type, m_iconSprites[NpcIconType.Icon_BestFriend]);
+            else if (type == VoiceType.Voice_Beloved)
+                m_datas[type].m_icon.Init(type, m_iconSprites[NpcIconType.Icon_Beloved]);
+            else if (type == VoiceType.Voice_Bully)
+                m_datas[type].m_icon.Init(type, m_iconSprites[NpcIconType.Icon_Bully]);
+            else if (type == VoiceType.Voice_Boss)
+                m_datas[type].m_icon.Init(type, m_iconSprites[NpcIconType.Icon_Boss_1]);
         }
 
         public void AppearIcon(float intensity)
@@ -222,7 +230,7 @@ namespace Comic
                 else
                     GetBubbleByType(config.m_bubbleType, true).SetTarget(m_datas[config.m_speaker].m_icon);
         
-                yield return StartCoroutine(GetBubbleByType(config.m_bubbleType, true).DialogueCoroutine(config.m_intensity, true));
+                yield return StartCoroutine(GetBubbleByType(config.m_bubbleType, true).DialogueCoroutine(config.m_intensity, true, target_main));
             }
             else
             {
@@ -233,7 +241,7 @@ namespace Comic
                 else
                     GetBubbleByType(config.m_bubbleType, false).SetTarget(m_datas[config.m_speaker].m_icon);
 
-                yield return StartCoroutine(GetBubbleByType(config.m_bubbleType, false).DialogueCoroutine(config.m_intensity, false));
+                yield return StartCoroutine(GetBubbleByType(config.m_bubbleType, false).DialogueCoroutine(config.m_intensity, false, target_main));
             }
         }
 
