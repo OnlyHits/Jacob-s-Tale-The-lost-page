@@ -15,7 +15,15 @@ namespace Comic
         private JacobDialogueConfig m_dialogueConfig;
         private Coroutine m_dialogueCoroutine;
         private Action<PowerType> m_changePowerCallback;
+        private Action<DialogueName> m_onEndDialogueCallback;
+        private Dictionary<DialogueName, bool> m_mainStory;
         private int m_powerIndex = 0;
+
+        public void SubscribeToEndDialogue(Action<DialogueName> function)
+        {
+            m_onEndDialogueCallback -= function;
+            m_onEndDialogueCallback += function;
+        }
 
         public void Init()
         {
@@ -27,6 +35,15 @@ namespace Comic
 
             m_dialogueConfig = SerializedScriptableObject.CreateInstance<JacobDialogueConfig>();
             m_dialogueCoroutine = null;
+
+            m_mainStory = new()
+            {
+                { DialogueName.Dialogue_Welcome, false},
+                { DialogueName.Dialogue_ChangePage, false},
+                { DialogueName.Dialogue_UnlockBF, false},
+                { DialogueName.Dialogue_UnlockBully, false},
+                { DialogueName.Dialogue_UnlockBL, false},
+            };
 
             InitDialogueView();
         }
@@ -117,11 +134,16 @@ namespace Comic
 
         private void Start()
         {
-            //StartDialogue(DialogueName.Dialogue_UnlockBL);
         }
 
         public void StartDialogue(DialogueName type)
         {
+            if (m_mainStory.ContainsKey(type) && m_mainStory[type])
+            {
+                Debug.LogWarning("Already trigger this dialogue");
+                return;
+            }
+
             if (!m_dialogueConfig.GetConfig().ContainsKey(type))
             {
                 Debug.LogWarning("Doesnt find dialogue");
@@ -138,13 +160,14 @@ namespace Comic
                 }
             }
 
+            if (m_mainStory.ContainsKey(type))
+                m_mainStory[type] = true;
+
             m_dialogueCoroutine = StartCoroutine(DialogueCoroutine(type));
         }
 
         public IEnumerator DialogueCoroutine(DialogueName type)
         {
-            yield return new WaitForSeconds(2f);
-
             foreach (var part in m_dialogueConfig.GetConfig()[type])
             {
                 if (part.m_isMainDialogue)
@@ -158,6 +181,8 @@ namespace Comic
 
                 yield return new WaitForSeconds(part.m_waitAfterDisappear);
             }
+
+            m_onEndDialogueCallback?.Invoke(type);
         }
 
         #endregion

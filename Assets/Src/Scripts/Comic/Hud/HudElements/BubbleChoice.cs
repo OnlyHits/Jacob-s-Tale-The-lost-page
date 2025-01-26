@@ -15,9 +15,9 @@ namespace Comic
         [SerializeField] private TMP_AnimatedText m_choiceTwoDialogue;
         [SerializeField] private GameObject m_cursorOne;
         [SerializeField] private GameObject m_cursorTwo;
-        bool                                m_accept = true;
 
-        private bool m_validate = false;
+        private bool                        m_accept = true;
+        private bool                        m_validate = false;
 
         public override void Init(RectTransform container_rect)
         {
@@ -41,6 +41,7 @@ namespace Comic
             m_cursorOne.SetActive(true);
             m_cursorTwo.SetActive(false);
 
+            m_validate = false;
             m_accept = true;
         }
 
@@ -55,7 +56,7 @@ namespace Comic
 
         protected override IEnumerator WaitForInput()
         {
-            yield return new WaitWhile(() => !m_validate);
+            yield return new WaitUntil(() => m_validate);
         }
 
         private void OnNavigate(InputType input, Vector2 v)
@@ -85,6 +86,7 @@ namespace Comic
             }
             else if (input == InputType.COMPUTED)
             {
+                m_validate = true;
             }
             else if (input == InputType.RELEASED)
             {

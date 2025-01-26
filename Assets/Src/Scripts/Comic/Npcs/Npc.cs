@@ -8,10 +8,22 @@ namespace Comic
     {
         [Header("Others")]
         [SerializeField] private Transform m_lookTarget;
+        [SerializeField] private DialogueName m_dialogueType;
 
         protected override void Awake()
         {
             base.Awake();
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            //  Access the GameObject we collided with
+            GameObject otherObject = collision.gameObject;
+
+            if (otherObject.GetComponent<Player>() != null)
+            {
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().TriggerDialogue(m_dialogueType);
+            }
         }
 
         public override void Init()

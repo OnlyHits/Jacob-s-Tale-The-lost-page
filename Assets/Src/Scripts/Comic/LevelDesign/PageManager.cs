@@ -111,6 +111,9 @@ namespace Comic
             }
             foreach (int index in pageIndexes)
             {
+                if (index >= m_pageList.Count)
+                    continue;
+
                 var page = m_pageList[index];
                 m_unlockedPageList.Remove(page);
 
@@ -121,6 +124,7 @@ namespace Comic
                 }
             }
         }
+
         private void UnlockPages(List<int> pageIndexes)
         {
             if (pageIndexes.IsNullOrEmpty())
@@ -130,6 +134,9 @@ namespace Comic
             }
             foreach (int index in pageIndexes)
             {
+                if (index >= m_pageList.Count)
+                    continue;
+
                 var page = m_pageList[index];
                 m_unlockedPageList.Add(page);
             }

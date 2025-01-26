@@ -61,10 +61,16 @@ MonoBehaviour:
       Data: 3|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 1
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 5
     - Name: 
       Entry: 13
       Data: 
@@ -126,19 +132,25 @@ MonoBehaviour:
       Data: 6|Comic.ChapterConfig, Assembly-CSharp
     - Name: m_voiceType
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: m_powerType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: m_pages
       Entry: 7
       Data: 7|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 6
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 3
+      Data: 8
     - Name: 
       Entry: 13
       Data: 
@@ -190,19 +202,25 @@ MonoBehaviour:
       Data: 9|Comic.ChapterConfig, Assembly-CSharp
     - Name: m_voiceType
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: m_powerType
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: m_pages
       Entry: 7
       Data: 10|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 9
+    - Name: 
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 3
+      Data: 11
     - Name: 
       Entry: 13
       Data: 
@@ -316,7 +334,7 @@ MonoBehaviour:
       Data: 16|Comic.ChapterConfig, Assembly-CSharp
     - Name: m_voiceType
       Entry: 3
-      Data: 4
+      Data: 6
     - Name: m_powerType
       Entry: 3
       Data: 4
@@ -325,10 +343,16 @@ MonoBehaviour:
       Data: 17|System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 3
       Data: 0
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 13
       Data: 
@@ -350,10 +374,10 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: $v
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
