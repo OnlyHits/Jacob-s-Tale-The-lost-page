@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 namespace CustomArchitecture
 {
@@ -10,8 +11,11 @@ namespace CustomArchitecture
         private AGameMode m_currentGameMode = null;
         private AGameMode m_startingGameMode = null;
         private Settings m_settings = null;
-
         public Settings GetSettings() => m_settings;
+
+        [SerializeField] private InputActionAsset m_inputActionAsset;
+        public InputActionAsset GetInputAsset() => m_inputActionAsset;
+
 
         // Prevent direct instantiation
         protected AGameCore() { }

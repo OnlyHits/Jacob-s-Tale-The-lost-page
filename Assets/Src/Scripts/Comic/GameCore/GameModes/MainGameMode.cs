@@ -4,6 +4,7 @@ using CustomArchitecture;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 namespace Comic
 {
@@ -63,6 +64,8 @@ namespace Comic
         private Action<VoiceType> m_onLockVoiceCallback;
         private Action<PowerType> m_onLockPowerCallback;
         private Action<Chapters> m_onLockChapterCallback;
+
+        public InputActionAsset GetInputAsset() => ComicGameCore.Instance.GetInputAsset();
 
         public NavigationInput GetNavigationInput() => m_hudNavigationInput;
         public Player GetPlayer() => m_characterManager.GetPlayer();
