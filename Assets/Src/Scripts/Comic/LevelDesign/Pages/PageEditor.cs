@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using Unity.VisualScripting;
@@ -73,4 +73,4 @@ namespace Comic
 
     }
 }
-#endif
+//#endif

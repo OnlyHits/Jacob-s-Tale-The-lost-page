@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+//#if UNITY_EDITOR
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -64,4 +64,4 @@ namespace Comic
         }
     }
 }
-#endif
+//#endif
