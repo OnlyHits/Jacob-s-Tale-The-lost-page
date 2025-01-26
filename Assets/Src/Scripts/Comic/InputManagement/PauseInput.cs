@@ -8,7 +8,7 @@ namespace Comic
 {
     public class PauseInput : AInputManager
     {
-        private bool            m_extPause = false;
+        private bool m_extPause = false;
 
         #region ACTIONS
         private InputAction m_pauseAction;

@@ -1,11 +1,10 @@
-#if UNITY_EDITOR
-
 using System.Collections.Generic;
 using Comic;
 using UnityEngine;
 
 public class Shortcuts : MonoBehaviour
 {
+#if UNITY_EDITOR
     public bool unlock = true;
     public Dictionary<KeyCode, Chapters> keyByChapters = new Dictionary<KeyCode, Chapters>()
     {
@@ -44,6 +43,6 @@ public class Shortcuts : MonoBehaviour
                 ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(chapterComputed);
         }
     }
+#endif
 }
 
-#endif

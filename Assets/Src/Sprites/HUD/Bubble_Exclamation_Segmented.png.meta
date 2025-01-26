@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bubble_Exclamation_Segmented_0: 2990089718215009469
+      Bubble_Exclamation_Segmented_1: -6685519696528679146
+      Bubble_Exclamation_Segmented_2: -5916234810295820212
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

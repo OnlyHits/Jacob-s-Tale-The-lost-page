@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 01895b810e0d8e7748115b4f58d8dea9
+guid: e0d0550a2b42feff19a1dde691eeca8a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2555231788398937062
-    second: Bubble_Thinking_Segmented_0
+      213: 1293105833330889045
+    second: icon-512x512_0
+  - first:
+      213: -1953364035154665443
+    second: icon-512x512_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_Thinking_Segmented_0
+      name: icon-512x512_0
       rect:
         serializedVersion: 2
-        x: 250
-        y: 454
-        width: 1790
-        height: 1537
+        x: 87
+        y: 81
+        width: 362
+        height: 375
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +118,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e30e4af5c1067320800000000000000
-      internalID: 2555231788398937062
+      spriteID: 5515cac77e802f110800000000000000
+      internalID: 1293105833330889045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: icon-512x512_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 271
+        width: 35
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d10259762c144e4e0800000000000000
+      internalID: -1953364035154665443
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_Thinking_Segmented_0: 2555231788398937062
+      icon-512x512_0: 1293105833330889045
+      icon-512x512_1: -1953364035154665443
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
