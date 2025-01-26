@@ -159,10 +159,10 @@ namespace Comic
                     return false;
                 }
             }
-            
+
             if (m_mainStory.ContainsKey(type))
                 m_mainStory[type] = true;
- 
+
             m_dialogueCoroutine = StartCoroutine(DialogueCoroutine(type));
 
             return true;

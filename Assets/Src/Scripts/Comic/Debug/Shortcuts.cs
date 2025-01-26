@@ -17,6 +17,16 @@ public class Shortcuts : MonoBehaviour
 
     private void Update()
     {
+        CheckInputSave();
+
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            ComicGameCore.Instance.GetGameMode<MainGameMode>().PlayEndGame();
+        }
+    }
+
+    private void CheckInputSave()
+    {
         bool hasComputeChaptersKey = false;
         Chapters chapterComputed = Chapters.Chapter_None;
 

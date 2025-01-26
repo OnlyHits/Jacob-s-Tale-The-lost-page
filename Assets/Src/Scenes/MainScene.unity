@@ -1534,6 +1534,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27c4c67b1673320f9b06fb64a4f523e0, type: 3}
+--- !u!114 &2363564913087073757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7372284716613228893, guid: 27c4c67b1673320f9b06fb64a4f523e0, type: 3}
+  m_PrefabInstance: {fileID: 2363564913087073756}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561050d2e363c3430b171720581ce429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3882208017803578542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1759,6 +1770,10 @@ PrefabInstance:
       propertyPath: m_canvas
       value: 
       objectReference: {fileID: 1928044578}
+    - target: {fileID: 5761145201504397644, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
+      propertyPath: m_pageVisual
+      value: 
+      objectReference: {fileID: 2363564913087073757}
     - target: {fileID: 5761145201504397644, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
       propertyPath: 'm_pageList.Array.data[0]'
       value: 
