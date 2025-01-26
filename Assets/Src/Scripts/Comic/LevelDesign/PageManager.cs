@@ -24,7 +24,10 @@ namespace Comic
 
             SwitchPageByIndex(m_currentPageIndex);
 
+#if UNITY_EDITOR
+#else
             OnStartGame();
+#endif
         }
 
         public void Init()
@@ -123,6 +126,7 @@ namespace Comic
             if (pageIndexes.IsNullOrEmpty())
             {
                 Debug.LogError("Could not get pages indexes because the list is null");
+                return;
             }
             foreach (int index in pageIndexes)
             {
