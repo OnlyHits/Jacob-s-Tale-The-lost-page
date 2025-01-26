@@ -15,16 +15,18 @@
             "$v": {
                 "$id": 2,
                 "$type": "2|System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]], mscorlib",
-                "$rlength": 5,
+                "$rlength": 3,
                 "$rcontent": [
                     {
                         "$id": 3,
                         "$type": "3|Comic.PartOfDialogueConfig, Assembly-CSharp",
-                        "m_speaker": 1,
-                        "m_iconType": 0,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
                         "m_associatedDialogue": 0,
                         "m_intensity": 0,
-                        "m_isMainDialogue": true
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 2
                     },
                     {
                         "$id": 4,
@@ -32,35 +34,23 @@
                         "m_speaker": 0,
                         "m_iconType": 1,
                         "m_associatedDialogue": 1,
-                        "m_intensity": 2,
-                        "m_isMainDialogue": false
+                        "m_intensity": 0,
+                        "m_bubbleType": 2,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 1
                     },
                     {
                         "$id": 5,
-                        "$type": 3,
-                        "m_speaker": 1,
-                        "m_iconType": 0,
-                        "m_associatedDialogue": 2,
-                        "m_intensity": 1,
-                        "m_isMainDialogue": true
-                    },
-                    {
-                        "$id": 6,
-                        "$type": 3,
-                        "m_speaker": 3,
-                        "m_iconType": 3,
-                        "m_associatedDialogue": 3,
-                        "m_intensity": 0,
-                        "m_isMainDialogue": false
-                    },
-                    {
-                        "$id": 7,
-                        "$type": 3,
+                        "$type": "4|Comic.PartOfDialogueChoiceConfig, Assembly-CSharp",
                         "m_speaker": 0,
                         "m_iconType": 1,
-                        "m_associatedDialogue": 4,
+                        "m_associatedDialogue": 2,
                         "m_intensity": 0,
-                        "m_isMainDialogue": false
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 2,
+                        "m_choiceOneDialogue": 3,
+                        "m_choiceTwoDialogue": 4
                     }
                 ]
             }

@@ -152,6 +152,8 @@ namespace Comic
                 {
                    yield return StartCoroutine(m_dialogueView.TriggerVoiceDialogue(part));
                 }
+
+                yield return new WaitForSeconds(part.m_waitAfterDisappear);
             }
         }
 

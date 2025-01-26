@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: afd74e2acd25e69848b82ea6652dda1e
+guid: ef7d2bd7f918e3b9881565133aca353f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4268060969350128035
-    second: Bubble_Thinking_0
+      213: 6735298768017504348
+    second: Bubble_Thinking_Pin_0
   - first:
-      213: -8943911125749345284
-    second: Bubble_Thinking_1
-  - first:
-      213: 7535628762516817005
-    second: Bubble_Thinking_2
+      213: -1650012039370581343
+    second: Bubble_Thinking_Pin_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -106,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_Thinking_0
+      name: Bubble_Thinking_Pin_0
       rect:
         serializedVersion: 2
-        x: 250
-        y: 454
-        width: 1790
-        height: 1537
+        x: 1541
+        y: 320
+        width: 275
+        height: 305
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,41 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a1e2d5a6d23b3b30800000000000000
-      internalID: 4268060969350128035
+      spriteID: c583fcb5b86987d50800000000000000
+      internalID: 6735298768017504348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bubble_Thinking_1
+      name: Bubble_Thinking_Pin_1
       rect:
         serializedVersion: 2
-        x: 336
-        y: 389
-        width: 305
-        height: 273
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf3db0fc738d0e380800000000000000
-      internalID: -8943911125749345284
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_Thinking_2
-      rect:
-        serializedVersion: 2
-        x: 161
-        y: 281
-        width: 165
+        x: 1576
+        y: 97
+        width: 167
         height: 168
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -165,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d64080d1f6ee39860800000000000000
-      internalID: 7535628762516817005
+      spriteID: 1aad236dacaf919e0800000000000000
+      internalID: -1650012039370581343
       vertices: []
       indices: 
       edges: []
@@ -175,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -185,9 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bubble_Thinking_0: 4268060969350128035
-      Bubble_Thinking_1: -8943911125749345284
-      Bubble_Thinking_2: 7535628762516817005
+      Bubble_Thinking_Pin_0: 6735298768017504348
+      Bubble_Thinking_Pin_1: -1650012039370581343
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

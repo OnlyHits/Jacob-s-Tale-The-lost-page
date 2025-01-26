@@ -53,25 +53,31 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 3
     - Name: 
       Entry: 7
       Data: 3|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: m_iconType
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: m_associatedDialogue
       Entry: 3
       Data: 0
     - Name: m_intensity
       Entry: 3
       Data: 0
+    - Name: m_bubbleType
+      Entry: 3
+      Data: 0
     - Name: m_isMainDialogue
       Entry: 5
       Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -89,58 +95,22 @@ MonoBehaviour:
       Data: 1
     - Name: m_intensity
       Entry: 3
-      Data: 2
-    - Name: m_isMainDialogue
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 5|Comic.PartOfDialogueConfig, Assembly-CSharp
-    - Name: m_speaker
-      Entry: 3
-      Data: 1
-    - Name: m_iconType
-      Entry: 3
       Data: 0
-    - Name: m_associatedDialogue
+    - Name: m_bubbleType
       Entry: 3
       Data: 2
-    - Name: m_intensity
-      Entry: 3
-      Data: 1
     - Name: m_isMainDialogue
       Entry: 5
       Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|Comic.PartOfDialogueConfig, Assembly-CSharp
-    - Name: m_speaker
-      Entry: 3
-      Data: 3
-    - Name: m_iconType
-      Entry: 3
-      Data: 3
-    - Name: m_associatedDialogue
-      Entry: 3
-      Data: 3
-    - Name: m_intensity
-      Entry: 3
-      Data: 0
-    - Name: m_isMainDialogue
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 7|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 5|Comic.PartOfDialogueChoiceConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 0
@@ -149,13 +119,25 @@ MonoBehaviour:
       Data: 1
     - Name: m_associatedDialogue
       Entry: 3
-      Data: 4
+      Data: 2
     - Name: m_intensity
+      Entry: 3
+      Data: 0
+    - Name: m_bubbleType
       Entry: 3
       Data: 0
     - Name: m_isMainDialogue
       Entry: 5
-      Data: false
+      Data: true
+    - Name: m_waitAfterDisappear
+      Entry: 4
+      Data: 2
+    - Name: m_choiceOneDialogue
+      Entry: 3
+      Data: 3
+    - Name: m_choiceTwoDialogue
+      Entry: 3
+      Data: 4
     - Name: 
       Entry: 8
       Data: 

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: d5f7defb544cb9da0bc633e6b155f783
+guid: c7d9faa0685a719728e0153912e3db56
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5933901300058954148
-    second: Bubble_Exclamation_0
-  - first:
-      213: 7362710884522726679
-    second: Bubble_Exclamation_1
+      213: 7668742688363854452
+    second: Bubble_Exclamation_Pin_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bubble_Exclamation_0
+      name: Bubble_Exclamation_Pin_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2048
-        height: 2048
+        x: 1432
+        y: 5
+        width: 336
+        height: 775
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c56e1cde43c86ada0800000000000000
-      internalID: -5933901300058954148
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bubble_Exclamation_1
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 44
-        width: 7
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 71511e74a8a9d2660800000000000000
-      internalID: 7362710884522726679
+      spriteID: 47a3dc528d8dc6a60800000000000000
+      internalID: 7668742688363854452
       vertices: []
       indices: 
       edges: []
@@ -159,9 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Bubble_Exclamation_0: -5933901300058954148
-      Bubble_Exclamation_1: 7362710884522726679
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -95,6 +95,7 @@ namespace Comic
             Vector2 newVel = new Vector2(0, m_rb.linearVelocity.y);
             m_rb.linearVelocity = newVel;
         }
+
         private void Move(Vector2 v)
         {
             SetSprireFaceDirection(v);
