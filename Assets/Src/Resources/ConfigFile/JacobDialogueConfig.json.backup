@@ -212,7 +212,7 @@
             "$v": {
                 "$id": 20,
                 "$type": 2,
-                "$rlength": 7,
+                "$rlength": 15,
                 "$rcontent": [
                     {
                         "$id": 21,
@@ -290,6 +290,96 @@
                         "m_bubbleType": 0,
                         "m_isMainDialogue": true,
                         "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 28,
+                        "$type": 3,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 25,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 29,
+                        "$type": 3,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
+                        "m_associatedDialogue": 26,
+                        "m_intensity": 0,
+                        "m_bubbleType": 2,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 30,
+                        "$type": 3,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 27,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 31,
+                        "$type": 3,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
+                        "m_associatedDialogue": 28,
+                        "m_intensity": 0,
+                        "m_bubbleType": 2,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 32,
+                        "$type": 3,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 29,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 33,
+                        "$type": 3,
+                        "m_speaker": 0,
+                        "m_iconType": 1,
+                        "m_associatedDialogue": 30,
+                        "m_intensity": 0,
+                        "m_bubbleType": 2,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 34,
+                        "$type": 3,
+                        "m_speaker": 4,
+                        "m_iconType": 7,
+                        "m_associatedDialogue": 31,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0
+                    },
+                    {
+                        "$id": 35,
+                        "$type": 4,
+                        "m_speaker": 2,
+                        "m_iconType": 4,
+                        "m_associatedDialogue": 32,
+                        "m_intensity": 0,
+                        "m_bubbleType": 0,
+                        "m_isMainDialogue": true,
+                        "m_waitAfterDisappear": 0,
+                        "m_choiceOneDialogue": 33,
+                        "m_choiceTwoDialogue": 34
                     }
                 ]
             }
