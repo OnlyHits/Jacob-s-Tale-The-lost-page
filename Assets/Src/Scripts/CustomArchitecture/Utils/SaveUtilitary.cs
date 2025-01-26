@@ -39,8 +39,7 @@ namespace CustomArchitecture
 
             if (type == FileType.ConfigFile)
             {
-                m_paths = Path.Combine(Application.streamingAssetsPath + file_path);
-//                m_paths = m_configPath + file_path;
+                m_paths = Path.Combine(Application.streamingAssetsPath, file_path);
             }
             else if (type == FileType.SaveFile)
             {

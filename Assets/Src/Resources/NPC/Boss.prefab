@@ -91,6 +91,7 @@ MonoBehaviour:
   m_rb: {fileID: 1089435790461630909}
   m_collider: {fileID: 2809568326133322152}
   m_lookTarget: {fileID: 0}
+  m_dialogueType: 5
 --- !u!95 &7404490483222237105
 Animator:
   serializedVersion: 7
