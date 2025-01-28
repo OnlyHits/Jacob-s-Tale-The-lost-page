@@ -17,7 +17,6 @@ namespace Comic
     public class GameProgression
     {
         private List<ChapterSavedData>                              m_unlockChapters = null;
-        private int                                                 m_currentPage = 0; // yes but not really
         private readonly SaveUtilitary<List<ChapterSavedData>>      m_saveUtilitary;
 
         public GameProgression()

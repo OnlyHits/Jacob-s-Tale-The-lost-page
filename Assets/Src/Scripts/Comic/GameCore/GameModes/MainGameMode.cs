@@ -112,7 +112,7 @@ namespace Comic
             // have to be last here
             m_hudNavigationInput.Init();
 
-            ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.English;
+            ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
             m_dialogueManager.SubscribeToEndDialogue(OnEndMainDialogue);
         }
 

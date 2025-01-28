@@ -43,6 +43,7 @@ namespace Comic
                 { DialogueName.Dialogue_UnlockBF, false},
                 { DialogueName.Dialogue_UnlockBully, false},
                 { DialogueName.Dialogue_UnlockBL, false},
+                { DialogueName.Dialogue_UnlockBoss, false},
             };
 
             InitDialogueView();
