@@ -24,6 +24,13 @@ namespace Comic
 
             SwitchPageByIndex(m_currentPageIndex);
 
+            int i = 1;
+            foreach (var page in m_pageList)
+            {
+                page.GetText().text = i.ToString() + "/" + m_pageList.Count.ToString(); 
+                ++i;
+            }
+
 #if UNITY_EDITOR
 #else
             OnStartGame();

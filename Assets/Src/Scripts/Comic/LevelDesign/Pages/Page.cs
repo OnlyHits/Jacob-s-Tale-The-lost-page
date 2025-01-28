@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using CustomArchitecture;
 using Unity.Cinemachine;
 using UnityEngine;
+using TMPro;
 
 namespace Comic
 {
@@ -9,9 +10,11 @@ namespace Comic
     {
         [SerializeField] private GameObject m_visual;
         [SerializeField] private Transform m_spawnPoint;
+        [SerializeField] private TMP_AnimatedText m_pageNumberText;
         [SerializeField, ReadOnly] private List<Case> m_cases = new List<Case>();
 
         private Quaternion m_baseVisualRot;
+        public TMP_Text GetText() => m_pageNumberText.GetTextMeshPro();
 
         private void Awake()
         {

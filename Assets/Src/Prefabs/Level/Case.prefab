@@ -329,7 +329,7 @@ Transform:
   m_GameObject: {fileID: 1464886707533714396}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000002682209, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -437,7 +437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.0000002682209, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 8.477573, y: 4.0184484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1178080065683445783
@@ -476,7 +476,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
+  m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -871,7 +871,6 @@ MonoBehaviour:
   - {fileID: 6010349044856126578}
   - {fileID: 8514401496207736787}
   m_elements: {fileID: 2563960877907049986}
-  m_propsParent: {fileID: 3224222298490956230}
   m_caseSprite: {fileID: 4831894460810933040}
 --- !u!1 &4798586584676182691
 GameObject:
@@ -1172,7 +1171,7 @@ Transform:
   m_GameObject: {fileID: 7593903219263513527}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000002682209, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
