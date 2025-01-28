@@ -101,6 +101,7 @@ namespace CustomArchitecture
         Credit_Chong,
         Credit_Annie,
         Credit_Myriam,
+        Credit_Production,
         Credit_Last,
     }
 

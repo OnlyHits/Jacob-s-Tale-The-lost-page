@@ -27,10 +27,7 @@ namespace Comic
         {
             m_isHighlight = highlight;
             if (m_isHighlight)
-            {
-                Debug.Log(m_type.ToString() + " is highlight");
                 m_background.sprite = m_iconspr[0];
-            }
             else
                 m_background.sprite = m_iconspr[1];
         }
