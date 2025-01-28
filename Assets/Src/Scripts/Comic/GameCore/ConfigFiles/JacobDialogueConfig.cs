@@ -45,7 +45,8 @@ namespace Comic
         Dialogue_UnlockBully,
         Dialogue_UnlockBL,
         Dialogue_UnlockBoss,
-        Dialogue_LostPage
+        Dialogue_LostPage,
+        Dialogue_Credit,
     }
 
     [System.Serializable]

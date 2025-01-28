@@ -2183,6 +2183,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3882208017803578544}
     - target: {fileID: 6305320286240585526, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
+      propertyPath: m_views.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305320286240585526, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
       propertyPath: 'm_views.Array.data[0]'
       value: 
       objectReference: {fileID: 3882208017803578544}
@@ -2190,6 +2194,14 @@ PrefabInstance:
       propertyPath: 'm_views.Array.data[1]'
       value: 
       objectReference: {fileID: 1572789555}
+    - target: {fileID: 6305320286240585526, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
+      propertyPath: 'm_views.Array.data[2]'
+      value: 
+      objectReference: {fileID: 5488883703409781145}
+    - target: {fileID: 6814327009217657937, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
+      propertyPath: m_creditView
+      value: 
+      objectReference: {fileID: 5488883703409781145}
     - target: {fileID: 6814327009217657937, guid: d3d8336788958983dad6b6c0edc74942, type: 3}
       propertyPath: m_dialogueView
       value: 

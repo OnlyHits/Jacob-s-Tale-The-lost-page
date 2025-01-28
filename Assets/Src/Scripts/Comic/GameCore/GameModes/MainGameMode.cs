@@ -140,6 +140,13 @@ namespace Comic
 
         public void PlayEndGame()
         {
+            // fix some issues
+            m_hudNavigationInput.Pause(true);
+            GetPlayer().Pause(true);
+
+            GetViewManager().Show<CreditView>();
+            m_dialogueManager.StartCreditDialogue();
+
             m_playEndGame?.Invoke();
         }
 

@@ -40,7 +40,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 61
+      Data: 67
     - Name: 
       Entry: 7
       Data: 
@@ -220,7 +220,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: What am I doing here?
+      Data: Qu'est-ce que je fais ici ?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -295,7 +295,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I must have fallen asleep while drawing. I must be dreaming
+      Data: "J'ai d\xFB m'endormir en dessinant. Je dois \xEAtre en train de r\xEAver"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -370,7 +370,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Let's take this opportunity to explore
+      Data: Profitons-en pour aller explorer
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -478,7 +478,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Mom! What are you doing here?
+      Data: "Maman!\\nMais qu'est-ce que tu fais l\xE0?"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -553,7 +553,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: It's been so long...
+      Data: "\xC7a fait tellement longtemps..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -628,7 +628,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: even in a dream, I feel like you're with me
+      Data: "m\xEAme dans un r\xEAve, j'ai l'impression que tu es avec moi"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -736,7 +736,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: SHUT UP!
+      Data: CHUT!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -811,7 +811,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Listen to her
+      Data: "\xC9coute-la"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -961,7 +961,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: LISTEN TO HER!
+      Data: "\xC9COUTE-LA !"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1069,7 +1069,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Wow, what are you talking about? I can't hear a thing...
+      Data: Wow, de quoi tu parles? Je n'entends rien...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1177,7 +1177,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Unworthy son, same as his father
+      Data: "Fils indigne, le m\xEAme que son p\xE8re"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1285,7 +1285,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You know I can hear you...
+      Data: Tu sais que je t'entends la vieille
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1393,7 +1393,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Forgive him, he doesn't understand
+      Data: Pardonnez-le, il ne comprend pas
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1543,7 +1543,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Yes... Okay
+      Data: Oui, d'accord
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1693,7 +1693,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: It tells you to press R2/L2 to travel in this world
+      Data: Elle te dit d'appuyer sur R2/L2 pour voyager dans ce monde
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1768,7 +1768,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: She's asking you to join her...
+      Data: Elle te demande de la rejoindre...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1876,7 +1876,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Well, let's do what she says while we figure out what's going on here.
+      Data: Bien, faisons ce qu'elle dit le temps de comprendre ce qui se passe ici
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -1951,7 +1951,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I still wonder who that voice is and why it wants to see me
+      Data: "Je me demande quand m\xEAme qui est cette voix et pourquoi elle veut
+        me voir"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2059,7 +2060,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Oh Jacob, I didn't recognize you, how are you?
+      Data: "Oh Jacob, je ne t'avais pas reconnue, comment \xE7a va ?"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2134,8 +2135,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I ran into your mom earlier, and she's been going nuts ever since you
-        left.
+      Data: "J'ai crois\xE9 ta m\xE8re tout \xE0 l'heure, elle perd la boule depuis
+        que tu es partie"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2210,8 +2211,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Otherwise, what are you talking about, it's been a long time since we've
-        seen you here
+      Data: "Sinon, qu'est-ce que tu racontes, \xE7a fait longtemps qu'on ne t'a
+        pas vu ici"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2319,7 +2320,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: How long? You're a figment of my imagination...
+      Data: "Comment \xE7a longtemps? T'es le fruit de mon imagination..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2394,7 +2395,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: It's just a bad dream...
+      Data: "Ce n'est qu'un mauvais r\xEAve..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2502,7 +2503,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: No, it's not a dream. Pinch yourself, you'll see.
+      Data: "Non, \xE7a n'est pas un r\xEAve, pince-toi, tu verras"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2610,7 +2611,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: All right, it's time to call it a day
+      Data: D'accord, il est temps que ca se finisses
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2835,7 +2836,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: This whole thing is starting to freak me out
+      Data: "\xC7a commence \xE0 me faire flipper, cette histoire"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -2910,7 +2911,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: What's going on, where are we, answer me!
+      Data: "Qu'est-ce qui se passe, o\xF9 on est, r\xE9ponds-moi!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3018,7 +3019,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Relax, you'll get all your answers
+      Data: "Du calme, tu auras toutes tes r\xE9ponses"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3093,7 +3094,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I'll be there to accompany you, my friend
+      Data: "Je serai l\xE0 pour t'accompagner, mon ami"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3168,8 +3169,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: But right now you have to make a choice that will change your destiny
-        for life
+      Data: "Mais pour le moment tu dois prendre un choix qui changera \xE0 vie ta
+        destin\xE9e"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3244,7 +3245,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: On the left is the light of your life and on the right your worst nightmare
+      Data: "\xC0 gauche se trouve la lumi\xE8re de ta vie et \xE0 droite ton pire
+        cauchemar"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3319,8 +3321,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Uh no, on the right is the light of your life and on the left your worst
-        nightmare...
+      Data: "Euh non, \xE0 droite se trouve la lumi\xE8re de ta vie et \xE0 gauche
+        ton pire cauchemar..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3395,7 +3397,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Something like that!
+      Data: "Un truc comme \xE7a quoi!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3470,7 +3472,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: So, what's it going to be?
+      Data: Alors, que choisis-tu ?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3578,7 +3580,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I don't want to, you're creepy
+      Data: Je n'ai pas envie, t'es flippant
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3653,7 +3655,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: And you're not answering any of my questions
+      Data: "Et tu ne r\xE9ponds \xE0 aucune de mes questions"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3761,7 +3763,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: CHOOSE!
+      Data: CHOISI!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3869,7 +3871,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Left
+      Data: Gauche
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -3977,7 +3979,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Right
+      Data: Droite
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4085,7 +4087,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Hey you! Come this way!
+      Data: Et toi!\nViens par ici
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4193,7 +4195,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Oh no, not him...
+      Data: Oh non pas lui...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4268,7 +4270,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: It's really not my day today
+      Data: Ce n'est vraiment pas mon jour aujourd'hui
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4376,7 +4378,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Well, if it isn't little Jacob
+      Data: Tiens tiens, ce ne serait pas le petit Jacob
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4451,7 +4453,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I never thought I'd see you again...
+      Data: Je ne pensais pas te revoir...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4526,7 +4528,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Always with your nose in your comics, aren't you?
+      Data: Toujours le nez dans tes BD, n'est-ce pas ?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4601,7 +4603,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Pathetic!
+      Data: "Path\xE9tique!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4709,7 +4711,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You're going to let him talk to you like that? Stand up for yourself!
+      Data: "Tu vas le laisser te parler comme \xE7a!? D\xE9fends-toi un peu!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4817,7 +4819,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You're right, we're not kids anymore.
+      Data: Tu as raison, on est plus des gamins
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -4892,7 +4894,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You don't scare me anymore, if you still talk to me like that...
+      Data: "Tu ne me fais plus peur, si tu me parles encore comme \xE7a..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5000,7 +5002,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Shut up!
+      Data: Ferme-la!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5108,7 +5110,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Sorry
+      Data: Pardon
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5216,7 +5218,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Well, you know we're gonna go see your wife
+      Data: Bon, t'es au courant qu'on va aller voir ta femme
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5291,7 +5293,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Speaking of which...
+      Data: "D'ailleurs, en parlant de \xE7a..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5399,7 +5401,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: He'll say it...
+      Data: Il va le dire...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5507,7 +5509,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You see, she and I, while you were away...
+      Data: Tu vois, elle et moi pendant ton absence...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5615,7 +5617,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I have a feeling he's going to say it...
+      Data: Je sens qu'il va le dire...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5723,7 +5725,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Anyway, she'll tell you all about it later
+      Data: "Enfin bref, elle te racontera tout \xE0 l'heure"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -5939,7 +5941,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I guess I don't have much choice anyway.
+      Data: "J'imagine que je n'ai pas trop le choix de toute fa\xE7on"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6047,7 +6049,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Hurry up, she's getting impatient, do you want to go on?
+      Data: Vite, elle s'impatiente, veux-tu continuer?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6155,7 +6157,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Yes
+      Data: Oui
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6263,7 +6265,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: No
+      Data: Non
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6371,7 +6373,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Hey there, it's good to see a familiar face.
+      Data: "Hey salut toi, \xE7a fait du bien de voir un visage familier"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6479,7 +6481,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Jacob, I'm so sor...
+      Data: "Jacob, je suis tellement d\xE9..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6587,7 +6589,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: She doesn't want to talk to you!
+      Data: Elle ne veut pas te parler!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6695,7 +6697,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: A true gentleman...
+      Data: Un vrai gentleman...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6803,7 +6805,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I'm sorry, what were you going to tell me?
+      Data: Excuse-moi, qu'est-ce que tu allais me dire ?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -6911,7 +6913,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: While you were away, I...
+      Data: Pendant ton absence, j'ai...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7127,7 +7129,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Oh, stop interrupting!
+      Data: "Oh, arr\xEAte de l'interrompre!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7235,7 +7237,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Don't worry, it's okay
+      Data: "T'inqui\xE8te pas, ce n'est pas grave"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7310,7 +7312,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: What I wanted to say was...
+      Data: Ce que je voulais te dire c'est que...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7418,7 +7420,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: What she means is, she's made a cuckold of you with the other brute
+      Data: Ce qu'elle veut dire, c'est qu'elle t'a fait cocu avec l'autre brute
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7526,7 +7528,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: It's not possible, let her speak...
+      Data: Ce n'est pas possible, laisse-la parler...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7601,7 +7603,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Wait, what?
+      Data: Attend quoi!?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7676,7 +7678,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Is it true what he says?
+      Data: C'est vrai ce qu'il dit?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7784,7 +7786,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You've been gone so long, I never thought I'd see you again
+      Data: Tu es parti si longtemps, je ne pensais jamais te revoir
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7859,7 +7861,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: And she told me I had to find someone else
+      Data: "Et elle m'a dit que je devais trouver quelqu\u2019un d'autre"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -7934,7 +7936,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: She told me you'd never come back without it
+      Data: "Elle m'a dit que sans \xE7a tu ne reviendrais jamais"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8009,7 +8011,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: That I'd lose you forever
+      Data: "Que je te perdrais \xE0 jamais"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8117,7 +8119,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Who are you talking about...
+      Data: De qui tu parles...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8192,7 +8194,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: That voice again?
+      Data: Encore cette voix hein?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8267,7 +8269,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Well, to hell with her, you're all going crazy over her!
+      Data: "Et bah qu'elle aille au diable, vous devenez tous fou \xE0 cause d'elle"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8375,7 +8377,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: SHHH!
+      Data: CHUT!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8483,7 +8485,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: NOT SO LOUD!
+      Data: PAS SI FORT!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8591,7 +8593,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Please don't say anything that might make her angry
+      Data: "Ne dis rien qui pourrait la mettre en col\xE8re s'il te pla\xEEt"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8666,7 +8668,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: She sees all, hears all, watches all...
+      Data: Elle voit tout, entend tout, elle nous surveille...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8816,7 +8818,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Follow me, Jacob, I've got something to show you
+      Data: "Suis-moi Jacob, j'ai quelque chose \xE0 te montrer"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8924,7 +8926,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Follow you...
+      Data: Te suivre...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -8999,7 +9001,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I don't know...
+      Data: Je ne sais pas...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -9074,7 +9076,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: I'm tired...
+      Data: "Je suis fatigu\xE9..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -9182,7 +9184,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Come on, follow me...
+      Data: "All\xE9 viens, suis moi..."
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -9581,7 +9583,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: BACK TO WORK!
+      Data: AU TRAVAIL!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -9689,7 +9691,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: But I recognize you as my boss
+      Data: "Mais je vous reconnait vous \xEAtes mon boss"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -9764,7 +9766,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Are you going to give me bad news too?
+      Data: Vous aussi, vous allez m'annoncer une mauvaise nouvelle?
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -9839,7 +9841,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Are you dating my mom?
+      Data: "Vous sortez avec ma m\xE8re peut-\xEAtre?"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10022,7 +10024,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: RUN AWAY!
+      Data: FUIT!
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10097,7 +10099,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Don't let it get into your head!
+      Data: "Ne la laisse pas rentrer dans ta t\xEAte!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10172,7 +10174,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: YOU BETRAYED ME!
+      Data: TU M'AS TRAHI
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10247,7 +10249,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: SHE'LL COME AND GET ME!
+      Data: ELLE VA VENIR ME CHERCHER
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10355,7 +10357,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: He's completely spun out!
+      Data: "Il a compl\xE8tement vrill\xE9!"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10463,7 +10465,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: The poor man
+      Data: Le pauvre
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10571,7 +10573,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: She....
+      Data: Elle....
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10646,7 +10648,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: The voices are too loud...
+      Data: Les voix sont trop fortes...
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10721,7 +10723,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: NOT THATTTTTTTTTT!
+      Data: "NON PAS \xC7AAAAAAAAA"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10904,7 +10906,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Jacob, here you are at last
+      Data: "Jacob, te voil\xE0 enfin"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -10979,7 +10981,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: You've finished the first chapter of a long epic
+      Data: "Tu as fini le premier chapitre d'une longue \xE9pop\xE9e"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -11054,7 +11056,8 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: But you still have some tests to pass before you can return to your world.
+      Data: "Mais il te reste des \xE9preuves \xE0 franchir avant de revenir dans
+        ton monde"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -11129,7 +11132,7 @@ MonoBehaviour:
       Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
     - Name: m_text
       Entry: 1
-      Data: Be proud of what you've accomplished, we'll see you soon
+      Data: "Sois fier de ce que tu as accompli, on se reverra tr\xE8s bient\xF4t"
     - Name: m_textModifier
       Entry: 3
       Data: 3
@@ -11284,9 +11287,657 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 64
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 186|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 187|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: "D\xE9veloppeur:\\n\\nThomas Itel"
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  m_saveName: English_Dialogue
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 65
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 188|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 189|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: "D\xE9veloppeur:\\n\\nGabriel Medoukali"
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 66
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 190|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 191|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: Graphiste:\n\nJuinbug
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 67
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 192|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 193|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: Graphiste:\n\nAnnilieD
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 68
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 194|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 195|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: Graphiste:\n\nMyriam Afyouni
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 69
+    - Name: $v
+      Entry: 7
+      Data: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    - Name: m_dialogueSentences
+      Entry: 7
+      Data: 196|CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    - Name: m_animatedText
+      Entry: 7
+      Data: 197|CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    - Name: m_text
+      Entry: 1
+      Data: Merci maman!
+    - Name: m_textModifier
+      Entry: 3
+      Data: 3
+    - Name: m_colorModifier
+      Entry: 3
+      Data: 0
+    - Name: m_solidColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 255
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_gradientColor
+      Entry: 7
+      Data: UnityEngine.Color32, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_colorSpeedRandomness
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_apparitionType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: m_handleByInput
+      Entry: 5
+      Data: false
+    - Name: m_durationBetweenSentence
+      Entry: 4
+      Data: 2.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  m_saveName: French_Dialogue

@@ -12,6 +12,8 @@ namespace Comic
     public class DialogueManager : BaseBehaviour
     {
         [SerializeField] private DialogueView m_dialogueView;
+        [SerializeField] private CreditView m_creditView;
+        
         private JacobDialogueConfig m_dialogueConfig;
         private Coroutine m_dialogueCoroutine;
         private Action<PowerType> m_changePowerCallback;
@@ -182,6 +184,23 @@ namespace Comic
             }
 
             m_onEndDialogueCallback?.Invoke(type);
+        }
+
+        public bool StartCreditDialogue()
+        {
+            m_dialogueCoroutine = StartCoroutine(CreditCoroutine(DialogueName.Dialogue_Credit));
+
+            return true;
+        }
+
+        public IEnumerator CreditCoroutine(DialogueName type)
+        {
+            foreach (var part in m_dialogueConfig.GetConfig()[type])
+            {
+                yield return StartCoroutine(m_creditView.TriggerMainDialogue(part));
+
+                yield return new WaitForSeconds(part.m_waitAfterDisappear);
+            }
         }
 
         #endregion

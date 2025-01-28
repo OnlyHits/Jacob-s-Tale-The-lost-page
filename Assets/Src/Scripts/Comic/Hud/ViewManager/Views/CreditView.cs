@@ -100,8 +100,8 @@ namespace Comic
 
         public override void Pause(bool pause)
         {
-            m_mainIcon.Pause(pause);
-            m_bubble.GetComponent<Bubble>().Pause(pause);
+            // m_mainIcon.Pause(pause);
+            // m_bubble.GetComponent<Bubble>().Pause(pause);
         }
 
         private IEnumerator SetupAndStartDialogue(PartOfDialogueConfig config, bool target_main)

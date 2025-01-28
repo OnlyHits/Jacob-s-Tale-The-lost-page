@@ -66,26 +66,22 @@ namespace Comic
 
         private void OnEndGame()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(true);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(true);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = false;
-
             foreach (var page in m_pageList) page.gameObject.SetActive(false);
             m_pageVisual.m_bgBookVisual.SetActive(true);
             m_pageVisual.m_endPage.SetActive(true);
             m_pageVisual.m_coverPage.SetActive(false);
 
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationEndGame, () =>
-            {
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(false);
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(false);
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = true;
+            // StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationEndGame, () =>
+            // {
+            //     ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(false);
+            //     ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(false);
+            //     ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = true;
 
-                foreach (var page in m_pageList) page.gameObject.SetActive(true);
-                m_pageVisual.m_bgBookVisual.SetActive(true);
-                m_pageVisual.m_endPage.SetActive(false);
-                m_pageVisual.m_coverPage.SetActive(false);
-            }));
+            //     foreach (var page in m_pageList) page.gameObject.SetActive(true);
+            //     m_pageVisual.m_bgBookVisual.SetActive(true);
+            //     m_pageVisual.m_endPage.SetActive(false);
+            //     m_pageVisual.m_coverPage.SetActive(false);
+            // }));
         }
 
         #endregion START & END GAME

@@ -96,6 +96,12 @@ namespace CustomArchitecture
         MainStory_UnlockBoss_BL_1,
         MainStory_UnlockBoss_Boss_3,
         MainStory_UnlockBoss_TheLostPage_1,
+        Credit_Thomas,
+        Credit_Gabriel,
+        Credit_Chong,
+        Credit_Annie,
+        Credit_Myriam,
+        Credit_Last,
     }
 
     public struct DynamicAnimatedTextData
