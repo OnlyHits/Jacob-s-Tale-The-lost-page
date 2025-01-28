@@ -169,6 +169,29 @@ namespace CustomArchitecture
             m_textMeshPro.text = m_dynamicDatas.m_sentenceData[m_sentenceIndex].m_fullText;
         }
 
+        IEnumerator WaitForEither()
+        {
+            bool conditionMet = false;
+
+            // Start both coroutines in parallel
+            StartCoroutine(WaitUntilInputPressed(() => conditionMet = true));
+            StartCoroutine(WaitForSecondsCoroutine(() => conditionMet = true));
+
+            yield return new WaitUntil(() => conditionMet);
+        }
+
+        IEnumerator WaitUntilInputPressed(System.Action onComplete)
+        {
+            yield return new WaitWhile(() => !m_isInputPressed);
+            onComplete?.Invoke();
+        }
+
+        IEnumerator WaitForSecondsCoroutine(System.Action onComplete)
+        {
+            yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
+            onComplete?.Invoke();
+        }
+
         protected IEnumerator DialogueCoroutine()
         {
             while (m_sentenceIndex < m_dialogueConfig.m_dialogueSentences.Length)
@@ -179,10 +202,12 @@ namespace CustomArchitecture
                 yield return StartCoroutine(ApparitionCoroutine());
                 m_updateInCoroutine = false;
                 
-                if (!m_dialogueConfig.m_handleByInput)
-                    yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
-                else
-                    yield return new WaitWhile(() => m_isInputPressed == false);
+                yield return StartCoroutine(WaitForEither());
+
+                // if (!m_dialogueConfig.m_handleByInput)
+                //     yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
+                // else
+                //     yield return new WaitWhile(() => m_isInputPressed == false);
 
                 yield return new WaitWhile(() => m_pause);
 
@@ -519,6 +544,8 @@ namespace CustomArchitecture
         private InputAction             m_dialogueInputAction;
         private Action<InputType, bool> onDialogueInput;
         private bool                    m_isInputPressed;
+
+        public void Validate(bool validate) => m_isInputPressed = validate;
 
         public override void Init()
         {

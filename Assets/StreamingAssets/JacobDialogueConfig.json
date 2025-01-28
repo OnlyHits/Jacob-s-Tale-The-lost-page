@@ -389,7 +389,7 @@
             "$v": {
                 "$id": 36,
                 "$type": 2,
-                "$rlength": 19,
+                "$rlength": 18,
                 "$rcontent": [
                     {
                         "$id": 37,
@@ -515,17 +515,6 @@
                     {
                         "$id": 48,
                         "$type": 3,
-                        "m_speaker": 0,
-                        "m_iconType": 1,
-                        "m_associatedDialogue": 46,
-                        "m_intensity": 0,
-                        "m_bubbleType": 2,
-                        "m_isMainDialogue": false,
-                        "m_waitAfterDisappear": 0
-                    },
-                    {
-                        "$id": 49,
-                        "$type": 3,
                         "m_speaker": 1,
                         "m_iconType": 0,
                         "m_associatedDialogue": 47,
@@ -535,7 +524,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 50,
+                        "$id": 49,
                         "$type": 3,
                         "m_speaker": 4,
                         "m_iconType": 8,
@@ -546,7 +535,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 51,
+                        "$id": 50,
                         "$type": 3,
                         "m_speaker": 2,
                         "m_iconType": 4,
@@ -557,7 +546,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 52,
+                        "$id": 51,
                         "$type": 3,
                         "m_speaker": 0,
                         "m_iconType": 1,
@@ -568,7 +557,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 53,
+                        "$id": 52,
                         "$type": 3,
                         "m_speaker": 1,
                         "m_iconType": 0,
@@ -579,7 +568,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 54,
+                        "$id": 53,
                         "$type": 3,
                         "m_speaker": 4,
                         "m_iconType": 8,
@@ -590,7 +579,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 55,
+                        "$id": 54,
                         "$type": 4,
                         "m_speaker": 1,
                         "m_iconType": 0,
@@ -608,12 +597,12 @@
         {
             "$k": 5,
             "$v": {
-                "$id": 56,
+                "$id": 55,
                 "$type": 2,
-                "$rlength": 8,
+                "$rlength": 7,
                 "$rcontent": [
                     {
-                        "$id": 57,
+                        "$id": 56,
                         "$type": 3,
                         "m_speaker": 3,
                         "m_iconType": 3,
@@ -624,7 +613,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 58,
+                        "$id": 57,
                         "$type": 3,
                         "m_speaker": 4,
                         "m_iconType": 9,
@@ -635,18 +624,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 59,
-                        "$type": 3,
-                        "m_speaker": 0,
-                        "m_iconType": 1,
-                        "m_associatedDialogue": 58,
-                        "m_intensity": 0,
-                        "m_bubbleType": 2,
-                        "m_isMainDialogue": false,
-                        "m_waitAfterDisappear": 0
-                    },
-                    {
-                        "$id": 60,
+                        "$id": 58,
                         "$type": 3,
                         "m_speaker": 3,
                         "m_iconType": 3,
@@ -657,7 +635,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 61,
+                        "$id": 59,
                         "$type": 3,
                         "m_speaker": 2,
                         "m_iconType": 4,
@@ -668,7 +646,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 62,
+                        "$id": 60,
                         "$type": 3,
                         "m_speaker": 1,
                         "m_iconType": 0,
@@ -679,7 +657,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 63,
+                        "$id": 61,
                         "$type": 3,
                         "m_speaker": 3,
                         "m_iconType": 3,
@@ -690,7 +668,7 @@
                         "m_waitAfterDisappear": 0
                     },
                     {
-                        "$id": 64,
+                        "$id": 62,
                         "$type": 3,
                         "m_speaker": 3,
                         "m_iconType": 11,

@@ -103,7 +103,6 @@ namespace Comic
                 UnlockChapter(Chapters.The_Prequel, false, false);
             }
 
-            //m_pauseInput.Init();
             m_viewManager.Init();
             m_pageManager.Init();
             m_characterManager.Init();
@@ -113,7 +112,7 @@ namespace Comic
             // have to be last here
             m_hudNavigationInput.Init();
 
-            ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
+            ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.English;
             m_dialogueManager.SubscribeToEndDialogue(OnEndMainDialogue);
         }
 

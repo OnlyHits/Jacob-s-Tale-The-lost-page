@@ -26,6 +26,7 @@ namespace Comic
 
         public void SetTarget(NpcIcon icon) => m_target = icon;
         public TMP_AnimatedText GetAnimatedText() => m_dialogue;
+        protected virtual bool IsBubbleChoice() => false;
 
         public void SubscribeToAppearCallback(Action<float> function)
         {
@@ -41,7 +42,9 @@ namespace Comic
 
         public virtual void Init(RectTransform container_rect)
         {
-            // m_target = icon_rect;
+            if (!IsBubbleChoice())
+                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetNavigationInput().SubscribeToValidate(OnValid);
+            
             m_containerRect = container_rect;
             gameObject.SetActive(false);
             gameObject.GetComponent<RectTransform>().position = m_containerRect.position;
@@ -52,6 +55,22 @@ namespace Comic
                 { DialogueAppearIntensity.Intensity_Medium, .5f },
                 { DialogueAppearIntensity.Intensity_Hard, .3f},
             };
+        }
+
+        private void OnValid(InputType input, bool v)
+        {
+            if (input == InputType.PRESSED)
+            {
+                m_dialogue.Validate(true);
+            }
+            else if (input == InputType.COMPUTED)
+            {
+                m_dialogue.Validate(true);
+            }
+            else if (input == InputType.RELEASED)
+            {
+                m_dialogue.Validate(false);
+            }
         }
 
         public override void Pause(bool pause)

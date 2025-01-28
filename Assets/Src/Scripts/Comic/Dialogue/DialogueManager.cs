@@ -132,11 +132,6 @@ namespace Comic
             Debug.Log("DialogueManager is paused : " + pause.ToString());
         }
 
-        private void Start()
-        {
-            StartDialogue(DialogueName.Dialogue_UnlockBoss);
-        }
-
         public bool StartDialogue(DialogueName type)
         {
             if (m_mainStory.ContainsKey(type) && m_mainStory[type])
@@ -156,7 +151,7 @@ namespace Comic
                 // check that view has unlocked the icon & bubble if not main icon
                 if (!t.m_isMainDialogue && !ProgressionUtils.HasUnlockVoice(t.m_speaker))
                 {
-                    Debug.LogWarning("You need to unlock " + t.m_speaker.ToString() + " before starting this dialogue");
+                    Debug.LogWarning("You need to unlock " + t.m_speaker.ToString() + " before start " + type.ToString());
                     return false;
                 }
             }

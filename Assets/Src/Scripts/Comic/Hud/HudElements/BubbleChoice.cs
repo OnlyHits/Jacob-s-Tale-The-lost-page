@@ -15,6 +15,7 @@ namespace Comic
         [SerializeField] private TMP_AnimatedText m_choiceTwoDialogue;
         [SerializeField] private GameObject m_cursorOne;
         [SerializeField] private GameObject m_cursorTwo;
+        protected override bool IsBubbleChoice() => true;
 
         private bool                        m_accept = true;
         private bool                        m_validate = false;

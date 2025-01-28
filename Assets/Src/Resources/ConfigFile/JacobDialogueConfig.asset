@@ -963,7 +963,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 19
+      Data: 18
     - Name: 
       Entry: 7
       Data: 37|Comic.PartOfDialogueConfig, Assembly-CSharp
@@ -1266,33 +1266,6 @@ MonoBehaviour:
       Data: 48|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
-      Data: 0
-    - Name: m_iconType
-      Entry: 3
-      Data: 1
-    - Name: m_associatedDialogue
-      Entry: 3
-      Data: 46
-    - Name: m_intensity
-      Entry: 3
-      Data: 0
-    - Name: m_bubbleType
-      Entry: 3
-      Data: 2
-    - Name: m_isMainDialogue
-      Entry: 5
-      Data: false
-    - Name: m_waitAfterDisappear
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 49|Comic.PartOfDialogueConfig, Assembly-CSharp
-    - Name: m_speaker
-      Entry: 3
       Data: 1
     - Name: m_iconType
       Entry: 3
@@ -1317,7 +1290,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 50|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 49|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 4
@@ -1344,7 +1317,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 51|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 50|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 2
@@ -1371,7 +1344,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 52|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 51|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 0
@@ -1398,7 +1371,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 53|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 52|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 1
@@ -1425,7 +1398,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 54|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 53|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 4
@@ -1452,7 +1425,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 55|Comic.PartOfDialogueChoiceConfig, Assembly-CSharp
+      Data: 54|Comic.PartOfDialogueChoiceConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 1
@@ -1500,14 +1473,14 @@ MonoBehaviour:
       Data: 5
     - Name: $v
       Entry: 7
-      Data: 56|System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]],
+      Data: 55|System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 8
+      Data: 7
     - Name: 
       Entry: 7
-      Data: 57|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 56|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 3
@@ -1534,7 +1507,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 58|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 57|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 4
@@ -1561,34 +1534,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 59|Comic.PartOfDialogueConfig, Assembly-CSharp
-    - Name: m_speaker
-      Entry: 3
-      Data: 0
-    - Name: m_iconType
-      Entry: 3
-      Data: 1
-    - Name: m_associatedDialogue
-      Entry: 3
-      Data: 58
-    - Name: m_intensity
-      Entry: 3
-      Data: 0
-    - Name: m_bubbleType
-      Entry: 3
-      Data: 2
-    - Name: m_isMainDialogue
-      Entry: 5
-      Data: false
-    - Name: m_waitAfterDisappear
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 60|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 58|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 3
@@ -1615,7 +1561,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 61|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 59|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 2
@@ -1642,7 +1588,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 62|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 60|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 1
@@ -1669,7 +1615,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 63|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 61|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 3
@@ -1696,7 +1642,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 64|Comic.PartOfDialogueConfig, Assembly-CSharp
+      Data: 62|Comic.PartOfDialogueConfig, Assembly-CSharp
     - Name: m_speaker
       Entry: 3
       Data: 3

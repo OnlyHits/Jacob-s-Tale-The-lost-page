@@ -16,6 +16,7 @@ namespace Comic
         private Tween                           m_scaleTween;
         private bool                            m_isHighlight;
         [SerializeField] private Sprite[]       m_iconspr;
+        [SerializeField] private Image          m_background;
 
         public bool IsHighlight() => m_isHighlight;
         public RectTransform GetBubbleAnchor() => m_bubbleAnchor;
@@ -26,9 +27,12 @@ namespace Comic
         {
             m_isHighlight = highlight;
             if (m_isHighlight)
-                GetComponent<Image>().sprite = m_iconspr[0];
+            {
+                Debug.Log(m_type.ToString() + " is highlight");
+                m_background.sprite = m_iconspr[0];
+            }
             else
-                GetComponent<Image>().sprite = m_iconspr[1];
+                m_background.sprite = m_iconspr[1];
         }
 
         public void Init(VoiceType type, Sprite sprite)

@@ -15,7 +15,6 @@ namespace CustomArchitecture
 
     public class SaveUtilitary<T>
     {
-        private readonly string                 m_configPath = "Assets/Src/Resources/ConfigFile/";
         private string                          m_paths = "default_path";
         private bool                            m_backup = true;
         private string                          m_backupExtension = ".backup";

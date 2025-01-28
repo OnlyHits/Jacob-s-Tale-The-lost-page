@@ -155,8 +155,7 @@ namespace Comic
                 {
                     data.Value.m_icon.Highlight(true);
                 }
-                else if (data.Value.m_icon.GetVoiceType() == type
-                    && data.Value.m_icon.IsHighlight())
+                else
                 {
                     data.Value.m_icon.Highlight(false);
                 }
