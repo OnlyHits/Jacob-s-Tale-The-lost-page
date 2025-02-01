@@ -14,7 +14,7 @@ The player incarnates Jacob, and discovers the story of his life from his childh
 The main goal is to find the last page of the comic book, that seems to have been forgotten and lost to time. Jacob will be aided by people he finds in these pages, people he encountered in his real life.<br>
 
 ## Release :
-Itch.io : https://gbmk.itch.io/jacobs-tale-the-lost-page <br>
+Itch.io : https://onlyhits.itch.io/jacobs-tale-the-lost-page <br>
 Github : Coming soon <br>
 Steam : Coming soon <br>
 
