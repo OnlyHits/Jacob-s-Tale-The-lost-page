@@ -4,35 +4,33 @@ using UnityEngine.InputSystem;
 
 namespace CustomArchitecture
 {
-    public abstract class AGameCore : BaseBehaviour
+    public abstract class AGameCore<T> : BaseBehaviour where T : AGameCore<T>
     {
-        private static AGameCore m_instance;
-        private List<AGameMode> m_gameModes = new();
-        private AGameMode m_currentGameMode = null;
-        private AGameMode m_startingGameMode = null;
+        private static T m_instance;
+
+        private List<AGameMode<T>>  m_gameModes = new();
+        private AGameMode<T>        m_currentGameMode = null;
+        private AGameMode<T>        m_startingGameMode = null;
         private Settings m_settings = null;
         public Settings GetSettings() => m_settings;
-
-        [SerializeField] private InputActionAsset m_inputActionAsset;
-        public InputActionAsset GetInputAsset() => m_inputActionAsset;
-
 
         // Prevent direct instantiation
         protected AGameCore() { }
 
         #region Singleton
-        public static AGameCore Instance
+        public static T Instance
         {
             get
             {
+                // kind of depreciated, until agamecore is abstract
                 if (m_instance == null)
                 {
-                    m_instance = FindFirstObjectByType<AGameCore>();
+                    m_instance = FindFirstObjectByType<T>();
 
                     if (m_instance == null)
                     {
                         GameObject singletonObject = new GameObject("GameCore");
-                        m_instance = singletonObject.AddComponent<AGameCore>();
+                        m_instance = singletonObject.AddComponent<T>();
                     }
                 }
                 return m_instance;
@@ -53,7 +51,7 @@ namespace CustomArchitecture
                 return;
             }
 
-            Instance = this;
+            Instance = (T)this;
             DontDestroyOnLoad(gameObject);
 
             m_settings = new Settings();
@@ -69,20 +67,20 @@ namespace CustomArchitecture
             }
         }
 
-        protected void CreateGameMode<T>(params object[] parameters) where T : AGameMode
+        protected void CreateGameMode<U>(params object[] parameters) where U : AGameMode<T>
         {
-            if (Exist<T>())
+            if (Exist<U>())
             {
                 Debug.LogError("Game mode already exist");
                 return;
             }
 
-            T game_mode = gameObject.AddComponent<T>();
+            U game_mode = gameObject.AddComponent<U>();
 
             if (game_mode != null)
             {
                 m_gameModes.Add(game_mode);
-                game_mode.Init(this, parameters);
+                game_mode.Init((T)this, parameters);
             }
             else
             {
@@ -90,9 +88,9 @@ namespace CustomArchitecture
             }
         }
 
-        protected void SetStartingGameMode<T>() where T : AGameMode
+        protected void SetStartingGameMode<U>() where U : AGameMode<T>
         {
-            AGameMode game_mode = GetGameMode<T>();
+            AGameMode<T> game_mode = GetGameMode<U>();
 
             if (game_mode != null)
                 m_startingGameMode = game_mode;
@@ -100,9 +98,9 @@ namespace CustomArchitecture
                 Debug.LogError("Game mode doesn't exist");
         }
 
-        private bool Exist(AGameMode game_mode)
+        private bool Exist(AGameMode<T> game_mode)
         {
-            foreach (AGameMode mode in m_gameModes)
+            foreach (AGameMode<T> mode in m_gameModes)
             {
                 if (mode == game_mode)
                     return true;
@@ -110,29 +108,29 @@ namespace CustomArchitecture
             return false;
         }
 
-        private bool Exist<T>() where T : AGameMode
+        private bool Exist<U>() where U : AGameMode<T>
         {
-            foreach (AGameMode game_mode in m_gameModes)
+            foreach (AGameMode<T> game_mode in m_gameModes)
             {
-                if (game_mode is T)
+                if (game_mode is U)
                     return true;
             }
             return false;
         }
 
-        public T GetGameMode<T>() where T : AGameMode
+        public U GetGameMode<U>() where U : AGameMode<T>
         {
-            foreach (AGameMode game_mode in m_gameModes)
+            foreach (AGameMode<T> game_mode in m_gameModes)
             {
-                if (game_mode is T)
-                    return (T)game_mode;
+                if (game_mode is U)
+                    return (U)game_mode;
             }
 
             Debug.LogError("Game mode doesn't exist");
             return null;
         }
 
-        protected void StartGameMode(AGameMode game_mode)
+        protected void StartGameMode(AGameMode<T> game_mode)
         {
             if (!Exist(game_mode))
             {
@@ -146,9 +144,9 @@ namespace CustomArchitecture
             m_currentGameMode.StartGameMode();
         }
 
-        public void StartGameMode<T>() where T : AGameMode
+        public void StartGameMode<U>() where U : AGameMode<T>
         {
-            if (!Exist<T>())
+            if (!Exist<U>())
             {
                 Debug.LogError("Game mode doesn't exist");
                 return;
@@ -156,7 +154,7 @@ namespace CustomArchitecture
 
             StopGameMode();
 
-            m_currentGameMode = GetGameMode<T>();
+            m_currentGameMode = GetGameMode<U>();
             m_currentGameMode.StartGameMode();
         }
 

@@ -13,9 +13,9 @@ namespace Comic
     {
         public void Start()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(After);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(Unactiv);
- //           ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToMiddleSwitchPage(Middle);
+            ComicGameCore.Instance.MainGameMode.SubscribeToAfterSwitchPage(After);
+            ComicGameCore.Instance.MainGameMode.SubscribeToBeforeSwitchPage(Unactiv);
+ //           ComicGameCore.Instance.MainGameMode.SubscribeToMiddleSwitchPage(Middle);
         }
 
         public void Unactiv(bool active, Page _1, Page _2)

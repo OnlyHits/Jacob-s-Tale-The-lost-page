@@ -16,7 +16,7 @@ namespace CustomArchitecture
     }
 
     [RequireComponent(typeof(TMP_Text))]
-    public class TMP_AnimatedText : AInputManager
+    public class TMP_AnimatedText : BaseBehaviour
     {
         private Coroutine                   m_dialogueCoroutine = null;
 
@@ -30,9 +30,11 @@ namespace CustomArchitecture
         protected int                       m_sentenceIndex = 0;
         protected TMP_AnimatedText_State    m_state = TMP_AnimatedText_State.State_Uncompute;
         protected bool                      m_updateInCoroutine = false;
+        private bool                        m_isInputPressed = false;
 
         public TMP_AnimatedText_State GetState() => m_state;
         public TMP_Text GetTextMeshPro() => m_textMeshPro;
+        public void Validate(bool validate) => m_isInputPressed = validate;
 
         public void CopyText(TMP_Text text)
         {
@@ -132,8 +134,6 @@ namespace CustomArchitecture
             
             if (m_textMeshPro == null)
                 Debug.LogWarning("No TextMeshPro found");
-
-            Init();
         }
 
         public void StartDialogue(DialogueConfig config, DynamicDialogueData datas)
@@ -203,11 +203,6 @@ namespace CustomArchitecture
                 m_updateInCoroutine = false;
                 
                 yield return StartCoroutine(WaitForEither());
-
-                // if (!m_dialogueConfig.m_handleByInput)
-                //     yield return new WaitForSeconds(m_dialogueConfig.m_durationBetweenSentence);
-                // else
-                //     yield return new WaitWhile(() => m_isInputPressed == false);
 
                 yield return new WaitWhile(() => m_pause);
 
@@ -538,51 +533,5 @@ namespace CustomArchitecture
         }
 
         #endregion
-    
-        #region Input
-
-        private InputAction             m_dialogueInputAction;
-        private Action<InputType, bool> onDialogueInput;
-        private bool                    m_isInputPressed;
-
-        public void Validate(bool validate) => m_isInputPressed = validate;
-
-        public override void Init()
-        {
-            // onDialogueInput += OnDialogueInput;
-
-            // FindAction();
-            // InitInputActions();
-        }
-
-        private void FindAction()
-        {
-            m_dialogueInputAction = InputSystem.actions.FindAction("DialogueInput");
-        }
-
-        private void InitInputActions()
-        {
-            InputActionStruct<bool> iInput = new InputActionStruct<bool>(m_dialogueInputAction, onDialogueInput, false);
-
-            m_inputActionStructsBool.Add(iInput);
-        }
-
-        private void OnDialogueInput(InputType input, bool b)
-        {
-            if (input == InputType.PRESSED)
-            {
-                m_isInputPressed = true;
-            }
-            else if (input == InputType.COMPUTED)
-            {
-                m_isInputPressed = true;
-            }
-            else if (input == InputType.RELEASED)
-            {
-                m_isInputPressed = false;
-            }
-        }
-
-        #endregion
-    }
+   }
 }

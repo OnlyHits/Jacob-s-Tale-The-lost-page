@@ -24,9 +24,9 @@ namespace Comic
         {
             base.Init(container_rect);
 
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetNavigationInput().SubscribeToCancel(OnCancel);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetNavigationInput().SubscribeToValidate(OnValidation);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetNavigationInput().SubscribeToNavigate(OnNavigate);
+            ComicGameCore.Instance.MainGameMode.GetNavigationInput().SubscribeToCancel(OnCancel);
+            ComicGameCore.Instance.MainGameMode.GetNavigationInput().SubscribeToValidate(OnValidation);
+            ComicGameCore.Instance.MainGameMode.GetNavigationInput().SubscribeToNavigate(OnNavigate);
 
             m_cursorOne.SetActive(true);
             m_cursorTwo.SetActive(false);
@@ -34,8 +34,8 @@ namespace Comic
 
         public void SetupChoiceOne(DialogueType type)
         {
-            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
-            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
+            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig<ComicGameCore>(type);
+            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas<ComicGameCore>(type);
 
             m_choiceOneDialogue.StartDialogue(config, datas);
             
@@ -48,8 +48,8 @@ namespace Comic
 
         public void SetupChoiceTwo(DialogueType type)
         {
-            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
-            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
+            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig<ComicGameCore>(type);
+            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas<ComicGameCore>(type);
 
             m_choiceTwoDialogue.StartDialogue(config, datas);
             m_accept = true;

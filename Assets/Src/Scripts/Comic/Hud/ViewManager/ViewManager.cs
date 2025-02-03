@@ -12,7 +12,6 @@ namespace Comic
         private AView m_currentView;
         private readonly Stack<AView> m_history = new Stack<AView>();
 
-
         public T GetView<T>() where T : AView
         {
             for (int i = 0; i < m_views.Length; i++)
@@ -67,34 +66,6 @@ namespace Comic
             }
         }
 
-        public void Unactiv(bool active)
-        {
-            if (!active)
-                m_currentView.ActiveGraphic(false);
-        }
-
-        public void Before(bool active, Page _1, Page _2)
-        {
-            m_currentView.Pause(true);
-        }
-
-        public void Middle(bool active, Page _1, Page _2)
-        {
-            if (active)
-                m_currentView.ActiveGraphic(false);
-            else
-                m_currentView.ActiveGraphic(true);
-
-            m_currentView.Pause(false);
-            m_currentView.Pause(true);
-        }
-
-        public void After(bool active, Page _1, Page _2)
-        {
-            m_currentView.ActiveGraphic(true);
-            m_currentView.Pause(false);
-        }
-
         public override void Pause(bool pause)
         {
             base.Pause(pause);
@@ -105,11 +76,6 @@ namespace Comic
 
         public void Init()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(After);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterCloneCanvasCallback(Unactiv);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(Before);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToMiddleSwitchPage(Middle);
-
             for (int i = 0; i < m_views.Length; i++)
             {
                 m_views[i].Init();

@@ -49,12 +49,12 @@ namespace Comic
 
             InitInputController();
 
-            m_pageManager = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager();
+            m_pageManager = ComicGameCore.Instance.MainGameMode.GetPageManager();
 
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToPowerSelected(OnPowerSelected);
+            ComicGameCore.Instance.MainGameMode.SubscribeToPowerSelected(OnPowerSelected);
 
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            ComicGameCore.Instance.MainGameMode.SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            ComicGameCore.Instance.MainGameMode.SubscribeToAfterSwitchPage(OnAfterSwitchPage);
         }
 
         private void InitInputController()

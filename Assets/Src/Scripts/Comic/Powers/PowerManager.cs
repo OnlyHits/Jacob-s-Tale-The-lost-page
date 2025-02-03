@@ -10,14 +10,14 @@ namespace Comic
 
         public void Init()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockPower(OnUnlockPower);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockPower(OnLockPower);
+            ComicGameCore.Instance.MainGameMode.SubscribeToUnlockPower(OnUnlockPower);
+            ComicGameCore.Instance.MainGameMode.SubscribeToLockPower(OnLockPower);
 
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
+            foreach (var data in ComicGameCore.Instance.MainGameMode.GetUnlockChaptersData())
             {
                 if (data.m_hasUnlockPower)
                 {
-                    PowerType powerType = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPowerByChapter(data.m_chapterType);
+                    PowerType powerType = ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPowerByChapter(data.m_chapterType);
                     OnUnlockPower(powerType);
                 }
             }
@@ -30,7 +30,7 @@ namespace Comic
             {
                 if (pow.GetPowerType() == powerType)
                 {
-                    ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().AddPower(pow);
+                    ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().AddPower(pow);
                 }
             }
         }
@@ -41,7 +41,7 @@ namespace Comic
             {
                 if (pow.GetPowerType() == powerType)
                 {
-                    ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().RemovePower(pow);
+                    ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().RemovePower(pow);
                 }
             }
         }

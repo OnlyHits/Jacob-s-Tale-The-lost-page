@@ -21,7 +21,7 @@ public class Shortcuts : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().PlayEndGame();
+            ComicGameCore.Instance.MainGameMode.PlayEndGame();
         }
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -56,9 +56,9 @@ public class Shortcuts : MonoBehaviour
         if (hasComputeChaptersKey)
         {
             if (unlock)
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().UnlockChapter(chapterComputed, true, true);
+                ComicGameCore.Instance.MainGameMode.UnlockChapter(chapterComputed, true, true);
             else
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().LockChapter(chapterComputed);
+                ComicGameCore.Instance.MainGameMode.LockChapter(chapterComputed);
         }
     }
 #endif

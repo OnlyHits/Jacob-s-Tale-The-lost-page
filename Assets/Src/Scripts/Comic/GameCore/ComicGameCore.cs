@@ -4,19 +4,32 @@ using UnityEngine.InputSystem;
 
 namespace Comic
 {
-    [DefaultExecutionOrder(-2)]
-    public class ComicGameCore : AGameCore
+   [DefaultExecutionOrder(-2)]
+    public class ComicGameCore : AGameCore<ComicGameCore>
     {
-        protected override void Awake()
+        [SerializeField] private InputActionAsset m_inputActionAsset;
+        private SceneLoader m_sceneLoader;
+
+        public InputActionAsset GetInputAsset() => m_inputActionAsset;
+
+        public MainGameMode MainGameMode
         {
-            base.Awake();
+            get { return GetGameMode<MainGameMode>(); }
+            protected set {}
         }
 
         protected override void InstantiateGameModes()
         {
-            CreateGameMode<MainGameMode>();
+            m_sceneLoader = gameObject.GetComponent<SceneLoader>();
+            
+            if (m_sceneLoader == null)
+            {
+                m_sceneLoader = gameObject.AddComponent<SceneLoader>();
+            }
 
-            SetStartingGameMode<MainGameMode>();
+            CreateGameMode<MainGameMode>(m_sceneLoader);
+
+            // SetStartingGameMode<MainGameMode>();
         }
     }
 }

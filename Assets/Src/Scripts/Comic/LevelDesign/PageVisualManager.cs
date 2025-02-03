@@ -24,25 +24,27 @@ namespace Comic
         public GameObject m_endPage;
         [SerializeField, ReadOnly] private List<PageVisual> m_pageVisuals = new List<PageVisual>();
 
-        private void Awake()
+        // private void Awake()
+        // {
+        // }
+
+        // Now is init into PageManager.Init()
+        // private void Start()
+        // {
+        //     Init();
+        // }
+
+        public void Init()
         {
+            ComicGameCore.Instance.MainGameMode.SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            ComicGameCore.Instance.MainGameMode.SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+
+            m_duration = ComicGameCore.Instance.MainGameMode.GetPageManager().GetSwitchPageDuration();
+
             m_destRotQuat = m_destTransform.rotation;
 
             var pages = GetComponentsInChildren<PageVisual>(true);
             m_pageVisuals.AddRange(pages);
-        }
-
-        private void Start()
-        {
-            Init();
-        }
-
-        public void Init()
-        {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
-
-            m_duration = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSwitchPageDuration();
         }
 
 
@@ -85,7 +87,7 @@ namespace Comic
 
         private void InstantiateHole(Page page)
         {
-            Vector3 playerPos = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().transform.position;
+            Vector3 playerPos = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().transform.position;
 
             m_hole = Instantiate(m_holePrefab, page.transform);
             m_hole.Init();

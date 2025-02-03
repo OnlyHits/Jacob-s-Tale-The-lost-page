@@ -27,17 +27,21 @@ namespace Comic
             m_onEndDialogueCallback += function;
         }
 
-        public void Init()
+        public void Init(DialogueView dialogue_view, CreditView credit_view)
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(UnlockVoice);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(LockVoice);
+            m_dialogueView = dialogue_view;
+            m_creditView = credit_view;
 
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToNextPower(() => OnSwitchPower(true));
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToPrevPower(() => OnSwitchPower(false));
+            ComicGameCore.Instance.MainGameMode.SubscribeToUnlockVoice(UnlockVoice);
+            ComicGameCore.Instance.MainGameMode.SubscribeToLockVoice(LockVoice);
+
+            ComicGameCore.Instance.MainGameMode.SubscribeToNextPower(() => OnSwitchPower(true));
+            ComicGameCore.Instance.MainGameMode.SubscribeToPrevPower(() => OnSwitchPower(false));
 
             m_dialogueConfig = SerializedScriptableObject.CreateInstance<JacobDialogueConfig>();
             m_dialogueCoroutine = null;
 
+            // must save this shit
             m_mainStory = new()
             {
                 { DialogueName.Dialogue_Welcome, false},
@@ -47,8 +51,6 @@ namespace Comic
                 { DialogueName.Dialogue_UnlockBL, false},
                 { DialogueName.Dialogue_UnlockBoss, false},
             };
-
-            InitDialogueView();
         }
 
         public void SubscribeToPowerSelected(Action<PowerType> function)
@@ -59,8 +61,8 @@ namespace Comic
 
         private void GetNextIndex(bool next)
         {
-            var unlockChapters = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData();
-            var gameConfig = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig();
+            var unlockChapters = ComicGameCore.Instance.MainGameMode.GetUnlockChaptersData();
+            var gameConfig = ComicGameCore.Instance.MainGameMode.GetGameConfig();
             int chapterCount = unlockChapters.Count;
             int i = 0;
             do
@@ -77,25 +79,15 @@ namespace Comic
         {
             GetNextIndex(next);
 
-            ChapterSavedData data = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData()[m_powerIndex];
+            ChapterSavedData data = ComicGameCore.Instance.MainGameMode.GetUnlockChaptersData()[m_powerIndex];
 
-            m_dialogueView.Highlight(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType));
+            if (m_dialogueView != null)
+                m_dialogueView.Highlight(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetVoiceByChapter(data.m_chapterType));
 
-            m_changePowerCallback?.Invoke(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPowerByChapter(data.m_chapterType));
+            m_changePowerCallback?.Invoke(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPowerByChapter(data.m_chapterType));
         }
 
         #region VoiceIcon
-
-        private void InitDialogueView()
-        {
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
-            {
-                if (data.m_hasUnlockVoice)
-                {
-                    m_dialogueView.AddVoice(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType));
-                }
-            }
-        }
 
         private bool IsNpcAllowedToBeVoice(VoiceType type)
         {
@@ -110,7 +102,8 @@ namespace Comic
 
         public void LockVoice(VoiceType type)
         {
-            m_dialogueView.RemoveVoice(type);
+            if (m_dialogueView != null)
+                m_dialogueView.RemoveVoice(type);
         }
 
         public void UnlockVoice(VoiceType type)
@@ -121,7 +114,8 @@ namespace Comic
                 return;
             }
 
-            m_dialogueView.AddVoice(type);
+            if (m_dialogueView != null)
+                m_dialogueView.AddVoice(type);
         }
 
         #endregion
@@ -131,8 +125,6 @@ namespace Comic
         public override void Pause(bool pause)
         {
             base.Pause(pause);
-
-            Debug.Log("DialogueManager is paused : " + pause.ToString());
         }
 
         public bool StartDialogue(DialogueName type)
@@ -169,6 +161,12 @@ namespace Comic
 
         public IEnumerator DialogueCoroutine(DialogueName type)
         {
+            if (m_dialogueView == null)
+            {
+                m_onEndDialogueCallback?.Invoke(type);
+                yield break;
+            }
+
             foreach (var part in m_dialogueConfig.GetConfig()[type])
             {
                 if (part.m_isMainDialogue)

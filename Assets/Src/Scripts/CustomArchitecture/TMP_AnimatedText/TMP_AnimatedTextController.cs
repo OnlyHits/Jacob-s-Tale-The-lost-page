@@ -9,8 +9,8 @@ namespace CustomArchitecture
 {
     public interface TMP_AnimatedTextController_Provider
     {
-        public DynamicDialogueData GetDialogueDatas(DialogueType type);
-        public DialogueConfig GetDialogueConfig(DialogueType type);
+        public DynamicDialogueData GetDialogueDatas<T>(DialogueType type) where T : AGameCore<T>;
+        public DialogueConfig GetDialogueConfig<T>(DialogueType type) where T : AGameCore<T>;
     }
 
     public class TMP_AnimatedTextController : BaseBehaviour, TMP_AnimatedTextController_Provider
@@ -84,14 +84,14 @@ namespace CustomArchitecture
             m_dialogues[Language.English].Init("English_Dialogue");
         }
 
-        public DynamicDialogueData GetDialogueDatas(DialogueType type)
+        public DynamicDialogueData GetDialogueDatas<T>(DialogueType type) where T : AGameCore<T>
         {
-            return m_dialogues[AGameCore.Instance.GetSettings().m_settingDatas.m_language].GetDialogueDatas(type);
+            return m_dialogues[AGameCore<T>.Instance.GetSettings().m_settingDatas.m_language].GetDialogueDatas(type);
         }
         
-        public DialogueConfig GetDialogueConfig(DialogueType type)
+        public DialogueConfig GetDialogueConfig<T>(DialogueType type) where T : AGameCore<T>
         {
-            return m_dialogues[AGameCore.Instance.GetSettings().m_settingDatas.m_language].GetDialogueConfig(type);
+            return m_dialogues[AGameCore<T>.Instance.GetSettings().m_settingDatas.m_language].GetDialogueConfig(type);
         }
     }
 }

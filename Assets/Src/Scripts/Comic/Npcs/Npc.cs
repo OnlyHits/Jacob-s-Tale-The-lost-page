@@ -22,7 +22,7 @@ namespace Comic
 
             if (otherObject.GetComponent<Player>() != null)
             {
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().TriggerDialogue(m_dialogueType);
+                ComicGameCore.Instance.MainGameMode.TriggerDialogue(m_dialogueType);
             }
         }
 
@@ -30,7 +30,7 @@ namespace Comic
         {
             base.Init();
 
-            Player player = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
+            Player player = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer();
 
             m_lookTarget = player.transform;
         }

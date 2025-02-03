@@ -15,21 +15,22 @@ namespace Comic
             LoadCharacters();
             InitCharacters();
 
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToAfterSwitchPage(OnAfterSwitchPage);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockVoice(OnUnlockVoice);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockVoice(OnLockVoice);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
+            ComicGameCore.Instance.MainGameMode.SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
+            ComicGameCore.Instance.MainGameMode.SubscribeToAfterSwitchPage(OnAfterSwitchPage);
+            ComicGameCore.Instance.MainGameMode.SubscribeToUnlockVoice(OnUnlockVoice);
+            ComicGameCore.Instance.MainGameMode.SubscribeToLockVoice(OnLockVoice);
+            ComicGameCore.Instance.MainGameMode.SubscribeToUnlockChapter(OnUnlockChapter);
+
+            SpawnCharacters();
         }
 
         private void Start()
         {
-            SpawnCharacters();
         }
 
         private void SpawnCharacters()
         {
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
+            foreach (var data in ComicGameCore.Instance.MainGameMode.GetUnlockChaptersData())
             {
                 // Spawn NPCS
                 TrySpawnNPCsByChapter(data.m_chapterType);
@@ -37,7 +38,7 @@ namespace Comic
                 // Disable NPC if already got in UI
                 if (data.m_hasUnlockVoice)
                 {
-                    VoiceType voiceType = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetVoiceByChapter(data.m_chapterType);
+                    VoiceType voiceType = ComicGameCore.Instance.MainGameMode.GetGameConfig().GetVoiceByChapter(data.m_chapterType);
                     EnableNPC(voiceType, false);
                 }
             }
@@ -76,7 +77,7 @@ namespace Comic
 
         private void TrySpawnNPCsByChapter(Chapters chapter)
         {
-            var gameConfig = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig();
+            var gameConfig = ComicGameCore.Instance.MainGameMode.GetGameConfig();
             Dictionary<VoiceType, int> npcsSpawnPages = gameConfig.GetNpcsSpawnPageByChapter(chapter);
 
             if (npcsSpawnPages == null)
@@ -97,7 +98,7 @@ namespace Comic
                 }
                 int idxPageToSpawn = npcsSpawnPages[npcVoice];
 
-                Transform spawn = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPageManager().GetSpawnPointByPageIndex(idxPageToSpawn);
+                Transform spawn = ComicGameCore.Instance.MainGameMode.GetPageManager().GetSpawnPointByPageIndex(idxPageToSpawn);
 
                 if (spawn == null)
                 {

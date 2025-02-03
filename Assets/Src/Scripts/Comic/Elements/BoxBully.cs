@@ -34,11 +34,12 @@ namespace Comic
             m_isMovable = false;
         }
 
+        // could make some problem
         private void Start()
         {
-            m_playerInstance = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
+            m_playerInstance = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer();
 
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToPowerSelected(OnPowerSelected);
+            ComicGameCore.Instance.MainGameMode.SubscribeToPowerSelected(OnPowerSelected);
         }
 
         private void EnableCubeInteraction(bool enable)
@@ -76,7 +77,7 @@ namespace Comic
                 EnableCubeInteraction(true);
             }
 
-            /*Player player = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
+            /*Player player = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer();
 
             if (!player.CanPushBoxes())
             {
@@ -99,7 +100,7 @@ namespace Comic
 
             m_isPlayerTriggerZone = true;
 
-            Player player = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
+            Player player = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer();
 
             if (!player.CanPushBoxes())
             {
@@ -128,7 +129,7 @@ namespace Comic
                 return;
             }
 
-            m_playerInstance = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer();
+            m_playerInstance = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer();
 
             if (!m_playerInstance.IsPushingBox())
             {

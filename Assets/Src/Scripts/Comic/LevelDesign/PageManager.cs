@@ -15,11 +15,18 @@ namespace Comic
         [SerializeField] private float m_durationStartGame = 5f;
         [SerializeField] private float m_durationEndGame = 10f;
 
-        private void Start()
+        public Page GetCurrentPage() => m_currentPage;
+        public Case GetCurrentCase() => m_currentPage.GetCurrentCase();
+
+        public void Init()
         {
-            foreach (var data in ComicGameCore.Instance.GetGameMode<MainGameMode>().GetUnlockChaptersData())
+            ComicGameCore.Instance.MainGameMode.SubscribeToUnlockChapter(OnUnlockChapter);
+            ComicGameCore.Instance.MainGameMode.SubscribeToLockChapter(OnLockChapter);
+            ComicGameCore.Instance.MainGameMode.SubscribeToEndGame(OnEndGame);
+            
+            foreach (var data in ComicGameCore.Instance.MainGameMode.GetUnlockChaptersData())
             {
-                UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(data.m_chapterType));
+                UnlockPages(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPagesByChapter(data.m_chapterType));
             }
 
             SwitchPageByIndex(m_currentPageIndex);
@@ -31,26 +38,21 @@ namespace Comic
                 ++i;
             }
 
-#if UNITY_EDITOR
-#else
-            OnStartGame();
-#endif
-        }
+            m_pageVisual.Init();
 
-        public void Init()
-        {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToUnlockChapter(OnUnlockChapter);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToLockChapter(OnLockChapter);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().SubscribeToEndGame(OnEndGame);
+// #if UNITY_EDITOR
+// #else
+//             OnStartGame();
+// #endif
         }
 
         #region START & END GAME
 
+        // not the right place to do that, put that in maingamecore
         private void OnStartGame()
         {
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(true);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(true);
-            ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = false;
+            ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().Pause(true);
+            ComicGameCore.Instance.MainGameMode.GetViewManager().Pause(true);
 
             foreach (var page in m_pageList) page.gameObject.SetActive(false);
             m_pageVisual.m_coverPage.SetActive(true);
@@ -59,9 +61,8 @@ namespace Comic
 
             StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationStartGame, () =>
             {
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(false);
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(false);
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = true;
+                ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().Pause(false);
+                ComicGameCore.Instance.MainGameMode.GetViewManager().Pause(false);
 
                 foreach (var page in m_pageList) page.gameObject.SetActive(true);
                 m_pageVisual.m_coverPage.SetActive(false);
@@ -80,9 +81,8 @@ namespace Comic
 
             // StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationEndGame, () =>
             // {
-            //     ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().Pause(false);
-            //     ComicGameCore.Instance.GetGameMode<MainGameMode>().GetViewManager().Pause(false);
-            //     ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCanvas().GetComponent<Canvas>().enabled = true;
+            //     ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().Pause(false);
+            //     ComicGameCore.Instance.MainGameMode.GetViewManager().Pause(false);
 
             //     foreach (var page in m_pageList) page.gameObject.SetActive(true);
             //     m_pageVisual.m_bgBookVisual.SetActive(true);
@@ -96,11 +96,11 @@ namespace Comic
         #region ON LOCK & UNLOCK CHAPTERS
         private void OnUnlockChapter(Chapters chapterUnlocked)
         {
-            UnlockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));
+            UnlockPages(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPagesByChapter(chapterUnlocked));
         }
         private void OnLockChapter(Chapters chapterUnlocked)
         {
-            LockPages(ComicGameCore.Instance.GetGameMode<MainGameMode>().GetGameConfig().GetPagesByChapter(chapterUnlocked));
+            LockPages(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPagesByChapter(chapterUnlocked));
         }
 
         #endregion ON LOCK & UNLOCK CHAPTERS
@@ -160,6 +160,8 @@ namespace Comic
         }
         public bool TryPrevPage()
         {
+            Debug.Log("Previous page");
+
             int prevIdx = m_currentPageIndex - 1;
             if (prevIdx < 0)
             {
@@ -182,15 +184,6 @@ namespace Comic
             Page page = m_pageList[indexPage];
 
             return page.TryGetSpawnPoint();
-        }
-
-        public Page GetCurrentPage()
-        {
-            return m_currentPage;
-        }
-        public Case GetCurrentCase()
-        {
-            return m_currentPage.GetCurrentCase();
         }
     }
 }

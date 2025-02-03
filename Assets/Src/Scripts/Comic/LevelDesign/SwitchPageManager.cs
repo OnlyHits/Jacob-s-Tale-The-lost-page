@@ -10,16 +10,15 @@ namespace Comic
         [SerializeField] private float m_durationSwitchPage = 1f;
 
         private Action<bool, Page, Page> m_onBeforeSwitchPageCallback;
+        // remove
         private Action<bool, Page, Page> m_onMiddleSwitchPageCallback;
         private Action<bool, Page, Page> m_onAfterSwitchPageCallback;
+
+        // remove
         private Action<bool> m_onAfterCloneCanvasCallback;
 
         [Header("Canvas Duplication")]
-        [SerializeField] private GameObject m_canvas;
         [SerializeField, ReadOnly] private GameObject m_canvasDuplicated;
-
-        public Canvas GetCanvasComponent() => m_canvas.GetComponent<Canvas>();
-
 
         #region CALLBACKS
 
@@ -57,42 +56,44 @@ namespace Comic
 
         private void SwitchPage(bool isNextPage, int idxNewPage)
         {
-            Page currentPage = m_unlockedPageList[m_currentPageIndex];
-            Page newPage = m_unlockedPageList[idxNewPage];
+            Debug.Log("Switch page : " + (isNextPage ? "next" : "prev"));
+            StartCoroutine(ComicGameCore.Instance.MainGameMode.GetCameraManager().ScreenAndApplyTexture());
+            // Page currentPage = m_unlockedPageList[m_currentPageIndex];
+            // Page newPage = m_unlockedPageList[idxNewPage];
 
-            m_onBeforeSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
+            // m_onBeforeSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
 
-            SwitchCanvas(isNextPage, idxNewPage);
+            // SwitchCanvas(isNextPage, idxNewPage);
 
-            m_onAfterCloneCanvasCallback?.Invoke(isNextPage);
+            // m_onAfterCloneCanvasCallback?.Invoke(isNextPage);
 
-            float delayEnableCurrentPage = isNextPage ? 0 : 0;
-            float delayDisableCurrentPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage / 2;
-            float delayEnableNewPage = isNextPage ? m_durationSwitchPage / 2 : 0;
-            float delayDisableNewPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage;
+            // float delayEnableCurrentPage = isNextPage ? 0 : 0;
+            // float delayDisableCurrentPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage / 2;
+            // float delayEnableNewPage = isNextPage ? m_durationSwitchPage / 2 : 0;
+            // float delayDisableNewPage = isNextPage ? m_durationSwitchPage : m_durationSwitchPage;
 
-            if (!isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableCurrentPage, () => currentPage.Enable(true)));
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableCurrentPage, () => currentPage.Enable(false)));
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableNewPage, () => newPage.Enable(true)));
-            if (isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableNewPage, () => newPage.Enable(false)));
+            // if (!isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableCurrentPage, () => currentPage.Enable(true)));
+            // StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableCurrentPage, () => currentPage.Enable(false)));
+            // StartCoroutine(CoroutineUtils.InvokeOnDelay(delayEnableNewPage, () => newPage.Enable(true)));
+            // if (isNextPage) StartCoroutine(CoroutineUtils.InvokeOnDelay(delayDisableNewPage, () => newPage.Enable(false)));
 
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage / 2, () =>
-            {
-                m_onMiddleSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
-            }));
+            // StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage / 2, () =>
+            // {
+            //     m_onMiddleSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
+            // }));
 
-            StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage, () =>
-            {
-                m_currentPageIndex = idxNewPage;
-                SwitchPageByIndex(m_currentPageIndex);
-                DestroyCanvasCopy();
-                m_onAfterSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
-            }));
+            // StartCoroutine(CoroutineUtils.InvokeOnDelay(m_durationSwitchPage, () =>
+            // {
+            //     m_currentPageIndex = idxNewPage;
+            //     SwitchPageByIndex(m_currentPageIndex);
+            //     DestroyCanvasCopy();
+            //     m_onAfterSwitchPageCallback?.Invoke(isNextPage, currentPage, newPage);
+            // }));
         }
 
         private void SwitchCanvas(bool isNextPage, int idxNewPage)
         {
-            m_canvasDuplicated = Instantiate(m_canvas);
+            // m_canvasDuplicated = Instantiate(m_canvas);
             // foreach (var d in m_canvasDuplicated.GetComponentsInChildren<AView>())
             // {
             //     if (d.gameObject.activeSelf)

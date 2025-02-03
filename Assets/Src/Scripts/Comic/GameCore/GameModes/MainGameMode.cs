@@ -11,18 +11,17 @@ namespace Comic
 {
     public interface MainGameModeProvider
     {
-        public Player GetPlayer();
-        public Page GetCurrentPage();
-        public Case GetCurrentCase();
+        // public Page GetCurrentPage();
+        // public Case GetCurrentCase();
 
         public List<ChapterSavedData> GetUnlockChaptersData();
         public GameConfig GetGameConfig();
         public PageManager GetPageManager();
         public CharacterManager GetCharacterManager();
+
         public void UnlockVoice(VoiceType type, bool force_unlock);
         public void UnlockPower(PowerType type, bool force_unlock);
         public void UnlockChapter(Chapters type, bool unlock_voice, bool unlock_power);
-
         public void LockChapter(Chapters type);
 
         public void SubscribeToLockVoice(Action<VoiceType> function);
@@ -47,18 +46,18 @@ namespace Comic
         public void ClearSaveDebug();
     }
 
-    public class MainGameMode : AGameMode, MainGameModeProvider
+    public class MainGameMode : AGameMode<ComicGameCore>, MainGameModeProvider
     {
+        // globals datas
         private GameConfig m_gameConfig;
-        private GameProgression m_gameProgression;// regrouper avec settings dans une subclass
-        private PauseInput m_pauseInput; // ca va etre integré direct dans gamemode
-        private NavigationInput m_hudNavigationInput; // ca degage
-        private DialogueManager m_dialogueManager;
+        private GameProgression m_gameProgression;
+        private SceneLoader m_sceneLoader;
+        private URP_CameraManager m_cameraManager;
+        private NavigationInput m_navigationInput;
 
-        private ViewManager m_viewManager;
-        private PageManager m_pageManager;
-        private CharacterManager m_characterManager;
-        private PowerManager m_powerManager;
+        // local datas
+        private HudManager m_hudManager;
+        private GameManager m_gameManager;
 
         private Action<VoiceType> m_onUnlockVoiceCallback;
         private Action<PowerType> m_onUnlockPowerCallback;
@@ -68,57 +67,109 @@ namespace Comic
         private Action<PowerType> m_onLockPowerCallback;
         private Action<Chapters> m_onLockChapterCallback;
 
-        private Action m_playEndGame;
+        private Action m_onEndGame;
 
-        public Canvas GetCanvas() => m_pageManager.GetCanvasComponent();
-        public ViewManager GetViewManager() => m_viewManager;
-        public InputActionAsset GetInputAsset() => ComicGameCore.Instance.GetInputAsset();
-        public NavigationInput GetNavigationInput() => m_hudNavigationInput;
-        public Player GetPlayer() => m_characterManager.GetPlayer();
-        public Page GetCurrentPage() => m_pageManager.GetCurrentPage();
-        public Case GetCurrentCase() => m_pageManager.GetCurrentCase();
+        // ---- really necessary? ----
+
         public List<ChapterSavedData> GetUnlockChaptersData() => m_gameProgression.GetUnlockedChaptersDatas();
-        public GameConfig GetGameConfig() => m_gameConfig;
-        public PageManager GetPageManager() => m_pageManager;
-        public CharacterManager GetCharacterManager() => m_characterManager;
-        public PowerManager GetPowerManager() => m_powerManager;
-        public override void OnLoadingEnded() { }
 
-        public override void Init(AGameCore game_core, params object[] parameters)
+        // ---- MainGameCore dependencies ----
+
+        public InputActionAsset GetInputAsset() => m_gameCore.GetInputAsset();
+        public NavigationInput GetNavigationInput() => m_navigationInput;
+        public GameConfig GetGameConfig() => m_gameConfig;
+        public URP_CameraManager GetCameraManager() => m_cameraManager;
+
+        // ---- Sub managers ----
+
+        public PageManager GetPageManager() => m_gameManager?.GetPageManager();
+        public CharacterManager GetCharacterManager() => m_gameManager?.GetCharacterManager();
+        public PowerManager GetPowerManager() => m_gameManager?.GetPowerManager();
+        public DialogueManager GetDialogueManager() => m_gameManager?.GetDialogueManager();
+        public ViewManager GetViewManager() => m_hudManager?.GetViewManager();
+
+
+        // This function is called right after Init()
+        public override void StartGameMode()
+        {
+            // // should be done in stop game mode but w/e
+            // m_cameraManager.ClearCameraStack();
+
+            m_sceneLoader.LoadGameModeScenes("HudScene", "GameScene");
+            Compute = true;
+        }
+
+        // This function is called first
+        public override void Init(ComicGameCore game_core, params object[] parameters)
         {
             base.Init(game_core, parameters);
 
-            m_gameConfig = SerializedScriptableObject.CreateInstance<GameConfig>();
-            m_gameProgression = new GameProgression();
-            m_pauseInput = GetComponent<PauseInput>();
-            m_hudNavigationInput = GetComponent<NavigationInput>();
-            m_viewManager = GetComponent<ViewManager>();
-            m_pageManager = GetComponent<PageManager>();
-            m_characterManager = GetComponent<CharacterManager>();
-            m_dialogueManager = GetComponent<DialogueManager>();
-            m_powerManager = GetComponent<PowerManager>();
-
-            if (GetUnlockChaptersData().Count == 0)
+            if (parameters.Length > 0 && parameters[0] is SceneLoader)
             {
-                UnlockChapter(Chapters.The_Prequel, false, false);
+                m_sceneLoader = (SceneLoader)parameters[0];
             }
 
-            m_viewManager.Init();
-            m_pageManager.Init();
-            m_characterManager.Init();
-            m_dialogueManager.Init();
-            m_powerManager.Init();
+            m_gameConfig = SerializedScriptableObject.CreateInstance<GameConfig>();
+            m_gameProgression = new GameProgression();
+            m_navigationInput = GetComponent<NavigationInput>();
+            m_cameraManager = GetComponentInChildren<URP_CameraManager>();
+            // init here cause there no dependency and its a global object
+            m_cameraManager.Init();
 
-            // have to be last here
-            m_hudNavigationInput.Init();
+            m_sceneLoader.SubscribeToEndLoading(OnLoadingEnded);
+        }
+
+        // make all dynamic instantiation here
+        public override void OnLoadingEnded()
+        {
+            // if (GetUnlockChaptersData().Count == 0)
+            // {
+            //     UnlockChapter(Chapters.The_Prequel, false, false);
+            // }
+
+            InitGame();
+            InitHud();
+
+            // tricky but w/e for the moment
+            m_navigationInput.Init();
+
+            // same
+            GetDialogueManager().SubscribeToEndDialogue(OnEndMainDialogue);
 
             ComicGameCore.Instance.GetSettings().m_settingDatas.m_language = Language.French;
-            m_dialogueManager.SubscribeToEndDialogue(OnEndMainDialogue);
+        }
+
+        public void InitHud()
+        {
+            m_hudManager = SceneUtils.FindObjectAcrossScenes<HudManager>();
+            
+            if (m_hudManager == null)
+            {
+                Debug.LogWarning("Can't find HudManager. Try to load the scene before initialize");
+                return;
+            }
+
+            m_hudManager.Init();
+            m_cameraManager.RegisterCameras(m_hudManager.GetRegisteredCameras());
+        }
+
+        public void InitGame()
+        {
+            m_gameManager = SceneUtils.FindObjectAcrossScenes<GameManager>();
+            
+            if (m_gameManager == null)
+            {
+                Debug.LogWarning("Can't find GameManager. Try to load the scene before initialize");
+                return;
+            }
+
+            m_gameManager.Init();
+            m_cameraManager.RegisterCameras(m_gameManager.GetRegisteredCameras());
         }
 
         public void OnEndMainDialogue(DialogueName type)
         {
-            GetPlayer().Pause(false);
+            GetCharacterManager().GetPlayer().Pause(false);
 
             if (type == DialogueName.Dialogue_UnlockBF)
                 UnlockChapter(Chapters.The_First_Chapter, true, true);
@@ -132,8 +183,8 @@ namespace Comic
 
         public void TriggerDialogue(DialogueName type)
         {
-            if (m_dialogueManager.StartDialogue(type))
-                GetPlayer().Pause(true);
+            if (GetDialogueManager().StartDialogue(type))
+                GetCharacterManager().GetPlayer().Pause(true);
         }
 
         #region END GAME
@@ -141,19 +192,19 @@ namespace Comic
         public void PlayEndGame()
         {
             // fix some issues
-            m_hudNavigationInput.Pause(true);
-            GetPlayer().Pause(true);
+            m_navigationInput.Pause(true);
+            GetCharacterManager().GetPlayer().Pause(true);
 
             GetViewManager().Show<CreditView>();
-            m_dialogueManager.StartCreditDialogue();
+            GetDialogueManager().StartCreditDialogue();
 
-            m_playEndGame?.Invoke();
+            m_onEndGame?.Invoke();
         }
 
         public void SubscribeToEndGame(Action function)
         {
-            m_playEndGame -= function;
-            m_playEndGame += function;
+            m_onEndGame -= function;
+            m_onEndGame += function;
         }
 
         #endregion END GAME
@@ -260,37 +311,79 @@ namespace Comic
 
         public void SubscribeToPowerSelected(Action<PowerType> function)
         {
-            m_dialogueManager.SubscribeToPowerSelected(function);
+            if (GetDialogueManager() == null)
+            {
+                Debug.LogWarning("DialogueManager could not be found");
+                return;
+            }
+
+            GetDialogueManager().SubscribeToPowerSelected(function);
         }
 
         public void SubscribeToNextPower(Action function)
         {
-            GetPlayer().SubscribeToNextPower(function);
+            if (GetCharacterManager() == null)
+            {
+                Debug.LogWarning("Player could not be found");
+                return;
+            }
+
+            GetCharacterManager().GetPlayer().SubscribeToNextPower(function);
         }
 
         public void SubscribeToPrevPower(Action function)
         {
-            GetPlayer().SubscribeToPrevPower(function);
+            if (GetCharacterManager() == null)
+            {
+                Debug.LogWarning("Page manager could not be found");
+                return;
+            }
+
+            GetCharacterManager().GetPlayer().SubscribeToPrevPower(function);
         }
 
         public void SubscribeToBeforeSwitchPage(Action<bool, Page, Page> function)
         {
-            m_pageManager.SubscribeToBeforeSwitchPage(function);
+            if (GetPageManager() == null)
+            {
+                Debug.LogWarning("Page manager could not be found");
+                return;
+            }
+
+            GetPageManager().SubscribeToBeforeSwitchPage(function);
         }
 
         public void SubscribeToMiddleSwitchPage(Action<bool, Page, Page> function)
         {
-            m_pageManager.SubscribeToMiddleSwitchPage(function);
+            if (GetPageManager() == null)
+            {
+                Debug.LogWarning("Page manager could not be found");
+                return;
+            }
+
+            GetPageManager().SubscribeToMiddleSwitchPage(function);
         }
 
         public void SubscribeToAfterSwitchPage(Action<bool, Page, Page> function)
         {
-            m_pageManager.SubscribeToAfterSwitchPage(function);
+            if (GetPageManager() == null)
+            {
+                Debug.LogWarning("Page manager could not be found");
+                return;
+            }
+
+            GetPageManager().SubscribeToAfterSwitchPage(function);
         }
 
         public void SubscribeToAfterCloneCanvasCallback(Action<bool> function)
         {
-            m_pageManager.SubscribeToAfterCloneCanvasCallback(function);
+            if (GetPageManager() == null)
+            {
+                Debug.LogWarning("Page manager could not be found");
+                return;
+            }
+
+            GetPageManager().SubscribeToAfterCloneCanvasCallback(function);
         }
 
         public void SubscribeToLockChapter(Action<Chapters> function)
@@ -337,12 +430,12 @@ namespace Comic
             {
                 Debug.Log("Pause game");
 
-                m_hudNavigationInput.Pause(false);
+                m_navigationInput.Pause(false);
                 // pause player
             }
             else
             {
-                m_hudNavigationInput.Pause(true);
+                m_navigationInput.Pause(true);
                 // resume player
             }
         }
@@ -353,15 +446,9 @@ namespace Comic
 
             // if (m_pause)
             // {
-            //     m_hudNavigationInput.OnUpdate();
+            //     m_navigationInput.OnUpdate();
             // }
 
-        }
-
-        // Instantiate gameObjects
-        public override void StartGameMode()
-        {
-            Compute = true;
         }
 
         // destroy all managed objects

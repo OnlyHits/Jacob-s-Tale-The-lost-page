@@ -8,8 +8,6 @@ namespace Comic
 {
     public class NavigationInput : AInputManager
     {
-        //public InputActionAsset m_inputActionAsset;
-
         #region ACTIONS
         private InputAction m_navigationAction;
         private InputAction m_validateAction;
@@ -50,9 +48,9 @@ namespace Comic
 
         private void FindAction()
         {
-            m_cancelAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Cancel");
-            m_validateAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Validate");
-            m_navigationAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Navigation");
+            m_cancelAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Cancel");
+            m_validateAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Validate");
+            m_navigationAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Navigation");
         }
 
         private void InitInputActions()

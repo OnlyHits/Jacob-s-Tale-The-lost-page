@@ -43,7 +43,7 @@ namespace Comic
         public virtual void Init(RectTransform container_rect)
         {
             if (!IsBubbleChoice())
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().GetNavigationInput().SubscribeToValidate(OnValid);
+                ComicGameCore.Instance.MainGameMode.GetNavigationInput().SubscribeToValidate(OnValid);
             
             m_containerRect = container_rect;
             gameObject.SetActive(false);
@@ -100,8 +100,8 @@ namespace Comic
                 m_dialogueCoroutine = null;
             }
 
-            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig(type);
-            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas(type);
+            DialogueConfig config = TMP_AnimatedTextController.Instance.GetDialogueConfig<ComicGameCore>(type);
+            DynamicDialogueData datas = TMP_AnimatedTextController.Instance.GetDialogueDatas<ComicGameCore>(type);
 
             m_dialogue.StartDialogue(config, datas);
         }

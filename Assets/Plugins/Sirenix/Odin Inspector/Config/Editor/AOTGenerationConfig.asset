@@ -16,5 +16,139 @@ MonoBehaviour:
   deleteDllAfterBuilds: 1
   AutomateForAllAOTPlatforms: 1
   automateForPlatforms: 0900000014000000
-  lastScan: 0
-  supportSerializedTypes: []
+  lastScan: 638738864406132530
+  supportSerializedTypes:
+  - TypeName: CustomArchitecture.AnimatedTextConfig, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.AnimatedTextConfig[], Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Boolean, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Byte, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.ChapterConfig, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.Chapters, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: UnityEngine.Color32, UnityEngine.CoreModule
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.DialogueApparitionType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.DialogueAppearIntensity, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.DialogueBubbleType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.DialogueConfig, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.DialogueName, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.DialogueSentenceConfig, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.DialogueSentenceConfig[], Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.DialogueType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.Dictionary`2[[Comic.Chapters, Assembly-CSharp],[Comic.ChapterConfig,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.Dictionary`2[[Comic.DialogueName, Assembly-CSharp],[System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig,
+      Assembly-CSharp]], mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.Dictionary`2[[CustomArchitecture.DialogueType,
+      Assembly-CSharp],[CustomArchitecture.DialogueConfig, Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.Dictionary`2[[Comic.VoiceType, Assembly-CSharp],[System.Int32,
+      mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.EnumEqualityComparer`1[[Comic.Chapters,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.EnumEqualityComparer`1[[Comic.DialogueName,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.EnumEqualityComparer`1[[CustomArchitecture.DialogueType,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.EnumEqualityComparer`1[[Comic.VoiceType,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Unity.VisualScripting.FlexibleDictionary`2[[CustomArchitecture.DialogueType,
+      Assembly-CSharp],[CustomArchitecture.DialogueConfig, Assembly-CSharp]], Unity.VisualScripting.Core
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Single, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.IEqualityComparer`1[[Comic.Chapters, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.IEqualityComparer`1[[Comic.DialogueName,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.IEqualityComparer`1[[CustomArchitecture.DialogueType,
+      Assembly-CSharp]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.IEqualityComparer`1[[Comic.VoiceType, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Int32, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[System.Int32, mscorlib]], mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.Collections.Generic.List`1[[Comic.PartOfDialogueConfig, Assembly-CSharp]],
+      mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.NpcIconType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.PartOfDialogueChoiceConfig, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.PartOfDialogueConfig, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.PowerType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: System.String, mscorlib
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.TextColor, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: CustomArchitecture.TextModifier, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1
+  - TypeName: Comic.VoiceType, Assembly-CSharp
+    IsCustom: 0
+    Emit: 1

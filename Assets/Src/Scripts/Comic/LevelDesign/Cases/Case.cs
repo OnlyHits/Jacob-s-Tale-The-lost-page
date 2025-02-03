@@ -24,7 +24,7 @@ namespace Comic
             bool isInWidth = false;
             bool isInHeight = false;
 
-            Vector3 playerPos = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetPlayer().transform.position;
+            Vector3 playerPos = ComicGameCore.Instance.MainGameMode.GetCharacterManager().GetPlayer().transform.position;
             Vector3 casePos = m_caseSprite.transform.position;
 
             float width = m_caseSprite.bounds.size.x / 2f;

@@ -47,16 +47,16 @@ namespace Comic
 
         private void FindAction()
         {
-            m_moveAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Move");
-            m_lookAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Look");
-            m_jumpAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Jump");
-            m_sprintAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Sprint");
-            m_interactAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Interact");
-            m_nextPageAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("NextPage");
-            m_prevPageAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("PrevPage");
-            m_powerAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("Power");
-            m_nextPowerAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("NextPower");
-            m_prevPowerAction = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetInputAsset().FindAction("PrevPower");
+            m_moveAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Move");
+            m_lookAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Look");
+            m_jumpAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Jump");
+            m_sprintAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Sprint");
+            m_interactAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Interact");
+            m_nextPageAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("NextPage");
+            m_prevPageAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("PrevPage");
+            m_powerAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("Power");
+            m_nextPowerAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("NextPower");
+            m_prevPowerAction = ComicGameCore.Instance.MainGameMode.GetInputAsset().FindAction("PrevPower");
         }
 
         private void InitInputActions()

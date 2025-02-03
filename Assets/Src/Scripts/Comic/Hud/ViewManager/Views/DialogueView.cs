@@ -33,7 +33,6 @@ namespace Comic
 
         private NpcIcon             m_mainIcon;
 
-        [SerializeField] protected Canvas m_canvas;
         private Dictionary<NpcIconType, Sprite> m_iconSprites;
 
         #if UNITY_EDITOR
@@ -105,6 +104,14 @@ namespace Comic
             }
 
             InitMainIcon();
+
+            foreach (var data in ComicGameCore.Instance.MainGameMode.GetUnlockChaptersData())
+            {
+                if (data.m_hasUnlockVoice)
+                {
+                    AddVoice(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetVoiceByChapter(data.m_chapterType));
+                }
+            }
         }
 
         private void InitMainIcon()

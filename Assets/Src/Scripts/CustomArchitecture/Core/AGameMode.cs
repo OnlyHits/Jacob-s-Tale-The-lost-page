@@ -4,10 +4,10 @@ using UnityEngine;
 
 namespace CustomArchitecture
 {
-    public abstract class AGameMode : BaseBehaviour
+    public abstract class AGameMode<T> : BaseBehaviour where T : AGameCore<T>
     {
         protected string                            m_gameName;
-        protected AGameCore                         m_gameCore;
+        protected T                                 m_gameCore;
         [SerializeField, ReadOnly] protected bool   m_isCompute;
         protected string                            m_gameSceneName = null;
         protected string                            m_uiSceneName = null;
@@ -29,7 +29,7 @@ namespace CustomArchitecture
             protected set { m_isCompute = value; }
         }
 
-        public virtual void Init(AGameCore game_core, params object[] parameters)
+        public virtual void Init(T game_core, params object[] parameters)
         {
             m_gameCore = game_core;
         }

@@ -55,7 +55,7 @@ namespace Comic
             else if (input == InputType.RELEASED)
             {
                 m_extPause = !m_extPause;
-                ComicGameCore.Instance.GetGameMode<MainGameMode>().Pause(m_extPause);
+                ComicGameCore.Instance.MainGameMode.Pause(m_extPause);
             }
         }
     }

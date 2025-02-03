@@ -171,7 +171,7 @@ namespace Comic
                 return;
             }
 
-            Case c = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCurrentCase();
+            Case c = ComicGameCore.Instance.MainGameMode.GetPageManager().GetCurrentCase();
 
             if (c == null)
             {
@@ -197,7 +197,7 @@ namespace Comic
                 return;
             }
 
-            Case currentCase = ComicGameCore.Instance.GetGameMode<MainGameMode>().GetCurrentCase();
+            Case currentCase = ComicGameCore.Instance.MainGameMode.GetPageManager().GetCurrentCase();
             GameObject dummy = Instantiate(m_dummyPrefab, currentCase.transform);
 
             dummy.transform.position = transform.position;
