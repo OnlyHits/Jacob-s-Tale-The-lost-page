@@ -483,8 +483,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_pause: 0
-  m_inputActionStructsV2: []
-  m_inputActionStructsBool: []
 --- !u!1 &6484403710493580170
 GameObject:
   m_ObjectHideFlags: 0

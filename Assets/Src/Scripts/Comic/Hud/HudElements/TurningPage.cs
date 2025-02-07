@@ -28,6 +28,13 @@ namespace Comic
 
         public void SetFrontSprite(Sprite sprite) => m_frontSprite = sprite;
         public void SetBackSprite(Sprite sprite) => m_backSprite = sprite;
+        private Action m_onEndTurning;
+
+        public void RegisterToEndTurning(Action function)
+        {
+            m_onEndTurning -= function;
+            m_onEndTurning += function;
+        }
 
         public void PreviousPage()
         {
@@ -123,6 +130,7 @@ namespace Comic
             m_turnSequence.Join(rotate_sequence);
             m_turnSequence.Join(shadow_sequence);
             m_turnSequence.OnComplete(() => {
+                m_onEndTurning?.Invoke();
                 m_turnSequence = null;
                 gameObject.SetActive(false);
             });

@@ -56,8 +56,12 @@ namespace Comic
 
         private void SwitchPage(bool isNextPage, int idxNewPage)
         {
-            Debug.Log("Switch page : " + (isNextPage ? "next" : "prev"));
-            StartCoroutine(ComicGameCore.Instance.MainGameMode.GetCameraManager().ScreenAndApplyTexture());
+            if (ComicGameCore.Instance.MainGameMode.GetCameraManager().IsCameraRegister(URP_OverlayCameraType.Camera_Hud))
+            {
+                StartCoroutine(ComicGameCore.Instance.MainGameMode.GetCameraManager().ScreenAndApplyTexture());
+            }
+
+
             // Page currentPage = m_unlockedPageList[m_currentPageIndex];
             // Page newPage = m_unlockedPageList[idxNewPage];
 
@@ -122,13 +126,13 @@ namespace Comic
             }
         }
 
-        private void DestroyCanvasCopy()
-        {
-            if (m_canvasDuplicated != null)
-            {
-                Destroy(m_canvasDuplicated);
-            }
-        }
+        // private void DestroyCanvasCopy()
+        // {
+        //     if (m_canvasDuplicated != null)
+        //     {
+        //         Destroy(m_canvasDuplicated);
+        //     }
+        // }
 
         private void SwitchPageByIndex(int index)
         {

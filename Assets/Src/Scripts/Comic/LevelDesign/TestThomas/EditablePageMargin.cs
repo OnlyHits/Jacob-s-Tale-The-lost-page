@@ -23,7 +23,7 @@ namespace Comic
             }
         }
 
-        private void Update()
+        protected override void OnUpdate(float elasped_time)
         {
             #if UNITY_EDITOR
             MatchParentSizeAndCenter();

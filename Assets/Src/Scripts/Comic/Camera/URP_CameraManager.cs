@@ -32,6 +32,7 @@ namespace Comic
         [SerializeField] private SpriteRenderer m_rightScreenshot;
 
         public Bounds GetScreenshotBounds() => m_leftScreenshot.bounds;
+        public bool IsCameraRegister(URP_OverlayCameraType type) => m_overlayCameras != null && m_overlayCameras.ContainsKey(type);
 
         public void ClearCameraStack()
         {
@@ -174,25 +175,28 @@ namespace Comic
             }
         }
 
-        public IEnumerator ScreenGameAndSetupTurningPage(bool previous)
-        {
-            if (!m_overlayCameras.ContainsKey(URP_OverlayCameraType.Camera_Hud)
-                || !m_overlayCameras.ContainsKey(URP_OverlayCameraType.Camera_Game))
-            {
-                Debug.LogWarning("Camera is not setup");
-                yield break;
-            }
+        // public IEnumerator ScreenGameAndSetupTurningPage(bool previous)
+        // {
+        //     if (!m_overlayCameras.ContainsKey(URP_OverlayCameraType.Camera_Hud)
+        //         || !m_overlayCameras.ContainsKey(URP_OverlayCameraType.Camera_Game))
+        //     {
+        //         Debug.LogWarning("Camera is not setup");
+        //         yield break;
+        //     }
 
-            yield return new WaitForEndOfFrame();
+        //     yield return new WaitForEndOfFrame();
 
-            yield return StartCoroutine(CaptureURPScreenshot(URP_OverlayCameraType.Camera_Hud));
-            yield return StartCoroutine(CaptureURPScreenshot(URP_OverlayCameraType.Camera_Game));
+        //     yield return StartCoroutine(CaptureURPScreenshot(URP_OverlayCameraType.Camera_Hud));
+        //     yield return StartCoroutine(CaptureURPScreenshot(URP_OverlayCameraType.Camera_Game));
 
-            ((HudCameraRegister)m_overlayCameras[URP_OverlayCameraType.Camera_Hud]).TurnPage(previous);
-        }
+        //     ((HudCameraRegister)m_overlayCameras[URP_OverlayCameraType.Camera_Hud]).TurnPage(previous);
+        // }
 
         public IEnumerator ScreenAndApplyTexture()
         {
+            if (!m_overlayCameras.ContainsKey(URP_OverlayCameraType.Camera_Hud))
+                yield break;
+
             yield return new WaitForEndOfFrame();
 
             CaptureAllCameraURPScreenshot(m_leftScreenshot, false);

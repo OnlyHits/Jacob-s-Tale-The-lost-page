@@ -39,7 +39,7 @@ namespace Comic
             }
             else
             {
-                // null case is handle (not for credit lmao)
+                // null case is handle inside (not for credit lmao)
                 m_dialogueManager.Init(null, null);
             }
         }

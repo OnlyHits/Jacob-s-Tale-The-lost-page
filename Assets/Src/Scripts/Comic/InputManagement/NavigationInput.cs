@@ -9,6 +9,7 @@ namespace Comic
     public class NavigationInput : AInputManager
     {
         #region ACTIONS
+
         private InputAction m_navigationAction;
         private InputAction m_validateAction;
         private InputAction m_cancelAction;

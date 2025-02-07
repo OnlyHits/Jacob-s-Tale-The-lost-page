@@ -13,6 +13,7 @@ namespace Comic
         [SerializeField] private Transform m_elements;
         [SerializeField] private SpriteRenderer m_caseSprite;
 
+        // do we want to buffer rotation?
         private List<Tween> m_rotCaseTweens = new List<Tween>();
         private bool m_isRotating = false;
         private Vector3 m_currentRotation = Vector3.zero;
@@ -50,6 +51,7 @@ namespace Comic
             return m_isRotating;
         }
 
+        // depreciated
         public void Rotate180(float speed, Action endRotateCallback)
         {
             if (m_rotCaseTweens.Count > 0)

@@ -16,7 +16,7 @@ namespace Comic
         [SerializeField] private float m_durationEndGame = 10f;
 
         public Page GetCurrentPage() => m_currentPage;
-        public Case GetCurrentCase() => m_currentPage.GetCurrentCase();
+        public Panel GetCurrentPanel() => m_currentPage.GetCurrentPanel();
 
         public void Init()
         {
@@ -31,12 +31,12 @@ namespace Comic
 
             SwitchPageByIndex(m_currentPageIndex);
 
-            int i = 1;
-            foreach (var page in m_pageList)
-            {
-                page.GetText().text = i.ToString() + "/" + m_pageList.Count.ToString(); 
-                ++i;
-            }
+            // int i = 1;
+            // foreach (var page in m_pageList)
+            // {
+            //     page.GetText().text = i.ToString() + "/" + m_pageList.Count.ToString(); 
+            //     ++i;
+            // }
 
             m_pageVisual.Init();
 
@@ -98,6 +98,7 @@ namespace Comic
         {
             UnlockPages(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPagesByChapter(chapterUnlocked));
         }
+
         private void OnLockChapter(Chapters chapterUnlocked)
         {
             LockPages(ComicGameCore.Instance.MainGameMode.GetGameConfig().GetPagesByChapter(chapterUnlocked));
@@ -158,10 +159,9 @@ namespace Comic
             SwitchPage(true, nextIdx);
             return true;
         }
+
         public bool TryPrevPage()
         {
-            Debug.Log("Previous page");
-
             int prevIdx = m_currentPageIndex - 1;
             if (prevIdx < 0)
             {

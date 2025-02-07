@@ -8,11 +8,11 @@ namespace Comic
 {
     public class PageVisualManager : BaseBehaviour
     {
-        [Header("Switch Page Anim")]
-        [SerializeField] private Transform m_destTransform;
-        [SerializeField, ReadOnly] private Quaternion m_destRotQuat;
-        [SerializeField, ReadOnly] private float m_duration = 1f;
-        private Tween m_switchPageTween = null;
+        // [Header("Switch Page Anim")]
+        // [SerializeField] private Transform m_destTransform;
+        // [SerializeField, ReadOnly] private Quaternion m_destRotQuat;
+        // [SerializeField, ReadOnly] private float m_duration = 1f;
+        // private Tween m_switchPageTween = null;
 
         [Header("Animation Hole")]
         [SerializeField] private PageHole m_holePrefab;
@@ -22,7 +22,7 @@ namespace Comic
         public GameObject m_bgBookVisual;
         public GameObject m_coverPage;
         public GameObject m_endPage;
-        [SerializeField, ReadOnly] private List<PageVisual> m_pageVisuals = new List<PageVisual>();
+        // [SerializeField, ReadOnly] private List<PageVisual> m_pageVisuals = new List<PageVisual>();
 
         // private void Awake()
         // {
@@ -39,12 +39,12 @@ namespace Comic
             ComicGameCore.Instance.MainGameMode.SubscribeToBeforeSwitchPage(OnBeforeSwitchPage);
             ComicGameCore.Instance.MainGameMode.SubscribeToAfterSwitchPage(OnAfterSwitchPage);
 
-            m_duration = ComicGameCore.Instance.MainGameMode.GetPageManager().GetSwitchPageDuration();
+            // m_duration = ComicGameCore.Instance.MainGameMode.GetPageManager().GetSwitchPageDuration();
 
-            m_destRotQuat = m_destTransform.rotation;
+            // m_destRotQuat = m_destTransform.rotation;
 
-            var pages = GetComponentsInChildren<PageVisual>(true);
-            m_pageVisuals.AddRange(pages);
+            // var pages = GetComponentsInChildren<PageVisual>(true);
+            // m_pageVisuals.AddRange(pages);
         }
 
 
@@ -52,37 +52,37 @@ namespace Comic
 
         private void OnBeforeSwitchPage(bool nextPage, Page currentPage, Page newPage)
         {
-            if (nextPage)
-            {
-                Quaternion from = m_destRotQuat;
-                Quaternion to = currentPage.GetBaseVisualRot();
-                TranslatePage(from, to, newPage);
-                newPage.gameObject.GetComponent<PageVisual>().PushFront();
-            }
-            else if (nextPage == false)
-            {
-                Quaternion from = currentPage.GetBaseVisualRot();
-                Quaternion to = m_destRotQuat;
-                TranslatePage(from, to, currentPage);
-                currentPage.gameObject.GetComponent<PageVisual>().PushFront();
-            }
+            // if (nextPage)
+            // {
+            //     Quaternion from = m_destRotQuat;
+            //     Quaternion to = currentPage.GetBaseVisualRot();
+            //     TranslatePage(from, to, newPage);
+            //     newPage.gameObject.GetComponent<PageVisual>().PushFront();
+            // }
+            // else if (nextPage == false)
+            // {
+            //     Quaternion from = currentPage.GetBaseVisualRot();
+            //     Quaternion to = m_destRotQuat;
+            //     TranslatePage(from, to, currentPage);
+            //     currentPage.gameObject.GetComponent<PageVisual>().PushFront();
+            // }
         }
 
         private void OnAfterSwitchPage(bool nextPage, Page currentPage, Page newPage)
         {
-            if (nextPage)
-            {
-                InstantiateHole(newPage);
+            // if (nextPage)
+            // {
+            //     InstantiateHole(newPage);
 
-                StartCoroutine(CoroutineUtils.InvokeOnDelay(0.5f / 3, () =>
-                {
-                    newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
-                }));
-            }
-            else if (nextPage == false)
-            {
-                currentPage.gameObject.GetComponent<PageVisual>().ResetDefault();
-            }
+            //     StartCoroutine(CoroutineUtils.InvokeOnDelay(0.5f / 3, () =>
+            //     {
+            //         newPage.gameObject.GetComponent<PageVisual>().ResetDefault();
+            //     }));
+            // }
+            // else if (nextPage == false)
+            // {
+            //     currentPage.gameObject.GetComponent<PageVisual>().ResetDefault();
+            // }
         }
 
         private void InstantiateHole(Page page)
@@ -95,30 +95,31 @@ namespace Comic
             m_hole.Play();
         }
 
-        private void TranslatePage(Quaternion from, Quaternion to, Page page)
-        {
-            if (m_switchPageTween != null)
-            {
-                m_switchPageTween.Kill();
-            }
+        // private void TranslatePage(Quaternion from, Quaternion to, Page page)
+        // {
+        //     if (m_switchPageTween != null)
+        //     {
+        //         m_switchPageTween.Kill();
+        //     }
 
-            if (Quaternion.Dot(from, to) < 0)
-            {
-                to = new Quaternion(-to.x, -to.y, -to.z, -to.w);
-            }
+        //     if (Quaternion.Dot(from, to) < 0)
+        //     {
+        //         to = new Quaternion(-to.x, -to.y, -to.z, -to.w);
+        //     }
 
-            m_switchPageTween = page.GetVisualTransform().DORotateQuaternion(to, m_duration)
-                .From(from)
-                .SetEase(Ease.Linear)
-                .OnComplete(() =>
-                {
-                    ResetTransformToBase(page);
-                });
-        }
-        private void ResetTransformToBase(Page page)
-        {
-            page.ResetBaseVisualRot();
-        }
+        //     m_switchPageTween = page.GetVisualTransform().DORotateQuaternion(to, m_duration)
+        //         .From(from)
+        //         .SetEase(Ease.Linear)
+        //         .OnComplete(() =>
+        //         {
+        //             ResetTransformToBase(page);
+        //         });
+        // }
+
+        // private void ResetTransformToBase(Page page)
+        // {
+        //     page.ResetBaseVisualRot();
+        // }
 
         #endregion SWITCH PAGE
 

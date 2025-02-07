@@ -14,7 +14,8 @@ namespace Comic
             Outside
         }
 
-        public CaseCanvasEditor m_canvasEditor;
+        // replaced by guizmos
+        // public CaseCanvasEditor m_canvasEditor;
         public CaseColliderEditor m_colliderEditor;
         public CaseDecorEditor m_decorEditor;
 
@@ -63,7 +64,7 @@ namespace Comic
                 return;
             }
 
-            m_canvasEditor?.Refresh();
+            // m_canvasEditor?.Refresh();
             m_colliderEditor?.Refresh();
             m_decorEditor?.Refresh();
 
@@ -90,7 +91,7 @@ namespace Comic
 
         public void EnableCanvasVisual(bool enable)
         {
-            m_canvasEditor?.EnableVisual(enable);
+            // m_canvasEditor?.EnableVisual(enable);
         }
 
     }

@@ -5,6 +5,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using CustomArchitecture;
 using UnityEngine.Rendering;
+using System;
 
 namespace Comic
 {
@@ -15,14 +16,17 @@ namespace Comic
 
         public void SetFrontSprite(Sprite sprite) => m_turningPage.SetFrontSprite(sprite);
         public void SetBackSprite(Sprite sprite) => m_turningPage.SetBackSprite(sprite);
-        
+        public void RegisterToEndTurning(Action function) => m_turningPage.RegisterToEndTurning(function);
+
         public void Init(Camera world_camera, Bounds sprite_bounds)
         {
             Vector3 minWorld = sprite_bounds.min;
             Vector3 maxWorld = sprite_bounds.max;
 
             if (m_cameras.Count > 1)
-                m_turningPage.MatchBounds(m_cameras[1], world_camera.WorldToScreenPoint(minWorld), world_camera.WorldToScreenPoint(maxWorld));
+                m_turningPage.MatchBounds(m_cameras[1],
+                    world_camera.WorldToScreenPoint(minWorld),
+                    world_camera.WorldToScreenPoint(maxWorld));
         }
 
         public void TurnPage(bool previous)

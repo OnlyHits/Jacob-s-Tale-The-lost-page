@@ -12,7 +12,7 @@ namespace Comic
     public interface MainGameModeProvider
     {
         // public Page GetCurrentPage();
-        // public Case GetCurrentCase();
+        // public Case GetCurrentPanel();
 
         public List<ChapterSavedData> GetUnlockChaptersData();
         public GameConfig GetGameConfig();
