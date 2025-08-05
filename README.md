@@ -26,6 +26,11 @@ The repository architecture is *CustomArchitecture* (namespace) which is includi
 And the project scripts are in *Comic* (namespace) which overrides the *CustomeArchitecture* classes, and incorportate generic classes such as :
 - `InputController`
 
+## Game Screenshots
+
+<img width="347" height="195" alt="uaw5jx" src="https://github.com/user-attachments/assets/6bf58f01-4fb6-457f-9880-a39aa327e6a8" />
+<img width="347" height="195" alt="O9cWz+" src="https://github.com/user-attachments/assets/24944c2e-039d-458d-b42d-72d35bf5a248" />
+
 ## Credits to : 
 - Myriam Afyouni (Artist)
 - AnnieD (Artist)
